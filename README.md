@@ -1,9 +1,9 @@
-Bienvenidos a Da Gym!
+Bienvenidos a Da Gym.com!
 
-El objetivo de nuestra página web es la venta de servicios de entrenamiento físico: clases y actividades deportivas ofrecidos en una cadena Gimnasio Low Cost: Da Gym. 
-La idea es que el usuario se conecte al sitio web desde cualquier dispositivo, y tenga acceso a la información correspondiente a las diferente clases/productos que se ofrecen: horarios, costos  y una pequeña reseña de los profesores que van a estar dictándolas en las diferentes sedes.
-Del mismo modo, el admin del sitio, va a poder ingresar a una página alternativa, desde donde tendrá acceso a un formulario de “carga de actividades” y podrá ingresar en los diferentes campos valores para los potenciales nuevos productos.
-Nuestro Público Objetivo es gente de CABA o alrededores, de cualquier género, de entre 18 y 35 años, que tenga acceso a internet desde su móbil y opte por modalidades de compras online y pagos con tarjetas. Este es un público dinámico  y moderno que utiliza redes sociales y Whatsapp.
+El objetivo de nuestra página web es la venta de servicios de entrenamiento físico: clases y actividades deportivas ofrecidos en la cadena de Gimnasios Low Cost "Da Gym". 
+La idea es que <<el usuario>> se conecte al sitio web desde cualquier dispositivo, y tenga acceso a la información correspondiente a las diferente clases/productos que se ofrecen: horarios, costos  y una pequeña reseña de los profesores que van a estar dictándolas junto con la info. de las diferentes sedes.
+A su vez, <<el admin>> del sitio, va a poder ingresar a una página alternativa, desde donde tendrá acceso a un formulario de “carga de actividades” y podrá ingresar en los diferentes campos valores para crear nuevos productos a ofrecer.
+Nuestro <<Público Objetivo>> es gente de CABA o alrededores, de cualquier género, de entre 18 y 35 años, que tenga acceso a internet desde su móbil y opte por modalidades de compras online y pagos con tarjetas. Este es un público dinámico  y moderno que utiliza redes sociales y Whatsapp.
 
 Nos inspiramos en las siguientes páginas web:
 
