@@ -4,28 +4,36 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Mercado Liebre</title>
+	<title>Da Gym</title>
 	<!-- Font Awesome Stylesheet -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 	<!-- Bootstrap Grid Stylesheet -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">	<!-- Own Stylesheet -->
-    <link rel="stylesheet" href="/stylesheets/daGymHeader.css">
+    <link rel="stylesheet" href="/app.css">
 </head>
 
 <body>
     <header>
-        <nav class="navbar__container-fixedtop">
-            <div class="navbar__container-elements">
-              <div class="navbar__container-logobox">
-                <img class= "navbar-logo" src="images/dagym/low-cost-gym-transparent.png" alt="gym-logo"> 
-              </div>
-              <ul class="navbar__list">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Actividades</a></li>
-                <li><a href="#">Sumate Ya!</a></li>
-                <li><a href="#">Contacto</a></li>
-              </ul>
+        <nav class="top__container-fixedtop">
+            <div class="top__container-elements">
+                <div class="top__container-logobox">
+                    <img class= "navbar-logo" src="/low-cost-gym-transparent.png" alt="gym-logo"> 
+                </div>
+                
+                <div class="top__container-navbar">
+                    <input type="checkbox" id="menu">
+                    <label for="menu"><i class="fas fa-bars"></i></label>
+                    <div class="top__container-navbar-menucontent">
+                        <ul class="navbar__list">
+                            <li><a href="#">Inicio</a></li>
+                            <li><a href="#">Actividades</a></li>
+                            <li><a href="#">Sumate Ya!</a></li>
+                            <li><a href="#">Contacto</a></li>
+                        </ul>
+                    </div>
+                </div>
+            
             </div>
         </nav>
     </header>
