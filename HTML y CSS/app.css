@@ -1,46 +1,54 @@
 
 /* ---------------------------------------NAV BAR------------------------------------------- */
 .top__container-fixedtop {
-    background-color: rgb(181, 235, 217);
+    background-color: black;
+    position: sticky;
 }
 
 .top__container-elements {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    align-items: first baseline;
+    height: 76px;
+    max-height: 75px;
 }
 
 
 .top__container-logobox {
-    background-color: brown;
-    width: 20%;
+    background-color: black;
     display: flex;
     justify-content: center;
+    max-width: 350px;
+    width: 39%;
 }
 
-.navbar-logo {
-    width: 150px;
+.header-logo {
+    max-width: 150px;
+    height: auto;
+    padding: 5px;
 }
 
 .top__container-navbar {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 15px 0;
-    background-color:  rgb(37, 37, 37);
+    background-color: black;
+    width: 225px;
+    position: relative;
+    bottom: 20px;
 }
 
 .top__container-navbar label {
     text-align: center;
     color: white;
-    font-size: 6vw;
-    display: block;
     width: 15%;
     cursor: pointer;
-    padding: 7px;
-    border: 2px solid rgb(255, 255, 255);
-    border-radius: 5px;
-    background-color: #00005A;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.fa-bars {
+    font-size: 25px;
 }
 
 input#menu {
@@ -57,26 +65,46 @@ input:checked ~ .top__container-navbar-menucontent {
     width: 100%;
 }
 
-/* .navbar__list {
-    width: 60%;
-    background-color: cornflowerblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.navbar__list {
+    display: inline;
+    flex-direction: column;    
     list-style-type: none;
     margin: 0;
     padding: 0;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.navbar__list li {
+    display: block;
 }
 
 .navbar__list a {
+    padding: 9px 15px 8px;
     display: block;
-    background-color: #dddddd;
-    text-align: center;
+    font-size: max(3vw, 14px); 
+    font-weight: 600;   
+    text-align: left;
+    border-color: transparent;
+    border-bottom: solid 1px #e0e0e0;
+    line-height: normal;
+    background: transparent;
+    font-family: sans-serif;
+    color: whitesmoke;
+    text-decoration: none;
   }
 
 .navbar__list :active {
-    background-color: black;    
-} */
+    background-color: black;
+    opacity: 0.7;
+    text-decoration: none;    
+}
+
+.navbar__list :hover {
+    background-color: black;
+    opacity: 0.7;
+    text-decoration: none;    
+}
 
 /* ///------------------------------BANNER--------------------------------- */
 .banner__container {
