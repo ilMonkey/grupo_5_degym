@@ -1,0 +1,169 @@
+
+/* ---------------------------------------NAV BAR------------------------------------------- */
+.top__container-fixedtop {
+    background-color: black;
+    position: sticky;
+}
+
+.top__container-elements {
+    display: flex;
+    justify-content: space-between;
+    align-items: first baseline;
+    height: 76px;
+    max-height: 75px;
+}
+
+
+.top__container-logobox {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    max-width: 350px;
+    width: 39%;
+}
+
+.header-logo {
+    max-width: 150px;
+    height: auto;
+    padding: 5px;
+}
+
+.top__container-navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    width: 225px;
+    position: relative;
+    bottom: 20px;
+}
+
+.top__container-navbar label {
+    text-align: center;
+    color: white;
+    width: 15%;
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.fa-bars {
+    font-size: 25px;
+}
+
+input#menu {
+    display: none;
+}
+
+.top__container-navbar-menucontent {
+    max-height: 0;
+    overflow: hidden;
+}
+
+input:checked ~ .top__container-navbar-menucontent {
+    max-height: 100%;
+    width: 100%;
+}
+
+.navbar__list {
+    display: inline;
+    flex-direction: column;    
+    margin: 0;
+    padding: 0;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.navbar__list li {
+    display: block;
+}
+
+.navbar__list a {
+    padding: 9px 15px 8px;
+    display: block;
+    font-size: max(3vw, 14px); 
+    font-weight: 600;   
+    border-bottom: solid 1px #e0e0e0;
+    line-height: normal;
+    font-family: sans-serif;
+    color: whitesmoke;
+  }
+
+  .navbar__list a:link {
+    color: whitesmoke;
+    text-decoration: none;
+  }
+
+.navbar__list a:visited {
+    color: whitesmoke
+}
+
+.navbar__list a:hover {
+    color: rgb(185, 185, 185);
+    text-decoration: none;
+}
+
+/* .navbar__list ul li a,
+.navbar__list ul li a:after,
+.navbar__list ul li a:before {
+  transition: all .5s;
+} */
+/* ---------------------------------------------WAPP-LOGO---------------------------------- */
+.icon-bar {
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  } 
+  
+  .icon-bar a {
+    display: block;
+    padding: 16px;
+    color: #448edd;
+    border-radius: 50px;
+  }
+  .whatsapp {
+    background: #53d365;
+    color: #448edd;
+  }
+
+/* ///------------------------------BANNER--------------------------------- */
+.banner__container {
+    background-color: darkgray;
+    height: 200px;
+}
+
+
+
+/* ///------------------------------CONTACT--------------------------------- */
+
+.contact__container {
+    background-color: darkseagreen;
+}
+
+.contact__container-map {
+    height: 150px;
+    width: 90%;
+    background-color: coral;
+}
+
+.contact__container-form {
+    height: 150px;
+    width: 90%;
+    background-color: darkcyan;
+}
+
+/* ///------------------------------FOOTER--------------------------------- */
+
+.footer__container {
+    background-color: darksalmon;
+    height: 180px;
+}
+
+/* 
+------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+

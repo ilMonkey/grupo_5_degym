@@ -1,5 +1,13 @@
 
+
 /* ---------------------------------------NAV BAR------------------------------------------- */
+.nav-header {
+    position: sticky; 
+    top: 0;
+}
+
+
+
 .top__container-fixedtop {
     background-color: black;
     position: sticky;
@@ -91,14 +99,16 @@ input:checked ~ .top__container-navbar-menucontent {
 
   .navbar__list a:link {
     color: whitesmoke;
+    text-decoration: none;
   }
 
 .navbar__list a:visited {
-    color: whitesmoke
+    color: grey
 }
 
 .navbar__list a:hover {
-    color: grey;
+    color: rgb(185, 185, 185);
+    text-decoration: none;
 }
 
 /* .navbar__list ul li a,
@@ -114,6 +124,29 @@ input:checked ~ .top__container-navbar-menucontent {
     background-color: darkgray;
     height: 200px;
 }
+
+.bannerTrolley__container-adImg {
+    background-color: violet;
+    height: 80px;
+}
+
+.bannerTrolleyTwo__container-adImg {
+    background-color: rgb(48, 45, 90);
+    height: 80px;
+}
+
+
+
+/* -----------------------------------TROLLEY------------------------------------ */
+
+
+
+
+
+
+
+
+
 
 
 
