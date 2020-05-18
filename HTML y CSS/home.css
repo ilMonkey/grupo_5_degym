@@ -4,6 +4,7 @@
 .nav-header {
     position: sticky; 
     top: 0;
+    z-index: 99;
 }
 
 
@@ -121,19 +122,16 @@ input:checked ~ .top__container-navbar-menucontent {
 .carousel-caption h1{
     color: #FF710F;
     text-align: center;
-    font-size: 1.4em;
+    font-size: 6vw;
     font-weight: bolder;
 }
 .carousel-caption h5{
-    font-size: 1em;
-}
-.carousel-caption p{
-    font-size: 0.8em;
+    font-size: 2.5vh;
 }
 .carousel-caption h2{
     color: #FF710F;
     text-align: center;
-    font-size: 1.4em;
+    font-size: 6vw;
     font-weight: bolder;
 }
 /* ------END HOME CAROUSEL------ */
@@ -219,25 +217,44 @@ width: 40%;
 
 /* TABLET */
 @media (min-width: 481px) {
-    /* JOSE */
+    /* MQ Banner and Carousel - Home*/
     .banner__container {
         background-image: url(./images/texturNegraPrueba1.jpg);
     } 
     .carousel-caption h1{
-        font-size: 2em;
+        font-size: 5vh;
         margin-bottom: 18%;
         margin-top: 22%;
-        color: grey;
     }
     .carousel-caption h2{
-        font-size: 2em;
+        font-size: 5vh;
         margin-bottom: 18%;
         margin-top: 22%;
     }
-    /* END JOSE */
+    /* MQ End Banner and Carousel - Home */
+
 }
 /* ENDA TABLET */
 
 /* DESKTOP */
+@media (min-width: 769px) {
+    /* MQ Banner and Carousel - Home*/
+    .banner__container {
+        background-image: url(./images/texturNegraPrueba2.jpg);
+    } 
+    .carousel-caption h1{
+        font-size: 10vh;
+        margin-bottom: 18%;
+        margin-top: 22%;
+    }
+    .carousel-caption h2{
+        font-size: 10vh;
+        margin-bottom: 18%;
+        margin-top: 22%;
+    }
+    .container__register--send button{
+        padding: 1% 4%;
+    }
+    /* MQ End Banner and Carousel - Home */
 
 /* END DESKTOP */
