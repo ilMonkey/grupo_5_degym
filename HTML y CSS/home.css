@@ -117,19 +117,59 @@ input:checked ~ .top__container-navbar-menucontent {
   transition: all .5s;
 } */
 
-
-
-
-
-
-
+/* ------HOME CAROUSEL------ */
+.carousel-caption h1{
+    color: #FF710F;
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: bolder;
+}
+.carousel-caption h5{
+    font-size: 1em;
+}
+.carousel-caption p{
+    font-size: 0.8em;
+}
+.carousel-caption h2{
+    color: #FF710F;
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: bolder;
+}
+/* ------END HOME CAROUSEL------ */
 
 
 /* ///------------------------------BANNER--------------------------------- */
 .banner__container {
-    background-color: darkgray;
-    height: 200px;
+    background-image: url(./images/texturNegraPrueba3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    text-align: center
 }
+.banner__container-elements-background img{
+width: 40%;
+}
+.banner__container-elements-textbox h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.8em;
+    color: #FF710F;
+    
+}
+.banner__container-elements-textbox h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2em;
+    color: white;
+}
+.container__register--send button{
+    background-color: #FF710F;
+    padding: 2% 5%;
+    margin-bottom: 3%;
+    font-weight: 700;
+    color: white;
+    border-color: #FF710F;
+}
+
 
 .bannerTrolley__container-adImg { 
     background-color: violet;
@@ -144,13 +184,6 @@ input:checked ~ .top__container-navbar-menucontent {
 
 
 /* -----------------------------------TROLLEY------------------------------------ */
-
-
-
-
-
-
-
 
 
 
@@ -182,3 +215,29 @@ input:checked ~ .top__container-navbar-menucontent {
     height: 180px;
 }
 
+/*====== Media-Queries ======*/
+
+/* TABLET */
+@media (min-width: 481px) {
+    /* JOSE */
+    .banner__container {
+        background-image: url(./images/texturNegraPrueba1.jpg);
+    } 
+    .carousel-caption h1{
+        font-size: 2em;
+        margin-bottom: 18%;
+        margin-top: 22%;
+        color: grey;
+    }
+    .carousel-caption h2{
+        font-size: 2em;
+        margin-bottom: 18%;
+        margin-top: 22%;
+    }
+    /* END JOSE */
+}
+/* ENDA TABLET */
+
+/* DESKTOP */
+
+/* END DESKTOP */
