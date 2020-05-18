@@ -119,13 +119,19 @@ input:checked ~ .top__container-navbar-menucontent {
 
 
 
+
+
+
+
+
+
 /* ///------------------------------BANNER--------------------------------- */
 .banner__container {
     background-color: darkgray;
     height: 200px;
 }
 
-.bannerTrolley__container-adImg {
+.bannerTrolley__container-adImg { 
     background-color: violet;
     height: 80px;
 }
@@ -138,6 +144,7 @@ input:checked ~ .top__container-navbar-menucontent {
 
 
 /* -----------------------------------TROLLEY------------------------------------ */
+
 
 
 
