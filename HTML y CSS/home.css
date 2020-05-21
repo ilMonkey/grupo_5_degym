@@ -1,5 +1,7 @@
 
-
+*{
+    box-sizing: border-box;
+}
 /* ---------------------------------------NAV BAR------------------------------------------- */
 .nav-header {
     position: sticky; 
@@ -136,7 +138,6 @@ input:checked ~ .top__container-navbar-menucontent {
 }
 /* ------END HOME CAROUSEL------ */
 
-
 /* ///------------------------------BANNER--------------------------------- */
 .banner__container {
     background-image: url(./images/texturNegraPrueba3.jpg);
@@ -183,7 +184,71 @@ width: 40%;
 
 /* -----------------------------------TROLLEY------------------------------------ */
 
+/* ----- Register and Login Page----- */
+.container__register--box{
+    background-color: #263238;
+    padding: 13% 0%;
+}
+.container__register{
+    width: 80%;
+    border: 1px solid #2c3940;
+    margin: 0% 9%;
+    background-color: #2c3940;
+    border-radius: 5%;
+}
+.container__register--title{
+    margin: 4% 7% 5% 7%;
+    border-bottom: solid 1px #FF710F;
+}
+.container__register--title h2{
+    color: White;
+    text-align: center;
+    font-size: 8vw;
+}
+.container__register--data{
+    text-align: center;
+    margin: 10% 7%;
+}
+.container__register--data input{
+    outline: none;
+    border: 0;
+    background: border-box;
+    width: 100%;
+    border-bottom: 1px solid #FF710F;
+    margin: 5% 0%;
+}
+.container__register--data input::placeholder{
+  color: white;
+  font-size: 4vw;
+  font-weight: 400;
+}
+.container__register--data-check{
+    display: flex;
+    margin: 4% 30%;
+}
+.container__register--data-check label{
+    font-size: 4vw;
+    margin-bottom: 5%;
+    color: #007bff;
+}
+.container__register--send button{
+    background-color: #FF710F;
+    padding: 3% 8%;
+    margin: 0;
+}
+.container__register--data-info{
+    font-size: 4vw;
+    margin-top: 6%;
+}
 
+  /* Footer provisional hasta que este el de marian */
+.container__footer{
+    background-color: purple;
+}
+.container__footer h2{
+    text-align: center;
+}
+/* ----- End Register and Login Page ----- */
 
 
 
@@ -232,7 +297,27 @@ width: 40%;
         margin-top: 22%;
     }
     /* MQ End Banner and Carousel - Home */
-
+    /* MQ Register Page */
+    .container__register {
+        margin: 0 20%;
+        width: auto;
+    }
+    .container__register--title h2 {
+        font-size: 6vw;
+    }
+    .container__register--data {
+        margin: 5% 7%;
+    }
+    .container__register--data input::placeholder{
+        font-size: 1em;
+    }
+    .container__register--data-check label{
+        font-size: 1em;
+    }
+    .container__register--data-info{
+        font-size: 1em
+    }
+    /* End MQ Register Page */
 }
 /* ENDA TABLET */
 
@@ -252,9 +337,28 @@ width: 40%;
         margin-bottom: 18%;
         margin-top: 22%;
     }
-    .container__register--send button{
-        padding: 1% 4%;
-    }
+    
     /* MQ End Banner and Carousel - Home */
+    /* MQ Register Page */
+    .container__register--title {
+        margin: 3% 10%;
+    }
+    .container__register--data {
+        margin: 5% 10%;
+    }
+    .container__register {
+        margin: 0 25%;
+        padding: 3% 0%;
+    }
+    .container__register--title h2 {
+        font-size: 4vw;
+    }
+    .container__register--send button{
+        padding: 3% 10%;
+    }
+    .container__register--data-info{
+        font-size: 1.2em
+    }
+    /* End MQ Register Page */
 
 /* END DESKTOP */
