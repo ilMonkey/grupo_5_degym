@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Da Gym</title>
+        <!-- Font Awesome Stylesheet -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+        <!-- BOOTSTRAP LOCAL -->
+        <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">	
+        <!-- Own Stylesheet -->
+        <link rel="stylesheet" href="./home.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="nav-header">
+        <nav class="top__container-fixedtop">
+            <div class="top__container-elements">
+                <div class="top__container-logobox">
+                    <img class= "header-logo" src="low-cost-gym-transparent.png" alt="gym-logo"> 
+                </div>
+                
+                <div class="top__container-navbar">
+                    <input type="checkbox" id="menu">
+                    <label for="menu"><i class="fas fa-bars"></i></label>
+                    <div class="top__container-navbar-menucontent">
+                        <ul class="navbar__list">
+                            <li><a href="#">INICIO</a></li>
+                            <li><a href="#">ACTIVIDADES</a></li>
+                            <li><a href="#">SUMATE YA!</a></li>
+                            <li><a href="#">CONTACTO</a></li>
+                        </ul>
+                    </div>
+                </div>
+            
+            </div>
+        </nav>
+    </header>
+    <!-- End Header -->
+    <!-- Login Form -->
+    <div class="container__register--box">
+        <section class="container__register">
+            <div class="container__register--title">
+                <h2>Bienvenido</h2>
+            </div>
+                <form action="" class="container__register--data" method="POST">
+                            <input type="email" placeholder="Email*" type="email">
+                            <input type="password" placeholder="Contraseña*" type="password">
+                        <div class="container__register--data-check">
+                            <input type="checkbox">
+                            <label for="">Recuerdame</label>
+                        </div>
+                        <div class="container__register--send">
+                            <button type="button" class="btn btn-warning">Enviar</button>
+                        </div>
+                        <div class="container__register--data-info">
+                            <label>
+                                <a href="#">¿Olvidaste tu contraseña?</a>
+                            </label>
+                            <label>
+                                <a href="#">¿Son nuevo por aca? Registrate</a>
+                            </label>
+                        </div>
+                </form>
+            </div>
+        </section>
+    </div>
+<!-- End Login Form -->
+<!-- Footer -->
+<footer class="container__footer">
+    <h2>FOOTER</h2>
+</footer>
+<!-- End Footer -->
+<!-- Scripts de Boostrap DON´T TOUCH-->
+<script src="./bootstrap/js/bootstrap.min.js"></script>
+<script src="./bootstrap/js/popper.js"></script>
+<script src="./bootstrap/js/jquery.js"></script>
+<!-- End Scripts de Boostrap -->    
+</body>
+</html>
