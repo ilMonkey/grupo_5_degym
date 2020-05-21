@@ -1,4 +1,6 @@
-
+* {
+    list-style: none;
+}
 
 /* ---------------------------------------NAV BAR------------------------------------------- */
 .nav-header {
@@ -191,26 +193,113 @@ width: 40%;
 /* ///------------------------------CONTACT--------------------------------- */
 
 .contact__container {
-    background-color: darkseagreen;
+    background-color: whitesmoke;
 }
 
 .contact__container-map {
-    height: 150px;
-    width: 90%;
-    background-color: coral;
+    width: 100%;
+    padding: 2%;
 }
 
+.contact__container-map h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.6em;
+    color: #FF710F;
+}
+
+.contact__container-map img{
+    width: 100%;
+}
 .contact__container-form {
-    height: 150px;
-    width: 90%;
-    background-color: darkcyan;
+    width: 100%;
+    background-color: whitesmoke;
+}
+
+.contact__container-form h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.6em;
+    color: #FF710F;
+    
+}
+.contact__container-form label{
+    font-size: 1.6em;
+}
+.contact__container-form input{
+    display: block;
+}
+.contact__container-form textarea{
+    display: block;
 }
 
 /* ///------------------------------FOOTER--------------------------------- */
 
 .footer__container {
-    background-color: darksalmon;
-    height: 180px;
+    background-color: black;
+    color: grey;
+
+}
+
+.footer__container-col1{
+    width: 100%;
+    padding: 2%;
+
+}
+
+
+
+.footer-logo {
+    width: 100PX;
+}
+
+.footer__container-col1-socialntw {
+    display: flex;
+    padding: 10px
+}
+
+.footer__container-col1-socialntw_objet a {
+    padding: 10px;
+    color: whitesmoke;
+}
+
+.footer__container-col1-socialntw_objet a:hover{
+    color: whitesmoke;
+    background-color: grey;
+}
+
+.footer__container-col2 {
+    width: 100%;
+    padding: 2%;
+}
+
+.footer__container-col2-branches {
+    padding: 10px;
+}
+
+.footer__container-col2-branches-options li{
+    padding: 4px;
+
+ 
+}
+
+.footer__container-col2-branches-options li a{
+    padding: 6px;
+    text-decoration: none;
+    color: whitesmoke;
+ 
+}
+
+.footer__container-col2-branches-options li a:hover{
+    color: whitesmoke;
+    background-color: grey;
+}
+
+.footer__container-col3 {
+    width: 100%;
+    padding: 2%;
+}
+
+.footer__container-col3-contact-title {
+    padding: 10px;
 }
 
 /*====== Media-Queries ======*/

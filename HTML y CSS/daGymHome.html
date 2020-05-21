@@ -7,7 +7,8 @@
 	<title>Da Gym</title>
 	<!-- Font Awesome Stylesheet -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 	<!-- BOOTSTRAP LOCAL -->
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">	
     <!-- Own Stylesheet -->
@@ -102,47 +103,74 @@
 
 
     <div class ="contact__container">
-        <div class="contact__container-map">MAPA</div>
-        <div class="contact__container-form">FORMULARIO DE CONTACTO</div>
+        <div class="contact__container-map">
+            <h2>MAPA</h2>
+            <img src="./images/mapa.jpg" class="" alt="">
+        </div>
+        <div class="contact__container-form">
+            <h2>FORMULARIO DE CONTACTO</h2>
+            <form action="#" method="post">
+                <label for="">Nombre</label>
+                <input class="form-control input-sm" type="text" name="name" placeholder="Nombre Apellido">
+                <label for="">Email</label>
+                <input class="form-control input-sm" type="email" name="email" placeholder="ejemplo@dominio.com">
+                <label for="">Telefono</label>
+                <input class="form-control input-sm" type="text" name="telefono" placeholder="011 1111 1111">
+                <label for="">Mensaje</label>
+                <textarea class="form-control textarea-sm" rows="10" name="mensaje" placeholder="Dejanos tu mensaje"></textarea>
+                <button type="submit" name="enviar"  >Enviar</button>
+
+            </form>
+        </div>
+        
     </div>
 
     <div class ="footer__container">
+        <!-- start Nuestras Redes  -->
         <div class ="footer__container-col1">
             <div class ="footer__container-col1-logobox">
-                <a href="index.html" class=""><img class="footer-logo" src="images/dagym/low-cost-gym-transparent.png" alt="Da-Gym"></a>
+                <a href="index.html" class=""><img class="footer-logo" src="low-cost-gym-transparent.png" alt="Da-Gym"></a>
             </div>
             <div class ="footer__container-col1-textbox">
                 <p class="">Entrenamiento personalizado con el mejor precio de Buenos Aires.</p>
             </div>
-            <div class ="footer__container-col1-socialntw">
-                <ul class="">
-                    <span class="">Seguinos</span>
-                    <li><a class="facebook text-white" href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-f"></i></a></li>
-                    <li><a class="instagram text-white" href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram no-margin-right"></i></a></li>
-                    <li><a class="facebook text-white" href="https://www.youtube.com/channel/" target="_blank"><i class="fa fa-youtube" ></i></a></li>
+                <ul class="footer__container-col1-socialntw">
+                    <span class="">Seguinos: </span>
+                    <li class="footer__container-col1-socialntw_objet"><a  href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-f"></i></a></li>
+                    <li class="footer__container-col1-socialntw_objet"><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram no-margin-right"></i></a></li>
+                    <li class="footer__container-col1-socialntw_objet"><a href="https://www.youtube.com/channel/" target="_blank"><i class="fa fa-youtube" ></i></a></li>
                 </ul>
-            </div>
+
         </div>
-        <div class ="footer__container-col2">
-            <div class ="footer__container-col2-branches"></div>
+        <!-- start Nuestras Sedes  -->
+        <div class ="footer__container-col2">   
+            <div class="footer__container-col2-branches">Nuestras Sedes</div>
+            <ul class="footer__container-col2-branches-options">
+                <li><a href="#">Palermo</a></li>
+                <li><a href="#">Almagro</a></li>
+                <li><a href="#">Urquiza</a></li>
+                <li><a href="#">Caballito</a></li>
+            </ul> 
         </div>
+        <!-- start contact information -->
         <div class ="footer__container-col3">
-            <div class ="footer__container-col3-contact"></div>
-        </div>
-        <div class= "footer__container-copyright">
-            <div class="footer__container-copyright-textbox">
-                <p>© Da-Gym. Todos los derechos reservados.</p>
+            <div class ="footer__container-col3-contact">
+                <div class="footer__container-col3-contact-title">Contacto</div>
+                <ul class="footer__container-col2-branches-options">
+                    <li>Email: <a class="" href="mailto:info@dagym.com.ar">info@dagym.com.ar</a></li>
+                    <li>Tel: <a class="" href="tel:11-xxxx-xxxx">0810-xxx-xxxx</a></li>
+                </ul>        
             </div>
-            <div class="footer__container-copyright-link">
-                <a href="http://G5dh.com.ar" class="" target="_blank">design by G5-DH Creative</a>
-            </div>
-
         </div>
-
-
-
-
-
+ 
+    </div>
+    <div class= "footer__container-copyright">
+        <div class="footer__container-copyright-textbox">
+            <p>© Da-Gym. Todos los derechos reservados.</p>
+        </div>
+        <div class="footer__container-copyright-link">
+            <a href="http://G5dh.com.ar" class="" target="_blank">design by G5-DH Creative</a>
+        </div>
 
     </div>
 
