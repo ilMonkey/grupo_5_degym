@@ -101,15 +101,15 @@ input:checked ~ .top__container-navbar-menucontent {
     line-height: normal;
     font-family: sans-serif;
     color: whitesmoke;
-  }
+}
 
-  .navbar__list a:link {
-    color: whitesmoke;
-    text-decoration: none;
-  }
+.navbar__list a:link {
+color: white;
+text-decoration: none;
+}
 
 .navbar__list a:visited {
-    color: grey
+    color: whitesmoke
 }
 
 .navbar__list a:hover {
@@ -552,44 +552,44 @@ width: 40%;
 /* ------------------------------------------------------------------------*/
 /* TABLET */
 @media (min-width: 481px) {
-    /* MQ Banner and Carousel - Home*/
-    .banner__container {
-        background-image: url(./images/texturNegraPrueba1.jpg);
-    } 
-    .carousel-caption h1{
-        font-size: 5vh;
-        margin-bottom: 18%;
-        margin-top: 22%;
-    }
-    .carousel-caption h2{
-        font-size: 5vh;
-        margin-bottom: 18%;
-        margin-top: 22%;
-    }
-    /* MQ End Banner and Carousel - Home */
-    /* MQ Register Page */
-    .container__register {
-        margin: 0 20%;
-        width: auto;
-    }
-    .container__register--title h2 {
-        font-size: 6vw;
-    }
-    .container__register--data {
-        margin: 5% 7%;
-    }
-    .container__register--data input::placeholder{
-        font-size: 1em;
-    }
-    .container__register--data-check label{
-        font-size: 1em;
-    }
-    .container__register--data-info{
-        font-size: 1em
-    }
+
+/* MQ Banner and Carousel - Home*/
+.banner__container {
+    background-image: url(./images/texturNegraPrueba1.jpg);
+} 
+.carousel-caption h1{
+    font-size: 5vh;
+    margin-bottom: 18%;
+    margin-top: 22%;
+}
+.carousel-caption h2{
+    font-size: 5vh;
+    margin-bottom: 18%;
+    margin-top: 22%;
+}
+/* MQ End Banner and Carousel - Home */
+/* MQ Register Page */
+.container__register {
+    margin: 0 20%;
+    width: auto;
+}
+.container__register--title h2 {
+    font-size: 6vw;
+}
+.container__register--data {
+    margin: 5% 7%;
+}
+.container__register--data input::placeholder{
+    font-size: 1em;
+}
+.container__register--data-check label{
+    font-size: 1em;
+}
+.container__register--data-info{
+    font-size: 1em
+}
 
 /* -----------TROLLEY-MQ-MIN 481px-------------- */
-
 
 
 /* PRODUCT */
@@ -625,71 +625,117 @@ width: 40%;
 }
 
 
-/* End MQ Register Page */
+/* End MQ 481*/
 }
 /* ENDA TABLET */
 
 /* DESKTOP */
 @media (min-width: 769px) {
-    /* MQ Banner and Carousel - Home*/
-    .banner__container {
-        background-image: url(./images/texturNegraPrueba2.jpg);
-    } 
-    .carousel-caption h1{
-        font-size: 10vh;
-        margin-bottom: 18%;
-        margin-top: 22%;
-    }
-    .carousel-caption h2{
-        font-size: 10vh;
-        margin-bottom: 18%;
-        margin-top: 22%;
-    }
-    
-    /* MQ End Banner and Carousel - Home */
-    /* MQ Register Page */
-    .container__register--title {
-        margin: 3% 10%;
-    }
-    .container__register--data {
-        margin: 5% 10%;
-    }
-    .container__register {
-        margin: 0 25%;
-        padding: 3% 0%;
-    }
-    .container__register--title h2 {
-        font-size: 4vw;
-    }
-    .container__register--send button{
-        padding: 3% 10%;
-    }
-    .container__register--data-info{
-        font-size: 1.2em
-    }
+
+
+/* -----------------NAV BAR--------------- */
+
+.top__container-elements {
+    justify-content: flex-start;
+}
+
+.top__container-navbar-menucontent {
+    overflow: initial;
+}
+
+.top__container-navbar {
+    display: inline;
+}
+
+.top__container-navbar menu {
+    display: none;
+}
+
+.top__container-navbar label {
+    display: none;
+}
+
+.navbar__list {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar__list a {
+    font-size: 1.1em;
+    display: block ruby;
+    border: 0;
+}
+
+/* MQ Banner and Carousel - Home*/
+.banner__container {
+    background-image: url(./images/texturNegraPrueba2.jpg);
+} 
+.carousel-caption h1{
+    font-size: 10vh;
+    margin-bottom: 18%;
+    margin-top: 22%;
+}
+.carousel-caption h2{
+    font-size: 10vh;
+    margin-bottom: 18%;
+    margin-top: 22%;
+}
+
+/* MQ End Banner and Carousel - Home */
+/* MQ Register Page */
+.container__register--title {
+    margin: 3% 10%;
+}
+.container__register--data {
+    margin: 5% 10%;
+}
+.container__register {
+    margin: 0 25%;
+    padding: 3% 0%;
+}
+.container__register--title h2 {
+    font-size: 4vw;
+}
+.container__register--send button{
+    padding: 3% 10%;
+}
+.container__register--data-info{
+    font-size: 1.2em
+}
 
 /* -----------TROLLEY-MQ-MIN 769px-------------- */
-    .bodyTrolley {
-        flex-direction: row-reverse;
-    }
+.bodyTrolley {
+    flex-direction: row-reverse;
+}
 
-    .verticalAd__container {
-        display: contents;
-        width:20%;
+.verticalAd__container {
+    display: contents;
+    width:20%;
+    position: relative;
+    text-align: center;
+} 
 
-    }   
-    .verticalBanner {
-        max-width: 350px;
-        height: auto;
-        margin: 5px 0 5px 5px;  
-        object-fit: cover; 
-        filter: grayscale(27%);
-        opacity: 0.9;
-    }
-    
-    .buy__container {
-        width: 75%;
-    }
+.verticalBanner {
+    max-width: 350px;
+    height: auto;
+    margin: 5px 0 5px 5px;  
+    object-fit: cover; 
+    filter: grayscale(27%);
+    opacity: 0.9;
+}
+
+.verticalAd__text {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.buy__container {
+    width: 75%;
+}
 
 
 
