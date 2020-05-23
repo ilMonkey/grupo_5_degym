@@ -724,11 +724,14 @@ width: 40%;
     opacity: 0.9;
 }
 
-.verticalAd__text {
+.verticalAd__container p {
     display: block;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    right: 3%;
+    top: 54%;
+    font-size: 3rem;
+    color: white;
+    font-weight: 700;
     transform: translate(-50%, -50%);
 }
 
