@@ -6,6 +6,7 @@
 *{
     box-sizing: border-box;
 }
+
 /* ---------------------------------------NAV BAR------------------------------------------- */
 .nav-header {
     position: sticky; 
@@ -171,20 +172,22 @@ width: 40%;
     border-color: #FF710F;
 }
 
-/* -----------------------------------TROLLEY-SUBHEADER-BANNER----------------------------------- */
+/* -----------------------------------TROLLEY-PAGE------------------------- */
+
+/* TROLLEY-SUBHEADER-BANNER */
 
 .bannerTrolley__container-adImgBox img {
     width: 100%;
     height: auto;
 }
 
-
-/* -----------------------------------TROLLEY------------------------------------ */
+/* TROLLEY BODY */
 
 .bodyTrolley {
     display: flex;
     flex-direction: column;
     padding: 0 10px;
+    background-color: whitesmoke;
 }
 
 .bodyTrolley h2 {
@@ -192,6 +195,21 @@ width: 40%;
     font-size: 1.4em;
     color: #FF710F;
 }
+
+
+/* VERTICAL BANNER */
+
+.verticalAd__container {
+ display: none; 
+}
+
+
+/* BUY ELEMENTS IN TROLLEY BODY */
+.buy__container {
+    display: flex;
+    flex-direction: column;
+}
+
 
 /* PRODUCT */
 .gymLesson__container-elements {
@@ -214,6 +232,7 @@ width: 40%;
 .gymLesson__container-elements-image img {
     width: 90%;
     height: auto;
+    max-width: 480px;
 }
 
 .gymLesson__container-elements-textbox h3 {
@@ -268,6 +287,7 @@ width: 40%;
 
 .subscription__container img {
     width: 100%;
+    max-width: 480px;
     height: auto;
     -webkit-box-shadow:0px 0px 16px 0px #929292 ;
     -moz-box-shadow:0px 0px 16px 0px #929292 ;
@@ -331,8 +351,16 @@ width: 40%;
     transform: translate(-50%, -50%);
 }
 
+/* SECOND TROLLEY BANNER */
 
-/* ----- Register and Login Page----- */
+.bannerTrolleyTwo__container-adImg img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+/* ----- Register and Login Page--------------------------------------------------------------------------------------------- */
 .container__register--box{
     background-color: #263238;
     padding: 13% 0%;
@@ -456,8 +484,6 @@ width: 40%;
 
 }
 
-
-
 .footer-logo {
     width: 100PX;
 }
@@ -513,8 +539,8 @@ width: 40%;
     padding: 10px;
 }
 
-/*====== Media-Queries ======*/
-
+/*============================== Media-Queries ============================*/
+/* ------------------------------------------------------------------------*/
 /* TABLET */
 @media (min-width: 481px) {
     /* MQ Banner and Carousel - Home*/
@@ -552,7 +578,45 @@ width: 40%;
     .container__register--data-info{
         font-size: 1em
     }
-    /* End MQ Register Page */
+
+/* -----------TROLLEY-MQ-MIN 481px-------------- */
+
+
+
+/* PRODUCT */
+.gymLesson__container-elements {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.gymLesson__container-elements-imagebox {
+    width: 40%;
+}
+
+.gymLesson__container-elements-textbox {
+    width: 45%;
+}
+
+/* SUSCRIPTION */
+
+
+.subscriptionPass__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.monthPass__container {
+    width: 49%;
+}
+
+.anualPass__container {
+    width: 49%;
+}
+
+
+/* End MQ Register Page */
 }
 /* ENDA TABLET */
 
@@ -593,7 +657,32 @@ width: 40%;
     }
     .container__register--data-info{
         font-size: 1.2em
-    }}
+    }
+
+/* -----------TROLLEY-MQ-MIN 769px-------------- */
+    .bodyTrolley {
+        flex-direction: row-reverse;
+    }
+
+    .verticalAd__container {
+        display: contents;
+        width:20%;
+
+    }   
+    .verticalBanner {
+        max-width: 250px;
+        height: auto;
+        margin: 5px 0;    
+    }
+    
+    .buy__container {
+        width: 75%;
+    }
+
+
+
+
+}
     /* End MQ Register Page */
 
 /* END DESKTOP */
