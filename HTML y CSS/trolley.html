@@ -10,7 +10,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 	<!-- Bootstrap Grid Stylesheet -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">	<!-- Own Stylesheet -->
-    <link rel="stylesheet" href="./trolley.css">
+    <link rel="stylesheet" href="./home.css">
 </head>
 <!-- --------------------------------------------HEADER/NAV----------------------- -->
 <body>
@@ -39,10 +39,10 @@
     </header>
 <!-- -------------------------------------------FIRST-BANNER--------------------- -->
 <div class= "bannerTrolley__container-adImgBox">
-    <img class= "bannerTrolley__container-adImg" src="#" alt="foto de una marca de deportes.jpeg">
+    <img class= "bannerTrolley__container-adImg" src="./images/trolley_banner3.jpeg" alt="foto de una marca de deportes.jpeg">
 </div>
 <!-- -------------------------------------------ORDER-TROLLEY--------------------- -->
-
+<section class= "bodyTrolley">
 <!-- PRIMERA SECCION CON CLASES A COMPRAR -->
 <section class="buyTrolley__container">
     <header class="buyTrolley__container-headertextbox">
@@ -51,11 +51,11 @@
     <!-- CLASE -->
     <article class ="gymLesson__container">
         <div class="gymLesson__container-elements">
-            <div class="gymLesson__container-elements-image">
-                <img class= "lesson-image" src="images/dagym/low-cost-gym-transparent.png" alt="gym-logo">
+            <div class="gymLesson__container-elements-imagebox">
+                <img class= "lesson-image" src="./images/yoga.webp" alt="Clases de Yoga">
             </div>
             <div class="gymLesson__container-elements-textbox">
-            <h3>Pase mensual a YOGA $XXXX</h3>
+            <h3>Pase mensual a YOGA<br>$X.XXXX.-</h3>
             <p>Las clases de Hata Yoga están orientadas a personas de cualquier edad que esperen practicar un deporte fresco y desafiante. Estamos convencido que vas a disfrutar de tus clases. Traé a un amigo y abona el 50% la siguiente vez!</p>
             </div>
         </div>
@@ -64,40 +64,40 @@
     <div class="payBox__container">
         <div class="payBox__container-textBox">
             <p>Subtotal</p>
-            <p2>$x.XXX</p2>
+            <p>$XXX</p>
+            <p2>TOTAL:<br>$x.XXX</p2>
         </div>
         <div class="payBox__container-btn">
-            <button class="btn__buy">Comprar</button>
+            <button class="btn btn-success">Comprar</button>
         </div>
     </div>
 
 </section>
-<!-- SEGUNDA SECCION CON PLANES DE SUSCRIPCION MENSUAL/SEMESTRAL -->
+<!-- SEGUNDA SECCION CON PLANES DE SUSCRIPCION MENSUAL/ANUAL -->
 <section class="subscription__container">
     <header class="suscription__container-headertextbox">
-        <h2>O también podes optar por nuestros ABONOS.</h2>
+        <h2>¿Pensaste en optar por nuestros ABONOS fijos?</h2>
     </header>
     <!-- SUSCRIPCION MENSUAL -->
     <article class ="monthPass__container">
-        <div class="monthPass__container-elements">
-            <img class= "month-image" src="images/dagym/low-cost-gym-transparent.png" alt="gym-logo">
+        <a class="monthPass__container-elements" href="#">
+            <img class= "month-image" src="./images/monthlySubGirl.png" alt="suscripcion por un mes">
             <div class="monthPass__container-elements-textbox">
-                <h3>Pase libre mensual $XXXX</h3>
+                <p>Pase libre mensual<br>$XXXX</p>
             </div>
-        </div>
+        </a>
     </article>
-    <!-- SUSCRIPCION SEMESTRAL -->
-    <article class ="semesterPass__container">
-        <div class="semesterPass__container-elements">
-            <img class= "semester-image" src="images/dagym/low-cost-gym-transparent.png" alt="gym-logo">
-            <div class="semesterPass__container-elements-textbox">
-                <h3>Pase libre semestral $XXXX</h3>
+    <!-- SUSCRIPCION ANUAL -->
+    <article class ="anualPass__container">
+        <a class="anualPass__container-elements" href="#">
+            <img class= "anual-image" src="./images/monthlySubBoy.png" alt="suscripcion por un anio">
+            <div class="anualPass__container-elements-textbox">
+                <p>Pase libre anual<br>$XXXX</p>
             </div>
-        </div>
+        </a>
     </article>
-
 </section>
-
+</section>
 <!-- -------------------------------------------SECOND-BANNER--------------------- -->
 
 

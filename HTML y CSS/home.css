@@ -1,22 +1,17 @@
-<<<<<<< HEAD
 * {
     list-style: none;
 }
 
-=======
 
 *{
     box-sizing: border-box;
 }
->>>>>>> d23c051e287895b0a05b26e6e63bee2e30f982d3
 /* ---------------------------------------NAV BAR------------------------------------------- */
 .nav-header {
     position: sticky; 
     top: 0;
     z-index: 99;
 }
-
-
 
 .top__container-fixedtop {
     background-color: black;
@@ -176,20 +171,166 @@ width: 40%;
     border-color: #FF710F;
 }
 
+/* -----------------------------------TROLLEY-SUBHEADER-BANNER----------------------------------- */
 
-.bannerTrolley__container-adImg { 
-    background-color: violet;
-    height: 80px;
+.bannerTrolley__container-adImgBox img {
+    width: 100%;
+    height: auto;
 }
-
-.bannerTrolleyTwo__container-adImg {
-    background-color: rgb(48, 45, 90);
-    height: 80px;
-}
-
 
 
 /* -----------------------------------TROLLEY------------------------------------ */
+
+.bodyTrolley {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+}
+
+.bodyTrolley h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.4em;
+    color: #FF710F;
+}
+
+/* PRODUCT */
+.gymLesson__container-elements {
+    display: flex;
+    flex-direction: column;
+}
+
+.gymLesson__container-elements-imagebox {
+    display: flex;
+    justify-content: center;
+    border-radius:11px;
+    -moz-border-radius:11px;
+    -webkit-border-radius:11px;
+    -webkit-box-shadow:0px 0px 16px 0px #929292 ;
+    -moz-box-shadow:0px 0px 16px 0px #929292 ;
+    box-shadow:0px 0px 16px 0px #929292 ;
+    overflow: hidden;
+}
+
+.gymLesson__container-elements-image img {
+    width: 90%;
+    height: auto;
+}
+
+.gymLesson__container-elements-textbox h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 0.9em;
+    color: rgb(58, 58, 58);
+    text-align: center;
+    margin: 15px 0;
+}
+
+.gymLesson__container-elements p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 0.9em;
+    color: rgb(17, 17, 17);
+    text-align: justify;
+    margin: 0;
+}
+
+/* PAYBOX */
+.payBox__container {
+    padding: 15px 0;
+}
+
+.payBox__container-textBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.payBox__container-textBox p {
+    margin:0;
+}
+
+.payBox__container-textBox p2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.3em;
+    color: rgb(36, 105, 19);
+    text-align: center;
+    font-weight: 900;
+}
+
+.payBox__container-btn {
+    display: flex;
+    justify-content: center;
+}
+
+/* SUSCRIPTION */
+
+.subscription__container {
+    width: 100%;
+}
+
+.subscription__container img {
+    width: 100%;
+    height: auto;
+    -webkit-box-shadow:0px 0px 16px 0px #929292 ;
+    -moz-box-shadow:0px 0px 16px 0px #929292 ;
+    box-shadow:0px 0px 16px 0px #929292 ;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+}
+
+.subscription__container p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.4em;
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+    text-transform: capitalize;
+}
+
+.monthPass__container {
+    margin: 5px 0;
+}
+
+.monthPass__container-elements {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.monthPass__container-elements :hover {
+    opacity: 0.5;
+}
+
+.monthPass__container-elements-textbox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.anualPass__container {
+    margin: 5px 0;
+}
+
+.anualPass__container-elements {
+    width: 100%;
+    position: relative;
+    text-align: center;
+
+}
+
+
+.anualPass__container-elements :hover {
+    opacity: 0.5;
+}
+
+
+.anualPass__container-elements-textbox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 
 /* ----- Register and Login Page----- */
 .container__register--box{
@@ -452,7 +593,7 @@ width: 40%;
     }
     .container__register--data-info{
         font-size: 1.2em
-    }
+    }}
     /* End MQ Register Page */
 
 /* END DESKTOP */
