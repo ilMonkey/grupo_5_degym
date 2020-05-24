@@ -436,6 +436,7 @@ width: 30%;
     background-color: #FF710F;
     padding: 3% 8%;
     margin: 0;
+    border-color: #FF710F;
 }
 .container__register--data-info{
     font-size: 4vw;
