@@ -355,10 +355,6 @@ width: 30%;
   z-index:100;
 }
 
-.whatsapp :hover {
-    color:#FF710F;
-}
-
 .whatsapp a:hover {
     color:#FF710F;  
 }
@@ -376,7 +372,7 @@ fab fa-whatsapp my-float :hover {
 /* ///------------------------------CONTACT--------------------------------- */
 
 .contact__container {
-    background-color: whitesmoke;
+    background-color: white;
     padding: 8px;
     text-align: center;
 }
@@ -396,17 +392,16 @@ fab fa-whatsapp my-float :hover {
 }
 .contact__container-form {
     width: 100%;
-    background-color: whitesmoke;
+    background-color: white;
 }
 
 .contact__container-form h2{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.6em;
     color: #FF710F;
-    
 }
 .contact__container-form label{
-    font-size: 1.6em;
+    font-size: 5vw;
 }
 .contact__container-form input{
     display: block;
@@ -447,6 +442,15 @@ fab fa-whatsapp my-float :hover {
     color: whitesmoke;
     background-color: grey;
 }
+.container__home--contact button{
+    background-color: #FF710F;
+    padding: 2% 5%;
+    margin-top: 2%;
+    margin-bottom: 4%;
+    font-weight: 700;
+    color: white;
+    border-color: #FF710F;
+}
 
 .footer__container-col2 {
     width: 100%;
@@ -485,6 +489,18 @@ fab fa-whatsapp my-float :hover {
 
 .footer__container-col3-contact-title {
     padding: 10px;
+}
+.footer__container-copyright{
+    background-color: #1b1b1b;
+    border-top: white 1px solid;
+}
+.footer__container-copyright-link{
+    text-align: center;
+    color: white;
+}
+.footer__container-copyright-textbox{
+    color: white;
+    text-align: center;
 }
 
 /*============================== Media-Queries ============================*/
@@ -591,6 +607,14 @@ fab fa-whatsapp my-float :hover {
     padding: 2%;
 }
 
+/* Home footer */
+.contact__container-form {
+    padding: 7% 2%;
+}
+.contact__container-form label{
+    font-size: 3vw;
+    font-weight: 500;
+}
 /* End MQ 481*/
 }
 /* END TABLET */
@@ -637,12 +661,12 @@ fab fa-whatsapp my-float :hover {
     background-image: url(./images/texturNegraPrueba2.jpg);
 } 
 .carousel-caption h1{
-    font-size: 8vh;
+    font-size: 7vh;
     margin-bottom: 32%;
     margin-top: 22%;
 }
 .carousel-caption h2{
-    font-size: 8vh;
+    font-size: 7vh;
     margin-bottom: 32%;
     margin-top: 22%;
 }
@@ -728,7 +752,7 @@ fab fa-whatsapp my-float :hover {
 }
 
 .contact__container-map {
-    display: inline;
+    display: block;
     width: 60%;
     padding: 2%;
 }
@@ -737,9 +761,14 @@ fab fa-whatsapp my-float :hover {
     width: 40%;
     padding: 2%;
 }
-
-
-
+/* Home Footer */
+.contact__container-form {
+    padding: 1% 2%;
+}
+.contact__container-form label{
+    font-size: 2vw;
+    font-weight: 500;
+}
 
 }
     /* End MQ Register Page */
