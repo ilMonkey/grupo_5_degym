@@ -1,9 +1,5 @@
 * {
     list-style: none;
-}
-
-
-*{
     box-sizing: border-box;
 }
 
@@ -36,133 +32,12 @@
     padding: 5px;
 }
 
-/* 
-.collapse navbar-collapse {
-    z-index: 99;
-}
-
-.top__container-fixedtop {
-    background-color: black;
-    position: sticky;
-}
-
-.top__container-elements {
-    display: flex;
-    justify-content: space-between;
-    align-items: first baseline;
-    height: 76px;
-    max-height: 75px;
-}
-
-
-.top__container-logobox {
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    max-width: 350px;
-    width: 39%;
-}
-
-.header-logo {
-    max-width: 150px;
-    height: auto;
-    padding: 5px;
-}
-
-.top__container-navbar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: black;
-    width: 225px;
-    position: relative;
-    bottom: 20px;
-}
-
-.top__container-navbar label {
-    text-align: center;
-    color: white;
-    width: 15%;
-    cursor: pointer;
-    padding: 10px;
-    margin-bottom: 8px;
-}
-
-.fa-bars {
-    font-size: 25px;
-}
-
-input#menu {
-    display: none;
-}
-
-.top__container-navbar-menucontent {
-    max-height: 0;
-    overflow: hidden;
-}
-
-input:checked ~ .top__container-navbar-menucontent {
-    max-height: 100%;
-    width: 100%;
-}
-
-.navbar__list {
-    display: inline;
-    flex-direction: column;    
-    margin: 0;
-    padding: 0;
-    border-color: transparent;
-    background-color: transparent;
-}
-
-.navbar__list li {
-    display: block;
-}
-
-.navbar__list a {
-    padding: 9px 15px 8px;
-    display: block;
-    font-size: max(3vw, 14px); 
-    font-weight: 600;   
-    border-bottom: solid 1px #e0e0e0;
-    line-height: normal;
-    font-family: sans-serif;
-    color: whitesmoke;
-}
-
-.inicio__li {
-    padding-top: 10;
-}
-
-.navbar__list a:link {
-color: white;
-text-decoration: none;
-}
-
-.navbar__list a:visited {
-    color: whitesmoke
-}
-
-.navbar__list a:hover {
-    color: rgb(185, 185, 185);
-    text-decoration: none;
-} */
-
-/* .navbar__list ul li a,
-.navbar__list ul li a:after,
-.navbar__list ul li a:before {
-  transition: all .5s;
-} */
-
 /* ------HOME CAROUSEL------ */
 .carousel-caption h1{
     color: #FF710F;
     text-align: center;
     font-size: 6vw;
     font-weight: bolder;
-}
-.carousel-caption h5{
-    font-size: 2.5vh;
 }
 .carousel-caption h2{
     color: #FF710F;
@@ -173,31 +48,31 @@ text-decoration: none;
 /* ------END HOME CAROUSEL------ */
 
 /* ///------------------------------BANNER--------------------------------- */
-.banner__container {
-    background-image: url(./images/texturNegraPrueba3.jpg);
+.banner__home {
+    background-image: url(./images/texturNegraPrueba1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    text-align: center
+    text-align: center;
 }
-.banner__container-elements-background img{
-width: 40%;
+.banner__home-elements-background img{
+width: 30%;
 }
-.banner__container-elements-textbox h2{
+.banner__home-elements-textbox h2{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.8em;
+    font-size: 6vw;
     color: #FF710F;
     
 }
-.banner__container-elements-textbox h3{
+.banner__home-elements-textbox h3{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.2em;
+    font-size: 5vw;
     color: white;
 }
-.container__register--send button{
+.container__home--send button{
     background-color: #FF710F;
     padding: 2% 5%;
-    margin-bottom: 3%;
+    margin-bottom: 4%;
     font-weight: 700;
     color: white;
     border-color: #FF710F;
@@ -451,6 +326,7 @@ width: 40%;
     background-color: #FF710F;
     padding: 3% 8%;
     margin: 0;
+    border-color: #FF710F;
 }
 .container__register--data-info{
     font-size: 4vw;
@@ -465,8 +341,24 @@ width: 40%;
     text-align: center;
 }
 /* ----- End Register and Login Page ----- */
+.whatsapp{
+    position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
 
-
+.my-float{
+	margin-top:16px;
+}
 
 
 /* ///------------------------------CONTACT--------------------------------- */
@@ -474,11 +366,11 @@ width: 40%;
 .contact__container {
     background-color: whitesmoke;
     padding: 8px;
+    text-align: center;
 }
 
 .contact__container-map {
-    width: 100%;
-    padding: 2%;
+    display: none;
 }
 
 .contact__container-map h2{
@@ -560,8 +452,6 @@ width: 40%;
 
 .footer__container-col2-branches-options li{
     padding: 4px;
-
- 
 }
 
 .footer__container-col2-branches-options li a{
@@ -603,6 +493,9 @@ width: 40%;
     font-size: 5vh;
     margin-bottom: 18%;
     margin-top: 22%;
+}
+.banner__home-elements-background img {
+    width: 20%;
 }
 /* MQ End Banner and Carousel - Home */
 /* MQ Register Page */
@@ -661,14 +554,32 @@ width: 40%;
     width: 49%;
 }
 
+.footer__container {
+    display: flex;
+}
+
+.footer__container-col1 {
+    width: 33%;
+    padding: 2%;
+}
+
+.footer__container-col2 {
+    width: 33%;
+    padding: 2%;
+}
+
+.footer__container-col3 {
+    width: 33%;
+    padding: 2%;
+}
 
 /* End MQ 481*/
 }
-/* ENDA TABLET */
+/* END TABLET */
 
 /* DESKTOP */
-@media (min-width: 769px) {
 
+@media (min-width: 769px) {
 
 /* -----------------NAV BAR--------------- */
 
@@ -708,16 +619,28 @@ width: 40%;
     background-image: url(./images/texturNegraPrueba2.jpg);
 } 
 .carousel-caption h1{
-    font-size: 10vh;
-    margin-bottom: 18%;
+    font-size: 8vh;
+    margin-bottom: 32%;
     margin-top: 22%;
 }
 .carousel-caption h2{
-    font-size: 10vh;
-    margin-bottom: 18%;
+    font-size: 8vh;
+    margin-bottom: 32%;
     margin-top: 22%;
 }
-
+.banner__home-elements-background img {
+    width: 13%;
+}
+.banner__home-elements-textbox h2 {
+    font-size: 5vw;
+}
+.banner__home-elements-textbox h3 {
+    font-size: 4vw;
+}
+.container__home--send button{
+    padding: 1% 4%;
+    margin-bottom: 2%;
+}
 /* MQ End Banner and Carousel - Home */
 /* MQ Register Page */
 .container__register--title {
@@ -780,6 +703,21 @@ width: 40%;
 
 .buy__container {
     width: 75%;
+}
+
+.contact__container {
+    display: flex;
+}
+
+.contact__container-map {
+    display: inline;
+    width: 60%;
+    padding: 2%;
+}
+
+.contact__container-form {
+    width: 40%;
+    padding: 2%;
 }
 
 
