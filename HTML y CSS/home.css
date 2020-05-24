@@ -480,8 +480,7 @@ width: 30%;
 }
 
 .contact__container-map {
-    width: 73%;
-    padding: 2%;
+    display: none;
 }
 
 .contact__container-map h2{
@@ -667,6 +666,24 @@ width: 30%;
     width: 49%;
 }
 
+.footer__container {
+    display: flex;
+}
+
+.footer__container-col1 {
+    width: 33%;
+    padding: 2%;
+}
+
+.footer__container-col2 {
+    width: 33%;
+    padding: 2%;
+}
+
+.footer__container-col3 {
+    width: 33%;
+    padding: 2%;
+}
 
 /* End MQ 481*/
 }
@@ -798,6 +815,21 @@ width: 30%;
 
 .buy__container {
     width: 75%;
+}
+
+.contact__container {
+    display: flex;
+}
+
+.contact__container-map {
+    display: inline;
+    width: 60%;
+    padding: 2%;
+}
+
+.contact__container-form {
+    width: 40%;
+    padding: 2%;
 }
 
 
