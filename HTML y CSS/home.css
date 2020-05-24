@@ -86,7 +86,7 @@ width: 30%;
     display: flex;
     flex-direction: column;
     padding: 0 10px;
-    background-color: #3c4549;
+    background-color: #1b1b1b;
     justify-content: space-evenly;
 }
 
@@ -95,6 +95,7 @@ width: 30%;
     font-size: 1.4em;
     color: #FF710F;
     text-align: center;
+    padding: 10px;
 }
 
 
@@ -117,6 +118,10 @@ width: 30%;
 .gymLesson__container-elements {
     display: flex;
     flex-direction: column;
+    background-color: whitesmoke;
+    padding: 15px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 .gymLesson__container-elements-imagebox {
@@ -140,36 +145,38 @@ width: 30%;
 .gymLesson__container-elements-textbox h3 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 0.9em;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     text-align: center;
     margin: 15px 0;
-    background-color: #3c4549;
 }
 
 .gymLesson__container-elements p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 0.9em;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     text-align: justify;
     margin: 0;
-    background-color: #3c4549;
 }
 
 /* PAYBOX */
 .payBox__container {
     padding: 15px 0;
+    background-color: whitesmoke;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 .payBox__container-textBox {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 10px;
 }
 
 .payBox__container-textBox p {
-    background-color: #3c4549;
-    color: white;
+    color: black;
     margin:0;
+    text-align: right;
 }
 
 .payBox__container-textBox p2 {
@@ -556,12 +563,18 @@ fab fa-whatsapp my-float :hover {
 }
 
 .gymLesson__container-elements-imagebox {
-    width: 40%;
+    width: 48%;
 }
 
 .gymLesson__container-elements-textbox {
     width: 45%;
 }
+
+.payBox__container {
+    margin-bottom: 10px;
+}
+
+
 
 /* SUSCRIPTION */
 
@@ -713,7 +726,7 @@ fab fa-whatsapp my-float :hover {
     display: block;
     max-width: 350px;
     height: auto;
-    margin: 5px 0 5px 5px;  
+    margin: 0 0 5px 5px;  
     object-fit: cover; 
     filter: grayscale(27%);
     opacity: 0.8;
