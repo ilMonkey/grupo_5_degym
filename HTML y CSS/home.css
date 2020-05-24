@@ -319,6 +319,11 @@ width: 30%;
     padding: 3% 8%;
     margin: 0;
     border-color: #FF710F;
+    color: white;
+    font-weight: 500;
+}
+.container__register--data input:hover{
+    border-color: yellow;
 }
 .container__register--data-info{
     font-size: 4vw;
