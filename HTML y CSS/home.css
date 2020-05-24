@@ -484,8 +484,8 @@ fab fa-whatsapp my-float :hover {
     padding: 10px;
 }
 .footer__container-copyright{
-    background-color: #1b1b1b
-    ;
+    background-color: #1b1b1b;
+    border-top: white 1px solid;
 }
 .footer__container-copyright-link{
     text-align: center;
@@ -739,7 +739,7 @@ fab fa-whatsapp my-float :hover {
 }
 
 .contact__container-map {
-    display: inline;
+    display: block;
     width: 60%;
     padding: 2%;
 }
