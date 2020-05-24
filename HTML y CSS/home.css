@@ -18,14 +18,6 @@
     color: white;
 }
 
-/* .bg-light  {
-    background-color: black !important;
-} */
-
-/* .navbar-toggler-icon {
-    color: whitesmoke;
-} */
-
 .header-logo {
     max-width: 150px;
     height: auto;
@@ -356,6 +348,19 @@ width: 30%;
   z-index:100;
 }
 
+.whatsapp :hover {
+    color:#FF710F;
+}
+
+.whatsapp a:hover {
+    color:#FF710F;  
+}
+
+fab fa-whatsapp my-float :hover {
+    color:#FF710F;  
+}
+
+
 .my-float{
 	margin-top:16px;
 }
@@ -406,7 +411,7 @@ width: 30%;
 /* ///------------------------------FOOTER--------------------------------- */
 
 .footer__container {
-    background-color: black;
+    background-color: #1b1b1b;
     color: grey;
     text-align: center;
 }
