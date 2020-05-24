@@ -9,6 +9,12 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Scripts de Boostrap DON´T TOUCH-->
+    <script src="./bootstrap/js/jquery.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="./bootstrap/js/popper.js"></script>
+
+    <!-- End Scripts de Boostrap -->
 	<!-- BOOTSTRAP LOCAL -->
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">	
     <!-- Own Stylesheet -->
@@ -17,7 +23,32 @@
 
 <body>
     <header class="nav-header">
-        <nav class="top__container-fixedtop">
+        <nav class="navbar navbar-light navbar-expand-lg navbar-dark bg-dark" style="background-color: #000000 !important;">
+            <a class="navbar-brand" href="#"><img class= "header-logo" src="low-cost-gym-transparent.png" alt="gym-logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">INICIO<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">ACTIVIDADES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">SUMATE YA!</a>
+                </li>
+                     </a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CONTACTO</a>
+                </li>
+                    </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        <!-- <nav class="top__container-fixedtop">
             <div class="top__container-elements">
                 <div class="top__container-logobox">
                     <img class= "header-logo" src="low-cost-gym-transparent.png" alt="gym-logo"> 
@@ -28,7 +59,7 @@
                     <label for="menu"><i class="fas fa-bars"></i></label>
                     <div class="top__container-navbar-menucontent">
                         <ul class="navbar__list">
-                            <li><a href="#">INICIO</a></li>
+                            <li><a class="inicio__li" href="#">INICIO</a></li>
                             <li><a href="#">ACTIVIDADES</a></li>
                             <li><a href="#">SUMATE YA!</a></li>
                             <li><a href="#">CONTACTO</a></li>
@@ -37,7 +68,7 @@
                 </div>
             
             </div>
-        </nav>
+        </nav> -->
     </header>
     <!-- Carousel Dont Change the class!!! vienen asi de bootstrap y no se pueden cambiar-->
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -117,7 +148,7 @@
                 <label for="">Telefono</label>
                 <input class="form-control input-sm" type="text" name="telefono" placeholder="011 1111 1111">
                 <label for="">Mensaje</label>
-                <textarea class="form-control textarea-sm" rows="10" name="mensaje" placeholder="Dejanos tu mensaje"></textarea>
+                <textarea class="form-control textarea-sm" rows="2" name="mensaje" placeholder="Dejanos tu mensaje"></textarea>
                 <button type="submit" name="enviar"  >Enviar</button>
 
             </form>
@@ -174,11 +205,6 @@
 
     </div>
 
-<!-- Scripts de Boostrap DON´T TOUCH-->
-<script src="./bootstrap/js/bootstrap.min.js"></script>
-<script src="./bootstrap/js/popper.js"></script>
-<script src="./bootstrap/js/jquery.js"></script>
-<!-- End Scripts de Boostrap -->
 
 </body>
 </html>

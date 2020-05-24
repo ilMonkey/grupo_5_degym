@@ -10,6 +10,25 @@
     z-index: 99;
 }
 
+/* .bg-light  {
+    background-color: black !important;
+} */
+
+/* .navbar-toggler-icon {
+    color: whitesmoke;
+} */
+
+.header-logo {
+    max-width: 150px;
+    height: auto;
+    padding: 5px;
+}
+
+/* 
+.collapse navbar-collapse {
+    z-index: 99;
+}
+
 .top__container-fixedtop {
     background-color: black;
     position: sticky;
@@ -54,7 +73,7 @@
     width: 15%;
     cursor: pointer;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .fa-bars {
@@ -99,6 +118,10 @@ input:checked ~ .top__container-navbar-menucontent {
     color: whitesmoke;
 }
 
+.inicio__li {
+    padding-top: 10;
+}
+
 .navbar__list a:link {
 color: white;
 text-decoration: none;
@@ -111,7 +134,7 @@ text-decoration: none;
 .navbar__list a:hover {
     color: rgb(185, 185, 185);
     text-decoration: none;
-}
+} */
 
 /* .navbar__list ul li a,
 .navbar__list ul li a:after,
@@ -438,6 +461,7 @@ width: 40%;
 
 .contact__container {
     background-color: whitesmoke;
+    padding: 8px;
 }
 
 .contact__container-map {
@@ -480,7 +504,7 @@ width: 40%;
 .footer__container {
     background-color: black;
     color: grey;
-
+    text-align: center;
 }
 
 .footer__container-col1{
@@ -516,6 +540,11 @@ width: 40%;
 .footer__container-col2-branches {
     padding: 10px;
 }
+
+.footer__container-col2-branches-options {
+    padding: 0;
+}
+
 
 .footer__container-col2-branches-options li{
     padding: 4px;
@@ -712,19 +741,27 @@ width: 40%;
 } 
 
 .verticalBanner {
+    display: block;
     max-width: 350px;
     height: auto;
     margin: 5px 0 5px 5px;  
     object-fit: cover; 
     filter: grayscale(27%);
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
-.verticalAd__text {
+.verticalBanner:hover {
+    opacity: 0.5;
+}
+
+.verticalAd__container p {
     display: block;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    right: 3%;
+    top: 54%;
+    font-size: 3rem;
+    color: white;
+    font-weight: 700;
     transform: translate(-50%, -50%);
 }
 
