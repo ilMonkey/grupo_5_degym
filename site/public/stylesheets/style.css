@@ -41,7 +41,7 @@
 
 /* ///------------------------------BANNER--------------------------------- */
 .banner__home {
-    background-image: url(./images/texturNegraPrueba1.jpg);
+    background-image: url(../images/banners/texturNegraPrueba1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
