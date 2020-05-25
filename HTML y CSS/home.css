@@ -881,16 +881,14 @@ fab fa-whatsapp my-float :hover {
 
 
 
-/* -----------------------------------/* Home Footer */----------------------- */
+/* -----------------------------------/* Home Footer----------------------- */
 .contact__container-form {
     padding: 1% 2%;
 }
-.contact__container-form label{
+.contact__container-form label {
     font-size: 2vw;
     font-weight: 500;
 }
-
 }
-    /* End MQ Register Page */
-
-/* END DESKTOP */
+/* End MQ Register Page 
+ END DESKTOP   */
