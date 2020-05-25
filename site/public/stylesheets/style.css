@@ -1,8 +1,990 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+* {
+    list-style: none;
+    box-sizing: border-box;
 }
 
-a {
-  color: #00B7FF;
+/* ---------------------------------------NAV BAR------------------------------------------- */
+.nav-header {
+    position: sticky; 
+    top: 0;
+    z-index: 99;
 }
+
+.navbar-nav {
+    text-align: end;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+}
+
+.header-logo {
+    max-width: 150px;
+    height: auto;
+    padding: 5px;
+}
+
+/* ------HOME CAROUSEL------ */
+.carousel-caption h1{
+    color: #FF710F;
+    text-align: center;
+    font-size: 6vw;
+    font-weight: bolder;
+}
+.carousel-caption h2{
+    color: #FF710F;
+    text-align: center;
+    font-size: 6vw;
+    font-weight: bolder;
+}
+/* ------END HOME CAROUSEL------ */
+
+/* ///------------------------------BANNER--------------------------------- */
+.banner__home {
+    background-image: url(./images/texturNegraPrueba1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+}
+.banner__home-elements-background img{
+width: 30%;
+}
+.banner__home-elements-textbox h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 6vw;
+    color: #FF710F;
+    
+}
+.banner__home-elements-textbox h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 5vw;
+    color: white;
+}
+.container__home--send button{
+    background-color: #FF710F;
+    padding: 2% 5%;
+    margin-bottom: 4%;
+    font-weight: 700;
+    color: white;
+    border-color: #FF710F;
+}
+
+/* -----------------------------------TROLLEY-PAGE------------------------- */
+
+/* TROLLEY-SUBHEADER-BANNER */
+
+.bannerTrolley__container-adImgBox img {
+    width: 100%;
+    height: auto;
+    opacity: 0.9;
+}
+
+/* TROLLEY BODY */
+
+.bodyTrolley {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    background-color: #1b1b1b;
+    justify-content: space-evenly;
+}
+
+.bodyTrolley h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.4em;
+    color: #FF710F;
+    text-align: center;
+    padding: 10px;
+}
+
+
+/* VERTICAL BANNER */
+
+.verticalAd__container {
+ display: none; 
+}
+
+
+/* BUY ELEMENTS IN TROLLEY BODY */
+.buy__container {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+
+/* PRODUCT */
+.gymLesson__container-elements {
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    padding: 15px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.gymLesson__container-elements-imagebox {
+    display: flex;
+    justify-content: center;
+    border-radius:11px;
+    -moz-border-radius:11px;
+    -webkit-border-radius:11px;
+    -webkit-box-shadow:0px 0px 16px 0px #929292 ;
+    -moz-box-shadow:0px 0px 16px 0px #929292 ;
+    box-shadow:0px 0px 16px 0px #929292 ;
+    overflow: hidden;
+}
+
+.gymLesson__container-elements-image img {
+    width: 90%;
+    height: auto;
+    max-width: 480px;
+}
+
+.gymLesson__container-elements-textbox h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 0.9em;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin: 15px 0;
+}
+
+.gymLesson__container-elements p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 0.9em;
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    margin: 0;
+}
+.lesson-image{
+    width: 100%;
+}
+
+/* PAYBOX */
+.payBox__container {
+    padding: 15px 0;
+    background-color: whitesmoke;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.payBox__container-textBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+.payBox__container-textBox p {
+    color: black;
+    margin:0;
+    text-align: right;
+}
+
+.payBox__container-textBox p2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.3em;
+    color: rgb(74, 156, 53);
+    text-align: center;
+    font-weight: 900;
+}
+
+.payBox__container-btn {
+    display: flex;
+    justify-content: center;
+}
+
+/* SUSCRIPTION */
+
+.subscription__container {
+    width: 100%;
+}
+
+.subscription__container img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    -webkit-box-shadow:0px 0px 16px 0px #929292 ;
+    -moz-box-shadow:0px 0px 16px 0px #929292 ;
+    box-shadow:0px 0px 16px 0px #929292 ;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+}
+
+.subscription__container p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.4em;
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+    text-transform: capitalize;
+}
+
+.monthPass__container {
+    margin: 5px 0;
+}
+
+.monthPass__container-elements {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.monthPass__container-elements :hover {
+    opacity: 0.5;
+}
+
+.monthPass__container-elements-textbox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.anualPass__container {
+    margin: 5px 0;
+}
+
+.anualPass__container-elements {
+    width: 100%;
+    position: relative;
+    text-align: center;
+
+}
+
+
+.anualPass__container-elements :hover {
+    opacity: 0.5;
+}
+
+
+.anualPass__container-elements-textbox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* SECOND TROLLEY BANNER */
+
+.bannerTrolleyTwo__container-adImg img {
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+}
+
+
+
+/* ----- Register and Login Page--------------------------------------------------------------------------------------------- */
+.container__register--box{
+    background-color: #263238;
+    padding: 13% 0%;
+}
+.container__register{
+    width: 80%;
+    border: 1px solid #2c3940;
+    margin: 0% 9%;
+    background-color: hsl(203, 17%, 27%);
+    border-radius: 5%;
+}
+.container__register--title{
+    margin: 4% 7% 5% 7%;
+    border-bottom: solid 1px #FF710F;
+}
+.container__register--title h2{
+    color: White;
+    text-align: center;
+    font-size: 8vw;
+}
+.container__register--data{
+    text-align: center;
+    margin: 10% 7%;
+}
+.container__register--data input{
+    outline: none;
+    border: 0;
+    background: border-box;
+    width: 100%;
+    border-bottom: 1px solid #FF710F;
+    margin: 5% 0%;
+}
+.container__register--data input::placeholder{
+  color: white;
+  font-size: 4vw;
+  font-weight: 400;
+}
+.container__register--data-check{
+    display: flex;
+    margin: 4% 30%;
+}
+.container__register--data-check label{
+    font-size: 4vw;
+    margin-bottom: 5%;
+    color: #007bff;
+}
+.container__register--send button{
+    background-color: #FF710F;
+    padding: 3% 8%;
+    margin: 0;
+    border-color: #FF710F;
+    color: white;
+    font-weight: 500;
+}
+.container__register--data input:hover{
+    border-color: yellow;
+}
+.container__register--data-info{
+    font-size: 4vw;
+    margin-top: 6%;
+}
+
+/* ----- Register Product Page--------------------------------------------------------------------------------------------- */
+.container__product--box{
+    background-color: #2c3940;
+    padding: 13% 0%;
+}
+.container__product{
+    width: 80%;
+    border: 1px solid #2c3940;
+    margin: 0% 9%;
+    background-color: #2c3940;
+    border-radius: 5%;
+}
+.container__product--title{
+    margin: 4% 7% 5% 7%;
+    border-bottom: solid 1px #FF710F;
+}
+.container__product--title h2{
+    color: White;
+    text-align: center;
+    font-size: 8vw;
+}
+.container__product--form{
+
+    margin: 10% 7%;
+}
+.container__product--form input{
+    outline: none;
+    border: 0;
+    width: 100%;
+    margin-bottom: 4% ;
+}
+.container__product--form label{
+    color: white;
+    display: block;
+}
+.container__product--form textarea {
+    outline: none;
+    border: 0;
+    width: 100%;
+    margin-bottom: 4% ;
+}
+.container__product--form input::placeholder{
+  color: white;
+  font-size: 4vw;
+  font-weight: 400;
+}
+.container__product--form-check{
+    display: flex;
+    text-align: left;
+    color: #FF710F;
+}
+.container__product--form-check label{
+    font-size: 4vw;
+    margin-bottom: 5%;
+    color: #007bff;
+}
+.container__product--send button{
+    background-color: #FF710F;
+    padding: 3% 8%;
+    margin: 0;
+    border-color: #FF710F;
+    color: white;
+    font-weight: 500;
+}
+.container__product--form input:hover{
+    border-color: yellow;
+}
+.container__product--form-info{
+    font-size: 4vw;
+    margin-top: 6%;
+}
+
+/* ----- End product and Login Page ----- */
+.whatsapp{
+    position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+.whatsapp a:hover {
+    color:#FF710F;  
+}
+
+
+fab fa-whatsapp my-float :hover {
+    color:#FF710F;  
+}
+
+
+.my-float{
+	margin-top:16px;
+}
+
+
+/* ///------------------------------CONTACT--------------------------------- */
+
+.contact__container {
+    background-color: white;
+    padding: 8px;
+    text-align: center;
+}
+
+.contact__container-map {
+    display: none;
+}
+
+.contact__container-map h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.6em;
+    color: #FF710F;
+}
+
+.contact__container-map img{
+    width: 100%;
+}
+.contact__container-form {
+    width: 100%;
+    background-color: white;
+}
+
+.contact__container-form h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.6em;
+    color: #FF710F;
+}
+.contact__container-form label{
+    font-size: 5vw;
+}
+.contact__container-form input{
+    display: block;
+}
+.contact__container-form textarea{
+    display: block;
+}
+
+/* ///------------------------------PRODUCT-DETAIL-PAGE---------------------------------- */
+
+.poductDetailPage {
+    background-color: #1b1b1b;
+}
+
+.poductDetailPage h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.4em;
+    color: #FF710F;
+    text-align: center;
+    padding: 10px;
+}
+
+/* ACTIVIDADES OFRECIDAS */
+.bodyProduct {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.class__container-multiGrid {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 8px;
+    background-color: whitesmoke;
+    padding: 8px;
+}
+
+.class__container h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.4em;
+    color: #FF710F;
+    text-align: center;
+    padding: 10px;
+}
+
+.classTextBox p {
+    color: black;
+}
+
+.individualClass__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.classImgBox {
+    position: relative;
+  }
+  
+  .classImgBox img {
+    border-radius: 5px;
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    max-width: 350px;
+  }
+  
+  .middleImgBox {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+  }
+  
+  .classImgBox:hover img {
+    opacity: 0.3;
+  }
+  
+  .classImgBox:hover .middleImgBox {
+    opacity: 1;
+  }
+  
+/* PROFES Y ENTRENADORES DEL GYM */
+.carousel-inner h5{
+    color: #FF710F;
+    font-weight: 800;
+}
+/* .gymStaff {
+    padding: 10px;
+}
+
+.staffTextBox h3, p {
+    color: whitesmoke;
+    text-align: center;
+}
+
+.staff__container {
+    display: flex;
+    justify-content: center;
+}
+
+.individualStaff__container {
+    padding: 3px;
+}
+
+.staffImgBox img {
+    width: 100%;
+    max-width: 150px;
+}
+
+.staffTextBox p {
+    display: block;
+    font-size: 0.7rem;
+} */
+
+/* ///------------------------------FOOTER--------------------------------- */
+
+.footer__container {
+    background-color: #1b1b1b;
+    color: grey;
+    text-align: center;
+}
+
+.footer__container-col1{
+    width: 100%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 100PX;
+}
+
+.footer__container-col1-socialntw {
+    display: flex;
+    padding: 10px
+}
+
+.footer__container-col1-socialntw_objet a {
+    padding: 10px;
+    color: whitesmoke;
+}
+
+.footer__container-col1-socialntw_objet a:hover{
+    color: whitesmoke;
+    background-color: grey;
+}
+.container__home--contact button{
+    background-color: #FF710F;
+    padding: 2% 5%;
+    margin-top: 2%;
+    margin-bottom: 4%;
+    font-weight: 700;
+    color: white;
+    border-color: #FF710F;
+}
+
+.footer__container-col2 {
+    width: 100%;
+    padding: 2%;
+}
+
+.footer__container-col2-branches {
+    padding: 10px;
+}
+
+.footer__container-col2-branches-options {
+    padding: 0;
+}
+
+
+.footer__container-col2-branches-options li{
+    padding: 4px;
+}
+
+.footer__container-col2-branches-options li a{
+    padding: 6px;
+    text-decoration: none;
+    color: whitesmoke;
+ 
+}
+
+.footer__container-col2-branches-options li a:hover{
+    color: whitesmoke;
+    background-color: grey;
+}
+
+.footer__container-col3 {
+    width: 100%;
+    padding: 2%;
+}
+
+.footer__container-col3-contact-title {
+    padding: 10px;
+}
+.footer__container-copyright{
+    background-color: #1b1b1b;
+    border-top: white 1px solid;
+}
+.footer__container-copyright-link{
+    text-align: center;
+    color: white;
+}
+.footer__container-copyright-textbox{
+    color: white;
+    text-align: center;
+}
+
+/*============================== Media-Queries ============================*/
+/* ------------------------------------------------------------------------*/
+/* TABLET */
+@media (min-width: 481px) {
+
+/* MQ Banner and Carousel - Home*/
+.banner__container {
+    background-image: url(./images/texturNegraPrueba1.jpg);
+} 
+.carousel-caption h1{
+    font-size: 5vh;
+    margin-bottom: 18%;
+    margin-top: 22%;
+}
+.carousel-caption h2{
+    font-size: 5vh;
+    margin-bottom: 18%;
+    margin-top: 22%;
+}
+.banner__home-elements-background img {
+    width: 20%;
+}
+/* MQ End Banner and Carousel - Home */
+/* MQ Register Page */
+.container__register {
+    margin: 0 20%;
+    width: auto;
+}
+.container__register--title h2 {
+    font-size: 6vw;
+}
+.container__register--data {
+    margin: 5% 7%;
+}
+.container__register--data input::placeholder{
+    font-size: 1em;
+}
+.container__register--data-check label{
+    font-size: 1em;
+}
+.container__register--data-info{
+    font-size: 1em
+}
+
+/* MQ product Page */
+.container__product {
+    margin: 0 20%;
+    width: auto;
+}
+.container__product--title h2 {
+    font-size: 6vw;
+}
+.container__product--data {
+    margin: 5% 7%;
+}
+.container__product--data input::placeholder{
+    font-size: 1em;
+}
+.container__product--data-check label{
+    font-size: 1em;
+}
+.container__product--data-info{
+    font-size: 1em
+}
+/* -----------TROLLEY-MQ-MIN 481px-------------- */
+
+
+/* PRODUCT */
+.gymLesson__container-elements {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.gymLesson__container-elements-imagebox {
+    width: 48%;
+}
+
+.gymLesson__container-elements-textbox {
+    width: 45%;
+}
+
+.payBox__container {
+    margin-bottom: 10px;
+}
+
+/* CAROUSEL PROFES */
+#carouselTeachersCaptions{
+    width: 60%;
+    margin: 0 20%;
+}
+
+/* SUSCRIPTION */
+
+
+.subscriptionPass__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.monthPass__container {
+    width: 49%;
+}
+
+.anualPass__container {
+    width: 49%;
+}
+
+.footer__container {
+    display: flex;
+}
+
+.footer__container-col1 {
+    width: 33%;
+    padding: 2%;
+}
+
+.footer__container-col2 {
+    width: 33%;
+    padding: 2%;
+}
+
+.footer__container-col3 {
+    width: 33%;
+    padding: 2%;
+}
+
+/* Home footer */
+.contact__container-form {
+    padding: 7% 2%;
+}
+.contact__container-form label{
+    font-size: 3vw;
+    font-weight: 500;
+}
+
+/* ---------------------PRODUCT-DETAIL-PAGE------------------------------- */
+
+.class__container-multiGrid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.individualClass__container {
+    width: 45%;
+    text-align: center;
+}
+
+
+
+/* End MQ 481*/
+}
+/* END TABLET */
+
+/* DESKTOP */
+
+@media (min-width: 769px) {
+
+
+/* MQ Banner and Carousel - Home*/
+.banner__container {
+    background-image: url(./images/texturNegraPrueba2.jpg);
+} 
+.carousel-caption h1{
+    font-size: 7vh;
+    margin-bottom: 32%;
+    margin-top: 22%;
+}
+.carousel-caption h2{
+    font-size: 7vh;
+    margin-bottom: 32%;
+    margin-top: 22%;
+}
+.banner__home-elements-background img {
+    width: 13%;
+}
+.banner__home-elements-textbox h2 {
+    font-size: 5vw;
+}
+.banner__home-elements-textbox h3 {
+    font-size: 4vw;
+}
+.container__home--send button{
+    padding: 1% 4%;
+    margin-bottom: 2%;
+}
+/* MQ End Banner and Carousel - Home */
+/* MQ Register Page */
+.container__register--title {
+    margin: 3% 10%;
+}
+.container__register--data {
+    margin: 5% 10%;
+}
+.container__register {
+    margin: 0 25%;
+    padding: 3% 0%;
+}
+.container__register--title h2 {
+    font-size: 4vw;
+}
+.container__register--send button{
+    padding: 3% 10%;
+}
+.container__register--data-info{
+    font-size: 1.2em
+}
+
+/* -----------TROLLEY-MQ-MIN 769px-------------- */
+.bodyTrolley {
+    flex-direction: row-reverse;
+}
+
+.verticalAd__container {
+    display: contents;
+    width:20%;
+    position: relative;
+    text-align: center;
+} 
+
+.verticalBanner {
+    display: block;
+    width: 20%;
+    max-width: 350px;
+    height: auto;
+    margin: 0 0 5px 5px;  
+    object-fit: cover; 
+    filter: grayscale(27%);
+    opacity: 0.8;
+}
+
+.verticalBanner:hover {
+    opacity: 0.5;
+}
+
+.buy__container {
+    width: 75%;
+}
+
+.contact__container {
+    display: flex;
+}
+
+.contact__container-map {
+    display: block;
+    width: 60%;
+    padding: 2%;
+}
+
+.contact__container-form {
+    width: 40%;
+    padding: 2%;
+}
+
+
+/* ---------------------------------------PRODUCT DETAIL PAGE------------------ */
+
+.bodyProduct {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.class__container-multiGrid {
+    flex-direction: unset;
+    justify-content: space-around;
+}
+
+.class__container {
+    width: 72%;
+}
+
+/* CAROUSEL PROFES */
+#carouselTeachersCaptions{
+    width: 36%;
+    margin: 0 32%;
+}
+
+
+/* -----------------------------------/* Home Footer----------------------- */
+.contact__container-form {
+    padding: 1% 2%;
+}
+.contact__container-form label {
+    font-size: 2vw;
+    font-weight: 500;
+}
+}
+/* End MQ Register Page 
+ END DESKTOP   */
