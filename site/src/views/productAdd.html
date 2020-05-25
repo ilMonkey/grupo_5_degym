@@ -9,9 +9,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
         <!-- BOOTSTRAP LOCAL -->
         <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
-        <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">	
+        <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">	
         <!-- Own Stylesheet -->
-        <link rel="stylesheet" href="./home.css">
+        <link rel="stylesheet" href="../../public/stylesheets/style.css">
 </head>
 <body>
 <!-- Whatsapp Boton -->
@@ -23,7 +23,7 @@
     <!-- Header -->
     <header class="nav-header">
         <nav class="navbar navbar-light navbar-expand-lg navbar-dark bg-dark" style="background-color: #1b1b1b !important;">
-            <a class="navbar-brand" href="#"><img class= "header-logo" src="low-cost-gym-transparent.png" alt="gym-logo"></a>
+            <a class="navbar-brand" href="#"><img class= "header-logo" src="../../public/images/logos/low-cost-gym-transparent.png" alt="gym-logo"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -58,12 +58,13 @@
             <div class="container__product--title">
                 <h2>Agregar Nueva Actividad</h2>
             </div>
-            <div class="errors">
-                <h3 class="error_text" style="color: rgb(102, 59, 59);">ERROR</h3>
-                <p style="color: black;">El nombre de tu producto es muy largo (Max. 45 caracteres).</p>
-                <p style="color: black;">La descripción es muy larga (Max. 150 caracteres).<br></p>
-            </div>
+
                 <form action="" class="container__product--form" method="POST">
+                    <div class="errors" style="background-color: rgb(141, 31, 31);">
+                        <h3 class="error_text" style="color: rgb(197, 196, 196);">ERROR</h3>
+                        <p style="color: black;">- El nombre de tu producto es muy largo (Max. 45 caracteres).</p>
+                        <p style="color: black;">- La descripción es muy larga (Max. 150 caracteres).<br></p>
+                    </div>
                             <label >Actividad: </label>
                             <input class="" type="text" placeholder="" type="name">
                             <label >Descripción: </label>
@@ -112,7 +113,7 @@
   <!-- start Nuestras Redes  -->
   <div class ="footer__container-col1">
       <div class ="footer__container-col1-logobox">
-          <a href="index.html" class=""><img class="footer-logo" src="./images/logo-dagy-white.png" alt="Da-Gym"></a>
+          <a href="index.html" class=""><img class="footer-logo" src="../../public/images/logos/logo-dagy-white.png" alt="Da-Gym"></a>
       </div>
       <div class ="footer__container-col1-textbox">
           <p class="">Entrenamiento personalizado con el mejor precio de Buenos Aires.</p>
@@ -161,9 +162,9 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-<script src="./bootstrap/js/bootstrap.min.js"></script>
-<script src="./bootstrap/js/popper.js"></script>
-<script src="./bootstrap/js/jquery.js"></script>
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<script src="../../bootstrap/js/popper.js"></script>
+<script src="../../bootstrap/js/jquery.js"></script>
 <!-- End Scripts de Boostrap -->    
 </body>
 </html>
