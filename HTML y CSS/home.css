@@ -410,6 +410,122 @@ fab fa-whatsapp my-float :hover {
     display: block;
 }
 
+/* ///------------------------------PRODUCT-DETAIL-PAGE---------------------------------- */
+
+.poductDetailPage {
+    background-color: #1b1b1b;
+}
+
+.poductDetailPage h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.4em;
+    color: #FF710F;
+    text-align: center;
+    padding: 10px;
+}
+
+/* ACTIVIDADES OFRECIDAS */
+.bodyProduct {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.class__container-multiGrid {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 8px;
+    background-color: whitesmoke;
+    padding: 8px;
+}
+
+.class__container h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.4em;
+    color: #FF710F;
+    text-align: center;
+    padding: 10px;
+}
+
+.classTextBox p {
+    color: black;
+}
+
+.individualClass__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.classImgBox {
+    position: relative;
+  }
+  
+  .classImgBox img {
+    border-radius: 5px;
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    max-width: 350px;
+  }
+  
+  .middleImgBox {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+  }
+  
+  .classImgBox:hover img {
+    opacity: 0.3;
+  }
+  
+  .classImgBox:hover .middleImgBox {
+    opacity: 1;
+  }
+  
+/* PROFES Y ENTRENADORES DEL GYM */
+
+.gymStaff {
+    padding: 10px;
+}
+
+.staffTextBox h3, p {
+    color: whitesmoke;
+    text-align: center;
+}
+
+.staff__container {
+    display: flex;
+    justify-content: center;
+}
+
+.individualStaff__container {
+    padding: 3px;
+}
+
+.staffImgBox img {
+    width: 100%;
+    max-width: 150px;
+}
+
+.staffTextBox p {
+    display: block;
+    font-size: 0.7rem;
+}
+
+
+
 /* ///------------------------------FOOTER--------------------------------- */
 
 .footer__container {
@@ -421,7 +537,9 @@ fab fa-whatsapp my-float :hover {
 .footer__container-col1{
     width: 100%;
     padding: 2%;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer-logo {
@@ -615,6 +733,25 @@ fab fa-whatsapp my-float :hover {
     font-size: 3vw;
     font-weight: 500;
 }
+
+/* ---------------------PRODUCT-DETAIL-PAGE------------------------------- */
+
+.class__container-multiGrid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.individualClass__container {
+    width: 45%;
+    text-align: center;
+}
+
+
+
+
+
 /* End MQ 481*/
 }
 /* END TABLET */
@@ -623,38 +760,6 @@ fab fa-whatsapp my-float :hover {
 
 @media (min-width: 769px) {
 
-/* -----------------NAV BAR--------------- */
-
-.top__container-elements {
-    justify-content: flex-start;
-}
-
-.top__container-navbar-menucontent {
-    overflow: initial;
-}
-
-.top__container-navbar {
-    display: inline;
-}
-
-.top__container-navbar menu {
-    display: none;
-}
-
-.top__container-navbar label {
-    display: none;
-}
-
-.navbar__list {
-    display: flex;
-    flex-direction: row;
-}
-
-.navbar__list a {
-    font-size: 1.1em;
-    display: block ruby;
-    border: 0;
-}
 
 /* MQ Banner and Carousel - Home*/
 .banner__container {
@@ -719,6 +824,7 @@ fab fa-whatsapp my-float :hover {
 
 .verticalBanner {
     display: block;
+    width: 20%;
     max-width: 350px;
     height: auto;
     margin: 0 0 5px 5px;  
@@ -730,18 +836,6 @@ fab fa-whatsapp my-float :hover {
 .verticalBanner:hover {
     opacity: 0.5;
 }
-
-.verticalAd__container p {
-    display: block;
-    position: absolute;
-    right: 3%;
-    top: 54%;
-    font-size: 3rem;
-    color: white;
-    font-weight: 700;
-    transform: translate(-50%, -50%);
-}
-
 
 .buy__container {
     width: 75%;
@@ -761,7 +855,28 @@ fab fa-whatsapp my-float :hover {
     width: 40%;
     padding: 2%;
 }
-/* Home Footer */
+
+
+/* ---------------------------------------PRODUCT DETAIL PAGE------------------ */
+
+.bodyProduct {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.class__container-multiGrid {
+    flex-direction: unset;
+    justify-content: space-around;
+}
+
+.class__container {
+    width: 72%;
+}
+
+
+
+
+/* -----------------------------------/* Home Footer */----------------------- */
 .contact__container-form {
     padding: 1% 2%;
 }
