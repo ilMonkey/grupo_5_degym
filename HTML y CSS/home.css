@@ -157,6 +157,9 @@ width: 30%;
     text-align: justify;
     margin: 0;
 }
+.lesson-image{
+    width: 100%;
+}
 
 /* PAYBOX */
 .payBox__container {
