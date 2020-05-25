@@ -1,5 +1,8 @@
 Bienvenidos a Da Gym.com!
 
+Nuestro proyecto en Trello!
+https://trello.com/b/GX5QzPdl/da-gym-web-project
+
 El objetivo de nuestra página web es la venta de servicios de entrenamiento físico: clases y actividades deportivas ofrecidos en la cadena de Gimnasios Low Cost "Da Gym". 
 La idea es que el usuario se conecte al sitio web desde cualquier dispositivo, y tenga acceso a la información correspondiente a las diferente clases/productos que se ofrecen: horarios, costos  y una pequeña reseña de los profesores que van a estar dictándolas junto con la info. de las diferentes sedes.
 A su vez, el admin del sitio, va a poder ingresar a una página alternativa, desde donde tendrá acceso a un formulario de “carga de actividades” y podrá ingresar en los diferentes campos valores para crear nuevos productos a ofrecer.

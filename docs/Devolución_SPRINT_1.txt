@@ -1,0 +1,16 @@
+VENTA DE SERVICIOS 
+"DA GYM" 
+
+Readme OK
+
+Reveer Formulario de Log In - Ordenarlo en el mockup (ubicarlo dentro de una "cajita")
+
+Subir un archivo al REPO ->
+"Guia de estilos" detallando: 
+Paleta de colores -solo 3 o 4-, 
+Investigar material design -estudio de colores de Google: colores de botones de Compra por ej.-,
+Especificar tipografias/fuentes -todos los "encabezados", todos los "links", definir clases-,
+
+Trello: Agregar link al ReadMe, consultar respecto al uso.
+
+ 
