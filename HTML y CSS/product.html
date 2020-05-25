@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Da Gym</title>
+	<!-- Font Awesome Stylesheet -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Scripts de Boostrap DON´T TOUCH-->
+    <!-- End Scripts de Boostrap -->
+	<!-- BOOTSTRAP LOCAL -->
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">	
+    <!-- Own Stylesheet -->
+    <link rel="stylesheet" href="./home.css">
+</head>
+
+<body>
+<!-- Whatsapp Boton -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="whatsapp" target="_blank">
+    <i class="fab fa-whatsapp my-float"></i>
+    </a>
+<!-- --------------------------------------------HEADER/NAV----------------------- -->
+<header class="nav-header">
+    <nav class="navbar navbar-light navbar-expand-lg navbar-dark bg-dark" style="background-color: #1b1b1b !important;">
+        <a class="navbar-brand" href="#"><img class= "header-logo" src="low-cost-gym-transparent.png" alt="gym-logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">INICIO<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">ACTIVIDADES</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">SUMATE YA!</a>
+            </li>
+                 </a>
+            <li class="nav-item">
+                <a class="nav-link" href="#">CONTACTO</a>
+            </li>
+                </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+</header>
+<!-- -------------------------------------------PRODUCT DETAIL (CLASES DE GyM Y STAFF)--------------------- -->
+<section class= "poductDetailPage">
+    <section class= "bodyProduct">
+            <!-- BANER VERTICAL DE PUBLICIDAD -->
+            <div class= "verticalAd__container">
+                <img class= "verticalBanner" src="./images/shoes.jpg" alt="reebok running shoes">
+            </div>
+          
+            <!-- CLASES DE GYM -->
+        <section class="class__container">
+            <h2>Agregá a tu carrito el pase mensual de la clase que quieras.</h2>
+ 
+            <div class="class__container-multiGrid">
+                <article class="individualClass__container">
+                    <div class= "classImgBox">
+                        <img src="./images/actividades/yoga.webp" alt="yoga">
+                        <div class="middleImgBox">
+                            <button class="btn btn-primary">Agregar</button>
+                        </div>
+                    </div>
+                    <div class="classTextBox">
+                        <h3>Hata Yoga</h3>
+                        <p>Una ciencia milenaria al servicio de tu bienestar y tu salud! Animate</p>
+                    </div>
+                </article>
+                <article class="individualClass__container">
+                    <div class= "classImgBox">
+                        <img src="./images/actividades/calistenia.jpg" alt="yoga">
+                        <div class="middleImgBox">
+                            <button class="btn btn-primary">Agregar</button>
+                        </div>
+                    </div>
+                    <div class="classTextBox">
+                        <h3>Calistenia</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis ullam nulla ipsam maiores, praesentium libero?</p>
+                    </div>       
+                </article>
+                <article class="individualClass__container">
+                    <div class= "classImgBox">
+                        <img src="./images/actividades/crossfit.jpg" alt="yoga">
+                        <div class="middleImgBox">
+                            <button class="btn btn-primary">Agregar</button>
+                        </div>
+                    </div>
+                    <div class="classTextBox">
+                        <h3>Crossfit</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam pariatur repellat nihil, hic fugit natus.</p>
+                    </div>       
+                </article>
+                <article class="individualClass__container">
+                    <div class= "classImgBox">
+                        <img src="./images/actividades/funcional.jpg" alt="yoga">
+                        <div class="middleImgBox">
+                            <button class="btn btn-primary">Agregar</button>
+                        </div>
+                    </div>
+                    <div class="classTextBox">
+                        <h3>Funcional</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex iure ullam voluptas nulla quas architecto.</p>
+                    </div>       
+                </article>
+            </div>
+        </section>
+    </section>
+
+<!-- ----------------------STAFF-del-GYM------------------------- -->
+<!-- Cambie el id del carousel de carouselExamplesCaptions a carouselTeachersCaption para que no me pise el codigo del carousel de la home -->
+<div id="carouselTeachersCaptions" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselTeachersCaptions" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselTeachersCaptions" data-slide-to="1"></li>
+      <li data-target="#carouselTeachersCaptions" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./images/profes/profe1H.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption">
+          <h5>Gaby Lopez</h5>
+          <p>23 años, profe de Zumba, Argentina</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./images/profes/profe1M.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption">
+          <h5>Cesar Palacios</h5>
+          <p>27 años, profe de Crosffit, Argentina</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./images/profes/profe2H.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption">
+          <h5>Nicolas Maduro</h5>
+          <p>35 años, profe de Funcional, Venezuela</p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+    <!-- <section class="gymStaff">
+        <h2>¡Conocé al staff más BUENA ONDA!</h2>
+        <div class= "staff__container">
+            <article class="individualStaff__container">
+                <div class= "staffImgBox"><img src="./images/profes/profe1M.jpg" alt="yoga"></div>
+                <div class="staffTextBox">
+                    <h3>Gaby Lopez</h3>
+                    <p>23 años, Profe de zumba, Argentina</p>
+                </div>
+            </article>
+            <article class="individualStaff__container">
+                <div class= "staffImgBox"><img src="./images/profes/profe1H.jpg" alt="yoga"></div>
+                <div class="staffTextBox">
+                    <h3>Cesar Palacios</h3>
+                    <p>27 años, Profe de crossfit, Argentina</p>
+                </div>
+            </article>
+                        <article class="individualStaff__container">
+                <div class= "staffImgBox"><img src="./images/profes/profe2H.jpg" alt="yoga"></div>
+                <div class="staffTextBox">
+                    <h3>Gaby Lopez</h3>
+                    <p>35 años, Profe de funcional, Venezuela</p>
+                </div>
+            </article>
+            <article class="individualStaff__container">
+
+        </div>
+    </section>
+</section> -->
+
+<!-- ---------------------------------------------------------FOOTER------------------------- -->
+<div class ="footer__container">
+    <!-- start Nuestras Redes  -->
+    <div class ="footer__container-col1">
+        <div class ="footer__container-col1-logobox">
+            <a href="index.html" class=""><img class="footer-logo" src="./images/logo-dagy-white.png" alt="Da-Gym"></a>
+        </div>
+        <div class ="footer__container-col1-textbox">
+            <p class="">Entrenamiento personalizado con el mejor precio de Buenos Aires.</p>
+        </div>
+            <ul class="footer__container-col1-socialntw">
+                <span class="">Seguinos: </span>
+                <li class="footer__container-col1-socialntw_objet"><a  href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-f"></i></a></li>
+                <li class="footer__container-col1-socialntw_objet"><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram no-margin-right"></i></a></li>
+                <li class="footer__container-col1-socialntw_objet"><a href="https://www.youtube.com/channel/" target="_blank"><i class="fa fa-youtube" ></i></a></li>
+            </ul>
+
+    </div>
+    <!-- start Nuestras Sedes  -->
+    <div class ="footer__container-col2">   
+        <div class="footer__container-col2-branches">Nuestras Sedes</div>
+        <ul class="footer__container-col2-branches-options">
+            <li><a href="#">Palermo</a></li>
+            <li><a href="#">Almagro</a></li>
+            <li><a href="#">Urquiza</a></li>
+            <li><a href="#">Caballito</a></li>
+        </ul> 
+    </div>
+    <!-- start contact information -->
+    <div class ="footer__container-col3">
+        <div class ="footer__container-col3-contact">
+            <div class="footer__container-col3-contact-title">Contacto</div>
+            <ul class="footer__container-col2-branches-options">
+                <li>Email: <a class="" href="mailto:info@dagym.com.ar">info@dagym.com.ar</a></li>
+                <li>Tel: <a class="" href="tel:11-xxxx-xxxx">0810-xxx-xxxx</a></li>
+            </ul>        
+        </div>
+    </div>
+
+</div>
+<div class= "footer__container-copyright">
+    <div class="footer__container-copyright-textbox">
+        <p>© Da-Gym. Todos los derechos reservados.</p>
+    </div>
+    <div class="footer__container-copyright-link">
+        <a href="http://G5dh.com.ar" class="" target="_blank">design by G5-DH Creative</a>
+    </div>
+
+</div>
+
+<!-- Scripts de Boostrap DON´T TOUCH van aca abajos los script de bootstrap-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="./bootstrap/js/bootstrap.min.js"></script>
+<script src="./bootstrap/js/popper.js"></script>
+<script src="./bootstrap/js/jquery.js"></script>
+<!-- End Scripts de Boostrap -->    
+</body>
+</html>
