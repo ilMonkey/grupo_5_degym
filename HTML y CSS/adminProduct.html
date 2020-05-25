@@ -52,52 +52,56 @@
           </nav>
     </header>
     <!-- End Header -->
-    <!-- Register Form -->
-    <div class="container__register--box">
-        <section class="container__register">
-            <div class="container__register--title">
+    <!-- product Form -->
+    <div class="container__product--box">
+        <section class="container__product">
+            <div class="container__product--title">
                 <h2>Agregar Nueva Actividad</h2>
             </div>
-                <form action="" class="container__register--data" method="POST">
-                            <label class>Actividad</label>
-                            <input type="text" placeholder="Actividad*" type="name">
-                            <textarea rows="5" cols="74" name="description" placeholder="Descripción del producto">Descripción</textarea>
-                            <input type="date"  name="date" placeholder="2020-05-25" min="2020-01-01" max="2020-12-31">
-                            <input type="text" placeholder="Profesor*" type="name">
-                            <input type="text" placeholder="Valor*" type="name">
-                            <div  class="">
-                                <label> Formas de Pago</label>
-                                <input type='radio' value='efectivo' name='pay'>Efectivo
+                <form action="" class="container__product--form" method="POST">
+                            <label >Actividad: </label>
+                            <input class="" type="text" placeholder="" type="name">
+                            <label >Descripción: </label>
+                            <textarea rows="5"  name="description" ></textarea>
+                            <label >Fecha: </label>
+                            <input type="date"  name="date" value="2020-05-25" min="2020-01-01" max="2020-12-31">
+                            <label >Profesor: </label>
+                            <input type="text"  type="name">
+                            <label >Valor: </label>
+                            <input type="text" type="name">
+                            <label> Formas de Pago</label>
+                            <div  class="container__product--form-check" >
+                                <input  type='radio' value='efectivo' name='pay'>Efectivo
                                 <input type='radio' value='credito' name='pay'>Tarjeta crédito
                                 <input type='radio' value='debito' name='pay'>Debito
                             </div>
-                            <div class="">
-                                <label for="">Cantidad máxima</label>
-                                <select  name="usuarios" size="1" >
-                                    <option value="1"> 1</option>
-                                    <option value="2"> 2</option>
-                                    <option value="3"> 3</option>
-                                    <option value="4"> 4</option>
-                                    <option value="5"> 5</option>
-                                    <option value="6"> 6</option>
-                                </select>
-                            </div>
+                            <label for="">Cantidad máxima</label>
+                            <select  name="usuarios" size="1" >
+                                <option value="1"> 1</option>
+                                <option value="2"> 2</option>
+                                <option value="3"> 3</option>
+                                <option value="4"> 4</option>
+                                <option value="5"> 5</option>
+                                <option value="6"> 6</option>
+                            </select>
                             <label>Requisitos</label>
-                            <input type='checkbox' value='apto' name='requisitos'>Apto Fisico
-                            <input type='checkbox' value='max18' name='requisitos'>Mayor de 18 años
-                            <input type='checkbox' value='especial' name='requisitos'>Permiso especial
+                            <div  class="container__product--form-check" >
+                                <input type='checkbox' value='apto' name='requisitos'>Apto Fisico
+                                <input type='checkbox' value='max18' name='requisitos'>Mayor de 18 años
+                                <input type='checkbox' value='especial' name='requisitos'>Permiso especial
+                            </div>
                             <textarea rows="5" cols="74" name="observaciones" placeholder="Observaciones">Observaciones</textarea>
 
-                        <div class="container__register--data-check">
+                        <div class="container__product--data-check">
                         </div>
-                        <div class="container__register--send">
+                        <div class="container__product--send">
                             <button type="button" class="btn btn-warning">Agregar Actividad</button>
                         </div>
                 </form>
             </div>
         </section>
     </div>
-<!-- End Register Form -->
+<!-- End product Form -->
 <!-- Footer -->
 <div class ="footer__container">
   <!-- start Nuestras Redes  -->
