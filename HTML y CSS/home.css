@@ -500,8 +500,11 @@ fab fa-whatsapp my-float :hover {
   }
   
 /* PROFES Y ENTRENADORES DEL GYM */
-
-.gymStaff {
+.carousel-inner h5{
+    color: #FF710F;
+    font-weight: 800;
+}
+/* .gymStaff {
     padding: 10px;
 }
 
@@ -527,9 +530,7 @@ fab fa-whatsapp my-float :hover {
 .staffTextBox p {
     display: block;
     font-size: 0.7rem;
-}
-
-
+} */
 
 /* ///------------------------------FOOTER--------------------------------- */
 
@@ -692,7 +693,11 @@ fab fa-whatsapp my-float :hover {
     margin-bottom: 10px;
 }
 
-
+/* CAROUSEL PROFES */
+#carouselTeachersCaptions{
+    width: 60%;
+    margin: 0 20%;
+}
 
 /* SUSCRIPTION */
 
@@ -752,8 +757,6 @@ fab fa-whatsapp my-float :hover {
     width: 45%;
     text-align: center;
 }
-
-
 
 
 
@@ -878,7 +881,11 @@ fab fa-whatsapp my-float :hover {
     width: 72%;
 }
 
-
+/* CAROUSEL PROFES */
+#carouselTeachersCaptions{
+    width: 36%;
+    margin: 0 32%;
+}
 
 
 /* -----------------------------------/* Home Footer----------------------- */
