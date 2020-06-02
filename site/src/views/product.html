@@ -1,57 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Da Gym</title>
-	<!-- Font Awesome Stylesheet -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <!-- Scripts de Boostrap DON´T TOUCH-->
-    <!-- End Scripts de Boostrap -->
-	<!-- BOOTSTRAP LOCAL -->
-    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">	
-    <!-- Own Stylesheet -->
-    <link rel="stylesheet" href="../../public/stylesheets/style.css">
-</head>
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Clases ofrecidas'}) %>
 
 <body>
-<!-- Whatsapp Boton -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="whatsapp" target="_blank">
-    <i class="fab fa-whatsapp my-float"></i>
-    </a>
-<!-- End Whatsapp boton -->
-    <header class="nav-header">
-        <nav class="navbar navbar-light navbar-expand-lg navbar-dark bg-dark" style="background-color: #1b1b1b !important;">
-            <a class="navbar-brand" href="#"><img class= "header-logo" src="../../public/images/logos/low-cost-gym-transparent.png" alt="gym-logo"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="/">INICIO<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/actividades">ACTIVIDADES</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/registrate">SUMATE YA!</a>
-                </li>
-                        </a>
-                <li class="nav-item">
-                    <a class="nav-link" href="/contacto">CONTACTO</a>
-                </li>
-                    </a>
-                </li>
-                </ul>
-            </div>
-            </nav>
     
-    </header>
+<!-- Whatsapp Boton -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="whatsapp" target="_blank">
+<i class="fab fa-whatsapp my-float"></i>
+</a>
+<!-- End Whatsapp boton -->
+
+<!-- Include Header -->
+<%- include('partials/header') %>
+
 <!-- -------------------------------------------PRODUCT DETAIL (CLASES DE GyM Y STAFF)--------------------- -->
 <section class= "poductDetailPage">
     <section class= "bodyProduct">
@@ -115,6 +79,7 @@
                 </article>
             </div>
         </section>
+
     </section>
 
 <!-- ----------------------STAFF-del-GYM------------------------- -->
@@ -158,57 +123,8 @@
     </a>
   </div>
 
-<!-- ---------------------------------------------------------FOOTER------------------------- -->
-    <!-- FOOTER -->
-
-    <div class ="footer__container">
-        <!-- start Nuestras Redes  -->
-        <div class ="footer__container-col1">
-            <div class ="footer__container-col1-logobox">
-                <a href="index.html" class=""><img class="footer-logo" src="../../public/images/logos/logo-dagy-white.png" alt="Da-Gym"></a>
-            </div>
-            <div class ="footer__container-col1-textbox">
-                <p class="">Entrenamiento personalizado con el mejor precio de Buenos Aires.</p>
-            </div>
-                <ul class="footer__container-col1-socialntw">
-                    <span class="">Seguinos: </span>
-                    <li class="footer__container-col1-socialntw_objet"><a  href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-f"></i></a></li>
-                    <li class="footer__container-col1-socialntw_objet"><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram no-margin-right"></i></a></li>
-                    <li class="footer__container-col1-socialntw_objet"><a href="https://www.youtube.com/channel/" target="_blank"><i class="fa fa-youtube" ></i></a></li>
-                </ul>
-
-        </div>
-        <!-- start Nuestras Sedes  -->
-        <div class ="footer__container-col2">   
-            <div class="footer__container-col2-branches">Nuestras Sedes</div>
-            <ul class="footer__container-col2-branches-options">
-                <li><a href="#">Palermo</a></li>
-                <li><a href="#">Almagro</a></li>
-                <li><a href="#">Urquiza</a></li>
-                <li><a href="#">Caballito</a></li>
-            </ul> 
-        </div>
-        <!-- start contact information -->
-        <div class ="footer__container-col3">
-            <div class ="footer__container-col3-contact">
-                <div class="footer__container-col3-contact-title">Contacto</div>
-                <ul class="footer__container-col2-branches-options">
-                    <li>Email: <a class="" href="mailto:info@dagym.com.ar">info@dagym.com.ar</a></li>
-                    <li>Tel: <a class="" href="tel:11-xxxx-xxxx">0810-xxx-xxxx</a></li>
-                </ul>        
-            </div>
-        </div>
- 
-    </div>
-    <div class= "footer__container-copyright">
-        <div class="footer__container-copyright-textbox">
-            <p>© Da-Gym. Todos los derechos reservados.</p>
-        </div>
-        <div class="footer__container-copyright-link">
-            <a href="http://G5dh.com.ar" class="" target="_blank">design by G5-DH Creative</a>
-        </div>
-
-    </div>
+ <!-- Include Footer -->
+<%- include('partials/footer') %>
 
 <!-- Scripts de Boostrap DON´T TOUCH van aca abajos los script de bootstrap-->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
