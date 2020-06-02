@@ -8,17 +8,23 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const controller = {
 
+	// All - Metodo que muestra todas las clases disponibles
+	all: (req, res) => {
+		res.render('products')
+	},
+
 	// Detail - Metodo que detalla la clase seleccionada
 	detail: (req, res) => {
-		let idDelProducto= req.params.id;
-		let product = products.find(product => product.id == idDelProducto)
-		let finalPrice = (product.price) * (1-(product.discount/100))
-		res.render('detail', {product, finalPrice, toThousand})
+		res.render('productDetail')
+		// let idDelProducto= req.params.id;
+		// let product = products.find(product => product.id == idDelProducto)
+		// let finalPrice = product.price
+		// res.render('productDetail', {product, finalPrice, toThousand})
 	},
 
 	// Create - Este metodo viaja por GET cuando tocamos Crear Nuevo Producto
 	create: (req, res) => {
-		res.render('product-create-form')
+		res.render('productAdd')
 	},
 	
 	// Create -  Metodo que viaja por POST para crear un producto
@@ -35,16 +41,18 @@ const controller = {
 		let nuevaBaseDD = [...products, nuevoProducto];
 		let nuevaBaseDDJSON = JSON.stringify(nuevaBaseDD);
 		fs.writeFileSync(productsFilePath, nuevaBaseDDJSON);
-		res.redirect('/')
+		res.redirect('/products')
 	},
 
 	// Update - Metodo que viaja por GET para editar un producto
 	edit: (req, res) => {
 		let id= req.params.id;
 		let product = products.find(product => product.id == req.params.id)
-		res.render('product-edit-form', {product})
+		res.render('productsEdit') 
+		// , {product} va adentro del render
 	},
-	// Update - metodo que viaja por POST cuando ya realizamos todos las ediciones necesarias
+	
+	// Update - metodo que viaja por PUT cuando ya realizamos todos las ediciones necesarias
 	update: (req, res) => {
 		let editId = req.params.id
         products.forEach(product => {
@@ -59,7 +67,7 @@ const controller = {
         });
         let productsJson = JSON.stringify(products)
         fs.writeFileSync(productsFilePath, productsJson)
-        res.redirect('/')
+        res.redirect('/products')
 	},
 
 	// Delete - Metodo que viaja por DELETE para borrar un producto

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Edita una Clase'}) %>
+
+<body>
+
+<!-- Include Header -->
+<%- include('partials/header') %>
+
+<!-- product Form -->
+<div class="container__product--box">
+    <section class="container__product">
+        <div class="container__product--title">
+            <h2>Agregar Nueva Actividad</h2>
+        </div>
+
+            <form action="" class="container__product--form" method="POST">
+                <div class="errors" style="background-color: rgb(141, 31, 31);">
+                    <h3 class="error_text" style="color: rgb(197, 196, 196);">ERROR</h3>
+                    <p style="color: black;">- El nombre de tu producto es muy largo (Max. 45 caracteres).</p>
+                    <p style="color: black;">- La descripción es muy larga (Max. 150 caracteres).<br></p>
+                </div>
+                        <label >Actividad: </label>
+                        <input class="" type="text" placeholder="" type="name">
+                        <label >Descripción: </label>
+                        <textarea rows="5"  name="description" ></textarea>
+                        <label >Fecha: </label>
+                        <input type="date"  name="date" value="2020-05-25" min="2020-01-01" max="2020-12-31">
+                        <label >Profesor: </label>
+                        <input type="text"  type="name">
+                        <label >Valor: </label>
+                        <input type="text" type="name">
+                        <label> Formas de Pago</label>
+                        <div  class="container__product--form-check" >
+                            <input  type='radio' value='efectivo' name='pay'>Efectivo
+                            <input type='radio' value='credito' name='pay'>Tarjeta crédito
+                            <input type='radio' value='debito' name='pay'>Debito
+                        </div>
+                        <label for="">Cantidad máxima</label>
+                        <select  name="usuarios" size="1" >
+                            <option value="1"> 1</option>
+                            <option value="2"> 2</option>
+                            <option value="3"> 3</option>
+                            <option value="4"> 4</option>
+                            <option value="5"> 5</option>
+                            <option value="6"> 6</option>
+                        </select>
+                        <label>Requisitos</label>
+                        <div  class="container__product--form-check" >
+                            <input type='checkbox' value='apto' name='requisitos'>Apto Fisico
+                            <input type='checkbox' value='max18' name='requisitos'>Mayor de 18 años
+                            <input type='checkbox' value='especial' name='requisitos'>Permiso especial
+                        </div>
+                        <textarea rows="5" cols="74" name="observaciones" placeholder="Observaciones">Observaciones</textarea>
+
+                    <div class="container__product--data-check">
+                    </div>
+                    <div class="container__product--send">
+                        <button type="button" class="btn btn-warning">Agregar Actividad</button>
+                    </div>
+            </form>
+        </div>
+    </section>
+</div>
+<!-- End product Form -->
+
+<!-- Include Footer -->
+<%- include('partials/footer') %>
+
+<!-- Scripts de Boostrap DON´T TOUCH-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<script src="../../bootstrap/js/popper.js"></script>
+<script src="../../bootstrap/js/jquery.js"></script>
+<!-- End Scripts de Boostrap -->    
+</body>
+</html>

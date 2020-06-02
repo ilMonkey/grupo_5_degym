@@ -5,7 +5,7 @@ const router = express.Router();
 // ************ Controller Require ************
 const productsController = require('../controllers/productsController');
 
-// router.get('/', productsController.root); /* GET - All products */
+router.get('/', productsController.all); /* GET - All products */
 router.get('/:id', productsController.detail); /* GET - Product detail */
 
 /*** CREATE ONE PRODUCT ***/ 
