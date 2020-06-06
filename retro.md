@@ -1,4 +1,6 @@
-Sprint 2 -RETRO
+-RETRO
+
+Sprint 2
 
 Comenzar a hacer: 
     •Definir dónde se linkean las imágenes (desde HTML o CSS, solo background o qué).
@@ -20,4 +22,7 @@ Hacer menos:
     •   Poner Styles desde HTML.
 Dejar de hacer:
     •   Hacer paginas sin leer la consigna específica del sprint donde se detalla las funcionalidades que "require el usuario". 
+
+Sprint 3
+
 
