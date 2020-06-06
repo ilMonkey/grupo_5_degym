@@ -19,13 +19,13 @@ Continuar haciendo:
 06/06/2020
 
 Hicimos:
-    • 
-    • 
-    • 
-    • 
+    • Organizamos las vistas.
+    • Retocamos los includes.
+    • Distribuimos vistas nuevas a realizar (+ info en el Trello).
+    • Modificamos los links a los archivos estáticos que estaban crasheando (../public).
 
 Continuar haciendo:
-    • 
-    • 
-    • 
-    • 
+    • Solucionar Bases de Datos. Clases (Schedules, vacantes por clase, cómo conviene organizarlas).
+    • Seguir pensando Panel de Control de Admin. Formularios de modificacion de Sedes, Actividades y perfiles de Usuarios.
+    • Vistas faltantes.
+    • Bases de datos en JSON para Sedes.
