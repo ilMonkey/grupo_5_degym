@@ -10,7 +10,8 @@ const controller = {
 
 	// All - Metodo que muestra todas las clases disponibles
 	all: (req, res) => {
-		res.render('products')
+		let products_view = products.filter(product => product.id <= 6 );
+		res.render('products',{products: products_view})
 	},
 
 	// Detail - Metodo que detalla la clase seleccionada

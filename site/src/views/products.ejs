@@ -26,54 +26,23 @@
             <h2>Agregá a tu carrito el pase mensual de la clase que quieras.</h2>
  
             <div class="class__container-multiGrid">
-                <article class="individualClass__container">
-                    <div class= "classImgBox">
-                        <img src="/images/actividades/yoga.webp" alt="yoga">
-                        <div class="middleImgBox">
-                            <button class="btn btn-primary">Agregar</button>
+                
+                <% products.forEach(product => { %>
+                    <!-- Una clase individual -->
+                    <article class="individualClass__container">
+                        <div class= "classImgBox">
+                            <img src="/images/actividades/<%- product.image %> " alt="yoga">
+                            <div class="middleImgBox">
+                                <button class="btn btn-primary">Agregar</button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="classTextBox">
-                        <h3>Hata Yoga</h3>
-                        <p>Una ciencia milenaria al servicio de tu bienestar y tu salud! Animate</p>
-                    </div>
-                </article>
-                <article class="individualClass__container">
-                    <div class= "classImgBox">
-                        <img src="/images/actividades/calistenia.jpg" alt="yoga">
-                        <div class="middleImgBox">
-                            <button class="btn btn-primary">Agregar</button>
+                        <div class="classTextBox">
+                            <h3><%- product.name %></h3>
+                            <p><%- product.description %></p>
                         </div>
-                    </div>
-                    <div class="classTextBox">
-                        <h3>Calistenia</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis ullam nulla ipsam maiores, praesentium libero?</p>
-                    </div>       
-                </article>
-                <article class="individualClass__container">
-                    <div class= "classImgBox">
-                        <img src="/images/actividades/crossfit.jpg" alt="yoga">
-                        <div class="middleImgBox">
-                            <button class="btn btn-primary">Agregar</button>
-                        </div>
-                    </div>
-                    <div class="classTextBox">
-                        <h3>Crossfit</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam pariatur repellat nihil, hic fugit natus.</p>
-                    </div>       
-                </article>
-                <article class="individualClass__container">
-                    <div class= "classImgBox">
-                        <img src="/images/actividades/funcional.jpg" alt="yoga">
-                        <div class="middleImgBox">
-                            <button class="btn btn-primary">Agregar</button>
-                        </div>
-                    </div>
-                    <div class="classTextBox">
-                        <h3>Funcional</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex iure ullam voluptas nulla quas architecto.</p>
-                    </div>       
-                </article>
+                    </article>                 
+                <% }) %>
+
             </div>
         </section>
 
