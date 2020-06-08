@@ -9,7 +9,7 @@ router.get('/', productsController.all); /* GET - All products */
 router.get('/:id', productsController.detail); /* GET - Product detail */
 
 /*** CREATE ONE PRODUCT ***/ 
-router.get('/create/', productsController.create); /* GET - Form to create */
+router.get('/create', productsController.create); /* GET - Form to create */
 router.post('/', productsController.store); /* POST - Store in DB */
 
 /*** EDIT ONE PRODUCT ***/ 

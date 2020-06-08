@@ -10,6 +10,11 @@ const controller = {
 		
 	},
 
+	// Admin Tools - Shows admin tools panel
+	adminPanel: (req, res) => {
+		
+	},
+
 	// Create - Form to create
 	create: (req, res) => {
 		
