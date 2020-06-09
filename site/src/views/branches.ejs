@@ -4,14 +4,14 @@
 <!-- Include Header -->
 <%- include('partials/header') %>
 
-<section class="class__container">
+<section class="branch__container">
 
     <h2>Agrega una nueva sede.</h2>
     <div class="class__container-multiGrid">
         <form action="" class="container__product--form" method="POST">
-                    <label >Nombre/Alias: </label>
+                    <label id="label-branch" >Nombre/Alias: </label>
                     <input class="" type="text" placeholder="" type="name">
-                    <label >Dirección: </label>
+                    <label  id="label-branch">Dirección: </label>
                     <input class="" type="text" placeholder="" type="address">
                 <div class="container__product--data-check">
                 </div>
@@ -22,14 +22,15 @@
     </div>
 
     <h2>Sedes ya cargadas.</h2>
-    <div class="class__container-multiGrid">
+    <div class="class__container-multiBranch">
        <ul class="branchesList" >
             <% branches.forEach(branch => { %>
                 <!-- Una clase individual -->
                     <li class="branch__TextBox">
                         <h3><%- branch.name %></h3>
-                        <form class="container__detail--send" action="/admin/branches/delete/<%= branch.id%>?_method=DELETE" method="POST" >
-                                <button type="button" class="btn btn-light"><i class="fas fa-trash-alt"></i></button>
+                        <form class="container__detail--send" action="/admin/branches/delete/<%= branch.id%>?_method=DELETE" method="POST">
+                            <button type="button" class="btn btn-light"><i class="fas fa-trash-alt"></i></button>
+
                         </form>
                     </li>
                 </article>                 
