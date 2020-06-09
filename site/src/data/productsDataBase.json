@@ -4,7 +4,7 @@
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus veniam itaque, minus cumque explicabo eum natus iste soluta deleniti rerum.",
     "image": "yoga.webp",
     "category": "Unisex",
-    "price": 940,
+    "price": 940, 
     "instructor": "Archibaldo Buttrum",
     "branch": "Independencia",
     "max_quotes": 23,

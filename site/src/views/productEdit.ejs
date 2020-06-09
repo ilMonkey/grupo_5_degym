@@ -13,14 +13,31 @@
             <h2>Editar Clase de: <%= product.name %> </h2>
         </div>
             <form action="" class="container__register--data" method="POST">
-                        <input type="text" placeholder="Nombre*" type="name">
-                        <input type="text" placeholder="Apellido*" name="sub_name">
-                        <input type="email" placeholder="Email*" type="email">
-                        <input type="password" placeholder="Contraseña*" type="password">
+                        <input type="text" placeholder="Nombre" name="name">
+                        <input type="text" placeholder="Descripción" name="description">
+                        <select name="category" size="1"  >
+                            <option value="1">Categoria</option>
+                            <option value="1">Unisex</option>
+                            <option value="2">Femenino</option>
+                            <option value="3">Masculino</option>
+                        </select>
+                        <input type="number" placeholder="Precio" name="price">
+                        <input type="text" placeholder="Profesor" name="instructor">
+                        <select name="branch" size="1"  >
+                            <option value="1">Sede</option>
+                            <option value="1">Palermo</option>
+                            <option value="2">Almagro</option>
+                            <option value="3">Urquiza</option>
+                            <option value="4">Caballito</option>
+                        </select>
+                        <select name="max_quotes" size="1"  >
+                            <option value="1">Capacidad Maxima</option>
+                            <option value="1">10</option>
+                            <option value="2">15</option>
+                            <option value="3">20</option>
+                        </select>
+                        <input type="text" placeholder="Dia y Hora" name="schedule">
                     <div class="container__register--data-check">
-                        <label>
-                        <a href="#">Leer Terminos y Condiciones</a>
-                        </label>
                     </div>
                     <div class="container__register--send">
                         <button type="button" class="btn btn-warning">Enviar</button>

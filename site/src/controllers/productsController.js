@@ -57,11 +57,13 @@ const controller = {
         products.forEach(product => {
         if (product.id == editId) {
             product.name = req.body.name
-            product.description = req.body.description
-            product.price = req.body.price
-            product.discount = req.body.discount
-            product.image = "imagen_de_prueba-jpg"
-            product.category = req.body.category           
+			product.description = req.body.description
+			product.category = req.body.category  
+			product.price = req.body.price
+			product.instructor = req.body.instructor
+			product.branch = req.body.branch
+			product.max_quotes = req.body.max_quotes
+            product.schedule = req.body.schedule   
         }            
         });
         let productsJson = JSON.stringify(products)

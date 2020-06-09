@@ -353,6 +353,7 @@ width: 30%;
     width: 100%;
     border-bottom: 1px solid #FF710F;
     margin: 5% 0%;
+    color: white;
 }
 .container__register--data input::placeholder{
   color: white;
@@ -383,6 +384,23 @@ width: 30%;
     font-size: 4vw;
     margin-top: 6%;
 }
+.container__register--data select{
+    outline: none;
+    border: 0;
+    background: border-box;
+    width: 100%;
+    border-bottom: 1px solid #FF710F;
+    margin: 5% 0%;
+    color: white;
+    font-size: 4vw;
+}
+.container__register--data select option{
+    background-color: hsl(203, 17%, 27%);
+}
+.container__register--data select:hover{
+    border-color: yellow;
+}
+
 
 /* ----- Register Product Page--------------------------------------------------------------------------------------------- */
 .container__product--box{
