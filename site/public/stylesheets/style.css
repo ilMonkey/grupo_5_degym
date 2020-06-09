@@ -816,7 +816,9 @@ fab fa-whatsapp my-float :hover {
 .container__register--data-info{
     font-size: 1em
 }
-
+.container__register--data select{
+    font-size: 1em;
+}
 /* MQ product Page */
 .container__product {
     margin: 0 20%;
@@ -983,6 +985,7 @@ fab fa-whatsapp my-float :hover {
 .container__register--data-info{
     font-size: 1.2em
 }
+
 /* MQ productDetail */
 .container__cart--buy button{
     width: 75%;

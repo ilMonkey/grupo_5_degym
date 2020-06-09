@@ -10,7 +10,7 @@
         <div class="container__register--title">
             <h2>Editar Clase de: <%= product.name %> </h2>
         </div>
-            <form action="" class="container__register--data" method="POST">
+            <form action="" class="container__register--data" method="POST" enctype = "multipar/form-data">
                         <input type="text" placeholder="Nombre" name="name">
                         <input type="text" placeholder="Descripción" name="description">
                         <select name="category" size="1"  >
@@ -19,6 +19,7 @@
                             <option value="2">Femenino</option>
                             <option value="3">Masculino</option>
                         </select>
+
                         <input type="number" placeholder="Precio" name="price">
                         <input type="text" placeholder="Profesor" name="instructor">
                         <select name="branch" size="1"  >
@@ -28,6 +29,7 @@
                             <option value="3">Urquiza</option>
                             <option value="4">Caballito</option>
                         </select>
+                        <input type="file" name="image">
                         <select name="max_quotes" size="1"  >
                             <option value="1">Capacidad Maxima</option>
                             <option value="1">10</option>
@@ -38,68 +40,14 @@
                     <div class="container__register--data-check">
                     </div>
                     <div class="container__register--send">
-                        <button type="button" class="btn btn-warning">Enviar</button>
+                        <button type="button" class="btn btn-warning">Cambiar Datos</button>
                     </div>
+                    
             </form>
         </div>
     </section>
 </div>
 <!-- End Edit Form -->
-<!-- <div class="container__product--box">
-    <section class="container__product">
-        <div class="container__product--title">
-            <h2>Agregar Nueva Actividad</h2>
-        </div>
-
-            <form action="" class="container__product--form" method="POST">
-                <div class="errors" style="background-color: rgb(141, 31, 31);">
-                    <h3 class="error_text" style="color: rgb(197, 196, 196);">ERROR</h3>
-                    <p style="color: black;">- El nombre de tu producto es muy largo (Max. 45 caracteres).</p>
-                    <p style="color: black;">- La descripción es muy larga (Max. 150 caracteres).<br></p>
-                </div>
-                        <label >Actividad: </label>
-                        <input class="" type="text" placeholder="" type="name">
-                        <label >Descripción: </label>
-                        <textarea rows="5"  name="description" ></textarea>
-                        <label >Fecha: </label>
-                        <input type="date"  name="date" value="2020-05-25" min="2020-01-01" max="2020-12-31">
-                        <label >Profesor: </label>
-                        <input type="text"  type="name">
-                        <label >Valor: </label>
-                        <input type="text" type="name">
-                        <label> Formas de Pago</label>
-                        <div  class="container__product--form-check" >
-                            <input  type='radio' value='efectivo' name='pay'>Efectivo
-                            <input type='radio' value='credito' name='pay'>Tarjeta crédito
-                            <input type='radio' value='debito' name='pay'>Debito
-                        </div>
-                        <label for="">Cantidad máxima</label>
-                        <select  name="usuarios" size="1" >
-                            <option value="1"> 1</option>
-                            <option value="2"> 2</option>
-                            <option value="3"> 3</option>
-                            <option value="4"> 4</option>
-                            <option value="5"> 5</option>
-                            <option value="6"> 6</option>
-                        </select>
-                        <label>Requisitos</label>
-                        <div  class="container__product--form-check" >
-                            <input type='checkbox' value='apto' name='requisitos'>Apto Fisico
-                            <input type='checkbox' value='max18' name='requisitos'>Mayor de 18 años
-                            <input type='checkbox' value='especial' name='requisitos'>Permiso especial
-                        </div>
-                        <textarea rows="5" cols="74" name="observaciones" placeholder="Observaciones">Observaciones</textarea>
-
-                    <div class="container__product--data-check">
-                    </div>
-                    <div class="container__product--send">
-                        <button type="button" class="btn btn-warning">Agregar Actividad</button>
-                    </div>
-            </form>
-        </div>
-    </section>
-</div> -->
-
 
 <!-- Include Footer -->
 <%- include('partials/footer') %>

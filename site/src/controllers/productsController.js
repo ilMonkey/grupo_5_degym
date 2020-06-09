@@ -52,7 +52,7 @@ const controller = {
 	},
 	
 	// Update - metodo que viaja por PUT cuando ya realizamos todos las ediciones necesarias
-	update: (req, res) => {
+	update: (req, res, next) => {
 		let editId = req.params.id
         products.forEach(product => {
         if (product.id == editId) {
@@ -63,7 +63,8 @@ const controller = {
 			product.instructor = req.body.instructor
 			product.branch = req.body.branch
 			product.max_quotes = req.body.max_quotes
-            product.schedule = req.body.schedule   
+			product.schedule = req.body.schedule   
+			product.image = req.file[0].filename
         }            
         });
         let productsJson = JSON.stringify(products)
