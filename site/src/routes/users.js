@@ -18,4 +18,7 @@ router.put('/edit/:id', usersController.update); /* PUT - Update in DB */
 /*** DELETE ONE User***/ 
 router.delete('/delete/:id', usersController.destroy); /* DELETE - Delete from DB */
 
+/*** DELETE ONE User***/ 
+router.get('/password/', usersController.forgotPass); /* DELETE - Delete from DB */
+
 module.exports = router;

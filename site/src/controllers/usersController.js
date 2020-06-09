@@ -32,7 +32,13 @@ const controller = {
 	// Delete - Delete one user from DB
 	destroy : (req, res) => {
 		// Do the magic
+	},
+
+	// Delete - Delete one user from DB
+	forgotPass : (req, res) => {
+		res.render('resetPassword');
 	}
+
 };
 
 module.exports = controller;
