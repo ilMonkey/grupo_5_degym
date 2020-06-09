@@ -102,7 +102,7 @@
     "password": "Ia5YPQ5X7",
     "birthday": "05-Nov-1997",
     "mobile": "260-115-6785",
-    "membership": 4,
+    "membership": 3,
     "role": 1,
     "gender": "Male",
     "image": "http://dummyimage.com/100x100.jpg/dddddd/000000"
@@ -126,7 +126,7 @@
     "password": "pJuA9CNK",
     "birthday": "16-Jan-1989",
     "mobile": "176-264-0193",
-    "membership": 4,
+    "membership": 2,
     "role": 3,
     "gender": "Female",
     "image": "http://dummyimage.com/100x100.jpg/ff4444/ffffff"
@@ -186,7 +186,7 @@
     "password": "yOJf67x",
     "birthday": "13-Aug-1984",
     "mobile": "140-649-4282",
-    "membership": 4,
+    "membership": 3,
     "role": 2,
     "gender": "Female",
     "image": "http://dummyimage.com/100x100.jpg/dddddd/000000"
