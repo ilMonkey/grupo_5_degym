@@ -7,12 +7,12 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const controller = {
 	// Root - Show all users
 	root: (req, res) => {
-		
+		res.render('login');
 	},
 
 	// Create - Form to create
 	create: (req, res) => {
-		
+		res.render('register');
 	},
 	
 	// Create -  Method to store

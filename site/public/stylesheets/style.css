@@ -647,7 +647,8 @@ fab fa-whatsapp my-float :hover {
 }
 
 .classImgBox {
-    position: relative;
+    display: flex;
+    justify-content: center;
   }
   
   .classImgBox img {
