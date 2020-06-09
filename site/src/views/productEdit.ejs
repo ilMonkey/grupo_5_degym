@@ -6,8 +6,31 @@
 <!-- Include Header -->
 <%- include('partials/header') %>
 
-<!-- product Form -->
-<div class="container__product--box">
+<!-- Product Edit Form -->
+<div class="container__register--box">
+    <section class="container__register">
+        <div class="container__register--title">
+            <h2>Editar Clase de: <%= product.name %> </h2>
+        </div>
+            <form action="" class="container__register--data" method="POST">
+                        <input type="text" placeholder="Nombre*" type="name">
+                        <input type="text" placeholder="Apellido*" name="sub_name">
+                        <input type="email" placeholder="Email*" type="email">
+                        <input type="password" placeholder="Contraseña*" type="password">
+                    <div class="container__register--data-check">
+                        <label>
+                        <a href="#">Leer Terminos y Condiciones</a>
+                        </label>
+                    </div>
+                    <div class="container__register--send">
+                        <button type="button" class="btn btn-warning">Enviar</button>
+                    </div>
+            </form>
+        </div>
+    </section>
+</div>
+<!-- End Edit Form -->
+<!-- <div class="container__product--box">
     <section class="container__product">
         <div class="container__product--title">
             <h2>Agregar Nueva Actividad</h2>
@@ -60,8 +83,8 @@
             </form>
         </div>
     </section>
-</div>
-<!-- End product Form -->
+</div> -->
+
 
 <!-- Include Footer -->
 <%- include('partials/footer') %>

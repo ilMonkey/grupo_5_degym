@@ -120,8 +120,7 @@ width: 30%;
     flex-direction: column;
     background-color: whitesmoke;
     padding: 15px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-radius: 2%;
 }
 
 .gymLesson__container-elements-imagebox {
@@ -141,27 +140,49 @@ width: 30%;
     height: auto;
     max-width: 480px;
 }
-
 .gymLesson__container-elements-textbox h3 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 0.9em;
-    color: rgb(0, 0, 0);
+    font-size: 4vh;
+    color: #263238;
     text-align: center;
     margin: 15px 0;
 }
-
+.gymLesson__container-elements-textbox h4 {
+    font-family: sans-serif;
+    font-size: 6vh;
+    color: #263238;
+    text-align: center;
+    margin: 15px 0;
+}
+.gymLesson__container-elements-textbox h5 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3vh;
+    color: #263238    
+}
+.gymLesson__container-elements-textbox h6 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2.5vh;
+    color: #263238    
+}
 .gymLesson__container-elements p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 0.9em;
-    color: rgb(0, 0, 0);
+    color: #263238;
     text-align: justify;
     margin: 0;
+}
+.actions-list p{
+    color: green;
+    text-align: center;
 }
 .lesson-image{
     width: 100%;
 }
 .actions-list{
     margin: 4% 0;
+}
+.container__options{
+    text-align: center;
 }
 .container__detail{
     display: flex;
@@ -177,28 +198,12 @@ width: 30%;
 .container__cart--buy button{
     background-color: #3571cc;
     padding: 5% 15%;
+    margin-top: 3%;
     font-weight: 700;
     color: white;
-    border-color: #3571cc;;
+    border-color: #3571cc;
+    width: 100%;
 }
-/* .container__home--edit button{
-    background-color: rgb(248, 248, 52);
-    padding: 2% 5%;
-    margin-bottom: 4%;
-    font-weight: 700;
-    font-size: 3vh;
-    color:#FF710F;
-    border-color: rgb(248, 248, 52);
-}
-.container__home--delete button{
-    background-color: rgb(248, 248, 52);
-    padding: 2% 5%;
-    margin-bottom: 4%;
-    font-weight: 700;
-    font-size: 3vh;
-    color:#FF710F;
-    border-color: rgb(248, 248, 52);
-} */
 
 /* PAYBOX */
 .payBox__container {
@@ -944,6 +949,10 @@ fab fa-whatsapp my-float :hover {
 }
 .container__register--data-info{
     font-size: 1.2em
+}
+/* MQ productDetail */
+.container__cart--buy button{
+    width: 75%;
 }
 
 /* -----------TROLLEY-MQ-MIN 769px-------------- */

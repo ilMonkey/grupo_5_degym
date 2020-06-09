@@ -20,7 +20,7 @@
     <!-- PRIMERA SECCION CON CLASES A COMPRAR -->
         <section class="buyTrolley__container">
             <header class="buyTrolley__container-headertextbox">
-                <h2>Clase a modificar.</h2>
+                <h2>Detalle Clase: <b><%= product.name %></b> </h2>
             </header>
             <!-- CLASE -->
             <article class ="gymLesson__container">
@@ -30,20 +30,23 @@
                     </div>
                     <div class="gymLesson__container-elements-textbox">
                         <h3><%= product.name %> </h3>
-                        <h3>$<%= product.price %> </h3>
+                        <h4>$<%= product.price %> </h4>
                         <p><%= product.description %></p>
+                        <h5>Trainer: <%= product.instructor %> </h5>
+                        <h6>Categoria: <%= product.category %> </h6>
+                        <h6>Horarios: <%= product.schedule %> </h6>
+                        <div class="container__options">
                             <li class="actions-list">
                                 <i class="fas fa-credit-card"></i>
                                 <p>Pagá en 12 cuotas sin interes</p>
                             </li>
-                        <div class="container__options">
                             <div class="container__detail">
                                 <div class="container__detail--send">
                                     <button type="button" class="btn btn-light"><i class="fas fa-shopping-cart"></i></button>
                                 </div>
-                                <div href="/products/edit/<%= product.id%>"class="container__detail--send">
+                                <a href="/products/<%= product.id%>/edit" class="container__detail--send">
                                     <button type="button" class="btn btn-light"><i class="fas fa-edit"></i></button>
-                                </div>
+                                </a>
                                 <form class="container__detail--send" action="/products/delete/<%= product.id%>?_method=DELETE" method="POST" >
                                         <button type="button" class="btn btn-light"><i class="fas fa-trash-alt"></i></button>
                                 </form>
@@ -54,30 +57,12 @@
                         </div>
                     </div>
                 </div>
-                
             </article>  
-            <!-- BOTON DE PAGO -->
-            <!-- <div class="payBox__container">
-                <div class="payBox__container-textBox">
-                    <div class="payBox__container-btn">
-                        <a href="/products/edit/<%= product.id%>" class="action-button edit">
-                            <div class="container__home--send">
-                                <button type="button" class="btn btn-light">EDITAR</button>
-                            </div>
-                        </a>
-                        <form action="/products/delete/<%= product.id%>?_method=DELETE" method="POST" style="display: inline-flex">
-                            <div class="container__home--send">
-                                <button type="button" class="btn btn-light">ELIMINAR</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div> -->
         </section>
     <!-- SEGUNDA SECCION CON PLANES DE SUSCRIPCION MENSUAL/ANUAL -->
         <section class="subscription__container">
             <header class="suscription__container-headertextbox">
-                <h2>Modificar abonos fijos</h2>
+                <h2>Abonos Fijos</h2>
             </header>
             <!-- SUSCRIPCION MENSUAL -->
             <section class="subscriptionPass__container">

@@ -48,8 +48,7 @@ const controller = {
 	edit: (req, res) => {
 		let id= req.params.id; 
 		let product = products.find(product => product.id == req.params.id)
-		res.render('productsEdit', {product}) 
-		// , {product} va adentro del render
+		res.render('productEdit', {product}) 
 	},
 	
 	// Update - metodo que viaja por PUT cuando ya realizamos todos las ediciones necesarias
