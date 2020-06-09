@@ -28,11 +28,12 @@ app.set('views', path.join(__dirname, '/views')); // Define la ubicación de la 
 const mainRouter = require('./routes/main'); // Rutas main
 const productsRouter = require('./routes/products'); // Rutas /products
 const usersRouter = require('./routes/users'); // Rutas /users
+const adminRouter = require('./routes/admin'); // Rutas /admin
 
 app.use('/', mainRouter);
 app.use('/products', productsRouter);
 app.use('/users', usersRouter);
-
+app.use('/admin', adminRouter);
 
 
 // ************ DON'T TOUCH FROM HERE ************

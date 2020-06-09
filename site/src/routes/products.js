@@ -17,6 +17,6 @@ router.get('/:id/edit', productsController.edit); /* GET - Form to create */
 router.put('/:id', productsController.update); /* PUT - Update in DB */
 
 /*** DELETE ONE PRODUCT***/ 
-router.delete('/:id', productsController.destroy); /* DELETE - Delete from DB */
+router.delete('/delete/:id', productsController.destroy); /* DELETE - Delete from DB */
 
 module.exports = router;

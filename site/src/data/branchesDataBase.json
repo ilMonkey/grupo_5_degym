@@ -1,0 +1,29 @@
+[{
+    "id": 1,
+    "name": "Sarmiento",
+    "address": "89767 Ridgeview Pass"
+  }, {
+    "id": 2,
+    "name": "Lugano",
+    "address": "43 Logan Lane"
+  }, {
+    "id": 3,
+    "name": "Viamonte",
+    "address": "92916 Grayhawk Junction"
+  }, {
+    "id": 4,
+    "name": "La Matanza I",
+    "address": "4181 Algoma Road"
+  }, {
+    "id": 5,
+    "name": "La Matanza II",
+    "address": "61080 Lakewood Gardens Drive"
+  }, {
+    "id": 6,
+    "name": "Ameghino",
+    "address": "7878 Morningstar Court"
+  }, {
+    "id": 7,
+    "name": "Martinez",
+    "address": "880 Fallview Avenue"
+  }]

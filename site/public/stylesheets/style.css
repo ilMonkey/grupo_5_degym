@@ -484,13 +484,55 @@ fab fa-whatsapp my-float :hover {
     display: block;
 }
 
-/* ///------------------------------PRODUCT-DETAIL-PAGE---------------------------------- */
+/* ///------------------------------ADMIN-PAGE--------------------------------- */
 
-.poductDetailPage {
+.adminPanel__container {
+    background-color: #1b1b1b;
+    padding: 10px
+}
+
+.adminPanel-content__container {   
+    border-radius: 20px;
+    padding: 10px;
+    background-color: whitesmoke;
+}
+
+.adminPanel-content__container h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.4em;
+    color: #FF710F;
+    text-align: center;
+    padding: 10px;
+}
+
+.admin__btn-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.admin__btn-container .btn {
+    font-weight: 700;
+    margin: 8px
+}
+
+.btn-activities-branches__container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px
+}
+
+/* ///-----------------------------BRANCHES-ADMIN-PAGE--------------------------------- */
+
+
+
+
+/* ///------------------------------PRODUCTS-PAGE---------------------------------- */
+
+.poductsPage {
     background-color: #1b1b1b;
 }
 
-.poductDetailPage h2 {
+.poductsPage h2 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.4em;
     color: #FF710F;
@@ -571,37 +613,10 @@ fab fa-whatsapp my-float :hover {
 /* PROFES Y ENTRENADORES DEL GYM */
 .carousel-inner h5{
     color: #FF710F;
-    font-weight: 800;
-}
-/* .gymStaff {
-    padding: 10px;
+    font-weight: 800
 }
 
-.staffTextBox h3, p {
-    color: whitesmoke;
-    text-align: center;
-}
-
-.staff__container {
-    display: flex;
-    justify-content: center;
-}
-
-.individualStaff__container {
-    padding: 3px;
-}
-
-.staffImgBox img {
-    width: 100%;
-    max-width: 150px;
-}
-
-.staffTextBox p {
-    display: block;
-    font-size: 0.7rem;
-} */
-
-/* ///------------------------------FOOTER--------------------------------- */
+/* ------FOOTER----- */
 
 .footer__container {
     background-color: #1b1b1b;
