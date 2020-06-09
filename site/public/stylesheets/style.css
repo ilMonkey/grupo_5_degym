@@ -54,8 +54,8 @@ width: 30%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 6vw;
     color: #FF710F;
-    
 }
+
 .banner__home-elements-textbox h3{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 5vw;
@@ -567,7 +567,32 @@ fab fa-whatsapp my-float :hover {
 
 /* ///-----------------------------BRANCHES-ADMIN-PAGE--------------------------------- */
 
+.branch__container {
+    width: 100%;
+    padding: 10px
+}
 
+.branch__container h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.6em;
+    color: #FF710F;
+}
+
+.container__product--form #label-branch {
+    color: black;
+}
+
+.class__container-multiBranch {
+    text-align: center;
+    border-radius: 8px;
+    background-color: whitesmoke;
+    padding: 8px
+}
+
+.branchesList {
+    padding:0;
+    margin:5px
+}
 
 
 /* ///------------------------------PRODUCTS-PAGE---------------------------------- */
