@@ -1,0 +1,45 @@
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Bienvenidos a Da Gym'}) %>
+
+<!-- Include Header -->
+<%- include('partials/header') %>
+
+<section class="class__container">
+
+    <h2>Agrega una nueva sede.</h2>
+    <div class="class__container-multiGrid">
+        <form action="" class="container__product--form" method="POST">
+                    <label >Nombre/Alias: </label>
+                    <input class="" type="text" placeholder="" type="name">
+                    <label >Dirección: </label>
+                    <input class="" type="text" placeholder="" type="address">
+                <div class="container__product--data-check">
+                </div>
+                <div class="container__product--send">
+                    <button type="button" class="btn btn-warning">Agregar Sede</button>
+                </div>
+        </form>
+    </div>
+
+    <h2>Sedes ya cargadas.</h2>
+    <div class="class__container-multiGrid">
+       <ul class="branchesList" >
+            <% branches.forEach(branch => { %>
+                <!-- Una clase individual -->
+                    <li class="branch__TextBox">
+                        <h3><%- branch.name %></h3>
+                        <form class="container__detail--send" action="/admin/branches/delete/<%= branch.id%>?_method=DELETE" method="POST" >
+                                <button type="button" class="btn btn-light"><i class="fas fa-trash-alt"></i></button>
+                        </form>
+                    </li>
+                </article>                 
+            <% }) %>
+       </ul>
+
+    </div>
+</section>
+
+
+
+<!-- Include Footer -->
+<%- include('partials/footer') %>

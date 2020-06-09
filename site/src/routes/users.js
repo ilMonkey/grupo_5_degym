@@ -7,8 +7,6 @@ const usersController = require('../controllers/usersController');
 
 router.get('/', usersController.root); /* GET - All Users */
 
-router.get('/admin', usersController.adminPanel);
-
 /*** CREATE ONE User ***/ 
 router.get('/create/', usersController.create); /* GET - Form to create */
 router.post('/create/', usersController.store); /* POST - Store in DB */
