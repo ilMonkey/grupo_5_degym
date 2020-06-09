@@ -160,6 +160,45 @@ width: 30%;
 .lesson-image{
     width: 100%;
 }
+.actions-list{
+    margin: 4% 0;
+}
+.container__detail{
+    display: flex;
+    justify-content: space-evenly;
+}
+.container__detail--send button{
+    background-color: #FF710F;
+    margin-bottom: 4%;
+    font-size: 3vh;
+    color:white;
+    border-color: #FF710F;
+}
+.container__cart--buy button{
+    background-color: #3571cc;
+    padding: 5% 15%;
+    font-weight: 700;
+    color: white;
+    border-color: #3571cc;;
+}
+/* .container__home--edit button{
+    background-color: rgb(248, 248, 52);
+    padding: 2% 5%;
+    margin-bottom: 4%;
+    font-weight: 700;
+    font-size: 3vh;
+    color:#FF710F;
+    border-color: rgb(248, 248, 52);
+}
+.container__home--delete button{
+    background-color: rgb(248, 248, 52);
+    padding: 2% 5%;
+    margin-bottom: 4%;
+    font-weight: 700;
+    font-size: 3vh;
+    color:#FF710F;
+    border-color: rgb(248, 248, 52);
+} */
 
 /* PAYBOX */
 .payBox__container {

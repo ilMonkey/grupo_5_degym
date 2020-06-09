@@ -26,26 +26,53 @@
             <article class ="gymLesson__container">
                 <div class="gymLesson__container-elements">
                     <div class="gymLesson__container-elements-imagebox">
-                        <img class= "lesson-image" src="/images/actividades/yoga.webp" alt="Clases de Yoga">
+                        <img class= "lesson-image" src="/images/actividades/<%= product.image %> " alt="Clases de Yoga">
                     </div>
                     <div class="gymLesson__container-elements-textbox">
-                    <h3>Pase mensual a YOGA<br>$X.XXXX.-</h3>
-                    <p>Las clases de Hata Yoga están orientadas a personas de cualquier edad que esperen practicar un deporte fresco y desafiante. Estamos convencido que vas a disfrutar de tus clases. Traé a un amigo y abona el 50% la siguiente vez!</p>
+                        <h3><%= product.name %> </h3>
+                        <h3>$<%= product.price %> </h3>
+                        <p><%= product.description %></p>
+                            <li class="actions-list">
+                                <i class="fas fa-credit-card"></i>
+                                <p>Pagá en 12 cuotas sin interes</p>
+                            </li>
+                        <div class="container__options">
+                            <div class="container__detail">
+                                <div class="container__detail--send">
+                                    <button type="button" class="btn btn-light"><i class="fas fa-shopping-cart"></i></button>
+                                </div>
+                                <div href="/products/edit/<%= product.id%>"class="container__detail--send">
+                                    <button type="button" class="btn btn-light"><i class="fas fa-edit"></i></button>
+                                </div>
+                                <form class="container__detail--send" action="/products/delete/<%= product.id%>?_method=DELETE" method="POST" >
+                                        <button type="button" class="btn btn-light"><i class="fas fa-trash-alt"></i></button>
+                                </form>
+                            </div>
+                            <div class="container__cart--buy">
+                                <button type="button" class="btn btn-light">COMPRAR AHORA</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </article>
+                
+            </article>  
             <!-- BOTON DE PAGO -->
-            <div class="payBox__container">
+            <!-- <div class="payBox__container">
                 <div class="payBox__container-textBox">
                     <div class="payBox__container-btn">
-                        <a href="/products/edit/<%= product.id%>" class="action-button edit">EDITAR PRODUCTO</a>
+                        <a href="/products/edit/<%= product.id%>" class="action-button edit">
+                            <div class="container__home--send">
+                                <button type="button" class="btn btn-light">EDITAR</button>
+                            </div>
+                        </a>
                         <form action="/products/delete/<%= product.id%>?_method=DELETE" method="POST" style="display: inline-flex">
-                            <button type="submit" class="action-button delete">ELIMINAR</button>
+                            <div class="container__home--send">
+                                <button type="button" class="btn btn-light">ELIMINAR</button>
+                            </div>
                         </form>
                     </div>
                 </div>
-            </div>
-
+            </div> -->
         </section>
     <!-- SEGUNDA SECCION CON PLANES DE SUSCRIPCION MENSUAL/ANUAL -->
         <section class="subscription__container">

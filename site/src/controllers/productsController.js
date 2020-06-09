@@ -16,11 +16,10 @@ const controller = {
 
 	// Detail - Metodo que detalla la clase seleccionada
 	detail: (req, res) => {
-		res.render('productDetail')
-		// let idDelProducto= req.params.id;
-		// let product = products.find(product => product.id == idDelProducto)
-		// let finalPrice = product.price
-		// res.render('productDetail', {product, finalPrice, toThousand})
+		let idDelProducto= req.params.id;
+		let product = products.find(product => product.id == idDelProducto)
+		let finalPrice = product.price
+		res.render('productDetail', {product, finalPrice, toThousand})
 	},
 
 	// Create - Este metodo viaja por GET cuando tocamos Crear Nuevo Producto
@@ -47,9 +46,9 @@ const controller = {
 
 	// Update - Metodo que viaja por GET para editar un producto
 	edit: (req, res) => {
-		let id= req.params.id;
+		let id= req.params.id; 
 		let product = products.find(product => product.id == req.params.id)
-		res.render('productsEdit') 
+		res.render('productsEdit', {product}) 
 		// , {product} va adentro del render
 	},
 	
