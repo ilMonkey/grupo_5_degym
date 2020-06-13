@@ -22,6 +22,6 @@ router.put('/edit/:id', usersController.update); /* PUT - Update in DB */
 router.delete('/delete/:id', usersController.destroy); /* DELETE - Delete from DB */
 
 /*** DELETE ONE User***/ 
-router.get('/password/', usersController.forgotPass); /* DELETE - Delete from DB */
+router.get('/password/', usersController.forgotPass); /* Reset  - Form to email */
 
 module.exports = router;

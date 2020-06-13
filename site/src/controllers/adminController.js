@@ -1,17 +1,23 @@
 const fs = require('fs');
 const path = require('path');
 
+// Parse de Product
+const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+// Parse de Branches
 const branchesFilePath = path.join(__dirname, '../data/branchesDataBase.json');
-const branches = JSON.parse(fs.readFileSync(branchesFilePath, 'utf-8'));
+var branches = JSON.parse(fs.readFileSync(branchesFilePath, 'utf-8'));
+branches = branches.filter(branch => branch.id < 5 );
 
 const controller = {
 	// Admin Tools - Shows admin tools
 	controlPanel: (req, res) => {
-		res.render("adminPanel")
+		res.render("adminPanel",{branches})
 	},
 
 	showBranches: (req, res) => {
-		res.render('branches',{branches: branches})
+		res.render('branches',{branches})
     },
 
     storeBranch: (req, res) => {

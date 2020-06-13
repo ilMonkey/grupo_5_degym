@@ -49,7 +49,7 @@
 
 <!-- ----------------------STAFF-del-GYM------------------------- -->
 <!-- Cambie el id del carousel de carouselExamplesCaptions a carouselTeachersCaption para que no me pise el codigo del carousel de la home -->
-<div id="carouselTeachersCaptions" class="carousel slide" data-ride="carousel">
+<div id="carouselTeachersCaptions" class="carousel slide" data-ride="carousel" data-interval="false">
     <ol class="carousel-indicators">
       <li data-target="#carouselTeachersCaptions" data-slide-to="0" class="active"></li>
       <li data-target="#carouselTeachersCaptions" data-slide-to="1"></li>
@@ -59,21 +59,21 @@
       <div class="carousel-item active">
         <img src="/images/profes/profe1H.jpg" class="d-block w-100" alt="...">
         <div class="carousel-caption">
-          <h5>Gaby Lopez</h5>
-          <p>23 años, profe de Zumba, Argentina</p>
+          <h5>Gabriel Lopez</h5>
+          <p>23 años, profe de Musculacion, Argentina</p>
         </div>
       </div>
       <div class="carousel-item">
         <img src="/images/profes/profe1M.jpg" class="d-block w-100" alt="...">
         <div class="carousel-caption">
-          <h5>Cesar Palacios</h5>
-          <p>27 años, profe de Crosffit, Argentina</p>
+          <h5>Cata Palacios</h5>
+          <p>27 años, profe de Crossfit, Argentina</p>
         </div>
       </div>
       <div class="carousel-item">
         <img src="/images/profes/profe2H.jpg" class="d-block w-100" alt="...">
         <div class="carousel-caption">
-          <h5>Nicolas Maduro</h5>
+          <h5>Nico Maduro</h5>
           <p>35 años, profe de Funcional, Venezuela</p>
         </div>
       </div>
@@ -89,4 +89,4 @@
   </div>
 
  <!-- Include Footer -->
-<%- include('partials/footer') %>
+<%- include('partials/footer',{branches}) %>
