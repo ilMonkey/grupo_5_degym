@@ -6,7 +6,9 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 // Parse de Branches
 const branchesFilePath = path.join(__dirname, '../data/branchesDataBase.json');
-const branches = JSON.parse(fs.readFileSync(branchesFilePath, 'utf-8'));
+var branches = JSON.parse(fs.readFileSync(branchesFilePath, 'utf-8'));
+branches = branches.filter(branch => branch.id < 5 );
+
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
@@ -15,7 +17,7 @@ const controller = {
 	// All - Metodo que muestra todas las clases disponibles
 	all: (req, res) => {
 		let products_view = products.filter(product => product.id <= 6 );
-		res.render('products',{products: products_view})
+		res.render('products',{products: products_view, branches})
 	},
 
 	// Detail - Metodo que detalla la clase seleccionada
@@ -23,7 +25,7 @@ const controller = {
 		let idDelProducto= req.params.id;
 		let product = products.find(product => product.id == idDelProducto)
 		let finalPrice = product.price
-		res.render('productDetail', {product, finalPrice, toThousand})
+		res.render('productDetail', {product, finalPrice, branches,toThousand})
 	},
 
 	// Create - Este metodo viaja por GET cuando tocamos Crear Nuevo Producto

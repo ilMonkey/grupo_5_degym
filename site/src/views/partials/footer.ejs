@@ -21,10 +21,10 @@
     <div class ="footer__container-col2">   
         <div class="footer__container-col2-branches">Nuestras Sedes</div>
         <ul class="footer__container-col2-branches-options">
-            <li><a href="#">Palermo</a></li>
-            <li><a href="#">Almagro</a></li>
-            <li><a href="#">Urquiza</a></li>
-            <li><a href="#">Caballito</a></li>
+            <% branches.forEach(branch => { %>
+                <li><a href="#"><%= branch.name %></a></li>
+               <% }) %>
+
         </ul> 
     </div>
     <!-- start contact information -->
