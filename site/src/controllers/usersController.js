@@ -1,31 +1,21 @@
 const fs = require('fs');
 const path = require('path');
-const bcrypt = require('bcryptjs');
+const bcrypt = require('bcrypt');
 
-<<<<<<< HEAD
+// Parse de Users
 const rutaUsersJSON = path.join(__dirname, '../data/usersDataBase.json');
 let DataBaseJSON = fs.readFileSync(rutaUsersJSON, 'utf-8') || '[]';
 let users = JSON.parse(DataBaseJSON);
-=======
-// Parse de Product
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 // Parse de Branches
 const branchesFilePath = path.join(__dirname, '../data/branchesDataBase.json');
 var branches = JSON.parse(fs.readFileSync(branchesFilePath, 'utf-8'));
 branches = branches.filter(branch => branch.id < 5 );
 
->>>>>>> 9917c5725edf90f751e0501de3a54cd73ebff98d
-
 const usersController = {
 	// Root - Show all users
 	root: (req, res) => {
-<<<<<<< HEAD
 		res.render('login'); 
-=======
-		res.render('login',{branches});
->>>>>>> 9917c5725edf90f751e0501de3a54cd73ebff98d
 	},
 
 	// Create - Form to create
