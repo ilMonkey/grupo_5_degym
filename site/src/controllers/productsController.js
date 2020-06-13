@@ -1,8 +1,12 @@
 const fs = require('fs');
 const path = require('path');
-
+// Parse de Product
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+// Parse de Branches
+const branchesFilePath = path.join(__dirname, '../data/branchesDataBase.json');
+const branches = JSON.parse(fs.readFileSync(branchesFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
@@ -48,27 +52,36 @@ const controller = {
 	edit: (req, res) => {
 		let id= req.params.id; 
 		let product = products.find(product => product.id == req.params.id)
-		res.render('productEdit', {product}) 
+		res.render('productEdit', {product, branches}) 
 	},
 	
 	// Update - metodo que viaja por PUT cuando ya realizamos todos las ediciones necesarias
 	update: (req, res, next) => {
-		let editId = req.params.id
+		let editId = req.params.id;
         products.forEach(product => {
-        if (product.id == editId) {
-            product.name = req.body.name
-			product.description = req.body.description
-			product.category = req.body.category  
-			product.price = req.body.price
-			product.instructor = req.body.instructor
-			product.branch = req.body.branch
-			product.max_quotes = req.body.max_quotes
-			product.schedule = req.body.schedule   
-			product.image = req.file[0].filename
-        }            
+			if (product.id == editId) {
+				product.name = req.body.name
+				product.description = req.body.description
+				product.category = req.body.category  
+				product.price = req.body.price
+				product.instructor = req.body.instructor
+				product.max_quotes = req.body.max_quotes
+				product.schedule = req.body.schedule   
+				// product.image = req.file[0].filename
+			}          
         });
         let productsJson = JSON.stringify(products)
-        fs.writeFileSync(productsFilePath, productsJson)
+		fs.writeFileSync(productsFilePath, productsJson)
+
+		let branchId = req.params.id;
+		branches.forEach(branch => {
+			if (branch.id = branchId){
+				branch.name = req.body.branch
+			}
+		});
+		let branchesJson = JSON.stringify(branches)
+		fs.writeFileSync(branchesFilePath, branchesJson)
+		
         res.redirect('/products')
 	},
 
@@ -80,7 +93,7 @@ const controller = {
 		let nuevaBaseDeDatosJSON = JSON.stringify(nuevaBaseDeDatos);
 		fs.writeFileSync(productsFilePath, nuevaBaseDeDatosJSON)
 		// primer parametro el path, segundo que le meto a ese path
-		res.redirect('/')
+		res.redirect('/products')
 	}
 };
 

@@ -1,0 +1,111 @@
+[{
+    "id": 1,
+    "name": "Yoga Hata",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus veniam itaque, minus cumque explicabo eum natus iste soluta deleniti rerum.",
+    "image": "yoga.webp",
+    "category": "Unisex",
+    "price": 940, 
+    "instructor": "Archibaldo Buttrum",
+    "branch": "Independencia",
+    "max_quotes": 23,
+    "schedule": "Lun 15:00hs, Vie 15:00hs"
+  }, {
+    "id": 2,
+    "name": "Calesthenics",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus veniam itaque, minus cumque explicabo eum natus iste soluta deleniti rerum.",
+    "image": "calistenia.jpg",
+    "category": "Male",
+    "price": 695,
+    "instructor": "Ossie Geale",
+    "branch": "Pilar",
+    "max_quotes": 20,
+    "schedule": "Mar 14:00hs, Vie 14:00hs"
+  }, {
+    "id": 3,
+    "name": "Yoga Hot",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus veniam itaque, minus cumque explicabo eum natus iste soluta deleniti rerum.",
+    "image": "funcional.jpg",
+    "category": "Unisex",
+    "price": 857,
+    "instructor": "Neddy Jeandin",
+    "branch": "Santos Lugares",
+    "max_quotes": 24,
+    "schedule": "Lun 10:00hs"
+  }, {
+    "id": 4,
+    "name": "Pilates",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus veniam itaque, minus cumque explicabo eum natus iste soluta deleniti rerum.",
+    "image": "crossfit.jpg",
+    "category": "Female",
+    "price": 680,
+    "instructor": "Ivonne Fennick",
+    "branch": "Independencia",
+    "max_quotes": 16,
+    "schedule": "Mie 15:00hs"
+  }, {
+    "id": 5,
+    "name": "M45",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus veniam itaque, minus cumque explicabo eum natus iste soluta deleniti rerum.",
+    "image": "yoga.webp",
+    "category": "Female",
+    "price": 860,
+    "instructor": "Isabella Woodham",
+    "branch": "Pilar",
+    "max_quotes": 15,
+    "schedule": "Jue 12:00hs"
+  }, {
+    "id": 6,
+    "name": "Funcional",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus veniam itaque, minus cumque explicabo eum natus iste soluta deleniti rerum.",
+    "image": "funcional.jpg",
+    "category": "Unisex",
+    "price": 955,
+    "instructor": "Cordie Eskrick",
+    "branch": "Pilar",
+    "max_quotes": 20,
+    "schedule": "Vie 18:00hs"
+  }, {
+    "id": 7,
+    "name": "Jumping Disco Stu",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus veniam itaque, minus cumque explicabo eum natus iste soluta deleniti rerum.",
+    "image": "yoga.webp",
+    "category": "Female",
+    "price": 674,
+    "instructor": "Dore MacInerney",
+    "branch": "Santos Lugares",
+    "max_quotes": 16,
+    "schedule": "Vie 09:00hs"
+  }, {
+    "id": 8,
+    "name": "Futsal",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus veniam itaque, minus cumque explicabo eum natus iste soluta deleniti rerum.",
+    "image": "yoga.webp",
+    "category": "Male",
+    "price": 839,
+    "instructor": "Constantin Farres",
+    "branch": "Independencia",
+    "max_quotes": 18,
+    "schedule": "Mar 19:00hs"
+  }, {
+    "id": 9,
+    "name": "Box",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus veniam itaque, minus cumque explicabo eum natus iste soluta deleniti rerum.",
+    "image": "yoga.webp",
+    "category": "Unisex",
+    "price": 907,
+    "instructor": "Regan Redpath",
+    "branch": "Santos Lugares",
+    "max_quotes": 19,
+    "schedule": "Lun 15:00hs"
+  }, {
+    "id": 10,
+    "name": "Fit One",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus veniam itaque, minus cumque explicabo eum natus iste soluta deleniti rerum.",
+    "image": "yoga.webp",
+    "category": "Unisex",
+    "price": 818,
+    "instructor": "Leroi Snoday",
+    "branch": "Independencia",
+    "max_quotes": 23,
+    "schedule": "Mie 08:00hs, Jue 08:00hs"
+  }]
