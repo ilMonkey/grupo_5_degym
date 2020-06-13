@@ -657,6 +657,7 @@ fab fa-whatsapp my-float :hover {
 
 .classTextBox p {
     color: black;
+    padding: 0;
 }
 
 .individualClass__container {
@@ -951,7 +952,7 @@ fab fa-whatsapp my-float :hover {
 }
 
 .individualClass__container {
-    width: 45%;
+    width: 48%;
     text-align: center;
 }
 
