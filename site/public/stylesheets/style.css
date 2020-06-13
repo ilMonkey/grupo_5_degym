@@ -1,9 +1,11 @@
 * {
     list-style: none;
     box-sizing: border-box;
+    padding: 0;
+    margin: 0
 }
 
-/* ---------------------------------------NAV BAR------------------------------------------- */
+/* --------------NAV BAR------------------------------------------- */
 .nav-header {
     position: sticky; 
     top: 0;
@@ -39,7 +41,7 @@
 }
 /* ------END HOME CAROUSEL------ */
 
-/* ///------------------------------BANNER--------------------------------- */
+/* ///------------------BANNER--------------------------------- */
 .banner__home {
     background-image: url(../images/banners/texturNegraPrueba1.jpg);
     background-repeat: no-repeat;
@@ -70,7 +72,7 @@ width: 30%;
     border-color: #FF710F;
 }
 
-/* -----------------------------------TROLLEY-PAGE------------------------- */
+/* ------------------CART-PAGE------------------------- */
 
 /* TROLLEY-SUBHEADER-BANNER */
 
@@ -505,7 +507,7 @@ fab fa-whatsapp my-float :hover {
 }
 
 
-/* ///------------------------------CONTACT--------------------------------- */
+/* ///-------------CONTACT--------------------------------- */
 
 .contact__container {
     background-color: white;
@@ -667,6 +669,7 @@ fab fa-whatsapp my-float :hover {
 .classImgBox {
     display: flex;
     justify-content: center;
+    position: relative;
   }
   
   .classImgBox img {
