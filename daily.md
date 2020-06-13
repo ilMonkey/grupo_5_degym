@@ -52,13 +52,22 @@ Hicimos:
 Continuar haciendo:
     • Seguir pensando las bases de datos. Como limitar los tiepos de las membresias. Cómo chequear disponibilidad por vacantes por cada actividad. Chquear genero. Chequear mayoría de edad (+18 años).
 
+10/06/2020
 
+DEVOLUCION 
+-Buen producto.
+-El responsive estaba bien hecho.
+-Color de textos y fondos de los elementos en donde estan los textos. Fondos oscuros y textos negros. Posibilidades: modificar colores de fondo claro y texto oscuro, o lo opuesto, jugar con la opacidad del fondo. 
+-Modificar imágenes de prueba. En todas las entregas intentar mantener la calidad al máximo.
 
 PREGUNTAS PARA PROFES;
     •Pensar las bases de datos. Pensar tabla usuario:
-    -tipos de las membresias. 
+    -tipos de las membresias => Agregar una membresia mas: "no membresia" para users "admin" y "profes".
     -Cómo chequear disponibilidad por vacantes por cada actividad. 
-    -Chquear genero. 
-    -Chequear mayoría de edad (+18 años).
+    -Chquear genero. => Dejar esto como desarrollo opcional. 
+    -Chequear mayoría de edad (+18 años). 
+
+13/06/2020
+
 
 
