@@ -16,9 +16,8 @@
                         <input type="text" placeholder="Precio" name="price" value="<%= product.price %> ">
                         <input type="text" placeholder="Profesor" name="instructor" value="<%= product.instructor %> ">
                         <select name="branch" size="1" >
-                            <option value="0">Sede</option>
                             <% branches.forEach(branch => { %>
-                            <option value="<%= branch.id %>"> <%= branch.name %> </option>
+                            <option value="<%= branch.id %>" <% branch.name == product.branch?'selected':null%>> <%= branch.name %> </option>
                             <% }); %> 
                         </select>
                         <!-- <input type="file" name="image"> -->
