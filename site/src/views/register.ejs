@@ -17,7 +17,7 @@
             <div class="container__register--title">
                 <h2>Registrarse</h2>
             </div>
-                <form action="" class="container__register--data" method="POST">
+                <form action="/users/register" enctype="multipart/form-data"class="container__register--data" method="POST">
                     <!-- <div class="errors" style="background-color: rgb(141, 31, 31);">
                         <h3 class="error_text" style="color: rgb(197, 196, 196);">ERROR</h3>
                         <p style="color: black;">- El nombre es un campo obligatorio.</p>
@@ -27,13 +27,14 @@
                             <input type="text" placeholder="Apellido*" name="sub_name">
                             <input type="email" placeholder="Email*" type="email">
                             <input type="password" placeholder="Contraseña*" type="password">
+                            <input type="password" placeholder="Repetir Contraseña*" type="sub_password">
                         <div class="container__register--data-check">
                             <label>
                             <a href="#">Leer Terminos y Condiciones</a>
                             </label>
                         </div>
                         <div class="container__register--send">
-                            <button type="button" class="btn btn-warning">Enviar</button>
+                            <button type="submit" class="btn btn-warning">Enviar</button>
                         </div>
                 </form>
             </div>

@@ -7,7 +7,7 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 // Parse de Branches
 const branchesFilePath = path.join(__dirname, '../data/branchesDataBase.json');
 var branches = JSON.parse(fs.readFileSync(branchesFilePath, 'utf-8'));
-branches = branches.filter(branch => branch.id < 5 );
+branches = branches.filter(branch => branch.id < 7 );
 
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");

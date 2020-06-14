@@ -11,6 +11,9 @@ router.get('/', usersController.root); /* GET - All Users */
 router.get('/create/', usersController.create); /* GET - Form to create */
 router.post('/create/', usersController.store); /* POST - Store in DB */
 
+/*** PROFILE User ***/ 
+router.get('/profile', usersController.profile)
+
 /*** EDIT ONE User ***/ 
 router.get('/edit/:id', usersController.edit); /* GET - Form to create */
 router.put('/edit/:id', usersController.update); /* PUT - Update in DB */
