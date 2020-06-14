@@ -186,17 +186,7 @@ width: 30%;
 .container__options{
     text-align: center;
 }
-.container__detail{
-    display: flex;
-    justify-content: space-evenly;
-}
-.container__detail--send button{
-    background-color: #FF710F;
-    margin-bottom: 4%;
-    font-size: 3vh;
-    color:white;
-    border-color: #FF710F;
-}
+
 .container__cart--buy button{
     background-color: #3571cc;
     padding: 5% 15%;
@@ -204,6 +194,36 @@ width: 30%;
     font-weight: 700;
     color: white;
     border-color: #3571cc;
+    width: 100%;
+}
+.container__cart--carrito button{
+    background-color: white;
+    padding: 5% 15%;
+    margin-top: 3%;
+    font-weight: 700;
+    color: #3571cc;
+    border-color: #3571cc;
+    width: 100%;
+    font-size: 1.8vh;
+}
+.container__detail form button{
+    background-color: white;
+    padding: 5% 15%;
+    margin-top: 5%;
+    font-weight: 700;
+    color: #3571cc;
+    border-color: #3571cc;
+    font-size: 1.8vh;
+    width: 100%;
+}
+.container__detail a button{
+    background-color: white;
+    padding: 5% 15%;
+    margin-top: 5%;
+    font-weight: 700;
+    color: #3571cc;
+    border-color: #3571cc;
+    font-size: 1.8vh;
     width: 100%;
 }
 
@@ -890,6 +910,16 @@ fab fa-whatsapp my-float :hover {
 .payBox__container {
     margin-bottom: 10px;
 }
+.container__detail{
+    display: flex;
+    justify-content: space-evenly;
+}
+.container__detail form {
+    width: 100%;
+}
+.container__detail a {
+    width: 100%;
+}
 
 /* CAROUSEL PROFES */
 #carouselTeachersCaptions{
@@ -1017,9 +1047,6 @@ fab fa-whatsapp my-float :hover {
 }
 
 /* MQ productDetail */
-.container__cart--buy button{
-    width: 75%;
-}
 
 /* -----------TROLLEY-MQ-MIN 769px-------------- */
 .bodyTrolley {

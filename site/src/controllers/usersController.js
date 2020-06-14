@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcrypt');
+const {validationResult} = require ('express-validator')
 
 // Parse de Users
 const rutaUsersJSON = path.join(__dirname, '../data/usersDataBase.json');
@@ -15,7 +16,17 @@ branches = branches.filter(branch => branch.id < 5 );
 const usersController = {
 	// Root - Show all users
 	root: (req, res) => {
-		res.render('login'); 
+		res.render('login', {branches}); 
+	},
+
+	processLogin: (req, res) => {
+		let validation = validationResult(req)
+		let errors = validation.errors
+		if(errors != ''){
+		res.render('login', {errors, branches})
+		}else{
+			res.redirect('/')
+		}
 	},
 
 	// Create - Form to create
@@ -42,16 +53,16 @@ const usersController = {
 
 	// Update - Form to edit
 	edit: (req, res) => {
-		// Do the magic
+		
 	},
 	// Update - Method to update
 	update: (req, res) => {
-		// Do the magic
+		
 	},
 
 	// Delete - Delete one user from DB
 	destroy : (req, res) => {
-		// Do the magic
+		
 	},
 
 	// Delete - Delete one user from DB

@@ -1,11 +1,16 @@
 // ************ Require's ************
 const express = require('express');
 const router = express.Router();
+const {check} = require('express-validator')
 
 // ************ Controller Require ************
 const usersController = require('../controllers/usersController');
 
 router.get('/', usersController.root); /* GET - All Users */
+
+/*** LOGIN ONE User ***/ 
+router.get('/login', usersController.root)
+router.post('/login',usersController.processLogin)
 
 /*** CREATE ONE User ***/ 
 router.get('/create/', usersController.create); /* GET - Form to create */

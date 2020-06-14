@@ -38,19 +38,22 @@
                                 <i class="fas fa-credit-card"></i>
                                 <p>Pagá en 12 cuotas sin interes</p>
                             </li>
-                            <div class="container__detail">
-                                <div class="container__detail--send">
-                                    <button type="button" class="btn btn-light"><i class="fas fa-shopping-cart"></i></button>
-                                </div>
-                                <a href="/products/<%= product.id%>/edit" class="container__detail--send">
-                                    <button type="button" class="btn btn-light"><i class="fas fa-edit"></i></button>
-                                </a>
-                                <form class="container__detail--send" action="/products/delete/<%= product.id%>?_method=DELETE" method="POST" >
-                                    <button type="submit" class="btn btn-light"><i class="fas fa-trash-alt"></i></button>
+                            
+                                <form class="container__cart--buy">
+                                    <button type="submit" class="btn btn-light">COMPRAR AHORA</button>  
                                 </form>
-                            </div>
-                            <div class="container__cart--buy">
-                                <button type="button" class="btn btn-light">COMPRAR AHORA</button> 
+                            
+                                <form class="container__cart--carrito">
+                                    <button type="submit" class="btn btn-light">AGREGAR AL CARRITO</button>  
+                                </form>
+                            
+                            <div class="container__detail">
+                                <a href="/products/<%= product.id%>/edit">
+                                    <button type="button" class="btn btn-light">EDITAR</button>  
+                                </a>
+                                <form action="/products/delete/<%= product.id%>?_method=DELETE" method="POST">
+                                    <button type="submit" class="btn btn-light">ELIMINAR</button>  
+                                </form>
                             </div>
                         </div>
                     </div>
