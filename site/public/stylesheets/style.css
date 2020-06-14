@@ -712,7 +712,7 @@ fab fa-whatsapp my-float :hover {
 
 .footer__container {
     background-color: #1b1b1b;
-    color: grey;
+    color: rgb(199, 199, 199);
     text-align: center;
 }
 
@@ -752,6 +752,11 @@ fab fa-whatsapp my-float :hover {
     border-color: #FF710F;
 }
 
+
+.footer__container-col2-contact-title {
+    padding: 10px;
+}
+
 .footer__container-col2 {
     width: 100%;
     padding: 2%;
@@ -779,17 +784,9 @@ fab fa-whatsapp my-float :hover {
 
 .footer__container-col2-branches-options li a:hover{
     color: whitesmoke;
-    background-color: grey;
+    background-color: gray
 }
 
-.footer__container-col3 {
-    width: 100%;
-    padding: 2%;
-}
-
-.footer__container-col3-contact-title {
-    padding: 10px;
-}
 .footer__container-copyright{
     background-color: #1b1b1b;
     border-top: white 1px solid;
@@ -919,19 +916,15 @@ fab fa-whatsapp my-float :hover {
 }
 
 .footer__container-col1 {
-    width: 33%;
+    width: 50%;
     padding: 2%;
 }
 
 .footer__container-col2 {
-    width: 33%;
+    width: 50%;
     padding: 2%;
 }
 
-.footer__container-col3 {
-    width: 33%;
-    padding: 2%;
-}
 
 /* Home footer */
 .contact__container-form {

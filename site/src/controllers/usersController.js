@@ -10,12 +10,12 @@ let users = JSON.parse(DataBaseJSON);
 // Parse de Branches
 const branchesFilePath = path.join(__dirname, '../data/branchesDataBase.json');
 var branches = JSON.parse(fs.readFileSync(branchesFilePath, 'utf-8'));
-branches = branches.filter(branch => branch.id < 5 );
+branches = branches.filter(branch => branch.id < 7 );
 
 const usersController = {
 	// Root - Show all users
 	root: (req, res) => {
-		res.render('login'); 
+		res.render('login',{branches}); 
 	},
 
 	// Create - Form to create
