@@ -39,6 +39,11 @@
     font-size: 6vw;
     font-weight: bolder;
 }
+
+.carousel a:hover{
+    text-decoration: none
+}
+
 /* ------END HOME CAROUSEL------ */
 
 /* ///------------------BANNER--------------------------------- */
@@ -48,19 +53,20 @@
     background-size: cover;
     background-position: center center;
     text-align: center;
+    padding: 10px 0 10px 0;
 }
 .banner__home-elements-background img{
-width: 30%;
+width: 18%;
 }
 .banner__home-elements-textbox h2{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 6vw;
+    font-size: 4vw;
     color: #FF710F;
 }
 
 .banner__home-elements-textbox h3{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 5vw;
+    font-size: 3.5vw;
     color: white;
 }
 .container__home--send button{
@@ -492,13 +498,16 @@ width: 30%;
   z-index:100;
 }
 
-.whatsapp a:hover {
-    color:#FF710F;  
+.whatsapp i:hover {
+    color:#FFCD05;  
 }
 
+.whatsapp:hover {
+    color:#FFCD05;  
+}
 
 fab fa-whatsapp my-float :hover {
-    color:#FF710F;  
+    color:#FFCD05;  
 }
 
 
