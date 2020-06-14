@@ -69,5 +69,16 @@ PREGUNTAS PARA PROFES;
 
 13/06/2020
 
+-pensar como crear el perfil de usuario.
+-pensar como hacer la funcionalidad de cambio de password.
+-que solo el admin pueda otorgar modo admin/instructor
 
+DEVOLUCION NOVIA GONZA
 
+-intentar que las imagenes del carousel de inicio sea clickeables y nos lleven a algun lado.
+-Meter mas informacion en la home, quizas destacar los productos mas importantes ahi.
+-mover "contactanos" a otra pestania. ocupa mucho espacio en el inicio.
+-mantener las dos columnas en el cuerpo y en el footer.. o si usamos tres, tres.
+-poner banner de nike horizontal para seguir la idea de la pagina.
+-aclarar el boton del carrito y los iconos. poner texto explicativo.
+-cuidado con los colores de los botones en la pagina de detalle, elegir otro color para que no "compita" tanto con lo de abajo.
