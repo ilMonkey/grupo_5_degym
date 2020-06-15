@@ -10,7 +10,7 @@ router.get('/', usersController.root); /* GET - All Users */
 
 /*** LOGIN ONE User ***/ 
 router.get('/login', usersController.root)
-router.post('/login',usersController.processLogin)
+// router.post('/login',usersController.processLogin)
 
 /*** CREATE ONE User ***/ 
 router.get('/create/', usersController.create); /* GET - Form to create */

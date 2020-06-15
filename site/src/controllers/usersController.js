@@ -27,7 +27,7 @@ const usersController = {
 	// 		res.redirect('/')
 	// 	}
 
-	},
+	// },
 
 	// Create - Form to create
 	create: (req, res) => {
