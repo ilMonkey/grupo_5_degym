@@ -19,10 +19,13 @@
             <h2>Bienvenido</h2>
         </div>
             <form action="/users/auth" class="container__register--data" method="POST">
-                <!-- <div class="errors" style="background-color: rgb(141, 31, 31);">
-                    <h3 class="error_text" style="color: rgb(197, 196, 196);">ERROR</h3>
-                    <p style="color: black;">Usuario o contraseña erronea</p>
-                </div> -->
+                <!-- Codigo para mostrar errores -->
+                <% if(typeof erros != 'undefined'){ %>
+                    <%errors.forEach(error => {%>
+                        <p><%= error.msg %></p>
+                    <%})%>
+                <%}%>
+                <!-- Termina codigo para mostrar errores -->
                         <input type="email" placeholder="Email*" name="email" class="miInput">
                         <input type="password" placeholder="Contraseña*" name="password" class="miInput">
                     <div class="container__register--data-check">
