@@ -15,7 +15,7 @@ branches = branches.filter(branch => branch.id < 7 );
 
 const usersController = {
 	// Login - Este metodo te lleva a la vista de Login
-	login: (req,res) =>res.render('login'),
+	login: (req,res) =>res.render('login',{branches}),
 
 	// Create - Metodo que se usa en el GET para ir al formulario de register
 	create: (req, res) => {
@@ -23,21 +23,21 @@ const usersController = {
 	},
 	
 	// Create -  Este metodo POST es para crear nuevos usuarios y que se guarden en la base de datos
-	store: (req, res, next) => {
+	store: (req, res, next )=> {
 		let newUser = {
 			id: users.length + 1,
-			name: req.body.name,
+			first_name: req.body.first_name,
 			sub_name: req.body.sub_name,
-			image : req.file[id].filename,
+			picture_profile : req.files[0].filename,
             email: req.body.email,
-			password: bcrypt.hashSync(req.body.password, 10),
+			// password: bcrypt.hashSync(req.body.password, 10),
 			// sub_password: req.body.sub_password
 		}
 		let newDataBase = [...users, newUser]
-		fs.writeFileSync(rutaUsersJSON, JSON.stringify(newUser,null, ' ') );
-        res.redirect('/users/login')
+			fs.writeFileSync(rutaUsersJSON, JSON.stringify(newUser,null, ' ') );
+			res.redirect('/users/login')
 	},
-
+		
 	// Login - Este metodo es de autentificación
 	auth: (req,res) => {
 		let usuarioEncontrado = users.find(usuario => req.body.mail == usuario.email)//req.body.password == usuarioEncontrado.passsword pero hay un problema que se soluciona en el siguiente punto

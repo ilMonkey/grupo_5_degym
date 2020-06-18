@@ -11,7 +11,7 @@ const usersController = require('../controllers/usersController');
 // ************ DiskStorage de Multer ************ 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, '/public/uploads')
+      cb(null, 'public/images/users')
     },
     filename: function (req, file, cb) {
       cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
@@ -28,8 +28,8 @@ router.get('/login', usersController.login)
 router.post('/auth', usersController.auth)
 
 /*** CREATE ONE USER ***/ 
-router.get('/create/', usersController.create); /* GET - Form to create */
-router.post('/create/', upload.any() ,usersController.store); /* POST - Store in DB */
+router.get('/create', usersController.create); /* GET - Form to create */
+router.post('/create', upload.any() ,usersController.store); /* POST - Store in DB */
 
 /*** PROFILE USER ***/ 
 router.get('/profile', usersController.profile)
