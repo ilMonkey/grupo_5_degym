@@ -31,7 +31,7 @@ router.post('/', productsController.store); /* POST - Store in DB */
 router.get('/:id/edit', productsController.edit); /* GET - Form to create */
 router.put('/:id', productsController.update); /* PUT - Update in DB */
 // upload.any() es el middleware
-
+ 
 /*** DELETE ONE PRODUCT***/ 
 router.delete('/delete/:id', productsController.destroy); /* DELETE - Delete from DB */
 

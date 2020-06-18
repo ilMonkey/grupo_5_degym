@@ -1,32 +1,47 @@
 // ************ Require's ************
 const express = require('express');
 const router = express.Router();
+const multer = require('multer')
+const path = require('path')
 const {check} = require('express-validator')
 
 // ************ Controller Require ************
 const usersController = require('../controllers/usersController');
 
-router.get('/', usersController.root); /* GET - All Users */
+// ************ DiskStorage de Multer ************ 
+var storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, '/public/uploads')
+    },
+    filename: function (req, file, cb) {
+      cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
+    }
+  })
 
-/*** LOGIN ONE User ***/ 
-router.get('/login', usersController.root)
-// router.post('/login',usersController.processLogin)
+  var upload = multer({ storage: storage })
+// ************ END DiskStorage de Multer ************
 
-/*** CREATE ONE User ***/ 
+
+
+/*** LOGIN ONE USER ***/ 
+router.get('/login', usersController.login)
+router.post('/auth', usersController.auth)
+
+/*** CREATE ONE USER ***/ 
 router.get('/create/', usersController.create); /* GET - Form to create */
-router.post('/create/', usersController.store); /* POST - Store in DB */
+router.post('/create/', upload.any() ,usersController.store); /* POST - Store in DB */
 
-/*** PROFILE User ***/ 
+/*** PROFILE USER ***/ 
 router.get('/profile', usersController.profile)
 
-/*** EDIT ONE User ***/ 
+/*** EDIT ONE USER ***/ 
 router.get('/edit/:id', usersController.edit); /* GET - Form to create */
 router.put('/edit/:id', usersController.update); /* PUT - Update in DB */
 
-/*** DELETE ONE User***/ 
+/*** DELETE ONE USER***/ 
 router.delete('/delete/:id', usersController.destroy); /* DELETE - Delete from DB */
 
-/*** DELETE ONE User***/ 
+/***  ONE User***/ 
 router.get('/password/', usersController.forgotPass); /* Reset  - Form to email */
 
 module.exports = router;
