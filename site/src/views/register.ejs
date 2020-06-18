@@ -1,6 +1,7 @@
 <!-- Include Head -->
 <%- include('partials/head', {title: 'Registrate en Da Gym'}) %>
 
+<script src="/js/efects.js" defer></script>
 <!-- Whatsapp Boton -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="whatsapp" target="_blank">
@@ -18,12 +19,12 @@
                 <h2>Registrarse</h2>
             </div>
                 <form action="/users/create" enctype="multipart/form-data"class="container__register--data" method="POST">
-                            <input type="text" placeholder="Nombre*" name="first_name">
-                            <input type="text" placeholder="Apellido*" name="sub_name">
-                            <input type="file" name="picture_profile">
-                            <input type="email" placeholder="Email*" name="email">
-                            <!-- <input type="password" placeholder="Contraseña*" name="password"> -->
-                            <!-- <input type="password" placeholder="Repetir Contraseña*" name="sub_password"> -->
+                            <input type="text" placeholder="Nombre*" name="first_name" class="miInput">
+                            <input type="text" placeholder="Apellido*" name="sub_name" class="miInput">
+                            <input type="file" name="picture_profile" id="foto" class="miInput">
+                            <input type="email" placeholder="Email*" name="email" class="miInput">
+                            <input type="password" placeholder="Contraseña*" name="password" class="miInput">
+                            <!-- <input type="password" placeholder="Repetir Contraseña*" name="sub_password" class="miInput"> -->
                         <div class="container__register--data-check">
                             <label>
                             <a href="#">Leer Terminos y Condiciones</a>

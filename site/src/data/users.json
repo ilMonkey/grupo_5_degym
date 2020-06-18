@@ -1,7 +1,16 @@
-{
+[{
  "id": 1,
- "first_name": "dsada",
- "sub_name": "sdadsa",
- "picture_profile": "picture_profile-1592450438336.jpg",
- "email": "jm.rosales92@gmail.com"
-}
+ "first_name": "Jose",
+ "sub_name": "Rosales",
+ "picture_profile": "picture_profile-1592504433570.jpg",
+ "email": "jm.rosales92@gmail.com",
+ "password": "$2a$10$nkK6uEdIN8lTHuZeaTg8NeP5tBAZ3RSp84aipYRmoYkWH3mxbbHFK"
+},
+{
+    "id": 12,
+    "first_name": "Jose",
+    "sub_name": "Rosales",
+    "picture_profile": "picture_profile-1592504433570.jpg",
+    "email": "jm.rosales@gmail.com",
+    "password": "$2a$10$nkK6uEdIN8lTHuZeaTg8NeP5tBAZ3RSp84aipYRmoYkWH3mxbbHFK"
+   }]

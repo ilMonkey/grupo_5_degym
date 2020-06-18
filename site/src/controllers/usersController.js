@@ -30,7 +30,7 @@ const usersController = {
 			sub_name: req.body.sub_name,
 			picture_profile : req.files[0].filename,
             email: req.body.email,
-			// password: bcrypt.hashSync(req.body.password, 10),
+			password: bcrypt.hashSync(req.body.password, 10),
 			// sub_password: req.body.sub_password
 		}
 		let newDataBase = [...users, newUser]
@@ -40,10 +40,12 @@ const usersController = {
 		
 	// Login - Este metodo es de autentificación
 	auth: (req,res) => {
-		let usuarioEncontrado = users.find(usuario => req.body.mail == usuario.email)//req.body.password == usuarioEncontrado.passsword pero hay un problema que se soluciona en el siguiente punto
-		let autorizado = bcrypt.compareSync(req.body.password, usuarioEncontrado.passsword) // El primer parametro es el string que quiero comparar y el segundo parametro es el hash contra el que lo quiero comparar
+		// Tener en cuenta en el find que busca por array, asiq si en la DB no es un array no lo va a encontrar
+		let usuarioEncontrado = users.find(usuario => req.body.email == usuario.email)//req.body.password == usuarioEncontrado.passsword pero hay un problema que se soluciona en el siguiente punto
+		let autorizado = bcrypt.compareSync(req.body.password, usuarioEncontrado.password) // El primer parametro es el string que quiero comparar y el segundo parametro es el hash contra el que lo quiero comparar
 		if(autorizado){
-		res.redirect('/users/profile')
+		res.redirect('/')
+		// En realidad res.redirect('/users/profile') pero es para testear que logea bien con el compare de bcrypt
 		}else{
 			res.render('login', {error: "credenciales invalidas"})
 	}

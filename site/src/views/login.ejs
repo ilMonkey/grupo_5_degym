@@ -1,6 +1,7 @@
 <!-- Include Head -->
 <%- include('partials/head', {title: 'Ingresá a Da Gym'}) %>
 
+<script src="/js/efects.js" defer></script>
 <!-- Whatsapp Boton -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="whatsapp" target="_blank">
@@ -22,14 +23,14 @@
                     <h3 class="error_text" style="color: rgb(197, 196, 196);">ERROR</h3>
                     <p style="color: black;">Usuario o contraseña erronea</p>
                 </div> -->
-                        <input type="email" placeholder="Email*" type="email">
-                        <input type="password" placeholder="Contraseña*" type="password">
+                        <input type="email" placeholder="Email*" name="email" class="miInput">
+                        <input type="password" placeholder="Contraseña*" name="password" class="miInput">
                     <div class="container__register--data-check">
                         <input type="checkbox">
                         <label for="">Recuerdame</label>
                     </div>
                     <div class="container__register--send">
-                        <button type="button" class="btn btn-warning">Enviar</button>
+                        <button type="submit" class="btn btn-warning">Enviar</button>
                     </div>
                     <div class="container__register--data-info">
                         <label>
