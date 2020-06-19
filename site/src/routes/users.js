@@ -29,7 +29,13 @@ router.post('/auth', usersController.auth)
 
 /*** CREATE ONE USER ***/ 
 router.get('/create', usersController.create); /* GET - Form to create */
-router.post('/create', upload.any() ,usersController.store); /* POST - Store in DB */
+router.post('/create', upload.any(), [
+  check('first_name').not().isEmpty().withMessage('Te olvidaste ingresar tu nombre!'),
+  check('second_name').not().isEmpty().withMessage('Te olvidaste ingresar tu apellido!'),
+  check('email').isEmail().trim(),
+  check('password', 'La contraseña tiene que tener 4 caracteres como minimo').isLength({min: 4}),  
+  check('sub_Password', 'Las contraseñas no coinciden').custom((value, {req}) => (value === req.body.password))]
+  ,usersController.store); /* POST - Store in DB */
 
 /*** PROFILE USER ***/ 
 router.get('/profile', usersController.profile)

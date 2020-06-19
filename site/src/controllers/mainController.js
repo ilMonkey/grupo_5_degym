@@ -18,13 +18,12 @@ const mainController = {
 		res.render('index', {products, branches})
 	},
 	search: (req, res) => {
-		// Do the magic
+		
 	},
 	processLogin: (req,res) =>{
-		let validation = validationResult(req)
-		let errors = validation.errors
-		if(errors != ''){
-		res.render('login', {errors})
+		let errors = validationResult(req);
+		if(!errors.isEmpty()){
+		res.render('login', {errors, branches})
 	}
 	}
 };

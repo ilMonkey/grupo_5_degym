@@ -20,12 +20,13 @@
         </div>
             <form action="/users/auth" class="container__register--data" method="POST">
                 <!-- Codigo para mostrar errores -->
-                <% if(typeof erros != 'undefined'){ %>
+                 <% if(typeof errors != 'undefined'){ %>
                     <%errors.forEach(error => {%>
                         <p><%= error.msg %></p>
                     <%})%>
-                <%}%>
+                <%}%> 
                 <!-- Termina codigo para mostrar errores -->
+                
                         <input type="email" placeholder="Email*" name="email" class="miInput">
                         <input type="password" placeholder="Contraseña*" name="password" class="miInput">
                     <div class="container__register--data-check">
