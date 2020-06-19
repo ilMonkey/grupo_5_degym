@@ -35,6 +35,11 @@ app.use('/products', productsRouter);
 app.use('/users', usersRouter);
 app.use('/admin', adminRouter);
 
+// ************ API's Route System require and use() ************
+
+//const productsResource = require('./routes/apiRoutes/apiProducts')
+//app.use('/api/products', productsResource)
+
 
 // ************ DON'T TOUCH FROM HERE ************
 // ************ catch 404 and forward to error handler ************
