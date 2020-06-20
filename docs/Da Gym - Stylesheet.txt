@@ -1,0 +1,17 @@
+PALETA DE COLORES 
+
+Naranja: #FF710F
+
+Amarillo: #FFCD05
+
+Blanco RGB(255, 255, 255) -usar con opacidad 0.6 para conseguir gris-.
+
+Negro diferentes grados de opacidad.
+
+FONT - Family y Size
+
+H1 “Sans Serif”  51px
+
+H2 “Montserrat Sans Serif” 30px
+
+H6 “Roboto Sans Serif” 18px

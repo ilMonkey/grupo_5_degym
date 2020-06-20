@@ -4,7 +4,7 @@ const bcrypt = require('bcryptjs');
 const {validationResult} = require ('express-validator')
 
 // Parse de Users
-const rutaUsersJSON = path.join(__dirname, '../data/users.json');
+const rutaUsersJSON = path.join(__dirname, '../data/usersDataBase.json');
 let DataBaseJSON = fs.readFileSync(rutaUsersJSON, 'utf-8') || '[]';
 let users = JSON.parse(DataBaseJSON);
 
@@ -27,7 +27,7 @@ const usersController = {
 		let newUser = {
 			id: users.length + 1,
 			first_name: req.body.first_name,
-			sub_name: req.body.sub_name,
+			last_name: req.body.last_name,
 			picture_profile : req.files[0].filename,
             email: req.body.email,
 			password: bcrypt.hashSync(req.body.password, 10),
@@ -59,6 +59,9 @@ const usersController = {
 
 	// Update - Form to edit
 	edit: (req, res) => {
+		let user = users.find(user => req.body.email == user.email)
+		res.render('userProfile', { user })
+		console.log(users);
 		
 	},
 	// Update - Method to update
