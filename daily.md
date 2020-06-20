@@ -82,3 +82,20 @@ DEVOLUCION NOVIA GONZA
 -poner banner de nike horizontal para seguir la idea de la pagina.
 -aclarar el boton del carrito y los iconos. poner texto explicativo.
 -cuidado con los colores de los botones en la pagina de detalle, elegir otro color para que no "compita" tanto con lo de abajo.
+
+
+Sprint 4
+
+20/06/2020 
+
+Hicimos:
+    •   Renderizamos métodos.
+    •   Creamos bases de datos Dummies para usuarios y actividades (clases).
+    •   Creamos partials y agregamos includes.
+    •   Creamos vista de detalle de producto para Admin.
+
+Continuar haciendo:
+    •   Tenemos que hacer todavia la vista de modificacion de productos "productEdit.ejs/html".
+    •   tenemos que retocar la estetica del front.
+    •   Chequear que todas las URLS funcionen.
+    •   Chequear que todos los métodos y funcionalidades anden.
