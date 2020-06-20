@@ -26,6 +26,24 @@
     padding: 5px;
 }
 
+.register {
+    display: block;
+}
+
+.login {
+    display: block;
+}
+
+.cpanel {
+    display: none;
+}
+
+.logout {
+    display: none;
+}
+
+
+
 /* ------HOME CAROUSEL------ */
 .carousel-caption h1{
     color: #FF710F;
