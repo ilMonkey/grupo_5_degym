@@ -38,7 +38,7 @@ router.post('/create', upload.any(), [
   ,usersController.store); /* POST - Store in DB */
 
 /*** PROFILE USER ***/ 
-router.get('/profile', usersController.profile)
+router.get('/:id', usersController.profile)
 
 /*** EDIT ONE USER ***/ 
 router.get('/edit/:id', usersController.edit); /* GET - Form to create */

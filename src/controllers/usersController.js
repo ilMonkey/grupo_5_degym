@@ -37,7 +37,7 @@ const usersController = {
 		}
 		let newDataBase = [...users, newUser]
 			fs.writeFileSync(rutaUsersJSON, JSON.stringify(newDataBase,null, ' ') );
-			res.redirect('/users/login')
+			res.redirect('users/login')
 		// const errors = validationResult(req);
 		// if (!errors.isEmpty()) {
 		// 	console.log(errors)
@@ -60,15 +60,14 @@ const usersController = {
 
 	profile: (req,res) => {
 		let user = users.find(user => req.params.id == user.id)
-		res.render('userProfile', {user, branches})
+		res.render('users/userProfile', {user, branches})
 	},
 	
 
 	// Update - Form to edit
 	edit: (req, res) => {
 		let user = users.find(user => req.params.id == user.id)
-		res.render('userProfileForm', {user, branches})
-		console.log(user);
+		res.render('users/userProfileForm', {user, branches})
 		
 	},
 	// Update - Method to update
