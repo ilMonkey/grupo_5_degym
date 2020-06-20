@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcryptjs');
 const {validationResult} = require ('express-validator')
-
+ 
 // Parse de Users
 const rutaUsersJSON = path.join(__dirname, '../data/users.json');
 let DataBaseJSON = fs.readFileSync(rutaUsersJSON, 'utf-8') || '[]';
@@ -27,21 +27,24 @@ const usersController = {
 		let newUser = {
 			id: users.length + 1,
 			first_name: req.body.first_name,
-			sub_name: req.body.sub_name,
+			last_name: req.body.last_name,
 			picture_profile : req.files[0].filename,
-            email: req.body.email,
+			email: req.body.email,
+			gender: req.body.gender,
+			birth_day: req.body.birth_day,
+			mobile_number: req.body.mobile_number,
 			password: bcrypt.hashSync(req.body.password, 10),
-			sub_password: req.body.sub_password
 		}
 		let newDataBase = [...users, newUser]
-			fs.appendFileSync(rutaUsersJSON, JSON.stringify(newUser,null, ' ') );
-		const errors = validationResult(req);
-		if (!errors.isEmpty()) {
-			console.log(errors)
-			  return res.status(422).json({ errors: errors.array() });
-		}else{
+			fs.writeFileSync(rutaUsersJSON, JSON.stringify(newDataBase,null, ' ') );
 			res.redirect('/users/login')
-		}
+		// const errors = validationResult(req);
+		// if (!errors.isEmpty()) {
+		// 	console.log(errors)
+		// 	  return res.status(422).json({ errors: errors.array() });
+		// }else{
+		// 	res.redirect('/users/login')
+		// }
 	},
 		
 	// Login - Este metodo es de autentificación
@@ -51,14 +54,21 @@ const usersController = {
 		if(autorizado){
 		res.redirect('/')// En realidad res.redirect('/users/profile') pero es para testear que logea bien con el compare de bcrypt
 		}else{
-			res.render('login', { branches})
-	}
+			res.render('login', {branches})
+		}
 	},
 
-	profile: (req,res) => res.render('profile', {users}), 
+	profile: (req,res) => {
+		let user = users.find(user => req.params.id == user.id)
+		res.render('userProfile', {user, branches})
+	},
+	
 
 	// Update - Form to edit
 	edit: (req, res) => {
+		let user = users.find(user => req.params.id == user.id)
+		res.render('userProfileForm', {user, branches})
+		console.log(user);
 		
 	},
 	// Update - Method to update

@@ -1,13 +1,10 @@
 const controller = {
     all: function(req,res) {
-        db.product.findAll
-}
+            res.send("en contruccion")
+}}
 
 
-
-
-
-module.exports =
+module.exports = controller
 
 //routeo de apis en carpeta aparte
 

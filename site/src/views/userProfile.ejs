@@ -1,0 +1,53 @@
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Bienvenidos a Da Gym'}) %>
+
+<!-- Include Header -->
+<%- include('partials/header') %>
+
+<!-- Profile  -->
+<div class="container profileEditForm">
+    <h1 class="profileTitle">Perfil de Usuario</h1>
+    <div class="container profileImage">
+        <div class="container imageBox">
+            <img src="<%= user.avatar %>" alt="Foto de Perfil">
+        </div>
+    </div>
+    <div class="container profileBody">
+        <ul class="container userEditProfileForm" >
+            <li>
+                <label for="">Nombre</label>
+                <p class="userData"><%= user.first_name %></p>
+            </li>
+            <li>
+                <label for="">Apellido</label>
+                <p class="userData"><%= user.last_name %></p>
+            </li>
+            <li>
+                <label for="">Email</label>
+                <p class="userData"><%= user.email %></p>
+            </li>
+            <li>
+                <label for="">Número de Celular</label>
+                <p class="userData"><%= user.mobile_number %></p>
+            </li>
+            <li>
+                <label for="">Genero</label>
+                <p class="userData"><%= user.gender%></p>
+            </li>
+            <li>
+                <label for="">Fecha de Nacimiento</label>
+                <p class="userData"><%= user.birth_day%></p>
+            </li>
+            <li>
+                <label for="">Numero de Afiliado</label>
+                <p class="userData"><%= user.id %></p>
+            </li>
+        </ul>  
+        <div class="container profileBtns">
+            <button type="submit" class="btn edit">Editar</button>
+        </div>
+    </div>
+</div>
+
+<!-- Include Footer -->
+<%- include('partials/footer',{branches}) %>
