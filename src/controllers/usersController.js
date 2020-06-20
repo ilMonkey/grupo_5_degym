@@ -37,14 +37,15 @@ const usersController = {
 		}
 		let newDataBase = [...users, newUser]
 			fs.writeFileSync(rutaUsersJSON, JSON.stringify(newDataBase,null, ' ') );
-			res.redirect('/users/login')
-		// const errors = validationResult(req);
-		// if (!errors.isEmpty()) {
-		// 	console.log(errors)
-		// 	  return res.status(422).json({ errors: errors.array() });
-		// }else{
-		// 	res.redirect('/users/login')
-		// }
+			// res.redirect('/users/login')
+		const errors = validationResult(req);
+		if (!errors.isEmpty()) {
+			console.log(errors)
+			res.render('users/register',{errors, branches})
+			//   return res.status(422).json({ errors: errors.array() });
+		}else{
+			res.redirect('/users/login', {errors, branches})
+		}
 	},
 		
 	// Login - Este metodo es de autentificación

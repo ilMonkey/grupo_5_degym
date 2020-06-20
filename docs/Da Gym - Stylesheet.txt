@@ -4,6 +4,10 @@ Naranja: #FF710F
 
 Amarillo: #FFCD05
 
+Background Body Register Page color:  #2c3940
+
+Background Register Page color: hsl(203, 17%, 27%)
+
 Blanco RGB(255, 255, 255) -usar con opacidad 0.6 para conseguir gris-.
 
 Negro diferentes grados de opacidad.
