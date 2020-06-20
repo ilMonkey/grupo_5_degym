@@ -2,9 +2,9 @@ const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcryptjs');
 const {validationResult} = require ('express-validator')
-
+ 
 // Parse de Users
-const rutaUsersJSON = path.join(__dirname, '../data/usersDataBase.json');
+const rutaUsersJSON = path.join(__dirname, '../data/users.json');
 let DataBaseJSON = fs.readFileSync(rutaUsersJSON, 'utf-8') || '[]';
 let users = JSON.parse(DataBaseJSON);
 
@@ -29,19 +29,22 @@ const usersController = {
 			first_name: req.body.first_name,
 			last_name: req.body.last_name,
 			picture_profile : req.files[0].filename,
-            email: req.body.email,
+			email: req.body.email,
+			gender: req.body.gender,
+			birth_day: req.body.birth_day,
+			mobile_number: req.body.mobile_number,
 			password: bcrypt.hashSync(req.body.password, 10),
-			sub_password: req.body.sub_password
 		}
 		let newDataBase = [...users, newUser]
-			fs.appendFileSync(rutaUsersJSON, JSON.stringify(newUser,null, ' ') );
-		const errors = validationResult(req);
-		if (!errors.isEmpty()) {
-			console.log(errors)
-			  return res.status(422).json({ errors: errors.array() });
-		}else{
+			fs.writeFileSync(rutaUsersJSON, JSON.stringify(newDataBase,null, ' ') );
 			res.redirect('/users/login')
-		}
+		// const errors = validationResult(req);
+		// if (!errors.isEmpty()) {
+		// 	console.log(errors)
+		// 	  return res.status(422).json({ errors: errors.array() });
+		// }else{
+		// 	res.redirect('/users/login')
+		// }
 	},
 		
 	// Login - Este metodo es de autentificación
