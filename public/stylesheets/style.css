@@ -852,9 +852,8 @@ fab fa-whatsapp my-float :hover {
 
 
 .profileBody {
-    
+    background-color: #2c3940;
 }
-]
 
 .imageBox {
     display: flex;
