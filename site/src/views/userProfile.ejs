@@ -11,7 +11,6 @@
         <div class="container imageBox">
             <img src="<%= user.avatar %>" alt="Foto de Perfil">
         </div>
-        <button class="btn delete">Eliminar Perfil</button>
     </div>
     <div class="container profileBody">
         <ul class="container userEditProfileForm" >
@@ -36,6 +35,10 @@
                 <p class="userData"><%= user.gender%></p>
             </li>
             <li>
+                <label for="">Fecha de Nacimiento</label>
+                <p class="userData"><%= user.birth_day%></p>
+            </li>
+            <li>
                 <label for="">Numero de Afiliado</label>
                 <p class="userData"><%= user.id %></p>
             </li>
@@ -45,9 +48,6 @@
         </div>
     </div>
 </div>
-
-
-
 
 <!-- Include Footer -->
 <%- include('partials/footer',{branches}) %>

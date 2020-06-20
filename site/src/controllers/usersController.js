@@ -51,17 +51,21 @@ const usersController = {
 		if(autorizado){
 		res.redirect('/')// En realidad res.redirect('/users/profile') pero es para testear que logea bien con el compare de bcrypt
 		}else{
-			res.render('login', { branches})
-	}
+			res.render('login', {branches})
+		}
 	},
 
-	profile: (req,res) => res.render('profile', {users}), 
+	profile: (req,res) => {
+		let user = users.find(user => req.params.id == user.id)
+		res.render('userProfile', {user, branches})
+	},
+	
 
 	// Update - Form to edit
 	edit: (req, res) => {
-		let user = users.find(user => req.body.email == user.email)
-		res.render('userProfile', { user })
-		console.log(users);
+		let user = users.find(user => req.params.id == user.id)
+		res.render('userProfileForm', {user, branches})
+		console.log(user);
 		
 	},
 	// Update - Method to update
