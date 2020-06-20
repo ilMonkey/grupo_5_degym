@@ -23,7 +23,7 @@ const mainController = {
 	processLogin: (req,res) =>{
 		let errors = validationResult(req);
 		if(!errors.isEmpty()){
-		res.render('login', {errors, branches})
+		res.render('users/login', {errors, branches})
 	}
 	}
 };

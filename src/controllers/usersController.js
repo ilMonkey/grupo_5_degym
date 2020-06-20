@@ -15,11 +15,11 @@ branches = branches.filter(branch => branch.id < 7 );
 
 const usersController = {
 	// Login - Este metodo te lleva a la vista de Login
-	login: (req,res) =>res.render('login',{branches}),
+	login: (req,res) =>res.render('users/login',{branches}),
 
 	// Create - Metodo que se usa en el GET para ir al formulario de register
 	create: (req, res) => {
-		res.render('register',{branches});
+		res.render('users/register',{branches});
 	},
 	
 	// Create -  Este metodo POST es para crear nuevos usuarios y que se guarden en la base de datos
@@ -54,7 +54,7 @@ const usersController = {
 		if(autorizado){
 		res.redirect('/')// En realidad res.redirect('/users/profile') pero es para testear que logea bien con el compare de bcrypt
 		}else{
-			res.render('login', {branches})
+			res.render('users/login', {branches})
 		}
 	},
 
@@ -83,7 +83,7 @@ const usersController = {
 
 	// Delete - Delete one user from DB
 	forgotPass : (req, res) => {
-		res.render('resetPassword',{branches});
+		res.render('users/resetPassword',{branches});
 	}
 
 };
