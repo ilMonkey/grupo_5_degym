@@ -89,13 +89,15 @@ Sprint 4
 20/06/2020 
 
 Hicimos:
-    •   Renderizamos métodos.
-    •   Creamos bases de datos Dummies para usuarios y actividades (clases).
-    •   Creamos partials y agregamos includes.
-    •   Creamos vista de detalle de producto para Admin.
+    •   Organizamos las views en carpetas /users y /products.
+    •   Creamos las vistas de profile y de edit profile.
+    •   Creamos la funcionalidad del register de usuario nuevo (multer funcionando para cargar avatar).
+    •   Trabajamos con las validaciones del registe con Express Validator.
+    •   Implementacion de bcrypt para autentificar password en el login.
+    •   Fucionalidad de display de botones en la nav-bar de usuarios logueados y no logueados.
 
 Continuar haciendo:
-    •   Tenemos que hacer todavia la vista de modificacion de productos "productEdit.ejs/html".
-    •   tenemos que retocar la estetica del front.
-    •   Chequear que todas las URLS funcionen.
-    •   Chequear que todos los métodos y funcionalidades anden.
+    •   Continuar trabajod con Express Validator para que muestre por la vista los errores (usar clase/etiqueta .small).
+    •   Cosas opcionales que pensamos: hacer un branchDetail.ejs para mostrar detalles de las sedes con un mapa,      telefono de contacto y dirección.
+    •   Definir parametros de css en el stylesheet del Proyecto.
+    •   Armar la session y validar los diesplays de los botones que requieren sesion de usuario.
