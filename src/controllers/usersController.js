@@ -35,23 +35,22 @@ const usersController = {
 			mobile_number: req.body.mobile_number,
 			password: bcrypt.hashSync(req.body.password, 10),
 		}
-		let newDataBase = [...users, newUser]
-			fs.writeFileSync(rutaUsersJSON, JSON.stringify(newDataBase,null, ' ') );
-			// res.redirect('/users/login')
 		const errors = validationResult(req);
 		if (!errors.isEmpty()) {
-			console.log(errors)
+			console.log(errors) 
 			res.render('users/register',{errors, branches})
 			//   return res.status(422).json({ errors: errors.array() });
 		}else{
-			res.redirect('/users/login', {errors, branches})
+			let newDataBase = [...users, newUser]
+			fs.writeFileSync(rutaUsersJSON, JSON.stringify(newDataBase,null, ' ') );
+			res.redirect('/users/login')
 		}
 	},
 		
-	// Login - Este metodo es de autentificación
+	// Login - Este metodo es de autentificación del usuario
 	auth: (req,res) => {
-		let usuarioEncontrado = users.find(usuario => req.body.email == usuario.email)//req.body.password == usuarioEncontrado.passsword pero hay un problema que se soluciona en el siguiente punto
-		let autorizado = bcrypt.compareSync(req.body.password, usuarioEncontrado.password) // El primer parametro es el string que quiero comparar y el segundo parametro es el hash contra el que lo quiero comparar
+		let usuarioBuscado = users.find(usuario => req.body.email == usuario.email)//req.body.password == usuarioEncontrado.passsword pero hay un problema que se soluciona en el siguiente punto
+		let autorizado = bcrypt.compareSync(req.body.password, usuarioBuscado.password) // El primer parametro es el string que quiero comparar y el segundo parametro es el hash contra el que lo quiero comparar
 		if(autorizado){
 		res.redirect('/')// En realidad res.redirect('/users/profile') pero es para testear que logea bien con el compare de bcrypt
 		}else{

@@ -11,8 +11,6 @@ var branches = JSON.parse(fs.readFileSync(branchesFilePath, 'utf-8'));
 branches = branches.filter(branch => branch.id < 7 );
 
 
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-
 const mainController = {
 	root: (req, res) => {
 		res.render('index', {products, branches})
@@ -20,12 +18,12 @@ const mainController = {
 	search: (req, res) => {
 		
 	},
-	processLogin: (req,res) =>{
-		let errors = validationResult(req);
-		if(!errors.isEmpty()){
-		res.render('users/login', {errors, branches})
-	}
-	}
+	// processLogin: (req,res) =>{
+	// 	if (!errors.isEmpty()) {
+	// 		console.log(errors) 
+	// 		res.render('users/login',{errors, branches})
+	// 	}
+	// }
 };
 
 module.exports = mainController;

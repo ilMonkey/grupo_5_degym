@@ -24,17 +24,19 @@ var storage = multer.diskStorage({
 
 
 /*** LOGIN ONE USER ***/ 
-router.get('/login', usersController.login)
-router.post('/auth', usersController.auth)
+router.get('/login', usersController.login) 
+router.post('/auth', [check('email').isEmail().trim()],usersController.auth)
 
 /*** CREATE ONE USER ***/ 
 router.get('/create', usersController.create); /* GET - Form to create */
 router.post('/create', upload.any(), [
   check('first_name').not().isEmpty().withMessage('Te olvidaste ingresar tu nombre!'),
-  check('second_name').not().isEmpty().withMessage('Te olvidaste ingresar tu apellido!'),
-  check('email').isEmail().trim(),
-  check('password', 'La contraseña tiene que tener 4 caracteres como minimo').isLength({min: 4}),  
-  check('sub_Password', 'Las contraseñas no coinciden').custom((value, {req}) => (value === req.body.password))]
+  check('last_name').not().isEmpty().withMessage('Te olvidaste ingresar tu apellido!'),
+  check('email').isEmail().trim().withMessage('Tenes que poner un mail valido'),
+  check('mobile_number').not().isEmpty().isNumeric({no_symbols: false}).withMessage('Debe poner un celular valido'),
+  check('birth_day').not().isEmpty().withMessage('No te olvides de tu fecha de cumpleaños!'),
+  check('password').isLength({min: 4}).withMessage('La contraseña tiene que tener 4 caracteres como minimo').matches(/\d/).withMessage('La contraseña debe contener al menos un numero'),  
+  check('sub_password', 'Las contraseñas no coinciden').custom((value, {req}) => (value === req.body.password))]
   ,usersController.store); /* POST - Store in DB */
 
 /*** PROFILE USER ***/ 
