@@ -9,29 +9,39 @@
     <h1 class="profileTitle">Perfil de Usuario</h1>
     <div class="container profileImage">
         <div class="container imageBox">
-            <img src="" alt="Foto de Perfil">
-            <div class="textAndBtnBox">
-                <p>Imagen<br>200x200</p>
-                <button>AGREGAR</button>
-            </div>
+            <img src="<%= user.avatar %>" alt="Foto de Perfil">
         </div>
         <button class="btn delete">Eliminar Perfil</button>
     </div>
     <div class="container profileBody">
-        <form action="/users/create" enctype="multipart/form-data"class="container userEditProfileForm" method="POST">
-            <label for="">Nombre</label>
-            <input type="text" placeholder="<%= user.first_name %>" name="first_name" class="miInput">
-            <label for="">Apellido</label>            
-            <input type="text" placeholder="<%= user.sub_name %>" name="sub_name" class="miInput">
-            <label for="">Email</label>
-            <input type="email" placeholder="<%= user.email %>" name="email" class="miInput">
-            <label for="">Género</label>
-            <input type="gender" placeholder="<%= user.gender %>" name="gender" class="miInput">
-            <label for="">Número de Mobil</label>
-            <input type="mobile" placeholder="<%= user.mobile.number %>" name="gender" class="miInput">
+        <ul class="container userEditProfileForm" >
+            <li>
+                <label for="">Nombre</label>
+                <p class="userData"><%= user.first_name %></p>
+            </li>
+            <li>
+                <label for="">Apellido</label>
+                <p class="userData"><%= user.last_name %></p>
+            </li>
+            <li>
+                <label for="">Email</label>
+                <p class="userData"><%= user.email %></p>
+            </li>
+            <li>
+                <label for="">Número de Celular</label>
+                <p class="userData"><%= user.mobile_number %></p>
+            </li>
+            <li>
+                <label for="">Genero</label>
+                <p class="userData"><%= user.gender%></p>
+            </li>
+            <li>
+                <label for="">Numero de Afiliado</label>
+                <p class="userData"><%= user.id %></p>
+            </li>
+        </ul>  
         <div class="container profileBtns">
-            <button type="submit" class="btn btn-warning">Guardar cambios</button>
-            <button type="submit" class="btn btn-warning">Cancelar</button>
+            <button type="submit" class="btn edit">Editar</button>
         </div>
     </div>
 </div>

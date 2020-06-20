@@ -1,0 +1,45 @@
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Bienvenidos a Da Gym'}) %>
+
+<!-- Include Header -->
+<%- include('partials/header') %>
+
+<!-- Profile  -->
+<div class="container profileEditForm">
+    <h1 class="profileTitle">Perfil de Usuario</h1>
+    <div class="container profileImage">
+        <div class="container imageBox">
+            <img src="" alt="Foto de Perfil">
+            <div class="textAndBtnBox">
+                <p>Imagen<br>200x200</p>
+                <button>AGREGAR</button>
+            </div>
+        </div>
+        <button class="btn delete">Eliminar Perfil</button>
+    </div>
+    <div class="container profileBody">
+        <form action="/users/create" enctype="multipart/form-data"class="container userEditProfileForm" method="POST">
+            <label for="">Nombre</label>
+            <input type="text" placeholder="<%= user.first_name %>" name="first_name" class="miInput">
+            <label for="">Apellido</label>            
+            <input type="text" placeholder="<%= user.sub_name %>" name="sub_name" class="miInput">
+            <label for="">Email</label>
+            <input type="email" placeholder="<%= user.email %>" name="email" class="miInput">
+            <label for="">Género</label>
+            <input type="gender" placeholder="<%= user.gender %>" name="gender" class="miInput">
+            <label for="">Fecha de Nacimiento</label>
+            <input type="gender" placeholder="<%= user.birth_day %>" name="gender" class="miInput">
+            <label for="">Número de Mobil</label>
+            <input type="mobile" placeholder="<%= user.mobile_number %>" name="gender" class="miInput">
+        <div class="container profileBtns">
+            <button type="submit" class="btn btn-warning">Guardar cambios</button>
+            <button type="submit" class="btn btn-warning">Cancelar</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Include Footer -->
+<%- include('partials/footer',{branches}) %>
