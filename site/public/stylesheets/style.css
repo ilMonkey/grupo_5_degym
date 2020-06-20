@@ -832,23 +832,67 @@ fab fa-whatsapp my-float :hover {
 
 /* ------USER-PROFILE-FORM-PAGE---- */
 
-.profileEditForm {
+
+.profileBody {
     
 }
+]
 
+.imageBox {
+    display: flex;
+    justify-content: center;
+}
 
+.profileImage img {
+    width: 200px;
+    border-radius: 100%;
+}
 
+.profileEditForm h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.4em;
+    color: #FF710F;
+    text-align: center;
+    padding: 10px;
+}
 
+.profileEditForm input {
+    width: 100%;
+    border-radius: 5px;
+    border-color:  #FF710F;
+    padding: 2px;
+}
 
+.profileEditForm p label input {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.4em;
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+    text-transform: capitalize;
+}
 
+.profileEditForm label {
+    margin: 0.3rem 0 0 0; 
+}
 
+.userEditProfileForm {
+    padding: 0
+}
 
+.profileBtns {
+    display: flex;
+    justify-content: space-between;
+    padding: 0
+}
 
+.deleteBtn {
+    display: flex;
+    flex-direction: row-reverse;
+}
 
-
-
-
-
+.profileEditForm .btn {
+    margin: 10px 0
+}
 
 
 
