@@ -17,7 +17,7 @@ const controller = {
 	// All - Metodo que muestra todas las clases disponibles
 	all: (req, res) => {
 		let products_view = products.filter(product => product.id <= 6 );
-		res.render('products',{products: products_view, branches})
+		res.render('products/products',{products: products_view, branches})
 	},
 
 	// Detail - Metodo que detalla la clase seleccionada
@@ -25,12 +25,12 @@ const controller = {
 		let idDelProducto= req.params.id;
 		let product = products.find(product => product.id == idDelProducto)
 		let finalPrice = product.price
-		res.render('productDetail', {product, finalPrice, branches,toThousand})
+		res.render('products/productDetail', {product, finalPrice, branches,toThousand})
 	},
 
 	// Create - Este metodo viaja por GET cuando tocamos Crear Nuevo Producto
 	create: (req, res) => {
-		res.render('productAdd')
+		res.render('products/productAdd')
 	},
 	
 	// Create -  Metodo que viaja por POST para crear un producto
@@ -54,7 +54,7 @@ const controller = {
 	edit: (req, res) => {
 		let id= req.params.id; 
 		let product = products.find(product => product.id == req.params.id)
-		res.render('productEdit', {product, branches}) 
+		res.render('products/productEdit', {product, branches}) 
 	},
 	
 	// Update - metodo que viaja por PUT cuando ya realizamos todos las ediciones necesarias
