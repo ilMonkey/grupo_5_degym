@@ -44,7 +44,12 @@ router.get('/:id', usersController.profile)
 
 /*** EDIT ONE USER ***/ 
 router.get('/edit/:id', usersController.edit); /* GET - Form to create */
-router.put('/edit/:id', usersController.update); /* PUT - Update in DB */
+router.put('/edit/:id', upload.any(), [
+  check('first_name').not().isEmpty().withMessage('Te olvidaste ingresar tu nombre!'),
+  check('last_name').not().isEmpty().withMessage('Te olvidaste ingresar tu apellido!'),
+  check('email').isEmail().trim().withMessage('Tenes que poner un mail valido'),
+  check('mobile_number').not().isEmpty().isNumeric({no_symbols: false}).withMessage('Debe poner un celular valido'),
+  check('birth_day').not().isEmpty().withMessage('No te olvides de tu fecha de cumpleaños!')], usersController.update); /* PUT - Update in DB */
 
 /*** DELETE ONE USER***/ 
 router.delete('/delete/:id', usersController.destroy); /* DELETE - Delete from DB */
