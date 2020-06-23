@@ -43,7 +43,7 @@ const usersController = {
 			id: users.length + 1,
 			first_name: req.body.first_name,
 			last_name: req.body.last_name,
-			avatar : req.files[0].filename,
+			avatar: req.files[0].filename,
 			email: req.body.email,
 			gender: req.body.gender,
 			birth_day: req.body.birth_day,
