@@ -39,16 +39,21 @@ const usersController = {
 	
 	// Create -  Este metodo POST es para crear nuevos usuarios y que se guarden en la base de datos
 	store: (req, res, next )=> {
+		//dia representa el dia de registro del nuevo usuario
+		var dia = new Date();
+		dia.getDate() + "-"+ dia.getMonth()+ "-" + dia.getFullYear();
+
 		let newUser = {
 			id: users.length + 1,
 			first_name: req.body.first_name,
 			last_name: req.body.last_name,
-			avatar: req.files[0].filename,
 			email: req.body.email,
-			gender: req.body.gender,
-			birth_day: req.body.birth_day,
-			mobile_number: req.body.mobile_number,
 			password: bcrypt.hashSync(req.body.password, 10),
+			gender: req.body.gender,
+			mobile_number: req.body.mobile_number,
+			avatar: req.files[0].filename,
+			register_date: dia,
+			birth_day: req.body.birth_day,
 		}
 		let validation = validationResult(req);
 		let errors = validation.errors
@@ -68,7 +73,7 @@ const usersController = {
 		let errors = validation.errors
 		if (errors != '') {
 			console.log(errors) 
-			res.render('users/login',{errors, branches}) 
+			res.render('/users/login',{errors, branches}) 
 		}
 		// Guardamos en una variable al usuario que se quiere logear
 		let usuarioLogeado = traerUsuarioPorEmail(req.body.email); 
@@ -86,9 +91,9 @@ const usersController = {
 				// En caso de que tilde recordame ...
 				if (req.body.recuerdame) {
 					// Parametros: Como se va a llamar la cookie, que le guardamos a la cookie y opciones
-					res.cookie('userCookie', usuarioLogeado.id, {maxAge: 30000});
+					res.cookie('userCookie', usuarioLogeado.id, {maxAge: 300000});
 				}
-				res.redirect('/');
+				res.redirect('/users/profile/' + usuarioLogeado.id);
 				// res.redirect('/' + usuarioLogeado.id);
 			}
 		}else{
@@ -113,37 +118,45 @@ const usersController = {
 
 	// Update - Form to edit
 	edit: (req, res) => {
-		let user = users.find(user => req.params.id == user.id)
+		let user = traerTodosLosUsuarios().find(usuario => usuario.id == req.session.idDelUsuario);
 		res.render('users/userProfileForm', {user, branches})
 	},
 
 	// Update - Method to update
 	update: (req, res) => {
-		const errors = validationResult(req);
-		if (!errors.isEmpty()) {
-			console.log(errors) 
-			res.render('users/edit/'+ req.params.id,{errors, branches})
-		}else{
-			let userToModify = users.find(user => req.params.id == user.id)
-			userToModify = {
-				id: req.params.id,
-				first_name: req.body.first_name,
-				last_name: req.body.last_name,
-				avatar : req.files[0].filename,
-				email: req.body.email,
-				gender: req.body.gender,
-				birth_day: req.body.birth_day,
-				mobile_number: req.body.mobile_number,
+		// const errors = validationResult(req);
+		// if (!errors.isEmpty()) {
+		// 	console.log(errors) 
+		// 	res.render('users/edit/'+ req.params.id,{errors, branches})
+		// }else{
+			
+			users.forEach(user => {
+				if (user.id == req.params.id) {
+				first_name = req.body.first_name,
+				last_name = req.body.last_name,
+				email = req.body.email,
+				gender = req.body.gender,
+				mobile_number = req.body.mobile_number,
+				avatar = req.files[0].filename,
+				birth_day = req.body.birth_day
 			}
-			let filteredDataBase = users.filter(user => req.params.id == user.id)
-			let newDataBase = [...filteredDataBase, userToModify]
-			fs.writeFileSync(rutaUsersJSON, JSON.stringify(newDataBase,null, ' ') );
-			res.redirect('/users/'+ req.params.id)
-		}
+		});
+		
+			fs.writeFileSync(rutaUsersJSON, JSON.stringify(users,null, ' ') );
+			res.redirect('/users/profile/'+ req.params.id)
+			
+		console.log(user);
+		// }
 	},
 
 	// Delete - Delete one user from DB
 	destroy : (req, res) => {
+		let idDelUsuarioABorrar = req.params.id;
+		let nuevaBaseDeDatos = users.filter((user) => user.id != idDelUsuarioABorrar  ) 
+		let nuevaBaseDeDatosJSON = JSON.stringify(nuevaBaseDeDatos,null, ' ');
+		fs.writeFileSync(rutaUsersJSON, nuevaBaseDeDatosJSON)
+		// primer parametro el path, segundo que le meto a ese path
+		res.redirect('/')
 	},
 
 	// Delete - Delete one user from DB
