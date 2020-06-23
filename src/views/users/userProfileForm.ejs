@@ -45,41 +45,12 @@
         </div>
     </form>
     <div class="deleteBtn">
-        <form action="/delete/<%= user.id %>" class="formToDelete" method="POST">
+        <form action="/delete/<%= user.id %>" class="" id="deleteForm" method="POST">
             <button type="submit" class="btn btn-danger deleteUser">Eliminar Perfil</button>
         </form>
         <a href="/users/<%= user.id %>" class="btn btn-light">Cancelar</a>
     </div> 
 </div>
-
-
-<script> //script para confirmar si usaurio quiere eliminar su perfil
-
-var deleteUser = document.querySelector('#deleteUser');
-
-deleteUser.addEventListener('click', function (e) {
-        swal({
-    title: "Estas seguro de borrar tu Perfil?",
-    text: "Una vez eliminado, perderás todos tus datos y actividades ya abonadas!",
-    icon: "warning",
-    buttons: true,
-    dangerMode: true,
-    })
-    .then((willDelete) => {
-    if (willDelete) {
-        swal("Listo! Tu Usuario ya no pertenece a Da Gym!");
-    } else {
-        swal("Todavía estás inscripto con nosotros :) !", {
-        icon: "success"});
-        event.preventDefault();
-    }
-    });
-})
-
-
-
-</script>
-
 
 <!-- Include Footer -->
 <%- include('../partials/footer',{branches}) %>
