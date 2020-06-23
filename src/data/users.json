@@ -252,13 +252,13 @@
  },
  {
   "id": 22,
-  "first_name": "Jose",
+  "first_name": "Benito",
   "last_name": "Rosales",
-  "avatar": "avatar-1592689253614.jpg",
-  "email": "administracion@smartib.com.ar",
+  "avatar": "avatar-1592696581734.jpg",
+  "email": "admin@seguroalacarta.com.ar",
   "gender": "Male",
-  "birth_day": "121992-12-11",
-  "mobile_number": "111111111",
-  "password": "$2a$10$RJrDk/kfPPyjrlPlNrppQeSIYuWskXykzvkHCsLM8zKe78hULkIvO"
+  "birth_day": "1999-11-11",
+  "mobile_number": "01140600369",
+  "password": "$2a$10$KrkTM1Vy5AvS0mml8M/PUe7Ds8G/l16Z2mxMVIjJbnFaSW6BlfS4W"
  }
 ]

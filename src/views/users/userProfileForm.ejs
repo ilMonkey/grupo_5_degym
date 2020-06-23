@@ -6,19 +6,23 @@
 
 <!-- Profile  style.css:830 -->
 
-<div class="container profileEditForm">
+<div class="profileEditForm">
     <h2><%= user.first_name %>, aquí podés editar tu Perfil.</h1>
     <div class="container profileImage">
         <div class="container imageBox">
             <img src="<%= user.avatar %>" alt="Foto de Perfil">
             <div class="textAndBtnBox">
-                <p>Tu avatar</p>
+                <button class="btn btn-primary">CAMBIAR</button>
                 <p style = "font-size: small;">(200x200px)</p>
-                <button>CAMBIAR</button>
             </div>
         </div>
     </div>
     <div class="profileBody">
+        <% if(errors) { %>
+            <p class="errorsProfileForm">
+                <%= errors %>
+            </p>
+            <% } %>
         <form action="/users/create" enctype="multipart/    form-data"class="container userEditProfileForm" method="POST">
             <label for="">Nombre</label>
             <input type="text" value="<%= user.first_name %>" name="first_name" class="miInput">
@@ -27,11 +31,11 @@
             <label for="">Email</label>
             <input type="email" value="<%= user.email %>" name="email" class="miInput">
             <label for="">Género</label>
-            <input type="gender" value="<%= user.gender %>" name="gender" class="miInput">
+            <input type="text" value="<%= user.gender %>" name="gender" class="miInput">
             <label for="">Fecha de Nacimiento</label>
-            <input type="gender" value="<%= user.birth_day %>" name="birth_day" class="miInput">
+            <input type="date" value="<%= user.birth_day %>" name="birth_day" class="miInput">
             <label for="">Número de Mobil</label>
-            <input type="mobile" value="<%= user.mobile_number %>" name="mobile_number" class="miInput">
+            <input type="number" value="<%= user.mobile_number %>" name="mobile_number" class="miInput">
             <div class="container profileBtns">
                 <button type="submit" class="btn btn-primary">Guardar cambios</button>
                 <button type="submit" class="btn btn-light">Cancelar</button>
