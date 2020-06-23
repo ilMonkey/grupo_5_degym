@@ -75,9 +75,9 @@ const usersController = {
 		console.log(usuarioLogeado); 
 
 		// Si encuentra al usuario ...
-		if(usuarioLogeandose != undefined){
+		if(usuarioLogeado != undefined){
 			// Verifica la contraseña y lo envia al profile
-			let autorizado = bcrypt.compareSync(req.body.password, usuarioLogedo.password)
+			let autorizado = bcrypt.compareSync(req.body.password, usuarioLogeado.password)
 			if(autorizado){
 				// Esta autorizado si las contraseñas coinciden
 				// Una vez verificado que es el usuario, tenemos que ponerlo en session --> idDelUsuario es lo que guardo del usuario en este caso el id
@@ -88,7 +88,8 @@ const usersController = {
 					// Parametros: Como se va a llamar la cookie, que le guardamos a la cookie y opciones
 					res.cookie('userCookie', usuarioLogeado.id, {maxAge: 30000});
 				}
-				res.redirect('/profile' + usuarioLogeado.id);
+				res.redirect('/');
+				// res.redirect('/' + usuarioLogeado.id);
 			}
 		}else{
 			// Si no encontro al usuario ...
