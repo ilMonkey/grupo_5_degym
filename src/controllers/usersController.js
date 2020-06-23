@@ -80,6 +80,7 @@ const usersController = {
 		}else{
 			let userToModify = users.find(user => req.params.id == user.id)
 			userToModify = {
+				id: req.params.id,
 				first_name: req.body.first_name,
 				last_name: req.body.last_name,
 				avatar : req.files[0].filename,

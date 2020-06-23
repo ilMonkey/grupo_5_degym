@@ -4,26 +4,31 @@
 <!-- Include Header -->
 <%- include('../partials/header') %>
 
-<!-- Profile  style.css:830 -->
+<!-- Profile  style.css:850 -->
 
 <div class="profileEditForm">
     <h2><%= user.first_name %>, aquí podés editar tu Perfil.</h1>
-    <div class="container profileImage">
-        <div class="container imageBox">
-            <img src="<%= user.avatar %>" alt="Foto de Perfil">
-            <div class="textAndBtnBox">
-                <button class="btn btn-primary">CAMBIAR</button>
-                <p style = "font-size: small;">(200x200px)</p>
+    
+    <form action="/users/edit/<%= user.id %>" enctype="multipart/    form-data"class="container userEditProfileForm" method="POST">
+        <div class="container profileImage">
+            <div class="container imageBox">
+                <img src="<%= user.avatar %>" alt="Foto de Perfil">
+                <div class="textAndBtnBox">
+                    <input type="file" name="avatar" id="foto" class="btn btn-primary">
+                    <p style = "font-size: small; color: black;">(200x200px)</p>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="profileBody">
-        <% if(errors) { %>
-            <p class="errorsProfileForm">
-                <%= errors %>
-            </p>
+        <div class="profileBody">
+
+    <!-- /chequea si hay errores cargadors por el usuario e el formulario, y de ser asi los muestra -->
+            <% if (typeof(errors) != "undefined") { %>
+                <p class="errorsProfileForm">
+                    <%= errors %>
+                </p>
             <% } %>
-        <form action="/users/create" enctype="multipart/    form-data"class="container userEditProfileForm" method="POST">
+
+
             <label for="">Nombre</label>
             <input type="text" value="<%= user.first_name %>" name="first_name" class="miInput">
             <label for="">Apellido</label>            
@@ -36,16 +41,25 @@
             <input type="date" value="<%= user.birth_day %>" name="birth_day" class="miInput">
             <label for="">Número de Mobil</label>
             <input type="number" value="<%= user.mobile_number %>" name="mobile_number" class="miInput">
-            <div class="container profileBtns">
-                <button type="submit" class="btn btn-primary">Guardar cambios</button>
-                <button type="submit" class="btn btn-light">Cancelar</button>
-            </div>
-            <div class="deleteBtn">
-                <button class="btn btn-danger">Eliminar Perfil</button>
-            </div>
-        </form>
-    </div>
+            <button type="submit" class="btn btn-primary">Guardar cambios</button>
+        </div>
+    </form>
+    <div class="deleteBtn">
+        <button class="btn btn-danger" id="deleteUser">Eliminar Perfil</button>
+        <a href="/users/<%= user.id %>" class="btn btn-light">Cancelar</a>
+    </div> 
 </div>
+
+
+<script>
+
+let delete = classSelectorbyId(".deleteUser")
+addEventListener
+
+
+
+</script>
+
 
 <!-- Include Footer -->
 <%- include('../partials/footer',{branches}) %>
