@@ -260,5 +260,16 @@
   "birth_day": "1999-11-11",
   "mobile_number": "01140600369",
   "password": "$2a$10$KrkTM1Vy5AvS0mml8M/PUe7Ds8G/l16Z2mxMVIjJbnFaSW6BlfS4W"
+ },
+ {
+  "id": 23,
+  "first_name": "Jose",
+  "last_name": "Rosales",
+  "avatar": "avatar-1592948045749.jpg",
+  "email": "administracion@smartib.com.ar",
+  "gender": "Male",
+  "birth_day": "1992-11-11",
+  "mobile_number": "1111111111",
+  "password": "$2a$10$axUqxc0YPR7rlNYg//r7FuswF4n6uPtiDB49wUfGnCEASMwgLjscO"
  }
 ]
