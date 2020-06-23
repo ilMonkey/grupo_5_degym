@@ -1,9 +1,10 @@
 // ************ Require's ************
 const express = require('express');
 const router = express.Router();
-const multer = require('multer')
-const path = require('path')
-const {check} = require('express-validator')
+const multer = require('multer');
+const path = require('path');
+const {check} = require('express-validator');
+const authMiddleware = require('../middlewares/authMiddleware');
 
 // ************ Controller Require ************
 const usersController = require('../controllers/usersController');
@@ -25,7 +26,10 @@ var storage = multer.diskStorage({
 
 /*** LOGIN ONE USER ***/ 
 router.get('/login', usersController.login) 
-router.post('/auth', [check('email').isEmail().trim()],usersController.auth)
+router.post('/auth', [check('email').isEmail().withMessage('Tenes que escribir un mail valido')
+.trim()
+.not().isEmpty().withMessage('Elcampo no puede estar vacio')  
+],usersController.auth)
 
 /*** CREATE ONE USER ***/ 
 router.get('/create', usersController.create); /* GET - Form to create */
@@ -40,7 +44,9 @@ router.post('/create', upload.any(), [
   ,usersController.store); /* POST - Store in DB */
 
 /*** PROFILE USER ***/ 
-router.get('/:id', usersController.profile)
+// Poniendo el autMiddleware evito que cualquier persona entre a cualquier perfil, me autentifica que el que entre a usar el metodo profile sea el usuario correspondiente
+// Este middleare pregunta quien sos, si es undefined te redirige a login 
+router.get('/profile/:id', authMiddleware ,usersController.profile)
 
 /*** EDIT ONE USER ***/ 
 router.get('/edit/:id', usersController.edit); /* GET - Form to create */
