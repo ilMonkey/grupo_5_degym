@@ -848,11 +848,12 @@ fab fa-whatsapp my-float :hover {
     text-align: center;
 }
 
-/* ------USER-PROFILE-FORM-PAGE---- */
+/* ------USER-PROFILE-EDIT-FORM-PAGE---- */
 
-
-.profileBody {
+.profileEditForm {
     background-color: #2c3940;
+    margin: 0;
+    max-width: none;
 }
 
 .imageBox {
@@ -864,6 +865,7 @@ fab fa-whatsapp my-float :hover {
     width: 200px;
     border-radius: 100%;
 }
+
 
 .profileEditForm h2 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -880,16 +882,17 @@ fab fa-whatsapp my-float :hover {
     padding: 2px;
 }
 
-.profileEditForm p label input {
+.profileEditForm p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.4em;
-    color: rgb(255, 255, 255);
-    font-weight: 800;
+    color: whitesmoke;
     text-transform: capitalize;
 }
 
 .profileEditForm label {
     margin: 0.3rem 0 0 0; 
+    color: whitesmoke;
+    font-size: small;
 }
 
 .userEditProfileForm {
@@ -910,6 +913,32 @@ fab fa-whatsapp my-float :hover {
 .profileEditForm .btn {
     margin: 10px 0
 }
+
+/* ------USER-PROFILE-PAGE---- */
+
+.profileImageBox {
+    text-align: center;
+}
+
+.profileBody {
+    margin: 0.9em 0 0 0;
+}
+
+.profileBtn {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-bottom: 0.5em;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

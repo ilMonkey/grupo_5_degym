@@ -4,11 +4,12 @@
 <!-- Include Header -->
 <%- include('../partials/header') %>
 
-<!-- Profile  -->
+<!-- Profile stile.css line:920 -->
+
 <div class="container profileEditForm">
-    <h1 class="profileTitle">Perfil de Usuario</h1>
+    <h2 class="profileTitle">Perfil de Usuario</h1>
     <div class="container profileImage">
-        <div class="container imageBox">
+        <div class="container profileImageBox">
             <img src="<%= user.avatar %>" alt="Foto de Perfil">
         </div>
     </div>
@@ -43,9 +44,9 @@
                 <p class="userData"><%= user.id %></p>
             </li>
         </ul>  
-        <a href="/edit/<%= user.id %>" class="container profileBtns">
-            <button type="" class="btn btn-primary">Editar</button>
-        </a>
+        <div class="profileBtn">
+           <a href="edit/<%= user.id %>" class= "btn btn-primary">Editar</a>
+        </div>
     </div>
 </div>
 
