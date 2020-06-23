@@ -925,7 +925,7 @@ fab fa-whatsapp my-float :hover {
 }
 
 .userEditProfileForm {
-    padding: 0
+    padding: 0.5em
 }
 
 .profileBtns {
@@ -946,7 +946,8 @@ fab fa-whatsapp my-float :hover {
 /* ------USER-PROFILE-PAGE---- */
 
 .profileImageBox {
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 .profileBody {
