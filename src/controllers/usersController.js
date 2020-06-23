@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcryptjs');
 const {validationResult} = require ('express-validator')
+const {check} = require ('express-validator')
 const usersFilePath = './src/data/users.json';
  
 // Parse de Users
@@ -17,7 +18,7 @@ branches = branches.filter(branch => branch.id < 7 );
 // Funciones customisadas
 function traerTodosLosUsuarios(){
 	let usersFileContent = fs.readFileSync(usersFilePath, 'utf-8');
-	let usuarios = usersFileContent != '' ? JSON.parse(usersFileContent) : [];
+	let usuarios = usersFileContent != '' ? JSON.parse(usersFileContent) : []; // Si el contenido de userFileContent es distinto de nada, entonces parsealo
 	return usuarios
 };
 
@@ -61,16 +62,8 @@ const usersController = {
 		}
 	},
 		
-	// Login - Este metodo es de autentificación del usuario
+	// Login - Este metodo es de autentificación del usuario, session y cookies EXPLICADO!!!
 	auth: (req,res) => {
-		// let usuarioBuscado = users.find(usuario => req.body.email == usuario.email)//req.body.password == usuarioEncontrado.passsword pero hay un problema que se soluciona en el siguiente punto
-		// let autorizado = bcrypt.compareSync(req.body.password, usuarioBuscado.password) // El primer parametro es el string que quiero comparar y el segundo parametro es el hash contra el que lo quiero comparar
-		// if(autorizado){
-		// res.redirect('/')// En realidad res.redirect('/users/profile') pero es para testear que logea bien con el compare de bcrypt
-		// }else{
-		// 	res.render('users/login', {branches})
-		// }
-// -----------------------------------------------------------------------------------------//
 		let validation = validationResult(req);
 		let errors = validation.errors
 		if (errors != '') {
@@ -89,36 +82,46 @@ const usersController = {
 				// Esta autorizado si las contraseñas coinciden
 				// Una vez verificado que es el usuario, tenemos que ponerlo en session --> idDelUsuario es lo que guardo del usuario en este caso el id
 				req.session.idDelUsuario = usuarioLogeado.id
-
+ 
 				// En caso de que tilde recordame ...
-
+				if (req.body.recuerdame) {
+					// Parametros: Como se va a llamar la cookie, que le guardamos a la cookie y opciones
+					res.cookie('userCookie', usuarioLogeado.id, {maxAge: 30000});
+				}
 				res.redirect('/profile' + usuarioLogeado.id);
 			}
 		}else{
 			// Si no encontro al usuario ...
-			res.send('No existe este usuario')
+			res.redirect('/users/login');
 		}
 	},
 
+	// Profile - Metodo que te lleva al profile con la info del usuario logeado
 	profile: (req,res) => {
-		let user = users.find(user => req.params.id == user.id)
+		// Buscamos al usuario por su id... Esta ruta va a estar protegida solo para el usuario que esta logeado
+		let user = traerTodosLosUsuarios().find(usuario => usuario.id == req.session.idDelUsuario);
 		res.render('users/userProfile', {user, branches})
 	},
-	
+
+	// Logout - Metodo para deslogearse
+	logout: (req, res) => {
+		req.session.destroy();
+		req.cookie('userCookie', null, {maxAge: 1});
+		res.redirect('/');
+	},
 
 	// Update - Form to edit
 	edit: (req, res) => {
 		let user = users.find(user => req.params.id == user.id)
 		res.render('users/userProfileForm', {user, branches})
-		
 	},
+
 	// Update - Method to update
 	update: (req, res) => {
 		const errors = validationResult(req);
 		if (!errors.isEmpty()) {
 			console.log(errors) 
 			res.render('users/edit/'+ req.params.id,{errors, branches})
-			//   return res.status(422).json({ errors: errors.array() });
 		}else{
 			let userToModify = users.find(user => req.params.id == user.id)
 			userToModify = {
@@ -139,7 +142,6 @@ const usersController = {
 
 	// Delete - Delete one user from DB
 	destroy : (req, res) => {
-		
 	},
 
 	// Delete - Delete one user from DB

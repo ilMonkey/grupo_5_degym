@@ -17,13 +17,7 @@ const mainController = {
 	},
 	search: (req, res) => {
 		
-	},
-	// processLogin: (req,res) =>{
-	// 	if (!errors.isEmpty()) {
-	// 		console.log(errors) 
-	// 		res.render('users/login',{errors, branches})
-	// 	}
-	// }
+	}
 };
 
 module.exports = mainController;

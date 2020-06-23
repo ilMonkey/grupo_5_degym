@@ -30,6 +30,7 @@ router.post('/auth', [check('email').isEmail().withMessage('Tenes que escribir u
 .trim()
 .not().isEmpty().withMessage('Elcampo no puede estar vacio')  
 ],usersController.auth)
+router.post('/logout', usersController.logout);
 
 /*** CREATE ONE USER ***/ 
 router.get('/create', usersController.create); /* GET - Form to create */
