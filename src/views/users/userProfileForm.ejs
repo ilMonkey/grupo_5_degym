@@ -9,7 +9,7 @@
 <div class="profileEditForm">
     <h2><%= user.first_name %>, aquí podés editar tu Perfil.</h1>
     
-    <form action="/users/edit/<%= user.id %>" enctype="multipart/    form-data"class="container userEditProfileForm" method="POST">
+    <form action="/users/edit/<%= user.id %>" enctype="multipart/form-data" class="container userEditProfileForm" method="POST">
         <div class="container profileImage">
             <div class="container imageBox">
                 <img src="<%= user.avatar %>" alt="Foto de Perfil">
@@ -45,16 +45,36 @@
         </div>
     </form>
     <div class="deleteBtn">
-        <button class="btn btn-danger" id="deleteUser">Eliminar Perfil</button>
+        <form action="/delete/<%= user.id %>" class="formToDelete" method="POST">
+            <button type="submit" class="btn btn-danger deleteUser">Eliminar Perfil</button>
+        </form>
         <a href="/users/<%= user.id %>" class="btn btn-light">Cancelar</a>
     </div> 
 </div>
 
 
-<script>
+<script> //script para confirmar si usaurio quiere eliminar su perfil
 
-let delete = classSelectorbyId(".deleteUser")
-addEventListener
+var deleteUser = document.querySelector('#deleteUser');
+
+deleteUser.addEventListener('click', function (e) {
+        swal({
+    title: "Estas seguro de borrar tu Perfil?",
+    text: "Una vez eliminado, perderás todos tus datos y actividades ya abonadas!",
+    icon: "warning",
+    buttons: true,
+    dangerMode: true,
+    })
+    .then((willDelete) => {
+    if (willDelete) {
+        swal("Listo! Tu Usuario ya no pertenece a Da Gym!");
+    } else {
+        swal("Todavía estás inscripto con nosotros :) !", {
+        icon: "success"});
+        event.preventDefault();
+    }
+    });
+})
 
 
 
