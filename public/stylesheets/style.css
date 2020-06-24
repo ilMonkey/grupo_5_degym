@@ -6,6 +6,12 @@
 }
 
 /* --------------NAV BAR------------------------------------------- */
+
+.navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 .nav-header {
     position: sticky; 
     top: 0;
@@ -23,7 +29,7 @@
 .header-logo {
     max-width: 150px;
     height: auto;
-    padding: 5px;
+    padding: 0 5px 0 5px;
 }
 
 .register {
