@@ -119,3 +119,5 @@ Continuar haciendo:
     •   Perfeccionar vistas en media queries de tablet y desktop.
     •   Trabajar en panel de administrador, funcionalidad de buscar usuarios por ID o Nombre/Apellido.
     •   Debuggear prompt de confirmacion de "eliminacion de perfil" con sweet-alert.
+
+    
