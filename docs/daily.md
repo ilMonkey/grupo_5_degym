@@ -101,3 +101,21 @@ Continuar haciendo:
     •   Cosas opcionales que pensamos: hacer un branchDetail.ejs para mostrar detalles de las sedes con un mapa,      telefono de contacto y dirección.
     •   Definir parametros de css en el stylesheet del Proyecto.
     •   Armar la session y validar los diesplays de los botones que requieren sesion de usuario.
+
+23/06/2020 
+
+Hicimos:
+    •   Agegado carousel de slides con productos en la home.
+    •   Creamos y funcionando userscontroller métodos: update y destroy.
+    •   Cambiado height de la navbar.
+    •   Testeado sistema de autentificacion de login.
+    •   Agregados dos middlewares. Metodo Auth terminado con autentificacion de mail y contraseñas, session y cookie. 
+    •   Creado metodo logout de usersController.
+    •   Creado script para prompt de confirmacion de "eliminacion de perfil".
+
+Continuar haciendo:
+    •   Trabajar en el multer. Problemas para actualizar (update) avatar de perfil.
+    •   Mandar errores de validaciones a las vistas. Tanto para login/register como para updateForm de perfil.
+    •   Perfeccionar vistas en media queries de tablet y desktop.
+    •   Trabajar en panel de administrador, funcionalidad de buscar usuarios por ID o Nombre/Apellido.
+    •   Debuggear prompt de confirmacion de "eliminacion de perfil" con sweet-alert.
