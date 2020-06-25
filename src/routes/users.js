@@ -28,7 +28,8 @@ var storage = multer.diskStorage({
 router.get('/login', usersController.login) 
 router.post('/auth', [check('email').isEmail().withMessage('Tenes que escribir un mail valido')
 .trim()
-.not().isEmpty().withMessage('Elcampo no puede estar vacio')  
+.not().isEmpty().withMessage('Los campos no pueden estar vacios'),
+check('password').not().isEmpty().withMessage('Tenes que poner una contraseña valida') 
 ],usersController.auth)
 router.post('/logout', usersController.logout);
 
@@ -47,7 +48,7 @@ router.post('/create', upload.any(), [
 /*** PROFILE USER ***/ 
 // Poniendo el autMiddleware evito que cualquier persona entre a cualquier perfil, me autentifica que el que entre a usar el metodo profile sea el usuario correspondiente
 // Este middleare pregunta quien sos, si es undefined te redirige a login 
-router.get('/profile/:id', authMiddleware ,usersController.profile)
+router.get('/profile/:id', authMiddleware ,usersController.profile) 
 
 /*** EDIT ONE USER ***/ 
 router.get('/profile/edit/:id', usersController.edit); /* GET - Form to create */

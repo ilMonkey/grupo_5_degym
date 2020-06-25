@@ -398,6 +398,9 @@ width: 18%;
     text-align: center;
     margin: 10% 7%;
 }
+.container__register--data p{
+    color: red
+}    
 .container__register--data input{
     outline: none;
     border: 0;

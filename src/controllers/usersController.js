@@ -45,7 +45,7 @@ const usersController = {
 
 		let newUser = {
 			id: users.length + 1,
-			first_name: req.body.first_name,
+			first_name: req.body.first_name, 
 			last_name: req.body.last_name,
 			email: req.body.email,
 			password: bcrypt.hashSync(req.body.password, 10),
@@ -73,7 +73,7 @@ const usersController = {
 		let errors = validation.errors
 		if (errors != '') {
 			console.log(errors) 
-			res.render('/users/login',{errors, branches}) 
+			res.render('users/login',{errors, branches}) 
 		}
 		// Guardamos en una variable al usuario que se quiere logear
 		let usuarioLogeado = traerUsuarioPorEmail(req.body.email); 

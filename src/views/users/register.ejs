@@ -19,6 +19,13 @@
                 <h2>Registrarse</h2> 
             </div> 
                 <form action="/users/create" enctype="multipart/form-data"class="container__register--data" method="POST">
+                <!-- Codigo para mostrar errores -->
+                <% if(typeof errors != 'undefined'){ %>
+                    <%errors.forEach(error => {%>
+                        <p><%= error.msg %></p>
+                    <%})%>  
+                <%}%> 
+                <!-- Termina codigo para mostrar errores -->
                             <input type="text" placeholder="Nombre*" name="first_name" class="miInput">
                             <input type="text" placeholder="Apellido*" name="last_name" class="miInput">
                             <input type="text" placeholder="Male or Female" name="gender" class="miInput">
