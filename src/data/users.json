@@ -238,5 +238,17 @@
   "avatar": "https://robohash.org/facilislaboreplaceat.jpg?size=200x200&set=set1",
   "register_date": "06/08/2019",
   "birth_day": "02-Aug-1991"
+ },
+ {
+  "id": 21,
+  "first_name": "Mariano",
+  "last_name": "Micheli",
+  "email": "hastux@yahoo.com",
+  "password": "$2a$10$EEMTJilL/HxAh3OL3m17VuPxT9QLxQzcnSVoTD4IxdYDPjqpFfs/K",
+  "gender": "male",
+  "mobile_number": "01156385467",
+  "avatar": "avatar-1593212567559.JPG",
+  "register_date": "2020-06-26T23:02:47.723Z",
+  "birth_day": "1972-05-19"
  }
 ]

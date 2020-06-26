@@ -41,11 +41,11 @@
 }
 
 .cpanel {
-    display: none;
+    display: block;
 }
 
 .logout {
-    display: none;
+    display: block;
 }
 
 
