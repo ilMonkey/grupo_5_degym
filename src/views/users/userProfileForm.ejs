@@ -12,7 +12,7 @@
     <form action="/users/profile/edit/<%= user.id %>?_method=PUT" enctype="multipart/form-data" class="container userEditProfileForm" method="POST">
         <div class="container profileImage">
             <div class="container imageBox">
-                <img src="<%= user.avatar %>" alt="Foto de Perfil">
+                <img src="/public/images/users/ <%=user.avatar%> %>" alt="Foto de Perfil">
                 <div class="textAndBtnBox">
                     <input type="file" name="avatar" id="foto" class="btn btn-primary">
                     <p style = "font-size: small; color: black;">(200x200px)</p>
