@@ -1,8 +1,8 @@
 /* script para confirmar si usaurio quiere eliminar su perfil */
 
-let deleteForm = document.querySelector('deleteForm')
+let deleteForm = document.querySelector('.deleteForm')
 
-deleteForm.addEventListener('click', function (e) {
+deleteForm.submit('submit', function (e) {
     e.preventDefault();
         swal({
             title: "Estas seguro de borrar tu Perfil?",
