@@ -153,8 +153,8 @@ const usersController = {
 	destroy : (req, res) => {
 		let idDelUsuarioABorrar = req.params.id;
 		let nuevaBaseDeDatos = users.filter((user) => user.id != idDelUsuarioABorrar  ) 
-		let nuevaBaseDeDatosJSON = JSON.stringify(nuevaBaseDeDatos,null, ' ');
-		fs.writeFileSync(rutaUsersJSON, nuevaBaseDeDatosJSON)
+		let baseDeDatosJSON = JSON.stringify(nuevaBaseDeDatos,null, ' ');
+		fs.writeFileSync(rutaUsersJSON, baseDeDatosJSON)
 		// primer parametro el path, segundo que le meto a ese path
 		res.redirect('/')
 	},
