@@ -243,11 +243,12 @@
   "id": 21,
   "first_name": "Marioxxx",
   "last_name": "Guerra",
-  "avatar": "avatar-1592955261118.jpeg",
   "email": "mario@gmail.com",
+  "password": "$2a$10$3.u6IYdv0qa1Vu7HT5PaDe72g7SE6uZ6FTPsueBTYuNdpYzxcGIE2",
   "gender": "Male",
-  "birth_day": "1989-12-04",
-  "mobile_number": "11546546",
-  "password": "$2a$10$xOKU80GSumpY6fN5qH.D5eK/9SgOClKFWfnpdg5lY3kGa59cwL9Q2"
+  "mobile_number": "115646546546",
+  "avatar": "avatar-1593208052220.jpeg",
+  "register_date": "2020-06-26T21:47:32.280Z",
+  "birth_day": "1989-12-04"
  }
 ]
