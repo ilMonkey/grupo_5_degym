@@ -152,11 +152,12 @@ const usersController = {
 	// Delete - Delete one user from DB
 	destroy : (req, res) => {
 		let idDelUsuarioABorrar = req.params.id;
-		let nuevaBaseDeDatos = users.filter((user) => user.id != idDelUsuarioABorrar  ) 
+		let nuevaBaseDeDatos = users.filter(user => user.id != idDelUsuarioABorrar  ) 
 		let baseDeDatosJSON = JSON.stringify(nuevaBaseDeDatos,null, ' ');
 		fs.writeFileSync(rutaUsersJSON, baseDeDatosJSON)
 		// primer parametro el path, segundo que le meto a ese path
-		res.redirect('/')
+		res.send('me borre')
+		// res.redirect('/')
 	},
 
 	// Delete - Delete one user from DB

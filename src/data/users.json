@@ -250,5 +250,17 @@
   "avatar": "avatar-1593208052220.jpeg",
   "register_date": "2020-06-26T21:47:32.280Z",
   "birth_day": "1989-12-04"
+ },
+ {
+  "id": 22,
+  "first_name": "Mario",
+  "last_name": "adsdasdsadsa",
+  "email": "jm.rosales92@gmail.com",
+  "password": "$2a$10$yFKuAIBKxpiwuYDkGnDRqOcX.jI7FvU8ASo/kYYf0D8dTRj9iKmXi",
+  "gender": "male",
+  "mobile_number": "212321321312",
+  "avatar": "avatar-1593209944181.jpg",
+  "register_date": "2020-06-26T22:19:04.340Z",
+  "birth_day": "1222-12-12"
  }
 ]
