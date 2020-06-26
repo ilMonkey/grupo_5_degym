@@ -2,7 +2,7 @@
 
 let deleteForm = document.querySelector('deleteForm')
 
-deleteForm.addEventListener('submit', function (e) {
+deleteForm.addEventListener('click', function (e) {
     e.preventDefault();
         swal({
             title: "Estas seguro de borrar tu Perfil?",

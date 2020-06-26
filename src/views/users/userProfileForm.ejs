@@ -1,6 +1,6 @@
 <!-- Include Head -->
 <%- include('../partials/head', {title: 'Bienvenidos a Da Gym'}) %>
-<script src="/public/js/deletePrompt.js" defer></script>
+<!-- <script src="/js/deletePrompt.js" defer></script> -->
 <!-- Include Header -->
 <%- include('../partials/header') %>
 
@@ -45,7 +45,11 @@
         </div>
     </form>
     <div class="deleteBtn">
+<<<<<<< HEAD
         <form action="/users/profile/delete/<%= user.id %>?_method=DELETE" class="" id="deleteForm" method="POST">
+=======
+        <form action="/profile/delete/<%= user.id %>?_method=DELETE" id="deleteForm" method="POST">
+>>>>>>> 42c77e8eb71545b0ed7b0beb7a3f162ed15ddff4
             <button type="submit" class="btn btn-danger deleteUser">Eliminar Perfil</button>
         </form>
         <a href="/users/profile/<%= user.id %>" class="btn btn-light">Cancelar</a>
