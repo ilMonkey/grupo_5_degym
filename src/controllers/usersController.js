@@ -132,13 +132,13 @@ const usersController = {
 			
 			users.forEach(user => {
 				if (user.id == req.params.id) {
-				first_name = req.body.first_name,
-				last_name = req.body.last_name,
-				email = req.body.email,
-				gender = req.body.gender,
-				mobile_number = req.body.mobile_number,
-				avatar = req.files[0].filename,
-				birth_day = req.body.birth_day
+				user.first_name = req.body.first_name,
+				user.last_name = req.body.last_name,
+				user.email = req.body.email,
+				user.gender = req.body.gender,
+				user.mobile_number = req.body.mobile_number,
+			//	user.avatar = req.files[0].filename,
+				user.birth_day = req.body.birth_day
 			}
 		});
 		
