@@ -45,7 +45,7 @@
         </div>
     </form>
     <div class="deleteBtn">
-        <form action="/delete/<%= user.id %>" class="" id="deleteForm" method="POST">
+        <form action="/users/profile/delete/<%= user.id %>?_method=DELETE" class="" id="deleteForm" method="POST">
             <button type="submit" class="btn btn-danger deleteUser">Eliminar Perfil</button>
         </form>
         <a href="/users/profile/<%= user.id %>" class="btn btn-light">Cancelar</a>
