@@ -250,5 +250,17 @@
   "avatar": "avatar-1593213194221.jpeg",
   "register_date": "2020-06-26T23:13:14.249Z",
   "birth_day": "1998-12-04"
+ },
+ {
+  "id": 22,
+  "first_name": "Mariano",
+  "last_name": "Micheli",
+  "email": "hastux@yahoo.com",
+  "password": "$2a$10$2XmQbUewiL462ZX3.xy/WuBJXkxgVHejEGtYhgzQ8SpnBo5r9pVm2",
+  "gender": "male",
+  "mobile_number": "01156385467",
+  "avatar": "avatar-1593278271482.jpg",
+  "register_date": "2020-06-27T17:17:51.551Z",
+  "birth_day": "1972-05-19"
  }
 ]

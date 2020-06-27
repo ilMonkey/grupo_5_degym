@@ -87,7 +87,6 @@ const usersController = {
 				// Esta autorizado si las contraseñas coinciden
 				// Una vez verificado que es el usuario, tenemos que ponerlo en session --> idDelUsuario es lo que guardo del usuario en este caso el id
 				req.session.idDelUsuario = usuarioLogeado.id
- 
 				// En caso de que tilde recordame ...
 				if (req.body.recuerdame) {
 					// Parametros: Como se va a llamar la cookie, que le guardamos a la cookie y opciones
@@ -112,7 +111,7 @@ const usersController = {
 	// Logout - Metodo para deslogearse
 	logout: (req, res) => {
 		req.session.destroy();
-		req.cookie('userCookie', null, {maxAge: 1});
+	//	req.cookie('userCookie', null, {maxAge: 1});
 		res.redirect('/');
 	},
 
