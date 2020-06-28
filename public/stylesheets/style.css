@@ -50,7 +50,7 @@
 
 
 
-/* ------HOME CAROUSEL------ */
+/* ------HOME CAROUSEL I------ */
 .carousel-caption h1{
     color: #FF710F;
     text-align: center;
@@ -68,7 +68,27 @@
     text-decoration: none
 }
 
-/* ------END HOME CAROUSEL------ */
+/* ------END HOME CAROUSEL I------ */
+
+
+/* ------HOME CAROUSEL II------ */
+
+#container-item {
+    position: relative;
+}
+
+.nombreClase{
+    color: whitesmoke;
+    text-align: center;
+    font-size: 6vw;
+    text-transform: uppercase;
+    font-weight: bolder;
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+}
+
+/* ------END HOME CAROUSEL II------ */
 
 /* ///------------------BANNER--------------------------------- */
 .banner__home {
