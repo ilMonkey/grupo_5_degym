@@ -78,11 +78,11 @@
 }
 
 .nombreClase{
-    color: whitesmoke;
+    color: white;
     text-align: center;
-    font-size: 6vw;
+    font-size: 5.5vw;
     text-transform: uppercase;
-    font-weight: bolder;
+    font-weight: 200;
     position: absolute;
     bottom: 0;
     left: 5%;
@@ -793,6 +793,10 @@ fab fa-whatsapp my-float :hover {
     text-align: center;
 }
 
+.footer__container {
+    font-size: 0.8rem;
+}
+
 .footer__container-col1{
     width: 100%;
     padding: 2%;
@@ -807,7 +811,6 @@ fab fa-whatsapp my-float :hover {
 
 .footer__container-col1-socialntw {
     display: flex;
-    padding: 10px
 }
 
 .footer__container-col1-socialntw_objet a {
@@ -843,20 +846,9 @@ fab fa-whatsapp my-float :hover {
     padding: 10px;
 }
 
-.footer__container-col2-branches-options {
-    padding: 0;
-}
-
-
-.footer__container-col2-branches-options li{
-    padding: 4px;
-}
-
 .footer__container-col2-branches-options li a{
-    padding: 6px;
     text-decoration: none;
-    color: whitesmoke;
- 
+    color: whitesmoke; 
 }
 
 .footer__container-col2-branches-options li a:hover{
@@ -865,6 +857,7 @@ fab fa-whatsapp my-float :hover {
 }
 
 .footer__container-copyright{
+    font-size: 0.7rem;
     background-color: #1b1b1b;
     border-top: white 1px solid;
 }

@@ -23,6 +23,30 @@ Hacer menos:
 Dejar de hacer:
     •Hacer paginas sin leer la consigna específica del sprint donde se detalla las funcionalidades que "require el usuario". 
 
+Sprint 3
+
+Comenzar a hacer: 
+    •Formulario de registro con: 
+        1.Los campos mínimos mencionados en el sprint anterior. 
+        2. Subida de una imagen de perfi. 
+        3.Guardado en JSON con encriptación de contraseña.
+    •Formulario de login con: 
+        1.Campos de email y password. 
+        2.Función de recordar al usuario. 
+    •Rutas de huéspedes y usuarios: Las de huéspedes deberán redireccionar al perfil si el usuario está logeado. Las de usuarios deberán redireccionar al login si el usuario no está logeado.
+    •Seguir perfeccionando la vista mobil. Posible cambio de el icono del menu (¨burguer¨):  flotante (sticky) en la esquina inferior derecha y que siga al usuario.
+
+Hacer más:
+    •Pensar la usabilidad de la app.
+
+Continuar haciendo:
+    •Trabajando los bugs de login y registro. Ver cambio de imagen (avatar) de perfil por otra nueva.
+
+Hacer menos:
+    •
+Dejar de hacer:
+    • 
+
 Sprint 4
 
 Comenzar a hacer: 
