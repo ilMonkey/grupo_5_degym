@@ -120,4 +120,14 @@ Continuar haciendo:
     •   Trabajar en panel de administrador, funcionalidad de buscar usuarios por ID o Nombre/Apellido.
     •   Debuggear prompt de confirmacion de "eliminacion de perfil" con sweet-alert.
 
-    
+Sprint 5
+
+29/06/2020 
+
+Hicimos:
+    •  Modificamos tamaño letras del footer para que no sean tan grandes.
+    •  Completamos el retro del sprint 4.
+    •  Modificamos el navbar-toggle para que "flote" junto al botón de whatsapp.
+
+Continuar haciendo:
+    •   Falta comenzar a trabajar en las bases de datos y los items entregables del sprint número 5.

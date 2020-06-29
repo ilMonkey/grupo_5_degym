@@ -48,12 +48,12 @@ Sprint 4
 
 Comenzar a hacer: 
     •Formulario de registro con: 
-        1.Los campos mínimos mencionados en el sprint anterior. 
-        2. Subida de una imagen de perfi. 
-        3.Guardado en JSON con encriptación de contraseña.
+        ○ Los campos mínimos mencionados en el sprint anterior. 
+        ○ Subida de una imagen de perfi. 
+        ○ Guardado en JSON con encriptación de contraseña.
     •Formulario de login con: 
-        1.Campos de email y password. 
-        2.Función de recordar al usuario. 
+        ○ Campos de email y password. 
+        ○ Función de recordar al usuario. 
     •Rutas de huéspedes y usuarios: Las de huéspedes deberán redireccionar al perfil si el usuario está logeado. Las de usuarios deberán redireccionar al login si el usuario no está logeado.
     •Seguir perfeccionando la vista mobil. Posible cambio de el icono del menu (¨burguer¨):  flotante (sticky) en la esquina inferior derecha y que siga al usuario.
 
@@ -84,15 +84,15 @@ Comenzar a hacer:
         ○ Tipos de datos de los campos y sus restricciones 
         ○ Relaciones entre las diferentes tablas.
     •Script de población de base de datos para: 
-        ○ Tabla de usuarios 
-        ○ Tabla de productos 
-        ○ Tablas secundarias (categorías, marcas, colores, talles, etc) 
+        ○ Tabla de usuarios. 
+        ○ Tabla de productos. 
+        ○ Tablas secundarias (categorías, marcas, colores, talles, etc). 
         ○ Tabla de carrito de compras y productos de carritos de compras.
     •Creación de carpeta Sequelize con: ○ Archivos de configuración ○ Modelos con sus relaciones.
     •CRUD 
-        ○ De productos 
-        ○ De usuarios 
-        ○ De tablas secundarias
+        ○ De productos. 
+        ○ De usuarios. 
+        ○ De tablas secundarias.
 
 
 Hacer más:

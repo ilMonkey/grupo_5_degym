@@ -48,7 +48,31 @@
     display: block;
 }
 
+.navbar-toggler{
+    position:fixed;
+	width:60px;
+	height:60px;
+	bottom:124px;
+	right:40px;
+	background-color:#2c3940;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+    font-size:42px;
+	box-shadow: 2px 2px 3px #999;
+    z-index:100;
+    display: flex;
+    align-items: center;
+}
 
+#navbar-burguer {
+    outline: none;
+    border-color: #d6ac02;
+}
+
+.navbar-toggler-icon {
+    width: 35px;
+}
 
 /* ------HOME CAROUSEL I------ */
 .carousel-caption h1{
@@ -443,7 +467,7 @@ width: 18%;
 .container__register--data-check label{
     font-size: 4vw;
     margin-bottom: 5%;
-    color: #007bff;
+    color: white;
 }
 .container__register--send button{
     background-color: #FF710F;
@@ -561,28 +585,22 @@ width: 18%;
 	color:#FFF;
 	border-radius:50px;
 	text-align:center;
-  font-size:30px;
+    font-size:42px;
 	box-shadow: 2px 2px 3px #999;
   z-index:100;
 }
 
 .whatsapp i:hover {
-    color:#FFCD05;  
+    color:#ffcd05;  
 }
 
 .whatsapp:hover {
-    color:#FFCD05;  
+    color:#ffcd05;  
 }
 
 fab fa-whatsapp my-float :hover {
     color:#FFCD05;  
 }
-
-
-.my-float{
-	margin-top:16px;
-}
-
 
 /* ///-------------CONTACT--------------------------------- */
 
@@ -840,6 +858,10 @@ fab fa-whatsapp my-float :hover {
 .footer__container-col2 {
     width: 100%;
     padding: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .footer__container-col2-branches {
@@ -1210,7 +1232,8 @@ fab fa-whatsapp my-float :hover {
     padding: 3% 10%;
 }
 .container__register--data-info{
-    font-size: 1.2em
+    font-size: 1.2em;
+    text-decoration: underline;
 }
 
 /* MQ productDetail */
