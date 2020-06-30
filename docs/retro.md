@@ -76,7 +76,7 @@ Sprint 5
     
 Comenzar a hacer: 
     •Archivo ​retro.md​ con el resultado de la retrospectiva.
-    •Archivo d​ aily.md​ con sus opiniones sobre las dailies / weeklies.
+    •Archivo d​aily.md​ con sus opiniones sobre las dailies / weeklies.
     •Tablero de trabajo actualizado.
     •Diagrama de base de datos.
     •Script de creación de estructura de base de datos con: 

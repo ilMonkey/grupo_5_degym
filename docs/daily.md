@@ -122,7 +122,7 @@ Continuar haciendo:
 
 Sprint 5
 
-29/06/2020 
+28/06/2020 
 
 Hicimos:
     •  Modificamos tamaño letras del footer para que no sean tan grandes.
@@ -131,3 +131,13 @@ Hicimos:
 
 Continuar haciendo:
     •   Falta comenzar a trabajar en las bases de datos y los items entregables del sprint número 5.
+
+29/06/2020 
+
+Hicimos:
+    •  Reunion de organización de tablero para Sprint 5.
+    •  Definimos cada uno de los modelos de datos de las tablas y terminamos de detallar el diagrama de la DB en draw.io.
+    •  Creamos el SCRIPT con la estructura de la base de datos en el Workbench.
+
+Continuar haciendo:
+    •  Seguimiento de puntos pendientes de Sprint 4: Mostrar errores en todos los formularios, Ruteo para usuarios logueados/no, Botones de la navbar visibles solo para Admin del sitio.
