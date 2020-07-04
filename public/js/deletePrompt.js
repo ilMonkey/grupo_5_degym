@@ -1,22 +1,47 @@
 /* script para confirmar si usaurio quiere eliminar su perfil */
 
-let deleteForm = document.querySelector('.deleteForm')
-
-deleteForm.submit('submit', function (e) {
+// let deleteForm = document.querySelector('#deleteForm')
+$('#deleteForm').on('click', function(e) {
     e.preventDefault();
-        swal({
+    var currentElement = $(this);
+
+    swal({
             title: "Estas seguro de borrar tu Perfil?",
             text: "Una vez eliminado, perderás todos tus datos y actividades ya abonadas!",
             icon: "warning",
             buttons: true,
             dangerMode: true,
-    })
-    .then((willDelete) => {
+            closeModal: "button"
+            })
+    .then(
+        (willDelete) => {
         if (willDelete) {
-            swal("Listo! Tu Usuario ya no pertenece a Da Gym!", {icon: "sad"})
-            this.unbind('submit').submit();
+            $('#deleteForm').trigger('click', { true });
         } else {
             swal("Todavía estás inscripto con nosotros.", {icon: "success"});
         }
     });
 });
+
+
+
+
+
+// deleteForm.addEventListener('click', function (e) {
+//     e.preventDefault();
+//         swal({
+//             title: "Estas seguro de borrar tu Perfil?",
+//             text: "Una vez eliminado, perderás todos tus datos y actividades ya abonadas!",
+//             icon: "warning",
+//             buttons: true,
+//             dangerMode: true,
+//     })
+//     .then(
+//         (willDelete) => {
+//         if (willDelete) {
+//             $('#deleteForm').trigger('click', {});
+//         } else {
+//             swal("Todavía estás inscripto con nosotros.", {icon: "success"});
+//         }
+//     });
+// });

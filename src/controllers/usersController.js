@@ -156,7 +156,7 @@ const usersController = {
 		let baseDeDatosJSON = JSON.stringify(nuevaBaseDeDatos,null, ' ');
 		fs.writeFileSync(rutaUsersJSON, baseDeDatosJSON)
 		// primer parametro el path, segundo que le meto a ese path
-		res.send('me borre')
+		res.render('users/register',{branches});
 		// res.redirect('/')
 	},
 
