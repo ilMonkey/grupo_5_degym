@@ -13,7 +13,8 @@ branches = branches.filter(branch => branch.id < 7 );
 
 const mainController = {
 	root: (req, res) => {
-		res.render('index', {products, branches})
+		let usuario = req.session;
+		res.render('index', {products, branches,usuario})
 	},
 	search: (req, res) => {
 		

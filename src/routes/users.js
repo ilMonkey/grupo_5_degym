@@ -5,6 +5,8 @@ const multer = require('multer');
 const path = require('path');
 const {check} = require('express-validator');
 const authMiddleware = require('../middlewares/authMiddleware');
+const guestMiddleware = require('../middlewares/guestMiddleware');
+
 
 // ************ Controller Require ************
 const usersController = require('../controllers/usersController');
@@ -25,7 +27,7 @@ var storage = multer.diskStorage({
 
 
 /*** LOGIN ONE USER ***/ 
-router.get('/login', usersController.login) 
+router.get('/login', guestMiddleware ,usersController.login) 
 router.post('/auth', [check('email').isEmail().withMessage('Tenes que escribir un mail valido')
 .trim()
 .not().isEmpty().withMessage('Los campos no pueden estar vacios'),
@@ -34,7 +36,7 @@ check('password').not().isEmpty().withMessage('Tenes que poner una contraseña v
 router.post('/logout', usersController.logout);
 
 /*** CREATE ONE USER ***/ 
-router.get('/create', usersController.create); /* GET - Form to create */
+router.get('/create', guestMiddleware , usersController.create); /* GET - Form to create */
 router.post('/create', upload.any(), [
   check('first_name').not().isEmpty().withMessage('Te olvidaste ingresar tu nombre!'),
   check('last_name').not().isEmpty().withMessage('Te olvidaste ingresar tu apellido!'),
@@ -59,5 +61,8 @@ router.delete('/profile/delete/:id', usersController.destroy); /* DELETE - Delet
 
 /***  ONE User***/ 
 router.get('/password/', usersController.forgotPass); /* Reset  - Form to email */
+
+router.get('/logout/', usersController.logout); /* finish session */
+
 
 module.exports = router;

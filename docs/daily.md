@@ -120,4 +120,24 @@ Continuar haciendo:
     •   Trabajar en panel de administrador, funcionalidad de buscar usuarios por ID o Nombre/Apellido.
     •   Debuggear prompt de confirmacion de "eliminacion de perfil" con sweet-alert.
 
-    
+Sprint 5
+
+28/06/2020 
+
+Hicimos:
+    •  Modificamos tamaño letras del footer para que no sean tan grandes.
+    •  Completamos el retro del sprint 4.
+    •  Modificamos el navbar-toggle para que "flote" junto al botón de whatsapp.
+
+Continuar haciendo:
+    •   Falta comenzar a trabajar en las bases de datos y los items entregables del sprint número 5.
+
+29/06/2020 
+
+Hicimos:
+    •  Reunion de organización de tablero para Sprint 5.
+    •  Definimos cada uno de los modelos de datos de las tablas y terminamos de detallar el diagrama de la DB en draw.io.
+    •  Creamos el SCRIPT con la estructura de la base de datos en el Workbench.
+
+Continuar haciendo:
+    •  Seguimiento de puntos pendientes de Sprint 4: Mostrar errores en todos los formularios, Ruteo para usuarios logueados/no, Botones de la navbar visibles solo para Admin del sitio.

@@ -19,8 +19,8 @@ $('#deleteForm').on('click', function(e) {
             $('#deleteForm').trigger('click', { true });
         } else {
             swal("Todavía estás inscripto con nosotros.", {icon: "success"});
-        }
-    });
+        }}
+    );
 });
 
 
