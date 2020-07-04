@@ -7,18 +7,14 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema daGymDB
 -- -----------------------------------------------------
--- Data base for Da Gym
--- 
--- 
+DROP SCHEMA IF EXISTS `daGymDB` ;
+CREATE SCHEMA IF NOT EXISTS `daGymDB` ;
 
 -- -----------------------------------------------------
--- Schema daGymDB
---
 -- Data base for Da Gym
--- 
--- 
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `daGymDB` ;
+DROP DATABASE IF EXISTS `daGymDB` ;
+CREATE DATABASE `daGymDB` ;
 USE `daGymDB` ;
 
 -- -----------------------------------------------------
@@ -75,8 +71,6 @@ CREATE TABLE IF NOT EXISTS `daGymDB`.`lessons` (
   `time` TIME NOT NULL,
   `max_capacity` INT NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_lessons_activities1_idx` (`id_activity` ASC) VISIBLE,
-  INDEX `fk_lessons_branches1_idx` (`id_branch` ASC) VISIBLE,
   CONSTRAINT `fk_lessons_activities1`
     FOREIGN KEY (`id_activity`)
     REFERENCES `daGymDB`.`activities` (`id`)
@@ -99,8 +93,6 @@ CREATE TABLE IF NOT EXISTS `daGymDB`.`users_lessons` (
   `lessons_id` INT NOT NULL,
   `expire_date` DATE NULL,
   PRIMARY KEY (`id`, `users_id`, `lessons_id`),
-  INDEX `fk_users_has_lessons2_lessons1_idx` (`lessons_id` ASC) VISIBLE,
-  INDEX `fk_users_has_lessons2_users1_idx` (`users_id` ASC) VISIBLE,
   CONSTRAINT `fk_users_has_lessons2_users1`
     FOREIGN KEY (`users_id`)
     REFERENCES `daGymDB`.`users` (`id`)
@@ -117,3 +109,4 @@ ENGINE = InnoDB;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
