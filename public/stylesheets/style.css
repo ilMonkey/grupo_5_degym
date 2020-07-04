@@ -242,7 +242,7 @@ width: 18%;
 }
 .gymLesson__container-elements p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 0.9em;
+    font-size: 1.3em;
     color: #263238;
     text-align: justify;
     margin: 0;
@@ -259,6 +259,7 @@ width: 18%;
 }
 .container__options{
     text-align: center;
+    max-width: 400px;
 }
 
 .container__cart--buy button{
@@ -589,6 +590,7 @@ width: 18%;
 	box-shadow: 2px 2px 3px #999;
     z-index:100;
     padding-left: 1px;
+    padding-bottom: 63px;
 }
 
 .whatsapp i:hover {
@@ -738,9 +740,6 @@ fab fa-whatsapp my-float :hover {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    border-radius: 8px;
-    background-color: whitesmoke;
-    padding: 8px;
 }
 
 .class__container h2 {
@@ -761,6 +760,10 @@ fab fa-whatsapp my-float :hover {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    background-color: whitesmoke;
+    padding: 8px;
+    border-radius: 8px;
+    margin: 5px 0 5px 0;
 }
 
 .classImgBox {
@@ -1091,14 +1094,7 @@ fab fa-whatsapp my-float :hover {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-}
-
-.gymLesson__container-elements-imagebox {
-    width: 48%;
-}
-
-.gymLesson__container-elements-textbox {
-    width: 45%;
+    max-width: 800px;
 }
 
 .payBox__container {
