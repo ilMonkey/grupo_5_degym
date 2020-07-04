@@ -141,3 +141,13 @@ Hicimos:
 
 Continuar haciendo:
     •  Seguimiento de puntos pendientes de Sprint 4: Mostrar errores en todos los formularios, Ruteo para usuarios logueados/no, Botones de la navbar visibles solo para Admin del sitio.
+
+4/07/2020 
+
+Hicimos:
+    •  Ejecutamos el script de la BD en workbench.
+    •  Definimos cosas para estudiar que no recordabamos de las clases.
+    •  Modificamos las vistas de productsDetail.ejs, products.ejs y el logo de whatsapp.
+
+Continuar haciendo:
+    •  Falta centrarnos en los CRUDS ahora que tenemos la estructura de la DB definitiva.
