@@ -3,7 +3,7 @@ module.exports = (sequelize,DataTypes )=>{
         'User',
         {
             id: {
-                type: DataTypes.INTENGER,
+                type: DataTypes.INTEGER,
                 primaryKey: true,
                 autoIncrement: true,
             },
@@ -12,7 +12,7 @@ module.exports = (sequelize,DataTypes )=>{
             birth_day: DataTypes.DATE,
             genre: DataTypes.STRING,
             start_date: DataTypes.TIMESTAMP,
-            role: DataTypes.INTERGER,
+            role: DataTypes.INTEGER,
             email: DataTypes.STRING,
             password: DataTypes.STRING,
             mobile_number: DataTypes.STRING,
