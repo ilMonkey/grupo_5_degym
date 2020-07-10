@@ -22,6 +22,7 @@ module.exports = {
 	detail: async (req, res) => {
 		try {		
 		const detailedLesson = await DB.Lesson.findByPk(req.params.id)
+		
 		res.render('products/productDetail', {detailedLesson})
 		} catch (error) {
 			res.send(error)
