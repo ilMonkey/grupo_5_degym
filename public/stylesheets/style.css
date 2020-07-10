@@ -63,7 +63,14 @@
     z-index:100;
     display: flex;
     align-items: center;
+    border: 3px solid transparent;
 }
+
+.navbar-toggler:hover{
+    opacity: .9;
+    border: 6px solid transparent;
+}
+
 
 #navbar-burguer {
     outline: none;
