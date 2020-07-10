@@ -1,9 +1,5 @@
-
-
 const DB = require ('../database/models');
 const OP = DB.Sequelize.Op;
-
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 module.exports = { 
 
