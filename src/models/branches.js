@@ -13,10 +13,7 @@ module.exports = (sequelize,DataTypes )=>{
         },
     );
     branch.associate = (models) => {
-        branch.hasMany(models.Lesson, {
-            as: 'lessons',
-            foreignKey: 'id_branch'
-        })
+        branch.hasMany(models.Lessons)
     }
     return branch
 };

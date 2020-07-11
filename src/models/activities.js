@@ -7,11 +7,8 @@ module.exports = (sequelize,DataTypes)=> {
             monthly_price:DataTypes.INTEGER,
         },
     );
-     activity.associate = (models) => {
-        Activity.hasMany(models.Lesson, {
-            as: 'lessons',
-            foreignKey: 'id_activity'
-        })
-         }
+    // activity.associate = (models) => {
+    //     activity.hasMany(models.Lessons)
+    //     }
         return activity
     }

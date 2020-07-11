@@ -11,13 +11,13 @@ module.exports = (sequelize,DataTypes )=>{
             },   
     );
         lesson.associate = (models)=>{
-            Lesson.belongsTo(models.Activity, {
-                 as: 'activity',
-                 foreignKey: 'id_activity'
-            })
-            Lesson.belongsTo(models.Branch, {
+            // lesson.belongsTo(models.Activity, {
+            //     as: 'activity',
+            //     foreignKey: 'id_activity',
+            // })
+            lesson.belongsTo(models.Branch, {
                 as: 'branch',
-                foreignKey: 'id_branch'
+                foreignKey: 'id_branch',
             })    
         }
     
