@@ -15,5 +15,11 @@ module.exports = (sequelize,DataTypes )=>{
     // branch.associate = (models) => {
     //     branch.hasMany(models.Lessons)
     // }
+    // branch.associate = (models) => {
+    //     branch.hasMany(models.Lesson, {
+    //         as: 'lessons',
+    //         foreignKey: 'id_branch'
+    //     })
+    // }
     return branch
 };
