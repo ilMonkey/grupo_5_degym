@@ -10,26 +10,16 @@ module.exports = (sequelize,DataTypes )=>{
                 timestamps: false
             },   
     );
-        // lesson.associate = (models)=>{
-            // lesson.belongsTo(models.Activity, {
-            //     as: 'activity',
-            //     foreignKey: 'id_activity',
-            // })
-            // lesson.belongsTo(models.Branch, {
-            //     as: 'branch',
-            //     foreignKey: 'id_branch',
-            // })    
-        // }
-        // lesson.associate = (models)=>{
-        //     Lesson.belongsTo(models.Activity, {
-        //          as: 'activity',
-        //          foreignKey: 'id_activity'
-        //     })
-        //     Lesson.belongsTo(models.Branch, {
-        //         as: 'branch',
-        //         foreignKey: 'id_branch'
-        //     })    
-        // }
+        lesson.associate = (models)=>{
+            Lesson.belongsTo(models.Activity, {
+                 as: 'activity',
+                 foreignKey: 'id_activity'
+            })
+            Lesson.belongsTo(models.Branch, {
+                as: 'branch',
+                foreignKey: 'id_branch'
+            })    
+        }
     
         return lesson
 }
