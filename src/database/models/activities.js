@@ -8,7 +8,7 @@ module.exports = (sequelize,DataTypes)=> {
         },
     );
      activity.associate = (models) => {
-        Activity.hasMany(models.Lesson, {
+        activity.hasMany(models.Lesson, {
             as: 'lessons',
             foreignKey: 'id_activity'
         })

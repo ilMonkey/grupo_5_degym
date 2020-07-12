@@ -12,9 +12,6 @@ module.exports = (sequelize,DataTypes )=>{
             telephone: DataTypes.STRING,
         },
     );
-    // branch.associate = (models) => {
-    //     branch.hasMany(models.Lessons)
-    // }
     branch.associate = (models) => {
         branch.hasMany(models.Lesson, {
             as: 'lessons',
