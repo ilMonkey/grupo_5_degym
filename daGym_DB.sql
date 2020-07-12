@@ -87,20 +87,20 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `daGymDB`.`users_lessons`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `daGymDB`.`users_lessons` (
+CREATE TABLE IF NOT EXISTS `daGymDB`.`user_lesson` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `users_id` INT NOT NULL,
-  `lessons_id` INT NOT NULL,
+  `user_id` INT NOT NULL,
+  `lesson_id` INT NOT NULL,
   `expire_date` DATE NULL,
-  PRIMARY KEY (`id`, `users_id`, `lessons_id`),
+  PRIMARY KEY (`id`, `user_id`, `lesson_id`),
   CONSTRAINT `fk_users_has_lessons2_users1`
-    FOREIGN KEY (`users_id`)
-    REFERENCES `daGymDB`.`users` (`id`)
+    FOREIGN KEY (`user_id`)
+    REFERENCES `daGymDB`.`user` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_users_has_lessons2_lessons1`
-    FOREIGN KEY (`lessons_id`)
-    REFERENCES `daGymDB`.`lessons` (`id`)
+    FOREIGN KEY (`lesson_id`)
+    REFERENCES `daGymDB`.`lesson` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -109,4 +109,3 @@ ENGINE = InnoDB;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
-

@@ -25,9 +25,9 @@ module.exports = (sequelize,DataTypes )=>{
     user.associate = (models) => {
         user.belongsToMany(models.Lesson,{
             as: 'lessons',
-            through: 'Users_lesson',
+            through: 'User_lesson',
             foreignKey: 'user_id',
-            otherKey: 'lesson_id',
+            otherKey: 'lesson_id'
         })
     }
     return user

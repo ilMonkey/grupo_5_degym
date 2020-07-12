@@ -7,7 +7,7 @@ module.exports = {
 	// All - Metodo que muestra todas las clases disponibles
 	all: async (req, res) => {
 		try {
-            const lessons = await DB.Users_lesson.findAll()
+            const lessons = await DB.User_lesson.findAll()
             console.log('Llegue')
             res.send('llegue bien')
         } catch (error) {
