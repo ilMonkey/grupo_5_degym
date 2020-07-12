@@ -18,7 +18,15 @@ module.exports = (sequelize,DataTypes )=>{
             lesson.belongsTo(models.Branch, {
                 as: 'branch',
                 foreignKey: 'id_branch'
-            })    
+            }) 
+            lesson.associate = (models) => {
+                lesson.belongsToMany(models.User,{
+                    as: 'users',
+                    through: 'Users_lesson',
+                    foreignKey: 'lesson_id',
+                    otherKey: 'user_id',
+                })
+            }   
         }
     
         return lesson
