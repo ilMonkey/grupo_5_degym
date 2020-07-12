@@ -11,6 +11,9 @@ module.exports = (sequelize,DataTypes )=>{
             address: DataTypes.STRING,
             telephone: DataTypes.STRING,
         },
+        {
+            timestamps: false
+        },
     );
     branch.associate = (models) => {
         branch.hasMany(models.Lesson, {
