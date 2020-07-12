@@ -151,3 +151,18 @@ Hicimos:
 
 Continuar haciendo:
     •  Falta centrarnos en los CRUDS ahora que tenemos la estructura de la DB definitiva.
+
+12/07/2020 
+
+Hicimos:
+    •  cargamos dummy data en la tabla "activities" y "branches".
+    •  Definimos los modelos de la BD.
+    •  Comentamos todas las 
+    •  Logramos que la DB se conecte a nuestra app :) .
+    •  Método productsControllers.all andadndo correctamente para mostrar todas las "lessons".
+
+Continuar haciendo:
+    •  Falta continuar trabajando en los routers/controllers.
+    •  Actualizar funcionalidad de vistas.
+    •  Terminar de configurar el "Panel de control del Admin".
+    
