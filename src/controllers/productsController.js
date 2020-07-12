@@ -16,7 +16,7 @@ module.exports = {
     },
     store: async (req, res) => {
 		try {
-		    const newLesson = await DB.Lesson.create(...req.body)
+		    const newLesson = await DB.Lesson.create(req.body)
             await newLesson.addBranches(req.body.branches_id)
             await newLesson.addActivities(req.body.activities_id)
 		    res.redirect('/')

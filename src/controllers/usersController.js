@@ -4,16 +4,16 @@ const bcrypt = require('bcryptjs');
 const {validationResult} = require ('express-validator')
 const {check} = require ('express-validator')
 const usersFilePath = './src/data/users.json';
- 
+const DB = require ('../database/models');
+const OP = DB.Sequelize.Op;
+
 // Parse de Users
 const rutaUsersJSON = path.join(__dirname, '../data/users.json');
 let DataBaseJSON = fs.readFileSync(rutaUsersJSON, 'utf-8') || '[]';
 let users = JSON.parse(DataBaseJSON);
 
 // Parse de Branches
-const branchesFilePath = path.join(__dirname, '../data/branches.json');
-var branches = JSON.parse(fs.readFileSync(branchesFilePath, 'utf-8'));
-branches = branches.filter(branch => branch.id < 7 );
+const branches = await DB.Branch.findAll()
 
 // Funciones customisadas
 function traerTodosLosUsuarios(){
@@ -38,35 +38,40 @@ const usersController = {
 	},
 	
 	// Create -  Este metodo POST es para crear nuevos usuarios y que se guarden en la base de datos
-	store: (req, res, next )=> {
-		//dia representa el dia de registro del nuevo usuario
-		var dia = new Date();
-		dia.getDate() + "-"+ dia.getMonth()+ "-" + dia.getFullYear();
-
-		let newUser = {
-			id: users.length + 1,
-			first_name: req.body.first_name, 
-			last_name: req.body.last_name,
-			email: req.body.email,
-			password: bcrypt.hashSync(req.body.password, 10),
-			gender: req.body.gender,
-			mobile_number: req.body.mobile_number,
-			avatar: req.files[0].filename,
-			register_date: dia,
-			birth_day: req.body.birth_day,
-		}
+	store: async (req, res) => {
 		let validation = validationResult(req);
 		let errors = validation.errors
 		if (errors != '') {
 			console.log(errors) 
 			res.render('users/register',{errors, branches}) 
 		}else{
-			let newDataBase = [...users, newUser]
-			fs.writeFileSync(rutaUsersJSON, JSON.stringify(newDataBase,null, ' ') );
-			res.redirect('/users/login')
+			try {
+				req.body.password = bcrypt.hashSync(req.body.password, 10)
+				const newUser = await DB.User.create(req.body)
+				res.send(newUser)
+				res.redirect('/users/login')
+			} catch (error) {
+				res.send(error)
+			}
 		}
 	},
-		
+
+	// 	var dia = new Date();
+	// 	dia.getDate() + "-"+ dia.getMonth()+ "-" + dia.getFullYear();
+
+	// 	let newUser = {
+	// 		id: users.length + 1,
+	// 		first_name: req.body.first_name, 
+	// 		last_name: req.body.last_name,
+	// 		email: req.body.email,
+	// 		password: bcrypt.hashSync(req.body.password, 10),
+	// 		gender: req.body.gender,
+	// 		mobile_number: req.body.mobile_number,
+	// 		avatar: req.files[0].filename,
+	// 		register_date: dia,
+	// 		birth_day: req.body.birth_day,
+	// 	}
+
 	// Login - Este metodo es de autentificación del usuario, session y cookies EXPLICADO!!!
 	auth: (req,res) => {
 		let validation = validationResult(req);
