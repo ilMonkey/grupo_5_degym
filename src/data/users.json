@@ -262,5 +262,17 @@
   "avatar": "avatar-1593876676423.jpg",
   "register_date": "2020-07-04T15:31:16.584Z",
   "birth_day": "1992-11-11"
+ },
+ {
+  "id": 23,
+  "first_name": "Jose",
+  "last_name": "Rosales",
+  "email": "jm.rosales92@gmail.com",
+  "password": "$2a$10$nnHp81sSJCx3fVgkmhfHZuCB.l1zlUbNCZlrxUOVHi3TLAQgk3eRS",
+  "gender": "Male",
+  "mobile_number": "321321321321",
+  "avatar": "avatar-1594585989441.jpg",
+  "register_date": "2020-07-12T20:33:09.699Z",
+  "birth_day": "1992-11-11"
  }
 ]

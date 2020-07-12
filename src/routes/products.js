@@ -25,8 +25,8 @@ router.get('/', productsController.all); /* GET - All products */
 // router.get('/:id', productsController.detail); /* GET - Product detail */
 
 /*** CREATE ONE PRODUCT ***/ 
-// router.get('/create', authMiddleware, productsController.create); /* GET - Form to create */
-// router.post('/', authMiddleware, productsController.store); /* POST - Store in DB */
+router.get('/create', authMiddleware, productsController.create); /* GET - Form to create */
+router.post('/', authMiddleware, productsController.store); /* POST - Store in DB */
 
 // /*** EDIT ONE PRODUCT ***/ 
 // router.get('/:id/edit', authMiddleware, productsController.edit); /* GET - Form to create */

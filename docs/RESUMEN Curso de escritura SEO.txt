@@ -1,0 +1,121 @@
+Curso de escritura SEO
+
+Modulo 1 - Introduccion.
+
+TIPS Para ESCRIBIR
+
+Usar:
+1.Multititulacion.
+2.Separar el Texto.
+3.Emplear negritas en color.
+4.Tipos de listas. Bolillas y enumeraciones
+5.Enlaces.
+
+-Palabras cortas, conocidas y precisas. ej : "fin" en vez de proposito, "colibri" en vez de "ave".
+-Frases cortas, sin incisas ni circunstancias. Economía de palabras. "si da lo mismo que esté o no, mejor que no esté"
+-Frase larga + frase corta + frase larga... es lo ideal para un parrafo ideal.
+-El nucleo debe ser un verbo imperativo en lo posible. ej "aclaró", en vez de "hizo una aclaración".
+-Adverbio descriptivos y exactos.
+-No tratar de incluir mas de una idea por oracion.
+-Dividir frases, eliminar redundancias y convertir frases en oraciones independientes.
+-Eliminar palabras innecesarias y las repeticiones de información.
+-Una oración idealmente debera tener entre 20 a 30 palabras aprox.
+-No mas de 5 a 6 lineas.
+-Texto de no menos de 300/400 palabras.
+-Ubicar la palabra clave en el titulo, en el primer parrafo y en el texto (dependuiendo la extensión).. y lo importante al inicio de la oracion.
+-Poner la informacion mas importante de la frase al inicio de la oración.
+
+TIPS de CÓMO USAR ENLACES
+-Poner enlaces salientes a otras paginas de autoridad/relevancia al final, NO a mitad o dentro del cuerpo del texto (no queremos que los usuarios abandonen nuestra pagina anticipadamente).
+-Un enlace de calidad se sitúa en una web que tiene pocos enlaces salientes.
+-Un enlace es de mayor calidad si es externo en lugar de interno.
+-Los enlaces que están dentro del contenido tienen mayor valor y naturalidad que aquéllos que se colocan en los menús de navegación o en el pie de página.
+-Los enlaces de texto son más efectivos que los enlaces procedentes de imágenes.
+-El crecimiento natural de enlaces, es más beneficioso que la aparición espontánea de numerosos enlaces que pueden ser considerados como spam.
+-El link juice o “zumo de enlaces” es la calidad o el prestigio que se transmite cuando una web enlaza a otra.
+-evita transferir mucho linkjuice a páginas poco importantes. Usa la etiqueta "nofollow" para que google no indexe el link.
+-Vigila cuál es el Page Rank de la página donde está colocado el link.
+-Combinación de enlaces dofollow y nofollow. Trata de tener un perfil de enlaces donde exista una combinación de enlaces  “dofollow” (indica a los buscadores que pueden seguir ese enlace)  y enlaces “nofollow” (indica a los buscadores que no sigan ese enlace).
+
+TIPOS de LETRAS (fonts)
+Fuentes o Tipos de Letras:
+-Mejores fonts para blogs ROBOTO, MERRIWEATHER y LOBSTER. Tamaño 16px para una pagina normal, si es una Pagina solo de texto 16-18px es el mínimo.
+-Máximo 4 diferentes tamaños de letra en toda la web.
+-Para comunicar menor importancia de un texto se puede usar un color gris o tonalidades mas blancuzcas de negro. El texto secundario deberia ser algo como 2 puntos mas chico que el texto del parrafo (13 o 14px). 
+-Tamaños responsive (celular,tabet, PC).: 
+	-Mobile. body text size 16px. Form input text 16px.
+	
+Eye tracking: Tips de distribucion de la informacion en la pantalla.
+-Mayoritariamente se hace una lectura de movimiento horizontal en la parte superior de la Web
+-La primera fijacion es en la esquina superior izquierda (donde esta el logo generalmente).
+-Despues de la primera fijacion, los usuarios se desplazan hacia abajo por la parte izq. Importancia de subtítulos, mayúsculas, negritas, etc. para organizar la informacion al escaneo del usuario.
+-El primer impacto es siempre sobre la imagen. luego encabezados, luego textos.
+-Textos cortos con espacio limitado entre uno y otro ayudan a fomentar continuar la lectura.
+-usar negritos y cursivas para resaltar ideas principales, palabras claves. Usar listas y enumeraciones para facilitar la lectura.
+
+Modulo 2 Hipertextualidad, legibilidad y comprencion de texto.
+
+-Darle importancia a la interconexión de textos en la web (ver tips de enlaces). 
+-Nunca debe faltar la Hipertextualidad, Interactividad y Multimedialidad.
+-Hipertextualidad: texto que contiene entradas a otros textos. Le da la libertad al usuario de eligir como realizar su lectoura (anclas).
+-En definitiva, si la legibility (legibilidad) apunta hacia la comodidad de visión, la readability (simpleza) se centra en la facilidad de comprensión.
+
+¿Cómo planificar y estructurar los textos en las redes digitales?
+
+-Precomposición. Dos Tecnicas:
+
+		-"Regla de las cinco uves dobles" (5W) (puedes aprovechar las preguntas como herramienta para la organización
+hipertextual. Si pretendes fragmentar tu texto en diversas páginas -en la terminología): Consiste en responder en el
+texto a seis preguntas esenciales: quién, qué, dónde, cuándo, cómo y por qué. Es
+decir, contestar a preguntas como por ejemplo:
+- ¿Quién es el protagonista de tu texto? ¿A quién afecta lo que explicas en él?
+A partir de lo que relatas, ¿quién debería actuar?
+- Si tu texto es una narración, ¿qué ha ocurrido? Si es una solicitud, ¿qué
+deseas? Si es una propuesta, ¿qué propones?
+- ¿Dónde ha ocurrido lo que explicas? ¿Dónde hay que tomar medidas?
+- ¿Cuándo ha sucedido lo que cuentas? ¿Cuándo acaba el plazo de lo que
+propones?
+- ¿Cómo ha ocurrido lo que relatas? ¿Cómo deseas que actúe tu lector?
+¿Cómo se puede resolver el problema que describes?
+- ¿Por qué han pasado los acontecimientos que relatas en tu texto? ¿Por qué
+cuentas lo que escribes?
+	
+		-La "tormenta de ideas" permite
+descubrir aspectos informativos relevantes de una manera sencilla y productiva. La
+tormenta de ideas consiste en anotar con rapidez todos aquellos conceptos y
+pensamientos que acuden a la mente a propósito de un tema. Esa anotación puede
+hacerse bien en forma de listado o bien mediante un mapa conceptual cuyo centro
+está ocupado por el concepto que deseamos desarrollar.
+Este mapa conceptual, además de servir para el descubrimiento y desarrollo de ideas
+relacionadas con el tema, tiene la ventaja añadida de servir como referencia para la
+estructuración hipertextual definitiva.
+Una vez que se dispone de la materia prima informativa y se han detectado los
+elementos informativos esenciales, llega el momento de darles forma.
+
+Modulo 3 - Palabras Claves - "Keywords"
+
+-answerthepublic.com - preposiciones, busquedas, ideas referidos a una palabra clave.
+- averiguar nivel de competencia de una palabra clave: MOZ extension (Mozbar). 
+	PA(Page Authority) se determina por la cantidad de enlaces recibidos por la pagina. Más importante.
+	DA(Autoridad de dominio) cantidad de enlaces recibido por todas las paginas del dominio en cuestion.
+-usar el autocompletar de Google. usar guin bajo dobles "__" antes de la palabra clave y usar el asterisco "*" antes de la palabra clave para que se autocompleten busquedas relacionadas. Ver busquedas relacionadas recomendadas por google al final de la pagina de resultados.
+
+LINKS UTILES
+
+Herramientas
+-CorrectorOrtográfico.com: http://www.correctorortografico.com
+-Wikilengua. Lista de diccionarios en internet: http://www.wikilengua.org/index.php/Lista_de_diccionarios_en_Internet
+-Buscador de ideas afines y relacionadas: http://www.ideasafines.com.ar/buscador-ideas-relacionadas.php
+-Un glosario sobre expresiones coloquiales. Glosario de coloquialismos: http://www.coloquialmente.com/es
+-Medir el nivel de legibilidad de tus textos, conforme al índice de Gunning Fog Index: http://gunning-fog-index.com
+-Mide frases y párrafos con esta otra herramienta: Word Counter: http://www.wordcounter.net
+-Herramienta para escribir "YOAST SEO for Everyone" (se puede instalar en wordpress). Da un puntaje SEO del Texto.
+-answerthepublic.com buscar preguntas frecuentes de una palabra clave.
+
+Info Util
+Link Building
+	-Backlinks y enlaces internos https://www.marketinet.com/blog/importancia-enlaces-para-seo#gref
+	-Para mantener el control de enlaces dofollow y no follow, podemos emplear herramientas de control de backlinks como 		MajesticSEO o AHREFS.
+	-Info sobre como poner enlaces https://www.antevenio.com/blog/2018/06/enlaces-para-el-seo/
+-200 factores que Google tiene en cuenta para posicionar tu página https://quondos.com/mag/factores-seo-posicionamiento-web-google/
+-10 reglas para posicionarte en Google. https://www.entrepreneur.com/article/265110

@@ -9,12 +9,22 @@ module.exports = {
 		try {
             const lessons = await DB.User_lesson.findAll()
             console.log('Llegue')
-            res.send('llegue bien')
+            res.send(lessons)
         } catch (error) {
             res.send(error)
         }
     },
-    createForm: async (req, res) => {
+    store: async (req, res) => {
+		try {
+		    const newLesson = await DB.Lesson.create(...req.body)
+            await newLesson.addBranches(req.body.branches_id)
+            await newLesson.addActivities(req.body.activities_id)
+		    res.redirect('/')
+	    } catch (error) {
+		    res.send(error)
+	    }
+    },
+    create: async (req, res) => {
 		try {		
 			const activities = await DB.Activity.findAll()
 			const branches = await DB.Branch.findAll()
@@ -23,5 +33,4 @@ module.exports = {
 			res.send(error)
 			}
         },
-        
 };
