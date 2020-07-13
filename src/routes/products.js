@@ -29,11 +29,11 @@ router.get('/create', authMiddleware, productsController.create); /* GET - Form 
 router.post('/', authMiddleware, productsController.store); /* POST - Store in DB */
 
 // /*** EDIT ONE PRODUCT ***/ 
-// router.get('/:id/edit', authMiddleware, productsController.edit); /* GET - Form to create */
-// router.put('/:id', authMiddleware, productsController.update); /* PUT - Update in DB */
-// // upload.any() es el middleware
+router.get('/:id/edit', authMiddleware, productsController.edit); /* GET - Form to create */
+router.put('/:id', authMiddleware, productsController.update); /* PUT - Update in DB */
+// upload.any() es el middleware
  
 /*** DELETE ONE PRODUCT***/ 
-// router.delete('/delete/:id', authMiddleware, productsController.destroy); /* DELETE - Delete from DB */
+router.delete('/delete/:id', authMiddleware, productsController.destroy); /* DELETE - Delete from DB */
 
 module.exports = router;
