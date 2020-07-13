@@ -182,4 +182,4 @@ Continuar haciendo:
     •  Corregir vistas Products (chequear errores y variables/if's en EJS).
     •  Corregir vistas Users (chequear errores y variables/if's en EJS).
     •  Verificar el correcto funcionamiento de las cookies.
-    
+    •  Corregir el Genero de User (no guarda el valor del campo male/woman/other)
