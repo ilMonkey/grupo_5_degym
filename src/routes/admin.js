@@ -7,7 +7,7 @@ const adminController = require('../controllers/adminController');
 const authMiddleware = require('../middlewares/authMiddleware');
 
 /*** GET ADMIN GENERAL panel ***/ 
-// router.get('/', authMiddleware ,adminController.controlPanel);
+router.get('/', authMiddleware ,adminController.controlPanel);
 
 
 //Branches controllers
@@ -18,5 +18,12 @@ router.post('/branches', adminController.storeBranch);
 /*** DELETE ONE BRANCH***/ 
 router.delete('/branches/delete/:id', adminController.destroyBranch);
 
+//Activities controllers
+/*** GET ADMIN-ACTIVITY panel ***/ 
+router.get('/activities', adminController.showActivities);
+/*** CREATE ONE ACTIVITY***/ 
+router.post('/activities', adminController.storeActivity);
+/*** DELETE ONE ACTIVITY***/ 
+router.delete('/activities/delete/:id', adminController.destroyActivity);
 module.exports = router;
 
