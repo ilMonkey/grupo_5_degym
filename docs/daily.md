@@ -178,8 +178,8 @@ Continuar haciendo:
     •  Prguntar: -Cómo guardar avatar_url en User model.
                  -Cómo esconder botones de Admin Panel, Login y Logout segun el usuario alojado en Session.
     •  Agregar en el menu de administrador boton y formulario de edicion de actividades ("Activity" model). Usar estructura de "branches".
-    •  Agregar funcionalidad de "search by email User" para poder editar Roles (por default viene rol: "0").
+    •  Agregar funcionalidad de "search by email User" para poder editar Roles (por default viene rol: "0"). Que el admin pueda ingresar al editor del perfil del usuario y que le aparezca la opcion de cambiar Rol.
     •  Corregir vistas Products (chequear errores y variables/if's en EJS).
     •  Corregir vistas Users (chequear errores y variables/if's en EJS).
     •  Verificar el correcto funcionamiento de las cookies.
-    •  Corregir el Genero de User (no guarda el valor del campo male/woman/other)
+    •  Corregir el Genero de User (no guarda el valor del campo male/woman/other).
