@@ -7,9 +7,14 @@ const controller = {
 	// 	res.render("adminPanel",{branches})
 	// },
 
-	// showBranches: (req, res) => {
-	// 	res.render('branches',{branches})
-    // },
+	showBranches: async (req, res) => {
+		try {
+			const branches = await DB.Branch.findAll()
+			res.send(branches)
+		} catch (error) {
+			res.send(error)
+		}
+	},
 
     storeBranch: async (req, res) => {
 		try {
@@ -18,7 +23,15 @@ const controller = {
 	    } catch (error) {
 		    res.send(error)
 	    }
-    },
+	},
+	destroyBranch: async (req, res) => {
+		 await DB.Branch.destroy({
+				where:{
+					id: req.params.id
+				}
+			});
+			res.json({succes: 'Se elimino piola la branch'})
+	}
 }
 
 module.exports = controller;

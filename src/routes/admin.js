@@ -12,11 +12,11 @@ const authMiddleware = require('../middlewares/authMiddleware');
 
 //Branches controllers
 /*** GET ADMIN-BRANCHES panel ***/ 
-// router.get('/branches', adminController.showBranches);
+router.get('/branches', adminController.showBranches);
 /*** CREATE ONE BRANCH***/ 
 router.post('/branches', adminController.storeBranch);
 /*** DELETE ONE BRANCH***/ 
-// router.delete('/branches/delete/:id', adminController.destroyBranch);
+router.delete('/branches/delete/:id', adminController.destroyBranch);
 
 module.exports = router;
 
