@@ -10,9 +10,13 @@ function traerTodosLosUsuarios(){
 };
 
 function traerUsuarioPorEmail(userEmail) {
-	let todosLosUsuarios = traerTodosLosUsuarios();
-	let elUsuario = todosLosUsuarios.find(unUsuario => unUsuario.email == userEmail);
-	return elUsuario;
+	let elUsuario = DB.User.findOne({
+		where:{
+			email: userEmail 
+		}
+	})
+	return elUsuario
+	console.log(elUsuario)
 }
 
 const usersController = { 
