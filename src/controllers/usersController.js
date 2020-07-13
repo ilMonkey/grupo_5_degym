@@ -23,16 +23,18 @@ const usersController = {
 			}
 		}) 
 		if (user){
-			const iguales = bcrypt.compareSync(req.body.password, user.password)
+
+			let iguales = bcrypt.compare(req.body.password, user.password)
+			console.log(iguales)
 			if (iguales){
 				req.session.idDelUsuario = user.id;
 				res.redirect('/users/profile/' + user.id);
 			} else {
-				res.json({ error: 'Error de usuario y/o contraseña' })
+				res.json({ error: 'Error contraseña 1' })
 //				res.render('users/login',{errors}) 
 			}
 		} else {
-			res.json({ error: 'Error de usuario y/o contraseña' })
+			res.json({ error: 'Error de usuario y/o contraseña 2' })
 //			res.render('users/login',{errors}) 
 		}
 
@@ -107,13 +109,27 @@ const usersController = {
 	},
 
 	// Update - Form to edit
-	edit: (req, res) => {
-		
+	edit: async (req, res) => {
+		try {		
+			let user = await DB.User.findByPk(req.params.id)
+			res.render('users/userProfileForm', {user})
+		} catch (error) {
+			res.send(error)
+			}
 	},
 
 	// Update - Method to update
 	update: (req, res) => {
-		
+		try {
+			DB.User.update( 
+				req.body,
+				{
+					where: { id: req.params.id} 
+				})
+			res.redirect('/profile/' + req.params.id)
+		} catch (error) {
+			res.send(error)
+		}
 	},
 
 	// Delete - Delete one user from DB
