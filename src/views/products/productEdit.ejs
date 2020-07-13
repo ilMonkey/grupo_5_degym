@@ -12,7 +12,6 @@
         </div>
             <form action="/products/<%= product.id %>?_method=PUT" method="POST" class="container__register--data" enctype = "multipar/form-data">
                         <input type="text" placeholder="Nombre" name="name" value="<%= product.name %> ">
-                        <input type="text" placeholder="Descripción" name="description" value="<%= product.description%>">
                         <input type="text" placeholder="Precio" name="price" value="<%= product.price %> ">
                         <input type="text" placeholder="Profesor" name="instructor" value="<%= product.instructor %> ">
                         <select name="branch" size="1" >
@@ -20,14 +19,19 @@
                             <option value="<%= branch.id %>" <% branch.name == product.branch?'selected':null%>> <%= branch.name %> </option>
                             <% }); %> 
                         </select>
+                        <select name="activity" size="1" >
+                            <% activities.forEach(activity => { %>
+                            <option value="<%= activity.id %>" <% activity.name == product.activity?'selected':null%>> <%= activity.name %> </option>
+                            <% }); %> 
+                        </select>
                         <!-- <input type="file" name="image"> -->
-                        <select name="max_quotes" size="1"  >
+                        <select name="max_capacity" size="1"  >
                             <option value="1">Capacidad Maxima</option>
                             <option value="1">10</option>
                             <option value="2">15</option>
                             <option value="3">20</option>
                         </select>
-                        <input type="text" placeholder="Dia y Hora" name="schedule" value="<%= product.schedule %> ">
+                        <input type="text" placeholder="Dia y Hora" name="schedule" value="<%= product.days, product.time %> ">
                     <div class="container__register--data-check">
                     </div>
                     <div class="container__register--send">

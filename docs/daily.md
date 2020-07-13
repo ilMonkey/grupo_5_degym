@@ -165,4 +165,15 @@ Continuar haciendo:
     •  Falta continuar trabajando en los routers/controllers.
     •  Actualizar funcionalidad de vistas.
     •  Terminar de configurar el "Panel de control del Admin".
-    
+
+13/07/2020 
+
+Hicimos:
+    •  Agregamos diferentes controllers de products, admin y branches.
+    •  Borramos branches del footer (era medio engorroso tener que enviar el json de branches a cada vista).
+    •  
+    •  
+    •  
+
+Continuar haciendo:
+    •  
