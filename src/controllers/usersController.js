@@ -3,29 +3,6 @@ const {validationResult} = require ('express-validator');
 const DB = require ('../database/models');
 const OP = DB.Sequelize.Op;
 
-// Funciones customisadas
-function traerUsuarioPorEmail(userEmail) {
-const user = await User.findOne({
-	where: {
-	 email: req.body.email 
-	}
-	})
-	if (user) {
-		const iguales = bcrypt.compareSync(req.body.password, user.password);
-		if (iguales) {
-			console.log("llegue bien"
-		} else {
-			res.json({ error: 'Error de usuario y/o contraseña' })
-		}
-	} elese {
-		res.json({ error: 'Error de usuario y/o contraseña' })
-	}
-
-
-	return elUsuario
-	console.log(elUsuario)
-}
-
 const usersController = { 
 	// Login - Este metodo te lleva a la vista de Login
 	login: (req,res) =>res.render('users/login'),
@@ -140,8 +117,13 @@ const usersController = {
 	},
 
 	// Delete - Delete one user from DB
-	destroy : (req, res) => {
-		
+	destroy : async (req, res) => {
+		DB.User.destroy({ 
+			where: { 
+				id: req.params.id
+			} }
+			)
+		res.redirect('/')
 	},
 
 	// Delete - Delete one user from DB
