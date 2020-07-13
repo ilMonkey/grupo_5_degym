@@ -9,7 +9,7 @@ function traerTodosLosUsuarios(){
 	return usuarios
 };
 
-function traerUsuarioPorEmail(userEmail) {
+function traerUsuarioPorEmail (userEmail) {
 	let elUsuario = DB.User.findOne({
 		where:{
 			email: userEmail 
@@ -32,7 +32,15 @@ const usersController = {
 			res.render('users/login',{errors}) 
 		}
 		// Guardamos en una variable al usuario que se quiere logear
-		let usuarioLogeado = traerUsuarioPorEmail(req.body.email); 
+		let userEmail = req.body.email
+		let usuarioLogeado = function traerUsuarioPorEmail (userEmail) {
+			let elUsuario = DB.User.findAll({
+				where:{
+					email: userEmail 
+				}
+			})
+			return elUsuario
+		}
 		console.log(usuarioLogeado); 
 
 		// Si encuentra al usuario ...
@@ -109,8 +117,13 @@ const usersController = {
 	},
 
 	// Delete - Delete one user from DB
-	destroy : (req, res) => {
-		
+	destroy : async (req, res) => {
+		DB.User.destroy({ 
+			where: { 
+				id: req.params.id
+			} }
+			)
+		res.redirect('/')
 	},
 
 	// Delete - Delete one user from DB
