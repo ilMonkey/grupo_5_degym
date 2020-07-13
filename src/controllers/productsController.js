@@ -23,7 +23,6 @@ module.exports = {
             res.send(error)
         }
 	},
-<<<<<<< HEAD
 
 	// GET - Metodo que muestra el formulario de EDICION de producto (lesson)
 	edit: async (req, res) => {
@@ -51,20 +50,18 @@ module.exports = {
 	},
 	
 	// GET - Metodo que muestra el formulario de creacion de producto (lesson)
-=======
 	
     store: async (req, res) => {
 		try {
-		    const newLesson = await DB.Lesson.create(req.body)
-            await newLesson.addBranches(req.body.branches_id)
-            await newLesson.addActivities(req.body.activities_id)
+		    const newProduct = await DB.Lesson.create(req.body)
+            await newProduct.addBranches(req.body.branches_id)
+            await newProduct.addActivities(req.body.activities_id)
 		    res.redirect('/')
 	    } catch (error) {
 		    res.send(error)
 	    }
 	},
 	
->>>>>>> 821a882951e2b45f3d0f44695d011cedf785555f
     create: async (req, res) => {
 		try {		
 			let activities = await DB.Activity.findAll()
@@ -75,17 +72,6 @@ module.exports = {
 			}
 		},
 	
-	// POST - Metodo que envía las clases cargadas nuevas
-	store: async (req, res) => {
-		try {
-			let newLesson = await DB.Lesson.create(req.body)
-			await newLesson.addBranches(req.body.branches_id)
-			await newLesson.addActivities(req.body.activities_id)
-			res.redirect('/')
-		} catch (error) {
-			res.send(error)
-		}
-	},
 
 	// DELETE - Metodo que elimina el registro de un product (lesson)
 	delete: async (req, res) => {
