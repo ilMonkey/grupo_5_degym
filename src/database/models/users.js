@@ -11,7 +11,7 @@ module.exports = (sequelize,DataTypes )=>{
             last_name: DataTypes.STRING,
             birth_day: DataTypes.DATE,
             genre: DataTypes.STRING,
-            start_date: DataTypes.TIMESTAMPS,
+            start_date: DataTypes.DATE,
             role: DataTypes.INTEGER,
             email: DataTypes.STRING,
             password: DataTypes.STRING,

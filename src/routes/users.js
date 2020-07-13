@@ -25,7 +25,6 @@ var storage = multer.diskStorage({
 // ************ END DiskStorage de Multer ************
 
 
-
 /*** LOGIN ONE USER ***/ 
 router.get('/login', guestMiddleware ,usersController.login) 
 router.post('/auth', [check('email').isEmail().withMessage('Tenes que escribir un mail valido')

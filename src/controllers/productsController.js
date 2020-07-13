@@ -74,7 +74,7 @@ module.exports = {
 	
 
 	// DELETE - Metodo que elimina el registro de un product (lesson)
-	delete: async (req, res) => {
+	destroy: async (req, res) => {
 		try {
 			DB.Lesson.destroy({ 
 				where: { 

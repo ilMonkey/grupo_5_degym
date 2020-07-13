@@ -105,7 +105,7 @@ const usersController = {
 	profile: (req,res) => {
 		// Buscamos al usuario por su id... Esta ruta va a estar protegida solo para el usuario que esta logeado
 		let user = traerTodosLosUsuarios().find(usuario => usuario.id == req.session.idDelUsuario);
-		res.render('users/userProfile', {user, branches})
+		res.render('users/userProfile', {user})
 	},
 
 	// Logout - Metodo para deslogearse
