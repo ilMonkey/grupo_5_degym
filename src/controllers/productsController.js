@@ -13,7 +13,8 @@ module.exports = {
         } catch (error) {
             res.send(error)
         }
-    },
+	},
+	
     store: async (req, res) => {
 		try {
 		    const newLesson = await DB.Lesson.create(req.body)
@@ -23,7 +24,8 @@ module.exports = {
 	    } catch (error) {
 		    res.send(error)
 	    }
-    },
+	},
+	
     create: async (req, res) => {
 		try {		
 			const activities = await DB.Activity.findAll()

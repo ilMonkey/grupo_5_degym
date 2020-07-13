@@ -28,32 +28,32 @@ function traerUsuarioPorEmail(userEmail) {
 	return elUsuario;
 }
 
-const usersController = {
+const usersController = { 
 	// Login - Este metodo te lleva a la vista de Login
-	login: (req,res) =>res.render('users/login',{branches}),
+	login: (req,res) =>res.render('users/login'),
 
 	// Create - Metodo que se usa en el GET para ir al formulario de register
 	create: (req, res) => {
-		res.render('users/register',{branches});
+		res.render('users/register');
 	},
 	
 	// Create -  Este metodo POST es para crear nuevos usuarios y que se guarden en la base de datos
 	store: async (req, res) => {
-		let validation = validationResult(req);
-		let errors = validation.errors
-		if (errors != '') {
-			console.log(errors) 
-			res.render('users/register',{errors, branches}) 
-		}else{
-			try {
-				req.body.password = bcrypt.hashSync(req.body.password, 10)
-				const newUser = await DB.User.create(req.body)
-				res.send(newUser)
-				res.redirect('/users/login')
-			} catch (error) {
-				res.send(error)
-			}
-		}
+		// let validation = validationResult(req);
+		// let errors = validation.errors
+		// if (errors != '') {
+		// 	console.log(errors) 
+		// 	res.render('users/register',{errors, branches}) 
+		// }else{
+		// 	try {
+		// 		req.body.password = bcrypt.hashSync(req.body.password, 10)
+		// 		const newUser = await DB.User.create(req.body)
+		// 		res.send(newUser)
+		// 		res.redirect('/users/login')
+		// 	} catch (error) {
+		// 		res.send(error)
+		// 	}
+		// }
 	},
 
 	// Login - Este metodo es de autentificación del usuario, session y cookies EXPLICADO!!!
