@@ -4,7 +4,7 @@ const OP = DB.Sequelize.Op;
 const controller = {
 	// Admin Tools - Shows admin tools
 	controlPanel: (req, res) => {
-		res.render("adminPanel",{branches})
+		res.render("adminPanel")
 	},
 
 	showBranches: async (req, res) => {
