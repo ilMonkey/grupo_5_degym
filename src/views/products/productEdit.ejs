@@ -8,7 +8,7 @@
 <div class="container__register--box">
     <section class="container__register">
         <div class="container__register--title">
-            <h2>Editar Clase de: <%= product.name %> </h2>
+            <h2>Editar Clase número: <%= lesson.id %> </h2>
         </div>
             <form action="/products/<%= product.id %>?_method=PUT" method="POST" class="container__register--data" enctype = "multipar/form-data">
                         <input type="text" placeholder="Nombre" name="name" value="<%= product.name %> ">

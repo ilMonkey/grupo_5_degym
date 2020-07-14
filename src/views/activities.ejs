@@ -1,0 +1,48 @@
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Bienvenidos a Da Gym'}) %>
+
+<!-- Include Header -->
+<%- include('partials/header') %>
+
+<section class="branch__container">
+
+    <h2>Agrega una nueva Actividad.</h2>
+    <div class="class__container-multiGrid">
+        <form action="" class="container__product--form" method="POST">
+                    <label id="label-branch" >Nombre/Alias: </label>
+                    <input class="" type="text" placeholder="" type="name">
+                    <label  id="label-branch">Descripcion: </label>
+                    <input class="" type="text" placeholder="" type="description">
+                    <label  id="label-branch">Costo mensual: </label>
+                    <input class="" type="number" placeholder="" type="monthly_price">
+                <div class="container__product--data-check">
+                </div>
+                <div class="container__product--send">
+                    <button type="button" class="btn btn-warning">Agregar Actividad</button>
+                </div>
+        </form>
+    </div>
+
+    <h2>Actividades ya cargadas.</h2>
+    <div class="class__container-multiBranch">
+       <ul class="branchesList" >
+            <% activities.forEach(activity => { %>
+                <!-- Una clase individual -->
+                    <li class="branch__TextBox">
+                        <h3><%- activity.name %></h3>
+                        <form class="container__detail--send" action="/admin/branches/delete/<%= activity.id%>?_method=DELETE" method="POST">
+                            <button type="button" class="btn btn-light"><i class="fas fa-trash-alt"></i></button>
+
+                        </form>
+                    </li>
+                </article>                 
+            <% }) %>
+       </ul>
+
+    </div>
+</section>
+
+
+
+<!-- Include Footer -->
+<%- include('partials/footer') %>

@@ -58,7 +58,7 @@ module.exports = {
             await newProduct.addActivities(req.body.id_activity)
 			res.redirect('/')
 			res.json({succes: 'Se cargo la nueva clase'})
-	    } catch (error) {
+	    } catch (error) { 
 		    res.send(error)
 	    }
 	},
