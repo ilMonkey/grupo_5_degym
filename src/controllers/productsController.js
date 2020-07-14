@@ -29,6 +29,7 @@ module.exports = {
 		try {		
 			let activities = await DB.Activity.findAll()
 			let branches = await DB.Branch.findAll()
+			console.log("entro")
 			res.render('products/productCreate', {activities, branches})
 		} catch (error) {
 			res.send(error)
@@ -44,7 +45,7 @@ module.exports = {
 			await newProduct.addActivities(req.body.id_activity)
 			res.redirect('/')
 			res.json({succes: 'Se cargo la nueva clase'})
-		} catch (error) { 
+		} catch (error) {  
 			res.send(error)
 		}
 	},
