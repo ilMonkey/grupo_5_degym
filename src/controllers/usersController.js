@@ -61,22 +61,46 @@ const usersController = {
 	},
 	
 	// Create -  Este metodo POST es para crear nuevos usuarios y que se guarden en la base de datos
-	store: (req, res) => {
+	store: async (req, res) => {
 		let validation = validationResult(req);
 		let errors = validation.errors
 		if (errors != '') {
 			console.log(errors) 
 			res.render('users/register',{errors}) 
-		}else{		
-			if (!req.body.role) {
-				req.body.role = 1;
+		}else{
+			// buscca en la base de dastos si está registrado el email
+			try {
+				const existeUser = await DB.User.findAll({
+				where: {
+					email: req.body.email
+					}
+				})
+				console.log(existeUser) 
+				// Si ya existe el email. manda mensaje de error si no. Guarda el registro
+				if  (existeUser.length>0){
+					let errors = [{ 
+					msg: 'El email ya está registrado',
+					}]
+					res.render('users/register',{errors});
+				} else {	
+					// Si el rol no existe le asigna valor 1
+					if (!req.body.role) {
+						req.body.role = 1;
+					}
+					req.body.avatar_url = req.files[0].filename
+					req.body.password = bcrypt.hashSync(req.body.password, 10)
+					let newUser = DB.User.create(req.body)
+					console.log(newUser)
+					res.redirect ('/')
 			}
-			req.body.avatar_url = req.files[0].filename
-			req.body.password = bcrypt.hashSync(req.body.password, 10)
-			let newUser = DB.User.create(req.body)
-			console.log(newUser)
-			res.redirect ('/')
+
+			} catch {
+				// Este mensaje aparece cuando no funciona la Base de datos
+				res.send('error')
+
+			}
 		}
+
 	},
 
 	// Profile - Metodo que te lleva al profile con la info del usuario logeado
