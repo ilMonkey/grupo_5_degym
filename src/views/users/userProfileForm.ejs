@@ -1,7 +1,7 @@
 <!-- Include Head -->
 <%- include('../partials/head', {title: 'Bienvenidos a Da Gym'}) %>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script src="/js/deletePrompt.js" defer></script>
+<!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+<!-- <script src="/js/deletePrompt.js" defer></script> -->
 
 <!-- Include Header -->
 <%- include('../partials/header') %>
@@ -14,9 +14,9 @@
     <form action="/users/profile/edit/<%= user.id %>?_method=PUT" enctype="multipart/form-data" class="container userEditProfileForm" method="POST">
         <div class="container profileImage">
             <div class="container imageBox">
-                <img src="/images/users/ <%=user.avatar%> %>" alt="Foto de Perfil">
+                <img src="/images/users/<%=user.avatar_url%>" alt="Foto de Perfil">
                 <div class="textAndBtnBox">
-                    <input type="file" name="avatar" id="foto" class="btn btn-primary">
+                    <input type="file" name="avatar_url" id="foto" class="btn btn-primary">
                     <p style = "font-size: small; color: black;">(200x200px)</p>
                 </div>
             </div>
@@ -38,10 +38,10 @@
             <label for="">Email</label>
             <input type="email" value="<%= user.email %>" name="email" class="miInput">
             <label for="">Género</label>
-            <input type="text" value="<%= user.gender %>" name="gender" class="miInput">
+            <input type="text" value="<%= user.genre %>" name="genre" class="miInput">
             <label for="">Fecha de Nacimiento</label>
             <input type="date" value="<%= user.birth_day %>" name="birth_day" class="miInput">
-            <label for="">Número de Mobil</label>
+            <label for="">Número de Movil</label>
             <input type="number" value="<%= user.mobile_number %>" name="mobile_number" class="miInput">
             <button type="submit" class="btn btn-primary">Guardar cambios</button>
         </div>

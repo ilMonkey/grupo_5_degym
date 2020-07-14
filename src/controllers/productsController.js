@@ -9,7 +9,7 @@ module.exports = {
 		try {
             let products = await DB.User_lesson.findAll()
             console.log('Llegue')
-            res.send(products)
+            res.render('products/productCart',{products})
         } catch (error) {
             res.send(error)
         }
@@ -21,7 +21,7 @@ module.exports = {
 			res.render('products/productDetail', {product})
         } catch (error) {
             res.send(error)
-        }
+        } 
 	},
 
 	// GET - Metodo que muestra el formulario de EDICION de producto (lesson)
@@ -56,7 +56,8 @@ module.exports = {
 		    const newProduct = await DB.Lesson.create(req.body)
             await newProduct.addBranches(req.body.id_branch)
             await newProduct.addActivities(req.body.id_activity)
-		    res.redirect('/')
+			res.redirect('/')
+			res.json({succes: 'Se cargo la nueva clase'})
 	    } catch (error) {
 		    res.send(error)
 	    }

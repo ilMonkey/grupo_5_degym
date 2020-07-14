@@ -9,12 +9,7 @@ const usersController = {
 
 	// Login - Este metodo es de autentificación del usuario, session y cookies EXPLICADO!!!
 	auth: async (req,res) => {
-		// let validation = validationResult(req);
-		// let errors = validation.errors
-		// if (errors != '') {
-		// 	console.log(errors) 
-		// 	res.render('users/login',{errors}) 
-		// }
+		
 		// Guardamos en una variable al usuario que se quiere logear
 		try {
 			const user = await DB.User.findOne({
@@ -28,49 +23,35 @@ const usersController = {
 			console.log(iguales)
 			if (iguales){
 				req.session.idDelUsuario = user.id;
-				res.redirect('/users/profile/' + user.id);
+		 		// En caso de que tilde recordame ...
+				 if (req.body.recuerdame) {
+				// Parametros: Como se va a llamar la cookie, que le guardamos a la cookie y opciones
+					res.cookie('userCookie', user.id, {maxAge: 300000});
+				   }
+				   res.redirect('/users/profile/' + user.id);
 			} else {
-				res.json({ error: 'Error contraseña 1' })
-//				res.render('users/login',{errors}) 
+				let validation = validationResult(req);
+				let errors = validation.errors
+				if (errors != '') {
+					console.log(errors) 
+					res.render('users/login',{errors}) 
+				}
 			}
 		} else {
 			res.json({ error: 'Error de usuario y/o contraseña 2' })
-//			res.render('users/login',{errors}) 
+			// res.render('users/login',{errors}) 
 		}
 
 		} catch (error) {
+			// Este mensaje aparece cuando no funciona la Base de datos
 			res.send('error')
 		}
-
-
-		// let usuarioLogeado = traerUsuarioPorEmail(req.body.email); 
-		// console.log(usuarioLogeado); 
-		// Si encuentra al usuario ...
-		// if(usuarioLogeado != undefined){
-		// 	// Verifica la contraseña y lo envia al profile
-		// 	let autorizado = bcrypt.compareSync(req.body.password, usuarioLogeado.password)
-		// 	if(autorizado){
-		// 		// Esta autorizado si las contraseñas coinciden
-		// 		// Una vez verificado que es el usuario, tenemos que ponerlo en session --> idDelUsuario es lo que guardo del usuario en este caso el id
-		// 		req.session.idDelUsuario = usuarioLogeado.id
-		// 		// En caso de que tilde recordame ...
-		// 		if (req.body.recuerdame) {
-		// 			// Parametros: Como se va a llamar la cookie, que le guardamos a la cookie y opciones
-		// 			res.cookie('userCookie', usuarioLogeado.id, {maxAge: 300000});
-		// 		}
-		// 		res.redirect('/users/profile/' + usuarioLogeado.id);
-		// 		// res.redirect('/' + usuarioLogeado.id);
-		// 	}
-		// }else{
-		// 	// Si no encontro al usuario ...
-		// 	res.redirect('/users/login');
-		// }
 	},
 
 	// Logout - Metodo para deslogearse
 	logout: (req, res) => {
 		req.session.destroy();
-	//	req.cookie('userCookie', null, {maxAge: 1});
+		res.cookie('userCookie', null, {maxAge: 1});
 		res.redirect('/');
 	},
 
@@ -80,19 +61,46 @@ const usersController = {
 	},
 	
 	// Create -  Este metodo POST es para crear nuevos usuarios y que se guarden en la base de datos
-	store: (req, res) => {
+	store: async (req, res) => {
 		let validation = validationResult(req);
 		let errors = validation.errors
 		if (errors != '') {
 			console.log(errors) 
 			res.render('users/register',{errors}) 
 		}else{
-			req.body.avatar = req.files[0].filename,
-			req.body.password = bcrypt.hashSync(req.body.password, 10)
-			let newUser = DB.User.create(req.body)
-			console.log(newUser)
-			res.send('Se cargo el usuario perfectamente')
+			// buscca en la base de dastos si está registrado el email
+			try {
+				const existeUser = await DB.User.findAll({
+				where: {
+					email: req.body.email
+					}
+				})
+				console.log(existeUser) 
+				// Si ya existe el email. manda mensaje de error si no. Guarda el registro
+				if  (existeUser.length>0){
+					let errors = [{ 
+					msg: 'El email ya está registrado',
+					}]
+					res.render('users/register',{errors});
+				} else {	
+					// Si el rol no existe le asigna valor 1
+					if (!req.body.role) {
+						req.body.role = 1;
+					}
+					req.body.avatar_url = req.files[0].filename
+					req.body.password = bcrypt.hashSync(req.body.password, 10)
+					let newUser = DB.User.create(req.body)
+					console.log(newUser)
+					res.redirect ('login')
+			}
+
+			} catch {
+				// Este mensaje aparece cuando no funciona la Base de datos
+				res.send('error')
+
+			}
 		}
+
 	},
 
 	// Profile - Metodo que te lleva al profile con la info del usuario logeado
@@ -119,14 +127,17 @@ const usersController = {
 	},
 
 	// Update - Method to update
-	update: (req, res) => {
+	update: async (req, res) => {		
 		try {
-			DB.User.update( 
-				req.body,
+			if (req.files[0]!=undefined) {
+				req.body.avatar_url = req.files[0].filename
+			}	
+	
+			await DB.User.update( req.body,
 				{
 					where: { id: req.params.id} 
 				})
-			res.redirect('/profile/' + req.params.id)
+				res.redirect('/users/profile/' + req.params.id)
 		} catch (error) {
 			res.send(error)
 		}
