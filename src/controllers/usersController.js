@@ -129,12 +129,11 @@ const usersController = {
 	// Update - Method to update
 	update: async (req, res) => {
 		try {
-			let user = await DB.User.update( req.body,
+			await DB.User.update( req.body,
 				{
 					where: { id: req.params.id} 
 				})
-				console.log(user)
-				res.render('users/userProfile', {user})
+				res.redirect('/users/profile/' + req.params.id)
 		} catch (error) {
 			res.send(error)
 		}

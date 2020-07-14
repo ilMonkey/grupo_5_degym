@@ -39,6 +39,7 @@ router.get('/create', guestMiddleware , usersController.create); /* GET - Form t
 router.post('/create', upload.any(), [
   check('first_name').not().isEmpty().withMessage('Te olvidaste ingresar tu nombre!'),
   check('last_name').not().isEmpty().withMessage('Te olvidaste ingresar tu apellido!'),
+  check('avatar').not().isEmpty().withMessage('Te olvidaste ingresar una foto'),
   check('email').isEmail().trim().withMessage('Tenes que poner un mail valido'),
   check('mobile_number').not().isEmpty().isNumeric({no_symbols: false}).withMessage('Debe poner un celular valido'),
   check('birth_day').not().isEmpty().withMessage('No te olvides de tu fecha de cumpleaños!'),
