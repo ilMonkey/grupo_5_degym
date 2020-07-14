@@ -40,7 +40,7 @@ router.post('/create', upload.any(), [
   check('first_name').not().isEmpty().withMessage('Te olvidaste ingresar tu nombre!'),
   check('last_name').not().isEmpty().withMessage('Te olvidaste ingresar tu apellido!'),
   check('genre').not().isEmpty().withMessage('Tenes que elegir un genero de los 3'),
-  check('avatar_url').not().isEmpty().withMessage('Te olvidaste ingresar una foto'),
+  // check('avatar_url').not().isEmpty().withMessage('Te olvidaste ingresar una foto'),
   check('email').isEmail().trim().withMessage('Tenes que poner un mail valido'),
   check('mobile_number').not().isEmpty().isNumeric({no_symbols: false}).withMessage('Debe poner un celular valido'),
   check('birth_day').not().isEmpty().withMessage('No te olvides de tu fecha de cumpleaños!'),

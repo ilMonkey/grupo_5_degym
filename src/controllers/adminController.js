@@ -2,10 +2,13 @@ const DB = require ('../database/models');
 const OP = DB.Sequelize.Op;
 
 const controller = {
+
 	// Admin Tools - Shows admin tools
 	controlPanel: (req, res) => {
 		res.render("adminPanel")
 	},
+
+	// Metodos de Admin controller para administrar las sedes.
 
 	showBranches: async (req, res) => {
 		try {
@@ -32,7 +35,10 @@ const controller = {
 			});
 			res.json({succes: 'Se elimino piola la branch'})
 	},
-	
+
+
+	// Metodos de Admin controller para administrar las actividades.
+
 	showActivities: async (req, res) => {
 		try {
 			const activities = await DB.Activity.findAll()
@@ -58,6 +64,8 @@ const controller = {
 			});
 			res.json({succes: 'Se elimino piola la activity'})
 	},
+
+	// Metodos de Admin controller para administrar las clases.
 
 	showLessons: async (req, res) => {
 		try {

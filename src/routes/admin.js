@@ -25,5 +25,6 @@ router.get('/activities', adminController.showActivities);
 router.post('/activities', adminController.storeActivity);
 /*** DELETE ONE ACTIVITY***/ 
 router.delete('/activities/delete/:id', adminController.destroyActivity);
+
 module.exports = router;
 
