@@ -35,7 +35,7 @@ const usersController = {
 				if (errors != '') {
 					console.log(errors) 
 					res.render('users/login',{errors}) 
-		}
+				}
 			}
 		} else {
 			res.json({ error: 'Error de usuario y/o contraseña 2' })
@@ -91,7 +91,7 @@ const usersController = {
 					req.body.password = bcrypt.hashSync(req.body.password, 10)
 					let newUser = DB.User.create(req.body)
 					console.log(newUser)
-					res.redirect ('/')
+					res.redirect ('login')
 			}
 
 			} catch {
@@ -127,14 +127,13 @@ const usersController = {
 	},
 
 	// Update - Method to update
-	update: (req, res) => {
+	update: async (req, res) => {
 		try {
-			DB.User.update( 
-				req.body,
+			await DB.User.update( req.body,
 				{
 					where: { id: req.params.id} 
 				})
-			res.redirect('/profile/' + req.params.id)
+				res.redirect('/users/profile/' + req.params.id)
 		} catch (error) {
 			res.send(error)
 		}
