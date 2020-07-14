@@ -67,12 +67,15 @@ const usersController = {
 		if (errors != '') {
 			console.log(errors) 
 			res.render('users/register',{errors}) 
-		}else{
-			req.body.avatar = req.files[0].filename
+		}else{		
+			if (!req.body.role) {
+				req.body.role = 1;
+			}
+			req.body.avatar_url = req.files[0].filename
 			req.body.password = bcrypt.hashSync(req.body.password, 10)
 			let newUser = DB.User.create(req.body)
 			console.log(newUser)
-			res.send('Se cargo el usuario perfectamente')
+			res.redirect ('/')
 		}
 	},
 

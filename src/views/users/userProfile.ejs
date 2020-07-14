@@ -10,7 +10,7 @@
     <h2 class="profileTitle">Perfil de Usuario</h1>
     <div class="container profileImage">
         <div class="container profileImageBox">
-            <img src="/images/users/<%= user.avatar %>" alt="Foto de Perfil">
+            <img src="/images/users/<%= user.avatar_url %>" alt="Foto de Perfil">
         </div>
     </div>
     <div class="container profileBody">
@@ -33,7 +33,7 @@
             </li>
             <li>
                 <label for="">Genero</label>
-                <p class="userData"><%= user.gender%></p>
+                <p class="userData"><%= user.genre%></p>
             </li>
             <li>
                 <label for="">Fecha de Nacimiento</label>
