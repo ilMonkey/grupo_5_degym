@@ -9,7 +9,7 @@ module.exports = {
 		try {
             let products = await DB.User_lesson.findAll()
             console.log('Llegue')
-            res.send(products)
+            res.render('products/productCart',{products})
         } catch (error) {
             res.send(error)
         }
