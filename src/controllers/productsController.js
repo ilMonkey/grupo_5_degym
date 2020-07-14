@@ -21,7 +21,7 @@ module.exports = {
 			res.render('products/productDetail', {product})
         } catch (error) {
             res.send(error)
-        }
+        } 
 	},
 
 	// GET - Metodo que muestra el formulario de EDICION de producto (lesson)
@@ -54,9 +54,10 @@ module.exports = {
     store: async (req, res) => {
 		try {
 		    const newProduct = await DB.Lesson.create(req.body)
-            await newProduct.addBranches(req.body.branches_id)
-            await newProduct.addActivities(req.body.activities_id)
-		    res.redirect('/')
+            await newProduct.addBranches(req.body.id_branch)
+            await newProduct.addActivities(req.body.id_activity)
+			res.redirect('/')
+			res.json({succes: 'Se cargo la nueva clase'})
 	    } catch (error) {
 		    res.send(error)
 	    }
