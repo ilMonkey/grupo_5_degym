@@ -183,3 +183,12 @@ Continuar haciendo:
     •  Corregir vistas Users (chequear errores y variables/if's en EJS).
     •  Verificar el correcto funcionamiento de las cookies.
     •  Corregir el Genero de User (no guarda el valor del campo male/woman/other).
+
+
+14/07/2020 
+
+Hicimos:
+    •  Arreglamos multer para cargar fotos en la edicion (metodo Update) de perfil de usuario.
+
+Continuar haciendo:
+    •  
