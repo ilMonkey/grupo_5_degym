@@ -127,8 +127,12 @@ const usersController = {
 	},
 
 	// Update - Method to update
-	update: async (req, res) => {
+	update: async (req, res) => {		
 		try {
+			if (req.files[0]!=undefined) {
+				req.body.avatar_url = req.files[0].filename
+			}	
+	
 			await DB.User.update( req.body,
 				{
 					where: { id: req.params.id} 
