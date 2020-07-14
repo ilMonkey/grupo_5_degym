@@ -6,7 +6,7 @@ const controller = {
 	controlPanel: (req, res) => {
 		res.render("adminPanel")
 	},
-
+ 
 	showBranches: async (req, res) => {
 		try {
 			const branches = await DB.Branch.findAll()
@@ -36,7 +36,8 @@ const controller = {
 	showActivities: async (req, res) => {
 		try {
 			const activities = await DB.Activity.findAll()
-			res.send(activities)
+			// res.send('Llegue')
+			res.render('activities', {activities})
 		} catch (error) {
 			res.send(error)
 		}
@@ -44,6 +45,7 @@ const controller = {
 
     storeActivity: async (req, res) => {
 		try {
+			req.body.img = req.files[0].filename
 		    const newActivity = await DB.Activity.create(req.body)
 		    res.send(newActivity)
 	    } catch (error) {

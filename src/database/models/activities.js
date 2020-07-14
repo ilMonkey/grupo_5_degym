@@ -6,6 +6,9 @@ module.exports = (sequelize,DataTypes)=> {
             description:DataTypes.STRING,
             monthly_price:DataTypes.INTEGER,
         },
+        {
+            timestamps: false
+        },
     );
      activity.associate = (models) => {
         activity.hasMany(models.Lesson, {
