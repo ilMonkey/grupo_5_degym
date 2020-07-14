@@ -59,6 +59,32 @@ const controller = {
 			res.json({succes: 'Se elimino piola la activity'})
 	},
 
+	showLessons: async (req, res) => {
+		try {
+			let lessons = await DB.Lesson.findAll()
+			res.send(lessons)
+		} catch (error) {
+			res.send(error)
+		}
+	},
+
+    storeLesson: async (req, res) => {
+		try {
+		    const newLesson = await DB.Lesson.create(req.body)
+		    res.send(newLesson)
+	    } catch (error) {
+		    res.send(error)
+	    }
+	},
+	destroyLesson: async (req, res) => {
+		 await DB.Activity.destroy({
+				where:{
+					id: req.params.id
+				}
+			});
+			res.json({succes: 'Se elimino piola la activity'})
+	},
+
 }
 
 module.exports = controller;
