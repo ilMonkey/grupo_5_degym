@@ -5,6 +5,7 @@ module.exports = (sequelize,DataTypes)=> {
             name:DataTypes.STRING,
             description:DataTypes.STRING,
             monthly_price:DataTypes.INTEGER,
+            img: DataTypes.STRING
         },
         {
             timestamps: false

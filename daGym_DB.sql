@@ -44,6 +44,7 @@ CREATE TABLE IF NOT EXISTS `daGymDB`.`activities` (
   `name` VARCHAR(45) NOT NULL,
   `description` TEXT(300) NOT NULL,
   `monthly_price` INT NOT NULL,
+  `img` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
