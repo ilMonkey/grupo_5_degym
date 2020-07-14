@@ -9,12 +9,7 @@ const usersController = {
 
 	// Login - Este metodo es de autentificación del usuario, session y cookies EXPLICADO!!!
 	auth: async (req,res) => {
-		// let validation = validationResult(req);
-		// let errors = validation.errors
-		// if (errors != '') {
-		// 	console.log(errors) 
-		// 	res.render('users/login',{errors}) 
-		// }
+		
 		// Guardamos en una variable al usuario que se quiere logear
 		try {
 			const user = await DB.User.findOne({
@@ -30,12 +25,16 @@ const usersController = {
 				req.session.idDelUsuario = user.id;
 				res.redirect('/users/profile/' + user.id);
 			} else {
-				res.json({ error: 'Error contraseña 1' })
-//				res.render('users/login',{errors}) 
+				let validation = validationResult(req);
+				let errors = validation.errors
+				if (errors != '') {
+					console.log(errors) 
+					res.render('users/login',{errors}) 
+		}
 			}
 		} else {
 			res.json({ error: 'Error de usuario y/o contraseña 2' })
-//			res.render('users/login',{errors}) 
+			// res.render('users/login',{errors}) 
 		}
 
 		} catch (error) {
