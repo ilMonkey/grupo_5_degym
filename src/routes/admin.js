@@ -21,18 +21,6 @@ var storage = multer.diskStorage({
   var upload = multer({ storage: storage })
 // ************ END DiskStorage de Multer ************
 
-// ************ DiskStorage de Multer ************ 
-var storageProfile = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, 'public/images/users')
-  },
-  filename: function (req, file, cb) {
-    cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
-  }
-})
-
-var uploadProfile = multer({ storage: storageProfile })
-// ************ END DiskStorage de Multer ************
 /*** GET ADMIN GENERAL panel ***/ 
 router.get('/', authMiddleware ,adminController.controlPanel);
 
@@ -58,7 +46,7 @@ router.delete('/activities/delete/:id', adminController.destroyActivity);
 router.get('/users', authMiddleware, adminController.showUsers);
 /*** EDIT ONE USER ***/ 
 router.get('/user/edit/:id', authMiddleware, adminController.editUser); /* GET - Form to create */
-router.put('/user/edit/:id', authMiddleware, uploadProfile.any(), adminController.storeUser); /* PUT - Update in DB */
+router.put('/user/edit/:id', authMiddleware, adminController.storeUser); /* PUT - Update in DB */
 
 /*** DELETE ONE USER***/ 
 router.delete('/user/delete/:id', authMiddleware, adminController.destroyUser); /* DELETE - Delete from DB */
