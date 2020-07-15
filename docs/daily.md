@@ -197,9 +197,11 @@ Continuar haciendo:
 
 Hicimos:
     •  Arreglamos el pane de ADMIN.
-
+    
 Continuar haciendo:
     •  PREGUNTAS PARA PROFES:
-                -prodectsController.
-                -sweet alert al borrar un user.
-                -esconder botones al login.
+                -prodectsController (hecho).
+                -sweet alert al borrar un user (hecho).
+                -esconder botones al login (hecho).
+
+
