@@ -5,7 +5,7 @@ const controller = {
 
 	// Admin Tools - Shows admin tools
 	controlPanel: (req, res) => {
-		res.render("adminPanel")
+		res.render("admin/adminPanel")
 	},
 
 	// Metodos de Admin controller para administrar las sedes.
@@ -93,6 +93,29 @@ const controller = {
 			res.json({succes: 'Se elimino piola la activity'})
 	},
 
+	showUsers: async (req, res) => {
+		// muestra listado de usuarios de la base de datos
+		try {
+			let users = await DB.User.findAll()
+			res.send(users)
+		} catch (error) {
+			res.send(error)
+		}
+	},	
+
+	editUser: (req, res) => {
+		//muestra formulario de edición de un usuario
+
+	},
+
+	storeUser: (req, res) => {
+		//Guarda modificaciones de un usuario
+
+	},
+
+	destroyUser: (req, res) => {
+		//Borra un usuario
+	}
 }
 
 module.exports = controller;

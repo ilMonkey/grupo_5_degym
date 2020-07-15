@@ -1,0 +1,25 @@
+<!-- Include Head -->
+<%- include('../partials/head', {title: 'CPanel Da Gym'}) %>
+
+<!-- Include Header -->
+<%- include('../partials/header') %>
+
+<!-- Profile stile.css line:920 -->
+
+<div class="container profileEditForm">
+    <h2 class="profileTitle">Perfil de Usuario</h1>
+    <div class="container profileBody">
+        <ul class="container userEditProfileForm" >
+            <li>
+                <label for="">Nombre</label>
+                <p class="userData"><%= user.first_name %></p>
+            </li>
+   
+        <div class="profileBtn">
+           <a href="edit/<%= user.id %>" class= "btn btn-primary">Editar</a>
+        </div>
+    </div>
+</div>
+
+<!-- Include Footer -->
+<%- include('../partials/footer') %>
