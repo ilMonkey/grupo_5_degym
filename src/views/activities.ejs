@@ -8,7 +8,7 @@
 
     <h2>Agrega una nueva Actividad.</h2>
     <div class="class__container-multiGrid">
-        <form action="" class="container__product--form" method="POST">
+        <form action="/admin/activities" class="container__product--form" method="POST" enctype="multipart/form-data">
                     <label id="label-branch" >Nombre/Alias: </label>
                     <input class="" type="text" placeholder="" name="name" style="background-color: orange;">
                     <label  id="label-branch">Descripcion: </label>
@@ -20,7 +20,7 @@
                 <div class="container__product--data-check">
                 </div>
                 <div class="container__product--send">
-                    <button type="button" class="btn btn-warning">Agregar Actividad</button>
+                    <button type="submit" class="btn btn-warning">Agregar Actividad</button>
                 </div>
         </form>
     </div>

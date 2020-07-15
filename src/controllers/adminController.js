@@ -50,8 +50,10 @@ const controller = {
     storeActivity: async (req, res) => {
 		try {
 			req.body.img = req.files[0].filename
-		    const newActivity = await DB.Activity.create(req.body)
-		    res.send(newActivity)
+			const newActivity = await DB.Activity.create(req.body)
+			console.log(newActivity)
+			res.send('llegue')
+		    // res.redirect('/admin/activities')
 	    } catch (error) {
 		    res.send(error)
 	    }
@@ -67,31 +69,32 @@ const controller = {
 
 	// Metodos de Admin controller para administrar las clases.
 
-	showLessons: async (req, res) => {
-		try {
-			let lessons = await DB.Lesson.findAll()
-			res.send(lessons)
-		} catch (error) {
-			res.send(error)
-		}
-	},
+	// showLessons: async (req, res) => {
+	// 	try {
+	// 		let lessons = await DB.Lesson.findAll()
+	// 		res.send(lessons)
+	// 	} catch (error) {
+	// 		res.send(error)
+	// 	}
+	// },
 
-    storeLesson: async (req, res) => {
-		try {
-		    const newLesson = await DB.Lesson.create(req.body)
-		    res.send(newLesson)
-	    } catch (error) {
-		    res.send(error)
-	    }
-	},
-	destroyLesson: async (req, res) => {
-		 await DB.Activity.destroy({
-				where:{
-					id: req.params.id
-				}
-			});
-			res.json({succes: 'Se elimino piola la activity'})
-	},
+    // storeLesson: async (req, res) => {
+	// 	try {
+	// 		req.body.img = req.files[0].filename
+	// 	    const newLesson = await DB.Lesson.create(req.body)
+	// 	    res.redirect('/admin/activities')
+	//     } catch (error) {
+	// 	    res.send(error)
+	//     }
+	// },
+	// destroyLesson: async (req, res) => {
+	// 	 await DB.Activity.destroy({
+	// 			where:{
+	// 				id: req.params.id
+	// 			}
+	// 		});
+	// 		res.json({succes: 'Se elimino piola la activity'})
+	// },
 
 }
 
