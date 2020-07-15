@@ -52,8 +52,7 @@ const controller = {
 			req.body.img = req.files[0].filename;
 			let newActivity = await DB.Activity.create(req.body)
 			console.log('Se cargo correctamente el nuevo producto')
-			res.send(newActivity)
-		    // res.redirect('/admin/activities')
+		    res.redirect('/admin/activities')
 	    } catch (error) {
 		    res.send(error)
 	    }
