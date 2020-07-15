@@ -191,4 +191,15 @@ Hicimos:
     •  Arreglamos multer para cargar fotos en la edicion (metodo Update) de perfil de usuario.
 
 Continuar haciendo:
-    •  
+    •  Arreglar controllers de product u users.
+
+15/07/2020 
+
+Hicimos:
+    •  Arreglamos el pane de ADMIN.
+
+Continuar haciendo:
+    •  PREGUNTAS PARA PROFES:
+                -prodectsController.
+                -sweet alert al borrar un user.
+                -esconder botones al login.
