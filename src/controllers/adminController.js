@@ -118,11 +118,8 @@ const controller = {
 
 	storeUser: async (req, res) => {
 		//Guarda modificaciones de un usuario
-		try {
-			// if (req.files[0]!=undefined) {
-			// 	req.body.avatar_url = req.files[0].filename
-			// }	
-			console.log(req.body)
+		try {	
+			console.log('campos: ',req.body)
 			await DB.User.update( req.body,
 				{
 					where: { id: req.params.id} 

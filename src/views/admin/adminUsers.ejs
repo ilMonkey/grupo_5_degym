@@ -15,14 +15,14 @@
                 <p class="userData">
                     <%= user.first_name %> <%= user.last_name %>
                 </p>
-                <form action="/admin/user/edit/<%= user.id %>?_method=PUT" enctype="multipart/form-data" class="container userEditProfileForm" method="POST">
+                <form action="/admin/user/edit/<%= user.id %>?_method=PUT" class="container userEditProfileForm" method="POST">
+                    
                     <select name="role" id="">
-                        <option value="0">Elija un Rol</option>
-                        <option value="1">Cliente</option>
-                        <option value="2">Profesor</option>
-                        <option value="3">Administrador</option>
+                        <option value="1" <%= user.role == 1 ? "selected" : ""%>>Cliente</option>
+                        <option value="2" <%= user.role == 2 ? "selected" : ""%>>Profesor</option>
+                        <option value="3" <%= user.role == 3 ? "selected" : ""%>>Administrador</option>
                     </select>
-                    <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                    <button type="submit" class="btn btn-primary">Cambiar Rol</button>
                 </form>
                 <form action="/admin/user/delete/<%= user.id %>?_method=DELETE" class="" id="deleteForm" method="POST">
                     <button type="submit" class="btn btn-danger deleteUser">Eliminar Perfil</button>
