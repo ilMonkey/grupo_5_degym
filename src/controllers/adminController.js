@@ -11,7 +11,7 @@ const controller = {
 	showBranches: async (req, res) => {
 		try {
 			let branches = await DB.Branch.findAll()
-			res.send(branches)
+			res.render('branches', {branches})
 		} catch (error) {
 			res.send(error)
 		}
@@ -20,7 +20,7 @@ const controller = {
     storeBranch: async (req, res) => {
 		try {
 			const newBranch = await DB.Branch.create(req.body)
-		    res.send(newBranch)
+		    res.redirect('/admin/branches')
 	    } catch (error) { 
 		    res.send(error)
 	    }
