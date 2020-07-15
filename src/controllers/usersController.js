@@ -26,7 +26,7 @@ const usersController = {
 		 		// En caso de que tilde recordame ...
 				 if (req.body.recuerdame) {
 				// Parametros: Como se va a llamar la cookie, que le guardamos a la cookie y opciones
-					res.cookie('userCookie', user.id, {maxAge: 300000});
+					res.cookie('userCookie', user.id, {maxAge: 300000000000});
 				   }
 				   res.redirect('/users/profile/' + user.id);
 			} else {
@@ -145,7 +145,7 @@ const usersController = {
 
 	// Delete - Delete one user from DB
 	destroy : async (req, res) => {
-		DB.User.destroy({ 
+		await DB.User.destroy({ 
 			where: { 
 				id: req.params.id
 			} }

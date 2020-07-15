@@ -100,24 +100,47 @@ const controller = {
 		// muestra listado de usuarios de la base de datos
 		try {
 			let users = await DB.User.findAll()
-			res.send(users)
+			res.render('admin/adminUsers',{users})
 		} catch (error) {
 			res.send(error)
 		}
 	},	
 
-	editUser: (req, res) => {
-		//muestra formulario de edición de un usuario
-
+	editUser: async (req, res) => {
+	//muestra formulario de edición de un usuario
+		try {		
+			let user = await DB.User.findByPk(req.params.id)
+			res.render('admin/adminUsersForm', {user})
+		} catch (error) {
+			res.send(error)
+			}
 	},
 
-	storeUser: (req, res) => {
+	storeUser: async (req, res) => {
 		//Guarda modificaciones de un usuario
-
+		try {
+			// if (req.files[0]!=undefined) {
+			// 	req.body.avatar_url = req.files[0].filename
+			// }	
+			console.log(req.body)
+			await DB.User.update( req.body,
+				{
+					where: { id: req.params.id} 
+				})
+				res.redirect('/admin/users/')
+		} catch (error) {
+			res.send(error)
+		}
 	},
 
-	destroyUser: (req, res) => {
+	destroyUser: async (req, res) => {
 		//Borra un usuario
+		await DB.User.destroy({ 
+			where: { 
+				id: req.params.id
+			} }
+			)
+		res.redirect('/admin/users')
 	}
 }
 

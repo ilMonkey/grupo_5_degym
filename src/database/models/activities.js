@@ -9,7 +9,11 @@ module.exports = (sequelize,DataTypes)=> {
         },
         {
             timestamps: false
+<<<<<<< HEAD
         },
+=======
+        }
+>>>>>>> df7a285474f2d43c24f3b6d6a51993db440d84f9
     );
      activity.associate = (models) => {
         activity.hasMany(models.Lesson, {
