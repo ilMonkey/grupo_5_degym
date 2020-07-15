@@ -7,17 +7,25 @@
 <!-- Profile stile.css line:920 -->
 
 <div class="container profileEditForm">
-    <h2 class="profileTitle">Perfil de Usuario</h1>
+    <h2 class="profileTitle">Usuarios Registrados</h1>
     <div class="container profileBody">
         <ul class="container userEditProfileForm" >
-            <li>
-                <label for="">Nombre</label>
-                <p class="userData"><%= user.first_name %></p>
+            <% users.forEach(user => { %>
+             <li>
+                <p class="userData">
+                    <%= user.first_name %> <%= user.last_name %>
+                </p>
+                    <a href="/admin/user/edit/<%= user.id %>" class= "btn btn-primary">Editar</a>
+                    <form action="/admin/user/delete/<%= user.id %>?_method=DELETE" class="" id="deleteForm" method="POST">
+                        <button type="submit" class="btn btn-danger deleteUser">Eliminar Perfil</button>
+                    </form>
+                
             </li>
-   
-        <div class="profileBtn">
-           <a href="edit/<%= user.id %>" class= "btn btn-primary">Editar</a>
-        </div>
+            <% }) %>
+
+        <!-- <div class="profileBtn">
+
+        </div> -->
     </div>
 </div>
 
