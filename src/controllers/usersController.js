@@ -23,6 +23,7 @@ const usersController = {
 			console.log(iguales)
 			if (iguales){
 				req.session.idDelUsuario = user.id;
+				req.session.rodeDelUsuario = user.role;
 		 		// En caso de que tilde recordame ...
 				 if (req.body.recuerdame) {
 				// Parametros: Como se va a llamar la cookie, que le guardamos a la cookie y opciones
@@ -151,6 +152,7 @@ const usersController = {
 			} }
 			)
 		res.redirect('/')
+		req.session.destroy();
 	},
 
 	// Delete - Delete one user from DB
