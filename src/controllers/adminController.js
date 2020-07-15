@@ -31,7 +31,7 @@ const controller = {
 					id: req.params.id
 				}
 			});
-			res.json({succes: 'Se elimino piola la branch'})
+			res.redirect('/admin/branches')
 	},
 
 
