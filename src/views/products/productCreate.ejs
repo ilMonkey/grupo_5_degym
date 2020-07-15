@@ -5,7 +5,7 @@
 <%- include('../partials/header') %>
 
 <!-- product Create Form -->
-<!-- Este formulario nos permite crear "Lessons" que son las unidades de venta, nuestros "Products". Las "Lesson" reciben atributos de los modelos "Branch" y "Activity". -->
+<!-- Este formulario nos permite crear "products" que son las unidades de venta, nuestros "Products". Las "product" reciben atributos de los modelos "Branch" y "Activity". -->
 
 
 <div class="container__product--box">
@@ -18,7 +18,7 @@
                     <p style="color: black;">- El nombre de tu producto es muy largo (Max. 45 caracteres).</p>
                     <p style="color: black;">- La descripción es muy larga (Max. 150 caracteres).<br></p>
                 </div> -->
-                <form action="/product/create" method="POST" class="container__register--data" enctype = "multipar/form-data">
+                <form action="/products/create" method="POST" class="container__register--data" enctype = "multipar/form-data">
                     <select name="branch" size="1" >
                         <% branches.forEach(branch => { %>
                         <option value="<%= branch.id %>" <% branch.name == product.branch?'selected':null%>> <%= branch.name %> </option>
@@ -53,14 +53,14 @@
             <h2>Clases ya cargadas.</h2>
     <div class="class__container-multiBranch">
        <ul class="branchesList" >
-            <% lessons.forEach(lesson => { %>
+            <% products.forEach(product => { %>
                 <!-- Una clase individual -->
                     <li class="branch__TextBox">
-                        <h2>Número de ID: <%- lesson.id %></h2>
-                        <span>Sede: <%- lesson.id_branch.name %></span>
-                        <span>Actividad: <%- lesson.id_activity.name %></span>
-                        <span>Dia/s que se ofrece la clase: <%- lesson.days %> a las <%- lesson.time %>hs.</span>
-                        <form class="container__detail--send" action="/admin/lessons/delete/<%= lesson.id%>?_method=DELETE" method="POST">
+                        <h2>Número de ID: <%- product.id %></h2>
+                        <span>Sede: <%- product.id_branch.name %></span>
+                        <span>Actividad: <%- product.id_activity.name %></span>
+                        <span>Dia/s que se ofrece la clase: <%- product.days %> a las <%- product.time %>hs.</span>
+                        <form class="container__detail--send" action="/products/delete/<%= product.id%>?_method=DELETE" method="POST">
                             <button type="button" class="btn btn-light"><i class="fas fa-trash-alt"></i></button>
                         </form>
                     </li>

@@ -16,7 +16,7 @@ module.exports = {
 	// Detail - Metodo que trae la vista del producto detallada
 	detail: async (req, res) => {
 		try {
-            let product = await DB.Lesson.findByPk(req.params.id)
+			let product = await DB.Lesson.findByPk(req.params.id)
 			res.render('products/productDetail', {product})
         } catch (error) {
             res.send(error)
@@ -24,12 +24,12 @@ module.exports = {
 	},
 
 	// GET - Metodo que muestra el formulario de creacion de producto (lesson)
-
     create: async (req, res) => {
 		try {		
 			let activities = await DB.Activity.findAll()
 			let branches = await DB.Branch.findAll()
-			res.render('products/productCreate', {activities, branches})
+			let products = await DB.Lesson.findAll()
+			res.render('products/productCreate', {activities, branches, products})
 		} catch (error) {
 			res.send(error)
 			}
