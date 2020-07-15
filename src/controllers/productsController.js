@@ -40,9 +40,9 @@ module.exports = {
 	store: async (req, res) => {
 		try {
 			const newProduct = await DB.Lesson.create(req.body)
-			await newProduct.addBranches(req.body.id_branch)
-			await newProduct.addActivities(req.body.id_activity)
-			res.redirect('/')
+			// await newProduct.addBranches(req.body.id_branch)
+			// await newProduct.addActivities(req.body.id_activity)
+			res.redirect('/admin')
 			res.json({succes: 'Se cargo la nueva clase'})
 		} catch (error) {  
 			res.send(error)
