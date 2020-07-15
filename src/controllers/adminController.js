@@ -64,7 +64,7 @@ const controller = {
 					id: req.params.id
 				}
 			});
-			res.json({succes: 'Se elimino piola la activity'})
+			res.redirect('/admin/activities')
 	},
 
 	// Metodos de Admin controller para administrar las clases.

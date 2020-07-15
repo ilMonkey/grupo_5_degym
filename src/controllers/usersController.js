@@ -73,7 +73,7 @@ const usersController = {
 				const existeUser = await DB.User.findAll({
 				where: {
 					email: req.body.email
-					}
+					} 
 				})
 				console.log(existeUser) 
 				// Si ya existe el email. manda mensaje de error si no. Guarda el registro
