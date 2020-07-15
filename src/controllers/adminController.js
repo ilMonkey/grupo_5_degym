@@ -10,7 +10,7 @@ const controller = {
  
 	showBranches: async (req, res) => {
 		try {
-			const branches = await DB.Branch.findAll()
+			let branches = await DB.Branch.findAll()
 			res.send(branches)
 		} catch (error) {
 			res.send(error)
@@ -19,9 +19,9 @@ const controller = {
 
     storeBranch: async (req, res) => {
 		try {
-		    const newBranch = await DB.Branch.create(req.body)
+			const newBranch = await DB.Branch.create(req.body)
 		    res.send(newBranch)
-	    } catch (error) {
+	    } catch (error) { 
 		    res.send(error)
 	    }
 	},
@@ -49,15 +49,16 @@ const controller = {
 
     storeActivity: async (req, res) => {
 		try {
-			req.body.img = req.files[0].filename
-			const newActivity = await DB.Activity.create(req.body)
-			console.log(newActivity)
-			res.send('llegue')
+			req.body.img = req.files[0].filename;
+			let newActivity = await DB.Activity.create(req.body)
+			console.log('Se cargo correctamente el nuevo producto')
+			res.send(newActivity)
 		    // res.redirect('/admin/activities')
 	    } catch (error) {
 		    res.send(error)
 	    }
 	},
+
 	destroyActivity: async (req, res) => {
 		 await DB.Activity.destroy({
 				where:{

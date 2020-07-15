@@ -1,7 +1,8 @@
 // ************ Require's ************
 const express = require('express');
-const router = express.Router();
+const router = express.Router(); 
 const multer = require('multer');
+const path = require('path');
 
 // ************ Controller Require ************
 const adminController = require('../controllers/adminController');
@@ -36,7 +37,7 @@ router.delete('/branches/delete/:id', adminController.destroyBranch);
 /*** GET ADMIN-ACTIVITY panel ***/ 
 router.get('/activities', adminController.showActivities);
 /*** CREATE ONE ACTIVITY***/ 
-router.post('/activities', adminController.storeActivity);
+router.post('/activities', upload.any(),adminController.storeActivity);
 /*** DELETE ONE ACTIVITY***/ 
 router.delete('/activities/delete/:id', adminController.destroyActivity);
 
