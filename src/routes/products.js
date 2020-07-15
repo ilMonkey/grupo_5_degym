@@ -18,11 +18,11 @@ var storage = multer.diskStorage({
     }
   })
    
-  var upload = multer({ storage: storage })
+  var upload = multer({ storage: storage }) 
 
 
 router.get('/', productsController.all); /* GET - All products */
-// router.get('/:id', productsController.detail); /* GET - Product detail */
+router.get('/:id', productsController.detail); /* GET - Product detail */
 
 /*** CREATE ONE PRODUCT ***/ 
 router.get('/create', authMiddleware, productsController.create); /* GET - Form to create */
@@ -31,6 +31,7 @@ router.post('/', authMiddleware, productsController.store); /* POST - Store in D
 // /*** EDIT ONE PRODUCT ***/ 
 router.get('/:id/edit', authMiddleware, productsController.edit); /* GET - Form to create */
 router.put('/:id', authMiddleware, productsController.update); /* PUT - Update in DB */
+
 // upload.any() es el middleware
  
 /*** DELETE ONE PRODUCT***/ 
