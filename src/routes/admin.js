@@ -26,5 +26,15 @@ router.post('/activities', adminController.storeActivity);
 /*** DELETE ONE ACTIVITY***/ 
 router.delete('/activities/delete/:id', adminController.destroyActivity);
 
+//Users controllers
+/*** GET listado de Usuarios panel ***/ 
+router.get('/users', authMiddleware, adminController.showUsers);
+/*** EDIT ONE USER ***/ 
+router.get('/user/edit/:id', authMiddleware, adminController.editUser); /* GET - Form to create */
+router.put('/user/edit/:id', authMiddleware, adminController.storeUser); /* PUT - Update in DB */
+
+/*** DELETE ONE USER***/ 
+router.delete('/user/delete/:id', authMiddleware, adminController.destroyUser); /* DELETE - Delete from DB */
+
 module.exports = router;
 
