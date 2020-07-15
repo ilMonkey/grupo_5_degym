@@ -29,7 +29,6 @@ module.exports = {
 		try {		
 			let activities = await DB.Activity.findAll()
 			let branches = await DB.Branch.findAll()
-			console.log("entro")
 			res.render('products/productCreate', {activities, branches})
 		} catch (error) {
 			res.send(error)
@@ -56,7 +55,7 @@ module.exports = {
 			let product = await DB.Lesson.findByPk(req.params.id)
 			let activities = await DB.Activity.findAll()
 			let branches = await DB.Branch.findAll()
-			res.render('products/productCreate', {product, activities, branches})
+			res.render('products/productEdit', {product, activities, branches})
 		} catch (error) {
 			res.send(error)
 			}
