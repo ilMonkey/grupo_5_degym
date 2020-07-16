@@ -8,8 +8,9 @@ module.exports = {
 	all: async (req, res) => {
 		try {
 			let usuario = req.session;
-            let products = await DB.Lesson.findAll()
-            res.render('products/products',{products, usuario})
+			let products = await DB.Lesson.findAll()
+			let activities = await DB.Activity.findAll()
+            res.render('products/products',{products, usuario, activities})
         } catch (error) {
             res.send(error)
         }
