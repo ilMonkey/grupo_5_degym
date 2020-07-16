@@ -26,18 +26,21 @@
  
             <div class="class__container-multiGrid"> 
                 
-                <% activities.forEach(activity => { %>
+              <% let activityEncontrada = [] %> 
+                <% products.forEach(product => { %>
+                  <% activityEncontrada = activities.find(activity => product.id_activity == activity.id)  %> 
                     <!-- Una clase individual -->
+
                     <article class="individualClass__container">
                         <div class= "classImgBox"> 
-                            <img src="/images/actividades/<%= activity.img %> " alt="yoga">
+                            <img src="/images/actividades/<%= activityEncontrada.img %> ">
                             <div class="middleImgBox">
-                                <a href="/products/<%= activity.id %>"><button class="btn btn-primary">Ver más</button></a>
+                                <a href="/products/<%= product.id %>"><button class="btn btn-primary">Ver más</button></a>
                             </div>
                         </div>
                         <div class="classTextBox">
-                            <h3><%= activity.name %></h3>
-                            <p><%= activity.description %></p>
+                            <h3><%= activityEncontrada.name %></h3>
+                            <p><%= activityEncontrada.description %></p>
                         </div>
                     </article>                 
                 <% }) %>

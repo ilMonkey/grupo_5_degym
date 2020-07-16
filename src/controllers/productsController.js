@@ -10,6 +10,7 @@ module.exports = {
 			let usuario = req.session;
 			let products = await DB.Lesson.findAll()
 			let activities = await DB.Activity.findAll()
+			// res.send(products)
             res.render('products/products',{products, usuario, activities})
         } catch (error) {
             res.send(error)
@@ -18,9 +19,17 @@ module.exports = {
 	// Detail - Metodo que trae la vista del producto detallada
 	detail: async (req, res) => {
 		try {
-			let usuario = req.session;			
+			let usuario = req.session;		
+
 			let product = await DB.Lesson.findByPk(req.params.id)
-			res.render('products/productDetail', {product, usuario})
+
+			let activity = await DB.Activity.findOne({
+				where:{
+					id: product.id_activity
+				}
+			})
+			// res.send(activity)
+			res.render('products/productDetail', {product, activity,usuario})
         } catch (error) {
             res.send(error)
         } 
