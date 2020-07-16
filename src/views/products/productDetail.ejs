@@ -47,10 +47,10 @@
                                 </form>
                             
                             <div class="container__detail">
-                                <a href="/products/<%= activity.id%>/edit">
+                                <a href="/products/<%= product.id%>/edit">
                                     <button type="button" class="btn btn-light">EDITAR</button>  
                                 </a>
-                                <form action="/products/delete/<%= activity.id%>?_method=DELETE" method="POST">
+                                <form action="/products/delete/<%= product.id%>?_method=DELETE" method="POST">
                                     <button type="submit" class="btn btn-light">ELIMINAR</button>  
                                 </form>
                             </div>

@@ -29,7 +29,7 @@ module.exports = {
 				}
 			})
 			// res.send(activity)
-			res.render('products/productDetail', {product, activity,usuario})
+			res.render('products/productDetail', {product, activity, usuario})
         } catch (error) {
             res.send(error)
         } 
