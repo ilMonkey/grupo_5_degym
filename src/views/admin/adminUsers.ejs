@@ -2,7 +2,7 @@
 <%- include('../partials/head', {title: 'CPanel Da Gym'}) %>
 
 <!-- Include Header -->
-<%- include('../partials/header') %>
+<%- include('../partials/header2',{usuario}) %>
 
 <!-- Profile stile.css line:920 -->
 
@@ -16,7 +16,6 @@
                     <%= user.first_name %> <%= user.last_name %>
                 </p>
                 <form action="/admin/user/edit/<%= user.id %>?_method=PUT" class="container userEditProfileForm" method="POST">
-                    
                     <select name="role" id="">
                         <option value="1" <%= user.role == 1 ? "selected" : ""%>>Cliente</option>
                         <option value="2" <%= user.role == 2 ? "selected" : ""%>>Profesor</option>

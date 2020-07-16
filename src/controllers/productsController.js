@@ -7,8 +7,9 @@ module.exports = {
 	// All - Metodo que muestra todas las clases disponibles (los "products")
 	all: async (req, res) => {
 		try {
+			let usuario = req.session;
             let products = await DB.User_lesson.findAll()
-            res.render('products/productCart',{products})
+            res.render('products/productCart',{products, usuario})
         } catch (error) {
             res.send(error)
         }
@@ -16,8 +17,9 @@ module.exports = {
 	// Detail - Metodo que trae la vista del producto detallada
 	detail: async (req, res) => {
 		try {
+			let usuario = req.session;			
 			let product = await DB.Lesson.findByPk(req.params.id)
-			res.render('products/productDetail', {product})
+			res.render('products/productDetail', {product, usuario})
         } catch (error) {
             res.send(error)
         } 
@@ -25,11 +27,12 @@ module.exports = {
 
 	// GET - Metodo que muestra el formulario de creacion de producto (lesson)
     create: async (req, res) => {
-		try {		
+		try {	
+			let usuario = req.session;				
 			let activities = await DB.Activity.findAll()
 			let branches = await DB.Branch.findAll()
 			let products = await DB.Lesson.findAll()
-			res.render('products/productCreate', {activities, branches, products})
+			res.render('products/productCreate', {activities, branches, products, usuario})
 		} catch (error) {
 			res.send(error)
 			}
@@ -51,11 +54,12 @@ module.exports = {
 
 	// GET - Metodo que muestra el formulario de EDICION de producto (lesson)
 	edit: async (req, res) => {
-		try {		
+		try {
+			let usuario = req.session;		
 			let product = await DB.Lesson.findByPk(req.params.id)
 			let activities = await DB.Activity.findAll()
 			let branches = await DB.Branch.findAll()
-			res.render('products/productEdit', {product, activities, branches})
+			res.render('products/productEdit', {product, activities, branches, usuario})
 		} catch (error) {
 			res.send(error)
 			}
