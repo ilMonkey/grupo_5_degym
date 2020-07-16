@@ -7,7 +7,7 @@
 <%- include('../partials/header2',{usuario}) %>
 
 <!-- Profile  style.css:850 -->
-
+<main class="main_content">
 <div class="profileEditForm">
     <h2><%= user.first_name %>, aquí podés editar tu Perfil.</h1>
     
@@ -53,6 +53,6 @@
         <a href="/users/profile/<%= user.id %>" class="btn btn-light">Cancelar</a>
     </div> 
 </div>
-
+</main>
 <!-- Include Footer -->
 <%- include('../partials/footer') %>

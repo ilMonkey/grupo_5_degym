@@ -4,42 +4,43 @@
 <!-- Include Header -->
 <%- include('partials/header2',{usuario}) %>
 
-<section class="branch__container">
-
-    <h2>Agrega una nueva sede.</h2>
-    <div class="class__container-multiGrid">
-        <form action="" class="container__product--form" method="POST">
-                    <label id="label-branch" >Nombre/Alias: </label>
-                    <input class="" type="text" placeholder="" name="name" style="background-color: orange;">
-                    <label  id="label-branch">Dirección: </label>
-                    <input class="" type="text" placeholder="" name="address" style="background-color: orange;">
+<main class="main_content">
+    <section class="branch__container">
+        <h2>Agrega una nueva sede.</h2>
+        <div class="class__container-multiGrid">
+            <form action="" class="container__product--form" method="POST">
+                <label id="label-branch">Nombre/Alias: </label>
+                <input class="" type="text" placeholder="" name="name" style="background-color: orange;">
+                <label id="label-branch">Dirección: </label>
+                <input class="" type="text" placeholder="" name="address" style="background-color: orange;">
                 <div class="container__product--data-check">
                 </div>
                 <div class="container__product--send">
                     <button type="submit" class="btn btn-warning">Agregar Sede</button>
                 </div>
-        </form>
-    </div>
+            </form>
+        </div>
+        <h2>Sedes ya cargadas.</h2>
+        <div class="class__container-multiBranch">
+            <ul class="branchesList">
+                
+                <% branches.forEach(branch => { %>
 
-    <h2>Sedes ya cargadas.</h2>
-    <div class="class__container-multiBranch">
-       <ul class="branchesList" >
-            <% branches.forEach(branch => { %>
                 <!-- Una clase individual -->
-                    <li class="branch__TextBox">
-                        <h3><%- branch.name %></h3>
-                        <form class="container__detail--send" action="/admin/branches/delete/<%= branch.id%>?_method=DELETE" method="POST">
-                            <button type="submit" class="btn btn-light"><i class="fas fa-trash-alt"></i></button>
-
-                        </form>
-                    </li>
-                </article>                 
-            <% }) %>
-       </ul>
-
-    </div>
-</section>
-
+                <li class="branch__TextBox">
+                    <h3><%- branch.name %></h3>
+                    <form class="container__detail--send" action="/admin/branches/delete/<%= branch.id%>?_method=DELETE"
+                        method="POST">
+                        <button type="submit" class="btn btn-light"><i class="fas fa-trash-alt"></i></button>
+                    </form>
+                </li>
+                </article>
+                <% }) %>
+                
+            </ul>
+        </div>
+    </section>
+</main>
 
 
 <!-- Include Footer -->
