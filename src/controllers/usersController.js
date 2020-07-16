@@ -5,7 +5,10 @@ const OP = DB.Sequelize.Op;
 
 const usersController = { 
 	// Login - Este metodo te lleva a la vista de Login
-	login: (req,res) =>res.render('users/login'),
+	login: (req,res) =>{
+		let usuario = req.session;
+		res.render('users/login', {usuario})
+	},
 
 	// Login - Este metodo es de autentificación del usuario, session y cookies EXPLICADO!!!
 	auth: async (req,res) => {
@@ -18,9 +21,10 @@ const usersController = {
 			}
 		}) 
 		if (user){
-
+			console.log(req.body.password)
+			console.log(user.password)
 			let iguales = bcrypt.compare(req.body.password, user.password)
-			console.log(iguales)
+			console.log('que trae en variable iguales: ',iguales)
 			if (iguales){
 				req.session.idDelUsuario = user.id;
 				req.session.rodeDelUsuario = user.role;
@@ -31,11 +35,11 @@ const usersController = {
 				   }
 				   res.redirect('/users/profile/' + user.id);
 			} else {
-				let validation = validationResult(req);
-				let errors = validation.errors
+			//	let validation = validationResult(req);
+			//	let errors = validation.errors
 				if (errors != '') {
 					console.log(errors) 
-					res.render('users/login',{errors}) 
+					res.render('users/login',{errors, usuario}) 
 				}
 			}
 		} else {
@@ -58,16 +62,18 @@ const usersController = {
 
 	// Create - Metodo que se usa en el GET para ir al formulario de register
 	create: async (req, res) => {
-		res.render('users/register');
+		let usuario = req.session;
+		res.render('users/register',{usuario});
 	},
 	
 	// Create -  Este metodo POST es para crear nuevos usuarios y que se guarden en la base de datos
 	store: async (req, res) => {
+		let usuario = req.session;
 		let validation = validationResult(req);
 		let errors = validation.errors
 		if (errors != '') {
 			console.log(errors) 
-			res.render('users/register',{errors}) 
+			res.render('users/register',{errors, usuario}) 
 		}else{
 			// buscca en la base de dastos si está registrado el email
 			try {
@@ -82,7 +88,7 @@ const usersController = {
 					let errors = [{ 
 					msg: 'El email ya está registrado',
 					}]
-					res.render('users/register',{errors});
+					res.render('users/register',{errors, usuario});
 				} else {	
 					// Si el rol no existe le asigna valor 1
 					if (!req.body.role) {
@@ -107,8 +113,9 @@ const usersController = {
 	// Profile - Metodo que te lleva al profile con la info del usuario logeado
 	profile: async (req,res) => {
 		try {
+			let usuario = req.session;
             let user = await DB.User.findByPk(req.session.idDelUsuario)
-			res.render('users/userProfile', {user})
+			res.render('users/userProfile', {user, usuario})
         } catch (error) {
             res.send(error)
         }
@@ -120,8 +127,9 @@ const usersController = {
 	// Update - Form to edit
 	edit: async (req, res) => {
 		try {		
+			let usuario = req.session;
 			let user = await DB.User.findByPk(req.params.id)
-			res.render('users/userProfileForm', {user})
+			res.render('users/userProfileForm', {user, usuario})
 		} catch (error) {
 			res.send(error)
 			}

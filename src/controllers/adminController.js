@@ -5,13 +5,15 @@ const controller = {
 
 	// Admin Tools - Shows admin tools
 	controlPanel: (req, res) => {
-		res.render("admin/adminPanel")
+		let usuario = req.session;
+		res.render('admin/adminPanel', {usuario})
 	},
  
 	showBranches: async (req, res) => {
 		try {
+			let usuario = req.session;
 			let branches = await DB.Branch.findAll()
-			res.render('branches', {branches})
+			res.render('branches', {branches, usuario})
 		} catch (error) {
 			res.send(error)
 		}
@@ -39,9 +41,10 @@ const controller = {
 
 	showActivities: async (req, res) => {
 		try {
+			let usuario = req.session;
 			const activities = await DB.Activity.findAll()
 			// res.send('Llegue')
-			res.render('activities', {activities})
+			res.render('activities', {activities, usuario})
 		} catch (error) {
 			res.send(error)
 		}
@@ -99,8 +102,9 @@ const controller = {
 	showUsers: async (req, res) => {
 		// muestra listado de usuarios de la base de datos
 		try {
+			let usuario = req.session;
 			let users = await DB.User.findAll()
-			res.render('admin/adminUsers',{users})
+			res.render('admin/adminUsers',{users, usuario})
 		} catch (error) {
 			res.send(error)
 		}
@@ -108,9 +112,10 @@ const controller = {
 
 	editUser: async (req, res) => {
 	//muestra formulario de edición de un usuario
-		try {		
+		try {	
+			let usuario = req.session;	
 			let user = await DB.User.findByPk(req.params.id)
-			res.render('admin/adminUsersForm', {user})
+			res.render('admin/adminUsersForm', {user, usuario})
 		} catch (error) {
 			res.send(error)
 			}
