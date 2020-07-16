@@ -56,11 +56,11 @@
         <div class="carousel-inner">     
                 <!-- Una clase individual -->
           
-                <% products.forEach(product => { %>
+                <% activities.forEach(activity => { %>
                 <div class="carousel-item" id="containter-item"> </div>
-                    <a href="/products/<%= product.id %>">
-                        <h2 class="nombreClase"><%- product.name %></h2>
-                        <img src="/images/actividades/<%- product.image %>" class="d-block w-100" alt="<%- product.name %>">
+                    <a href="/products">
+                        <h2 class="nombreClase"><%= activity.name %></h2>
+                        <img src="/images/actividades/<%= activity.imag %>" class="d-block w-100" alt="<%= activity.name %>">
                     </a>
                 </div>
             <% }) %>
