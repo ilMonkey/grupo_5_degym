@@ -10,7 +10,7 @@
 <!-- End Whatsapp boton -->
 
 <!-- Include Header -->
-<%- include('partials/header') %>
+<%- include('partials/header2', {usuario}) %>
 
 
     <!-- Carousel Dont Change the class!!! vienen asi de bootstrap y no se pueden cambiar-->
@@ -52,31 +52,36 @@
     <!-- End Carousel -->
 
     <!-- Carousel II -->
-    <div id="carousel-2" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">     
-                <!-- Una clase individual -->
-          
-                <% activities.forEach(activity => { %>
-                <div class="carousel-item" id="containter-item"</div>
-                    <a href="/products">
-                        <h2 class="nombreClase"><%- activity.name %></h2>
-                        <img src="/images/actividades/<%- activity.img %>" class="d-block w-100" alt="<%- activity.name %>">
-                    </a>
-                </div>
-            <% }) %>
-
+    
+    <div id="carousel-2" class="carousel-2 slide" data-ride="carousel-2">
+      <div class="carousel-inner">
+        <a href="/products">
+          <div class="carousel-item active" id="containter-item"> </div>
+             <h2 class="nombreClase">Hot Yoga</h2>
+             <img src="/images/actividades/yoga.webp" class="d-block w-100">
+          </div>
+          <div class="carousel-item" id="containter-item"> </div>
+            <h2 class="nombreClase">Calistenia</h2>
+            <img src="/images/actividades/calistenia.jpg" class="d-block w-100">
+          </div>
+          <div class="carousel-item" id="containter-item"> </div>
+            <h2 class="nombreClase">Crossfit</h2>
+            <img src="/images/actividades/crossfit.jpg" class="d-block w-100">
+          </div>
+          <div class="carousel-item" id="containter-item"> </div>
+            <h2 class="nombreClase">Funcional</h2>
+            <img src="/images/actividades/Funcional.jpg" class="d-block w-100">
+            <a class="carousel-control-prev" href="#carousel-2" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-2" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
         </div>
-        <a class="carousel-control-prev" href="#carousel-2" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carousel-2" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
         </a>
       </div>
-
-      
     <!-- End Carousel -->
 
     <!-- Banner --> 
@@ -101,11 +106,6 @@
 <%- include('partials/footer',{branches}) %>
 
 <!-- truquito para poder hacer correr el carousel de bootstrap con un forEach. agrega "active" a la primera slide del loop. -->
-<script>
-    $(document).ready(function () {
-      $('#carousel-2').find('.carousel-item').first().addClass('active');
-    });
-    $('#carousel-2').carousel({
-      interval: false,
-    });
-</script>
+<!-- <script> -->
+
+<!-- </script> -->
