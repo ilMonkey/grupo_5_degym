@@ -13,13 +13,12 @@
             <div class="container__product--title">
                 <h2>Agregar Clases a Da Gym!</h2>
             </div>
-            <form action="/products/new/create" method="POST" class="container__register--data"
-                enctype="multipar/form-data">
+            <form action="/products/new/create" method="POST" class="container__register--data">
                 <select name="id_branch" size="1">
                     <option value="0">Elija una sede</option>
                     <% branches.forEach(branch => { %>
                     <option value="<%= branch.id %>"><%= branch.name %></option>
-                    <% }); %>
+                    <% }); %> 
                 </select>
                 <select name="id_activity" size="1">
                     <option value="0">Elija una actividad</option>
