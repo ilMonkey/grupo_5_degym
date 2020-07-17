@@ -794,6 +794,8 @@ fab fa-whatsapp my-float :hover {
 .poductsPage {
     background: rgb(27,27,27);
     background: linear-gradient(0deg, rgba(27,27,27,1) 0%, rgba(44,57,64,1) 100%);
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 .poductsPage h2 {
@@ -1385,6 +1387,12 @@ fab fa-whatsapp my-float :hover {
 
 @media (min-width: 900px) {
 
+#products_main_content {
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+
 .verticalAd__container {
     display: contents;
     text-align: center;
@@ -1398,6 +1406,7 @@ fab fa-whatsapp my-float :hover {
     object-fit: cover; 
     filter: grayscale(27%);
     opacity: 0.8;
+    width: 248%;
 }
 
 .verticalBanner:hover {
