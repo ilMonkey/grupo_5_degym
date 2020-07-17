@@ -6,12 +6,20 @@
 }
 
 body {
-    background-color: #131111;
+    background: rgb(44,57,64);
+    background: linear-gradient(0deg, rgba(44,57,64,1) 0%, rgba(0,0,0,1) 100%);
 }
 
 main {
     max-width: 1100px;
     margin: 0 auto;
+    background: rgb(44,57,64);
+    background: linear-gradient(0deg, rgba(44,57,64,1) 0%, rgba(0,0,0,1) 100%);
+    text-align: center;
+}
+
+a {
+    color: cornflowerblue;
 }
 
 /* --------------NAV BAR------------------------------------------- */
@@ -432,9 +440,8 @@ width: 18%;
     filter: grayscale(100%);
 }
 
-
-
 /* ----- Register and Login Page--------------------------------------------------------------------------------------------- */
+
 .container__register--box{
     background-color: #263238;
     padding: 13% 0%;
@@ -445,6 +452,7 @@ width: 18%;
     margin: 0% 9%;
     background-color: hsl(203, 17%, 27%);
     border-radius: 5%;
+
 }
 .container__register--title{
     margin: 4% 7% 5% 7%;
@@ -522,17 +530,16 @@ width: 18%;
 /* ----- Register Product Page--------------------------------------------------------------------------------------------- */
 .container__product--box{
     background-color: #2c3940;
-    padding: 13% 0%;
+    text-align: center;
+    display: inline;
 }
+
 .container__product{
-    width: 80%;
     border: 1px solid #2c3940;
-    margin: 0% 9%;
-    background-color: #2c3940;
-    border-radius: 5%;
+    border-radius: 8px;
+    max-width: 550px !important;
 }
 .container__product--title{
-    margin: 4% 7% 5% 7%;
     border-bottom: solid 1px #FF710F;
 }
 .container__product--title h2{
@@ -541,14 +548,17 @@ width: 18%;
     font-size: 8vw;
 }
 .container__product--form{
-
     margin: 10% 7%;
 }
 .container__product--form input{
     outline: none;
     border: 0;
     width: 100%;
-    margin-bottom: 4% ;
+    margin-bottom: 4%;
+    border-radius: 5px;
+    height: 30px;
+    padding-left: 10px;
+    background-color: wheat !important;
 }
 .container__product--form label{
     color: white;
@@ -666,13 +676,16 @@ fab fa-whatsapp my-float :hover {
 
 .adminPanel__container {
     background-color: #1b1b1b;
-    padding: 10px
+    padding: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 .adminPanel-content__container {   
     border-radius: 20px;
     padding: 10px;
     background-color: whitesmoke;
+    max-width: 500px;
 }
 
 .adminPanel-content__container h2 {
@@ -685,12 +698,25 @@ fab fa-whatsapp my-float :hover {
 
 .admin__btn-container {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
+    align-items: center;
+    padding-right: 16px;
+}
+
+.admin__btn-container div {
+ width: 100%;
+
 }
 
 .admin__btn-container .btn {
     font-weight: 700;
-    margin: 8px
+    margin: 8px;
+    width: 100%;
+    border: inherit;
+    -webkit-box-shadow: 10px 10px 5px -5px rgba(196,196,196,1);
+    -moz-box-shadow: 10px 10px 5px -5px rgba(196,196,196,1);
+    box-shadow: 10px 10px 5px -5px rgba(196,196,196,1);
 }
 
 .btn-activities-branches__container {
@@ -703,7 +729,20 @@ fab fa-whatsapp my-float :hover {
 
 .branch__container {
     width: 100%;
-    padding: 10px
+    padding: 10px;
+    max-width: 500px;
+    background-color: white;
+    border-radius: 8px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    display: inline-block;
+}
+
+.branch__container li {
+    display: flex;
 }
 
 .branch__container h2{
@@ -720,7 +759,29 @@ fab fa-whatsapp my-float :hover {
     text-align: center;
     border-radius: 8px;
     background-color: whitesmoke;
-    padding: 8px
+    padding: 8px;
+    max-width: 500px;
+    display: inline-block;
+}
+
+.class__container-multiBranch h2 {
+    color: #FF710F;
+    text-align: center;
+    font-size: 3vw;
+    font-weight: bolder;
+}
+
+.class__container-multiBranch h3 {
+    color: black;
+    text-align: center;
+    font-size: 2.5vw;
+    font-weight: bolder;
+}
+
+.branch__TextBox {
+    border-radius: 8px;
+    background-color: rgb(243, 236, 223);
+    margin: 5px;
 }
 
 .branchesList {
@@ -732,7 +793,8 @@ fab fa-whatsapp my-float :hover {
 /* ///------------------------------PRODUCTS-PAGE---------------------------------- */
 
 .poductsPage {
-    background-color: #2c3940;
+    background: rgb(27,27,27);
+    background: linear-gradient(0deg, rgba(27,27,27,1) 0%, rgba(44,57,64,1) 100%);
 }
 
 .poductsPage h2 {
@@ -915,7 +977,6 @@ fab fa-whatsapp my-float :hover {
 /* ------USER-PROFILE-EDIT-FORM-PAGE---- */
 
 .profileEditForm {
-    background-color: #2c3940;
     margin: 0;
     max-width: none;
 }
@@ -1003,6 +1064,10 @@ fab fa-whatsapp my-float :hover {
     flex-direction: row-reverse;
 }
 
+#deleteForm {
+    margin-left: 10px;
+}
+
 .profileEditForm .btn {
     margin: 10px 0
 }
@@ -1023,16 +1088,6 @@ fab fa-whatsapp my-float :hover {
     flex-direction: row-reverse;
     padding-bottom: 0.5em;
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1069,6 +1124,7 @@ fab fa-whatsapp my-float :hover {
 }
 .container__register--data {
     margin: 5% 7%;
+    max-width: 550px !important;
 }
 .container__register--data input::placeholder{
     font-size: 1em;
@@ -1084,11 +1140,17 @@ fab fa-whatsapp my-float :hover {
 }
 /* MQ product Page */
 .container__product {
-    margin: 0 20%;
-    width: auto;
+    max-width: 500px;
+    display: inline-block;
+    text-align: center;
+    margin: 20px;
+    border: none;
 }
 .container__product--title h2 {
-    font-size: 6vw;
+    color: #FF710F;
+    text-align: center;
+    font-size: 3vw;
+    font-weight: bolder;
 }
 .container__product--data {
     margin: 5% 7%;
@@ -1331,4 +1393,16 @@ fab fa-whatsapp my-float :hover {
 }
 }
 /* End MQ Register Page 
+
+/* -----------------------------------/* User Edit Page----------------------- */
+
+.userEditProfileForm {
+    max-width: 400px;
+}
+
+.deleteBtn {
+    padding: 0 20px 10px 0;
+}
+
+
  END DESKTOP   */

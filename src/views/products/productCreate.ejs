@@ -8,70 +8,60 @@
 <!-- Este formulario nos permite crear "products" que son las unidades de venta, nuestros "Products". Las "product" reciben atributos de los modelos "Branch" y "Activity". -->
 
 <main class="main_content">
-<div class="container__product--box">
-    <section class="container__product">
-        <div class="container__product--title">
-            <h2>Agregar Clases a Da Gym!</h2>
-        </div>
-                <!-- <div class="errors" style="background-color: rgb(141, 31, 31);">
-                    <h3 class="error_text" style="color: rgb(197, 196, 196);">ERROR</h3>
-                    <p style="color: black;">- El nombre de tu producto es muy largo (Max. 45 caracteres).</p>
-                    <p style="color: black;">- La descripción es muy larga (Max. 150 caracteres).<br></p>
-                </div> -->
-                <form action="/products/new/create" method="POST" class="container__register--data" enctype = "multipar/form-data">
-                    <select name="id_branch" size="1" >
-                        <option value="0">Elija una sede</option>
-                        <% branches.forEach(branch => { %>
-                        <option value="<%= branch.id %>"><%= branch.name %></option>
-                        <% }); %> 
-                    </select>
-                    <select name="id_activity" size="1" >
-                        <option value="0">Elija una actividad</option>
-                        <% activities.forEach(activity => { %>
-                        <option value="<%= activity.id %>"><%= activity.name %></option>
-                        <% }); %> 
-                    </select>
-                    <!-- <input type="file" name="image"> -->
-                    <input type="text" placeholder="Dia/s de la semana" name="days" value="">
-                    <input type="text" placeholder="Hora del día" name="time" value="">
-                    <!-- <input type="text" placeholder="Capacidad máxima: 5, 15, 30" name="max_capacity" value=""> -->
-                           
-                    <!-- <label for="">Cantidad máxima de alumnos:</label> -->
-                        
-                    <select  name="max_capacity" size="1" >
-                            <option value="5"> 5</option>
-                            <option value="10"> 10</option>
-                            <option value="15"> 15</option>
-                            <option value="20"> 20</option>
-                            <option value="25"> 25</option>
-                            <option value="30"> 30</option>
-                        </select>
-                        
+    <div class="product--box">
+        <section id="create_product" class="container__product">
+            <div class="container__product--title">
+                <h2>Agregar Clases a Da Gym!</h2>
+            </div>
+            <form action="/products/new/create" method="POST" class="container__register--data"
+                enctype="multipar/form-data">
+                <select name="id_branch" size="1">
+                    <option value="0">Elija una sede</option>
+                    <% branches.forEach(branch => { %>
+                    <option value="<%= branch.id %>"><%= branch.name %></option>
+                    <% }); %>
+                </select>
+                <select name="id_activity" size="1">
+                    <option value="0">Elija una actividad</option>
+                    <% activities.forEach(activity => { %>
+                    <option value="<%= activity.id %>"><%= activity.name %></option>
+                    <% }); %>
+                </select>
+                <input type="text" placeholder="Dia/s de la semana" name="days" value="">
+                <input type="text" placeholder="Hora del día" name="time" value="">
+                <select name="max_capacity" size="1">
+                    <option value="5"> 5</option>
+                    <option value="10"> 10</option>
+                    <option value="15"> 15</option>
+                    <option value="20"> 20</option>
+                    <option value="25"> 25</option>
+                    <option value="30"> 30</option>
+                </select>
                 <div class="container__register--send">
                     <button type="submit" class="btn btn-warning">GUARDAR</button>
                 </div>
             </form>
-        
-            <h2>Clases ya cargadas.</h2>
-    <div class="class__container-multiBranch">
-       <ul class="branchesList" >
-            <% products.forEach(product => { %>
-                <!-- Una clase individual -->
+
+            <div class="class__container-multiBranch">
+                <h2>Clases ya cargadas</h2>
+                <ul class="branchesList">
+                    <% products.forEach(product => { %>
+                    <!-- Una clase individual -->
                     <li class="branch__TextBox">
-                        <h2>Número de ID: <%- product.id %></h2>
+                        <h3>Número de ID: <%- product.id %></h3>
                         <span>Sede: <%- product.id_branch.name %></span>
                         <span>Actividad: <%- product.id_activity.name %></span>
                         <span>Dia/s que se ofrece la clase: <%- product.days %> a las <%- product.time %>hs.</span>
-                        <form class="container__detail--send" action="/products/delete/<%= product.id%>?_method=DELETE" method="POST">
+                        <form class="container__detail--send" action="/products/delete/<%= product.id%>?_method=DELETE"
+                            method="POST">
                             <button type="button" class="btn btn-light"><i class="fas fa-trash-alt"></i></button>
                         </form>
                     </li>
-                </article>                 
-            <% }) %>
-       </ul>
-        </div>
-    </section>
-</div>
+                    <% }) %>
+                </ul>
+            </div>
+        </section>
+    </div>
 </main>
 <!-- End product Form -->
 
