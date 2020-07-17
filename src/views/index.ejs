@@ -68,7 +68,7 @@
             <!-- Una clase individual -->
 
             <% activities.forEach(activity => { %>
-            <div class="carousel-item" id="containter-item" </div>
+            <div class="carousel-item" id="containter-item"></div>
                 <a href="/products">
                     <h2 class="nombreClase"><%- activity.name %></h2>
                     <img src="/images/actividades/<%- activity.img %>" class="d-block w-100" alt="<%- activity.name %>">
@@ -99,9 +99,9 @@
                 <h2><b>CON NIKE OBTENE TU PASE GRATIS</b></h2>
                 <h3>VENI Y PROBA UNA CLASE SIN CARGO</h3>
             </div>
-            <div class="container__home--send">
+            <a class="container__home--send" href="/users/create">
                 <button type="button" class="btn btn-light">QUIERO</button>
-            </div>
+            </a>
         </div>
     </div>
     <!-- End Banner  -->
