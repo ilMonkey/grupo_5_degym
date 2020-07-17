@@ -43,8 +43,8 @@ const usersController = {
 				}
 			}
 		} else {
-			res.json({ error: 'Error de usuario y/o contraseña 2' })
-			// res.render('users/login',{errors}) 
+			// res.redirect({ error: 'Error de usuario y/o contraseña 2' })
+			res.redirect('/users/login') 
 		}
 
 		} catch (error) {
