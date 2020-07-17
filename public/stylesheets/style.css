@@ -724,6 +724,13 @@ fab fa-whatsapp my-float :hover {
     padding: 10px
 }
 
+/* ADMIN CONTROL PANE USERS */
+
+
+.user_admin_btns {
+    display: block ruby;
+}
+
 /* ///-----------------------------BRANCHES-ADMIN-PAGE--------------------------------- */
 
 .branch__container {
@@ -1391,7 +1398,7 @@ fab fa-whatsapp my-float :hover {
     display: flex;
     flex-direction: row-reverse;
 
-}
+} 
 
 .verticalAd__container {
     display: contents;
