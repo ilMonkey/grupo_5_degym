@@ -49,15 +49,17 @@
                                 <form class="container__cart--carrito">
                                     <button type="submit" class="btn btn-light">AGREGAR AL CARRITO</button>  
                                 </form>
-                            
-                            <div class="container__detail">
-                                <a href="/products/<%= product.id%>/edit">
-                                    <button type="button" class="btn btn-light">EDITAR</button>  
-                                </a> 
-                                <form action="/products/delete/<%= product.id%>?_method=DELETE" method="POST">
-                                    <button type="submit" class="btn btn-light">ELIMINAR</button>  
-                                </form>
-                            </div>
+                                <% if (usuario.rodeDelUsuario== 3) { %>
+                                <div class="container__detail">
+                                    <a href="/products/<%= product.id%>/edit">
+                                        <button type="button" class="btn btn-light">EDITAR</button>  
+                                    </a> 
+                                    <form action="/products/delete/<%= product.id%>?_method=DELETE" method="POST">
+                                        <button type="submit" class="btn btn-light">ELIMINAR</button>  
+                                    </form>
+                                </div>
+                            <% } %>
+
                         </div>
                     </div>
                 </div>

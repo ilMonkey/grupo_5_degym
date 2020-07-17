@@ -110,17 +110,6 @@ const controller = {
 		}
 	},	
 
-	editUser: async (req, res) => {
-	//muestra formulario de edición de un usuario
-		try {	
-			let usuario = req.session;	
-			let user = await DB.User.findByPk(req.params.id)
-			res.render('admin/adminUsersForm', {user, usuario})
-		} catch (error) {
-			res.send(error)
-			}
-	},
-
 	storeUser: async (req, res) => {
 		//Guarda modificaciones de un usuario
 		try {	

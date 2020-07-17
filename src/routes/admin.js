@@ -7,6 +7,7 @@ const path = require('path');
 // ************ Controller Require ************
 const adminController = require('../controllers/adminController');
 const authMiddleware = require('../middlewares/authMiddleware');
+const adminMiddleware = require('../middlewares/adminMiddleware');
 
 // ************ DiskStorage de Multer ************ 
 var storage = multer.diskStorage({
@@ -22,30 +23,29 @@ var storage = multer.diskStorage({
 // ************ END DiskStorage de Multer ************
 
 /*** GET ADMIN GENERAL panel ***/ 
-router.get('/', authMiddleware ,adminController.controlPanel);
+router.get('/', adminMiddleware ,adminController.controlPanel);
 
 
 //Branches controllers
 /*** GET ADMIN-BRANCHES panel ***/ 
-router.get('/branches', adminController.showBranches);
+router.get('/branches', adminMiddleware, adminController.showBranches);
 /*** CREATE ONE BRANCH***/ 
-router.post('/branches', adminController.storeBranch);
+router.post('/branches', adminMiddleware,  adminController.storeBranch);
 /*** DELETE ONE BRANCH***/ 
-router.delete('/branches/delete/:id', adminController.destroyBranch); 
+router.delete('/branches/delete/:id',  adminMiddleware, adminController.destroyBranch); 
 
 //Activities controllers
 /*** GET ADMIN-ACTIVITY panel ***/ 
-router.get('/activities', adminController.showActivities);
+router.get('/activities', adminMiddleware, adminController.showActivities);
 /*** CREATE ONE ACTIVITY***/ 
-router.post('/activities', upload.any(),adminController.storeActivity);
+router.post('/activities', upload.any(), adminMiddleware, adminController.storeActivity);
 /*** DELETE ONE ACTIVITY***/ 
-router.delete('/activities/delete/:id', adminController.destroyActivity);
+router.delete('/activities/delete/:id',  adminMiddleware, adminController.destroyActivity);
 
 //Users controllers
 /*** GET listado de Usuarios panel ***/ 
-router.get('/users', authMiddleware, adminController.showUsers);
+router.get('/users', adminMiddleware, adminController.showUsers);
 /*** EDIT ONE USER ***/ 
-router.get('/user/edit/:id', authMiddleware, adminController.editUser); /* GET - Form to create */
 router.put('/user/edit/:id', authMiddleware, adminController.storeUser); /* PUT - Update in DB */
 
 /*** DELETE ONE USER***/ 
