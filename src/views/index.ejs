@@ -64,17 +64,31 @@
 
     <!-- Carousel II -->
     <div id="carousel-2" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
         <div class="carousel-inner">
             <!-- Una clase individual -->
-
-            <% activities.forEach(activity => { %>
-            <div class="carousel-item" id="containter-item"></div>
+            <div class="carousel-item " id="containter-item">
                 <a href="/products">
-                    <h2 class="nombreClase"><%- activity.name %></h2>
-                    <img src="/images/actividades/<%- activity.img %>" class="d-block w-100" alt="<%- activity.name %>">
+                    <h2 class="nombreClase"> Musculación </h2>
+                    <img src="/images/actividades/funcional.jpg" class="d-block w-100" alt="Musculación">
                 </a>
             </div>
-            <% }) %>
+            <div class="carousel-item" id="containter-item">
+                <a href="/products">
+                    <h2 class="nombreClase"> Yoga </h2>
+                    <img src="/images/actividades/yoga.jpg" class="d-block w-100" alt="Yoga">
+                </a>
+            </div>
+            <div class="carousel-item" id="containter-item">
+                <a href="/products">
+                    <h2 class="nombreClase"> Calistenia </h2>
+                    <img src="/images/actividades/calistenia.jpg" class="d-block w-100" alt="Calistenia">
+                </a>
+            </div>
         </div>
         <a class="carousel-control-prev" href="#carousel-2" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
